@@ -1,422 +1,678 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
 
-<title>SpiesHub | Categories</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<style>
-* {
-  box-sizing: border-box;
-}
+  <title>Tactical Gear, EDC, CCTV & Security | SpiesHub</title>
 
-html {
-  scroll-behavior: smooth;
-}
+  <meta name="description" content="Explore tactical gear, EDC equipment, tracking devices, CCTV and security, home electronics, tactical bags, outdoor gear, clothing, footwear and accessories at SpiesHub.">
 
-body {
-  margin: 0;
-  background: #050708;
-  color: #f4f7f8;
-  font-family: Arial, Helvetica, sans-serif;
-}
+  <meta name="keywords" content="tactical gear, tactical equipment, EDC, everyday carry, tracking devices, GPS trackers, CCTV, security cameras, home electronics, tactical bags, tactical backpacks, outdoor gear, tactical clothing, tactical footwear, tactical accessories">
 
-header {
-  padding: 28px 6%;
-  border-bottom: 1px solid #1c252d;
-  background: #050708;
-}
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-.logo {
-  font-size: 42px;
-  font-weight: 800;
-  letter-spacing: 8px;
-  margin-bottom: 28px;
-}
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #080d0a;
+      color: #f1f3f2;
+      line-height: 1.6;
+    }
 
-.logo span {
-  color: #4f9cff;
-}
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
 
-nav {
-  display: flex;
-  gap: 38px;
-  flex-wrap: wrap;
-}
+    header {
+      border-bottom: 1px solid #263029;
+      padding: 28px 6%;
+      background: #090e0b;
+    }
 
-nav a {
-  color: #aab4bd;
-  text-decoration: none;
-  font-size: 18px;
-  font-weight: 700;
-}
+    .logo {
+      font-size: 38px;
+      font-weight: 900;
+      letter-spacing: 4px;
+      margin-bottom: 20px;
+    }
 
-nav a:hover {
-  color: #4f9cff;
-}
+    .logo span {
+      color: #9bb875;
+    }
 
-.hero {
-  padding: 80px 7% 60px;
-  background:
-    radial-gradient(circle at 80% 20%, #10243b 0%, #071018 35%, #050708 75%);
-}
+    nav {
+      display: flex;
+      gap: 28px;
+      flex-wrap: wrap;
+    }
 
-.eyebrow {
-  display: inline-block;
-  border: 1px solid #28629a;
-  border-radius: 50px;
-  padding: 14px 28px;
-  color: #4f9cff;
-  font-size: 15px;
-  font-weight: 800;
-  letter-spacing: 5px;
-  text-transform: uppercase;
-}
+    nav a {
+      color: #c5cbc7;
+      font-size: 17px;
+      transition: 0.2s;
+    }
 
-h1 {
-  font-size: clamp(52px, 9vw, 100px);
-  line-height: .95;
-  margin: 45px 0 25px;
-}
+    nav a:hover {
+      color: #a4c37b;
+    }
 
-h1 span {
-  color: #4f9cff;
-}
+    .hero {
+      padding: 70px 6% 45px;
+      max-width: 1100px;
+    }
 
-.hero p {
-  max-width: 760px;
-  color: #aab4bd;
-  font-size: 24px;
-  line-height: 1.65;
-}
+    .eyebrow {
+      color: #9bb875;
+      font-weight: bold;
+      letter-spacing: 4px;
+      font-size: 15px;
+      margin-bottom: 18px;
+      text-transform: uppercase;
+    }
 
-.categories {
-  padding: 60px 7% 100px;
-}
+    h1 {
+      font-size: clamp(42px, 8vw, 76px);
+      line-height: 1.02;
+      max-width: 900px;
+      margin-bottom: 25px;
+    }
 
-.grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 28px;
-}
+    .hero p {
+      color: #b7bfba;
+      font-size: 20px;
+      max-width: 800px;
+    }
 
-.card {
-  background: #0a1015;
-  border: 1px solid #1d2b37;
-  border-radius: 28px;
-  overflow: hidden;
-  transition: transform .25s ease, border-color .25s ease;
-}
+    .intro {
+      padding: 0 6% 55px;
+      max-width: 1050px;
+    }
 
-.card:hover {
-  transform: translateY(-5px);
-  border-color: #4f9cff;
-}
+    .intro p {
+      color: #9fa9a3;
+      font-size: 17px;
+    }
 
-.card-image {
-  width: 100%;
-  height: 260px;
-  object-fit: cover;
-  display: block;
-  background: #101820;
-}
+    .categories {
+      padding: 10px 6% 80px;
+    }
 
-.card-content {
-  padding: 34px;
-}
+    .section-title {
+      font-size: 32px;
+      margin-bottom: 10px;
+    }
 
-.number {
-  color: #4f9cff;
-  font-size: 15px;
-  font-weight: 800;
-  letter-spacing: 4px;
-  text-transform: uppercase;
-}
+    .section-subtitle {
+      color: #929b96;
+      margin-bottom: 35px;
+      font-size: 17px;
+    }
 
-h2 {
-  font-size: 36px;
-  margin: 18px 0;
-}
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      max-width: 1200px;
+    }
 
-.card p {
-  color: #9da8b1;
-  font-size: 18px;
-  line-height: 1.6;
-}
+    .card {
+      display: block;
+      background: #151c17;
+      border: 1px solid #29342c;
+      border-radius: 16px;
+      padding: 28px;
+      min-height: 220px;
+      transition: transform 0.2s, border-color 0.2s, background 0.2s;
+    }
 
-.button {
-  display: inline-block;
-  margin-top: 18px;
-  color: #4f9cff;
-  text-decoration: none;
-  font-size: 19px;
-  font-weight: 800;
-}
+    .card:hover {
+      transform: translateY(-4px);
+      border-color: #77945b;
+      background: #192119;
+    }
 
-.button:hover {
-  color: white;
-}
+    .icon {
+      font-size: 34px;
+      margin-bottom: 18px;
+    }
 
-footer {
-  border-top: 1px solid #1c252d;
-  padding: 45px 7%;
-  color: #69747d;
-}
+    .card h3 {
+      font-size: 23px;
+      margin-bottom: 10px;
+    }
 
-@media (max-width: 700px) {
+    .card p {
+      color: #9fa9a3;
+      font-size: 15px;
+    }
 
-  header {
-    padding: 28px 5%;
-  }
+    .card .explore {
+      display: inline-block;
+      margin-top: 18px;
+      color: #a4c37b;
+      font-weight: bold;
+      font-size: 14px;
+      letter-spacing: 0.5px;
+    }
 
-  .logo {
-    font-size: 32px;
-    letter-spacing: 6px;
-  }
+    .feature {
+      margin: 0 6% 80px;
+      padding: 45px;
+      max-width: 1100px;
+      background: #121913;
+      border: 1px solid #29342c;
+      border-radius: 18px;
+    }
 
-  nav {
-    gap: 22px;
-  }
+    .feature h2 {
+      font-size: 32px;
+      margin-bottom: 15px;
+    }
 
-  nav a {
-    font-size: 16px;
-  }
+    .feature p {
+      color: #aab2ad;
+      max-width: 850px;
+      margin-bottom: 12px;
+    }
 
-  .hero {
-    padding: 60px 6% 45px;
-  }
+    footer {
+      border-top: 1px solid #263029;
+      padding: 35px 6%;
+      color: #77817b;
+      font-size: 14px;
+    }
 
-  .eyebrow {
-    font-size: 12px;
-    letter-spacing: 3px;
-    line-height: 1.5;
-  }
+    .disclosure {
+      margin-top: 10px;
+      color: #66716a;
+    }
 
-  h1 {
-    font-size: 58px;
-  }
+    @media (max-width: 600px) {
+      header {
+        padding: 24px 5%;
+      }
 
-  .hero p {
-    font-size: 19px;
-  }
+      .logo {
+        font-size: 30px;
+      }
 
-  .categories {
-    padding: 40px 6% 70px;
-  }
+      nav {
+        gap: 18px;
+      }
 
-  .grid {
-    grid-template-columns: 1fr;
-  }
+      .hero {
+        padding: 55px 5% 35px;
+      }
 
-  .card-image {
-    height: 230px;
-  }
+      .intro,
+      .categories {
+        padding-left: 5%;
+        padding-right: 5%;
+      }
 
-  h2 {
-    font-size: 32px;
-  }
-}
-</style>
+      .feature {
+        margin-left: 5%;
+        margin-right: 5%;
+        padding: 30px;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-<header>
+  <header>
 
-  <div class="logo">
-    SPIES<span>HUB</span>
-  </div>
+    <div class="logo">
+      SPIES<span>HUB</span>
+    </div>
 
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="reviews.html">Reviews</a>
-    <a href="categories.html">Categories</a>
-    <a href="deals.html">Deals</a>
-    <a href="about.html">About</a>
-  </nav>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="categories.html">Categories</a>
+      <a href="deals.html">Deals</a>
+      <a href="reviews.html">Reviews</a>
+      <a href="about.html">About</a>
+    </nav>
 
-</header>
+  </header>
 
-<section class="hero">
 
-  <div class="eyebrow">
-    EQUIPMENT • TECHNOLOGY • FIELD GEAR
-  </div>
+  <main>
 
-  <h1>
-    Explore<br>
-    <span>the gear.</span>
-  </h1>
+    <section class="hero">
 
-  <p>
-    Explore the equipment worth knowing about — from bags and drones
-    to cameras, optics, field gear and everyday technology.
-  </p>
+      <div class="eyebrow">
+        SPIESHUB GEAR & TECHNOLOGY
+      </div>
 
-</section>
+      <h1>
+        Tactical Gear, EDC, Security & Smart Technology
+      </h1>
 
-<section class="categories">
+      <p>
+        Explore tactical equipment, everyday carry gear, tracking devices,
+        CCTV and security products, home electronics, outdoor equipment
+        and more from leading retailers.
+      </p>
 
-<div class="grid">
+    </section>
 
-<div class="card">
 
-<img
-class="card-image"
-src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=1200&q=85"
-alt="Outdoor backpack">
+    <section class="intro">
 
-<div class="card-content">
+      <p>
+        SpiesHub brings together useful products for everyday carry,
+        personal security, outdoor adventures, tactical applications and
+        smart technology. Browse our categories to discover equipment,
+        compare products and find deals from online retailers.
+      </p>
 
-<div class="number">01 • CARRY</div>
+    </section>
 
-<h2>Bags & Packs</h2>
 
-<p>
-Tactical packs, field bags, travel bags and everyday
-carry systems built for real-world use.
-</p>
+    <section class="categories">
 
-<a class="button" href="bags.html">
-Explore →
-</a>
+      <h2 class="section-title">
+        Explore SpiesHub Categories
+      </h2>
 
-</div>
-</div>
+      <p class="section-subtitle">
+        Browse tactical gear, security technology, EDC equipment and more.
+      </p>
 
-<div class="card">
 
-<img
-class="card-image"
-src="https://images.unsplash.com/photo-1473968512647-3e447244af8f?auto=format&fit=crop&w=1200&q=85"
-alt="Drone">
+      <div class="grid">
 
-<div class="card-content">
 
-<div class="number">02 • AIR</div>
+        <!-- TACTICAL GEAR -->
 
-<h2>Drones</h2>
+        <a class="card" href="#tactical-gear">
 
-<p>
-Drones, accessories and aerial technology for
-observation, photography and field use.
-</p>
+          <div class="icon">🎯</div>
 
-<a class="button" href="#">
-Coming soon →
-</a>
+          <h3>
+            Tactical Gear
+          </h3>
 
-</div>
-</div>
+          <p>
+            Tactical equipment, field gear and practical equipment
+            designed for demanding environments and outdoor use.
+          </p>
 
-<div class="card">
+          <span class="explore">
+            Explore Tactical Gear →
+          </span>
 
-<img
-class="card-image"
-src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&w=1200&q=85"
-alt="Camera">
+        </a>
 
-<div class="card-content">
 
-<div class="number">03 • VISUAL</div>
+        <!-- TACTICAL BAGS -->
 
-<h2>Cameras</h2>
+        <a class="card" href="bags.html">
 
-<p>
-Cameras and video equipment for photography,
-surveillance, documentation and content creation.
-</p>
+          <div class="icon">🎒</div>
 
-<a class="button" href="#">
-Coming soon →
-</a>
+          <h3>
+            Tactical Bags & Backpacks
+          </h3>
 
-</div>
-</div>
+          <p>
+            Tactical backpacks, EDC bags, utility bags and rugged
+            packs for everyday carry and outdoor use.
+          </p>
 
-<div class="card">
+          <span class="explore">
+            Explore Bags →
+          </span>
 
-<img
-class="card-image"
-src="https://images.unsplash.com/photo-1511497584788-876760111969?auto=format&fit=crop&w=1200&q=85"
-alt="Outdoor optics">
+        </a>
 
-<div class="card-content">
 
-<div class="number">04 • OBSERVE</div>
+        <!-- TRACKING DEVICES -->
 
-<h2>Optics</h2>
+        <a class="card" href="#tracking-devices">
 
-<p>
-Binoculars, observation equipment and optical
-gear compared for clarity, usability and value.
-</p>
+          <div class="icon">📡</div>
 
-<a class="button" href="#">
-Coming soon →
-</a>
+          <h3>
+            Tracking Devices
+          </h3>
 
-</div>
-</div>
+          <p>
+            GPS trackers, location devices, vehicle trackers and
+            smart tracking technology for everyday applications.
+          </p>
 
-<div class="card">
+          <span class="explore">
+            Explore Tracking Devices →
+          </span>
 
-<img
-class="card-image"
-src="https://images.unsplash.com/photo-1521507710749-e6a97f3f0f98?auto=format&fit=crop&w=1200&q=85"
-alt="Field equipment">
+        </a>
 
-<div class="card-content">
 
-<div class="number">05 • FIELD</div>
+        <!-- CCTV -->
 
-<h2>Field Gear</h2>
+        <a class="card" href="#cctv-security">
 
-<p>
-Practical equipment designed for outdoor use,
-travel, work and demanding environments.
-</p>
+          <div class="icon">📹</div>
 
-<a class="button" href="#">
-Coming soon →
-</a>
+          <h3>
+            CCTV & Security
+          </h3>
 
-</div>
-</div>
+          <p>
+            CCTV cameras, security cameras, smart surveillance
+            systems, alarms and home security technology.
+          </p>
 
-<div class="card">
+          <span class="explore">
+            Explore CCTV & Security →
+          </span>
 
-<img
-class="card-image"
-src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=1200&q=85"
-alt="Everyday technology">
+        </a>
 
-<div class="card-content">
 
-<div class="number">06 • TECH</div>
+        <!-- HOME ELECTRONICS -->
 
-<h2>Everyday Tech</h2>
+        <a class="card" href="#home-electronics">
 
-<p>
-Technology and useful gadgets that earn a place
-in your everyday carry.
-</p>
+          <div class="icon">🏠</div>
 
-<a class="button" href="#">
-Coming soon →
-</a>
+          <h3>
+            Home Electronics
+          </h3>
 
-</div>
-</div>
+          <p>
+            Smart home devices, useful electronics, connected
+            technology and practical gadgets for the home.
+          </p>
 
-</div>
+          <span class="explore">
+            Explore Home Electronics →
+          </span>
 
-</section>
+        </a>
 
-<footer>
-© 2026 SpiesHub — Gear worth knowing.
-</footer>
+
+        <!-- EDC -->
+
+        <a class="card" href="#edc">
+
+          <div class="icon">🔦</div>
+
+          <h3>
+            EDC — Everyday Carry
+          </h3>
+
+          <p>
+            Everyday carry gear including torches, tools, organisers,
+            wallets, accessories and practical EDC equipment.
+          </p>
+
+          <span class="explore">
+            Explore EDC →
+          </span>
+
+        </a>
+
+
+        <!-- OUTDOOR -->
+
+        <a class="card" href="#outdoor-gear">
+
+          <div class="icon">🏕️</div>
+
+          <h3>
+            Outdoor Gear
+          </h3>
+
+          <p>
+            Outdoor equipment, camping gear, survival equipment,
+            lighting and practical adventure accessories.
+          </p>
+
+          <span class="explore">
+            Explore Outdoor Gear →
+          </span>
+
+        </a>
+
+
+        <!-- CLOTHING -->
+
+        <a class="card" href="#tactical-clothing">
+
+          <div class="icon">🥾</div>
+
+          <h3>
+            Tactical Clothing
+          </h3>
+
+          <p>
+            Tactical clothing, outdoor apparel, durable pants,
+            jackets, shirts and performance clothing.
+          </p>
+
+          <span class="explore">
+            Explore Clothing →
+          </span>
+
+        </a>
+
+
+        <!-- FOOTWEAR -->
+
+        <a class="card" href="#tactical-footwear">
+
+          <div class="icon">👢</div>
+
+          <h3>
+            Tactical Footwear
+          </h3>
+
+          <p>
+            Tactical boots, outdoor footwear, hiking boots and
+            durable footwear for demanding environments.
+          </p>
+
+          <span class="explore">
+            Explore Footwear →
+          </span>
+
+        </a>
+
+
+        <!-- ACCESSORIES -->
+
+        <a class="card" href="#tactical-accessories">
+
+          <div class="icon">🧰</div>
+
+          <h3>
+            Tactical Accessories
+          </h3>
+
+          <p>
+            Practical accessories, equipment organisers, pouches,
+            lights, tools and useful tactical additions.
+          </p>
+
+          <span class="explore">
+            Explore Accessories →
+          </span>
+
+        </a>
+
+
+      </div>
+
+    </section>
+
+
+    <!-- SEO CONTENT -->
+
+    <section class="feature" id="tactical-gear">
+
+      <h2>
+        Tactical Gear & Equipment
+      </h2>
+
+      <p>
+        Tactical gear can cover a wide range of practical equipment,
+        from tactical bags and backpacks to outdoor equipment,
+        clothing, footwear and everyday carry accessories.
+      </p>
+
+      <p>
+        SpiesHub is designed to make it easier to discover useful
+        tactical equipment and compare products available from
+        online retailers.
+      </p>
+
+    </section>
+
+
+    <section class="feature" id="tracking-devices">
+
+      <h2>
+        Tracking Devices & GPS Technology
+      </h2>
+
+      <p>
+        Discover tracking devices, GPS trackers and smart location
+        technology for vehicles, equipment, luggage and other
+        everyday applications.
+      </p>
+
+    </section>
+
+
+    <section class="feature" id="cctv-security">
+
+      <h2>
+        CCTV & Home Security
+      </h2>
+
+      <p>
+        Explore CCTV cameras, security cameras, smart surveillance
+        equipment, alarms and other home security technology designed
+        to help protect homes and property.
+      </p>
+
+    </section>
+
+
+    <section class="feature" id="home-electronics">
+
+      <h2>
+        Home Electronics & Smart Technology
+      </h2>
+
+      <p>
+        Find practical home electronics, smart devices and connected
+        technology that can make everyday life easier, more convenient
+        and more secure.
+      </p>
+
+    </section>
+
+
+    <section class="feature" id="edc">
+
+      <h2>
+        EDC — Everyday Carry Gear
+      </h2>
+
+      <p>
+        Everyday carry equipment is designed around the things you
+        use regularly. SpiesHub covers practical EDC products such
+        as torches, organisers, wallets, tools and other useful
+        everyday accessories.
+      </p>
+
+    </section>
+
+
+    <section class="feature" id="outdoor-gear">
+
+      <h2>
+        Outdoor & Adventure Gear
+      </h2>
+
+      <p>
+        Explore outdoor equipment, camping products, lighting,
+        survival equipment and practical gear for adventures,
+        travel and time outdoors.
+      </p>
+
+    </section>
+
+
+    <section class="feature" id="tactical-clothing">
+
+      <h2>
+        Tactical Clothing
+      </h2>
+
+      <p>
+        Browse durable tactical and outdoor clothing including
+        jackets, shirts, pants and other practical apparel.
+      </p>
+
+    </section>
+
+
+    <section class="feature" id="tactical-footwear">
+
+      <h2>
+        Tactical Footwear
+      </h2>
+
+      <p>
+        Explore tactical boots, hiking footwear and durable outdoor
+        footwear designed for comfort and demanding conditions.
+      </p>
+
+    </section>
+
+
+    <section class="feature" id="tactical-accessories">
+
+      <h2>
+        Tactical Accessories
+      </h2>
+
+      <p>
+        Discover useful tactical accessories including pouches,
+        organisers, lighting, tools and other equipment designed
+        to complement your kit.
+      </p>
+
+    </section>
+
+  </main>
+
+
+  <footer>
+
+    <p>
+      © 2026 SpiesHub. All rights reserved.
+    </p>
+
+    <p class="disclosure">
+      SpiesHub may earn a commission when you purchase through
+      some of the links on this website.
+    </p>
+
+  </footer>
 
 </body>
 </html>
