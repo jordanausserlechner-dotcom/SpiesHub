@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -65,12 +66,13 @@ nav a:hover {
   color: #4f9cff;
 }
 
+
 /* HERO */
 
 .hero {
-  padding: 85px 6%;
+  padding: 70px 6% 90px;
   background:
-    radial-gradient(circle at 85% 15%, #10243b 0%, #071018 35%, #050708 75%);
+    radial-gradient(circle at 80% 15%, #10243b 0%, #071018 35%, #050708 75%);
 }
 
 .hero-inner {
@@ -82,24 +84,192 @@ nav a:hover {
   color: #4f9cff;
   font-size: 14px;
   font-weight: 800;
-  letter-spacing: 3px;
-  margin-bottom: 30px;
+  letter-spacing: 4px;
+  margin-bottom: 35px;
 }
 
 .hero-grid {
   display: grid;
-  grid-template-columns: 1.1fr .9fr;
+  grid-template-columns: 1fr 1fr;
   gap: 55px;
   align-items: center;
 }
 
-.product-image {
+
+/* PRODUCT GRAPHIC */
+
+.product-showcase {
   width: 100%;
-  border-radius: 22px;
-  display: block;
-  background: #0b1116;
-  border: 1px solid #1d2b38;
+  min-height: 560px;
+  border-radius: 24px;
+  border: 1px solid #244b6d;
+
+  background:
+    radial-gradient(
+      circle at 50% 35%,
+      #193450 0%,
+      #0b151f 42%,
+      #050708 78%
+    );
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
 }
+
+.product-showcase:before {
+  content: "";
+  position: absolute;
+  width: 420px;
+  height: 420px;
+  border: 1px solid #1f405c;
+  border-radius: 50%;
+}
+
+.product-showcase:after {
+  content: "";
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  border: 1px solid #17334d;
+  border-radius: 50%;
+}
+
+
+/* BAG */
+
+.bag {
+  width: 230px;
+  height: 330px;
+  background: linear-gradient(
+    145deg,
+    #1b252b,
+    #090d10
+  );
+
+  border: 4px solid #53616a;
+  border-radius: 28px 28px 35px 35px;
+
+  position: relative;
+  z-index: 2;
+
+  box-shadow:
+    0 35px 70px rgba(0,0,0,.65),
+    inset 0 0 30px rgba(255,255,255,.04);
+}
+
+.bag:before {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 55px;
+
+  left: 50%;
+  top: -52px;
+
+  transform: translateX(-50%);
+
+  border: 4px solid #53616a;
+  border-bottom: none;
+
+  border-radius: 35px 35px 0 0;
+}
+
+.bag-top {
+  position: absolute;
+
+  left: 28px;
+  right: 28px;
+  top: 35px;
+
+  height: 60px;
+
+  border: 2px solid #3b474e;
+  border-radius: 12px;
+
+  background: #11181d;
+}
+
+.bag-front {
+  position: absolute;
+
+  left: 24px;
+  right: 24px;
+  top: 115px;
+
+  height: 115px;
+
+  border: 2px solid #3b474e;
+  border-radius: 15px;
+
+  background: #10171b;
+}
+
+.bag-front:before,
+.bag-front:after {
+  content: "";
+
+  position: absolute;
+
+  top: 22px;
+
+  width: 35px;
+  height: 65px;
+
+  border: 2px solid #364249;
+  border-radius: 8px;
+}
+
+.bag-front:before {
+  left: -48px;
+}
+
+.bag-front:after {
+  right: -48px;
+}
+
+.molle {
+  position: absolute;
+
+  left: 35px;
+  right: 35px;
+  bottom: 38px;
+
+  height: 48px;
+
+  background:
+    repeating-linear-gradient(
+      to bottom,
+      #3c484e 0px,
+      #3c484e 4px,
+      transparent 4px,
+      transparent 11px
+    );
+}
+
+.product-label {
+  position: absolute;
+
+  bottom: 35px;
+  left: 0;
+  right: 0;
+
+  text-align: center;
+
+  color: #4f9cff;
+
+  font-size: 12px;
+  font-weight: 800;
+
+  letter-spacing: 4px;
+
+  z-index: 4;
+}
+
+
+/* HERO TEXT */
 
 .category {
   color: #4f9cff;
@@ -145,11 +315,16 @@ h1 span {
 
 .button {
   display: inline-block;
+
   background: #4f9cff;
   color: #050708;
+
   text-decoration: none;
+
   padding: 17px 26px;
-  border-radius: 8px;
+
+  border-radius: 9px;
+
   font-weight: 800;
   font-size: 17px;
 }
@@ -157,6 +332,7 @@ h1 span {
 .button:hover {
   background: white;
 }
+
 
 /* MAIN */
 
@@ -196,7 +372,8 @@ h2 span {
   max-width: 850px;
 }
 
-/* VERDICT BOX */
+
+/* VERDICT */
 
 .verdict-box {
   background: #0a1015;
@@ -209,10 +386,10 @@ h2 span {
   color: #aab4bd;
   font-size: 19px;
   line-height: 1.7;
-  margin: 0;
 }
 
-/* PROS CONS */
+
+/* PROS / CONS */
 
 .pros-cons {
   display: grid;
@@ -244,7 +421,6 @@ h2 span {
 
 ul {
   padding-left: 20px;
-  margin-bottom: 0;
 }
 
 li {
@@ -253,18 +429,23 @@ li {
   line-height: 1.5;
 }
 
+
 /* SPECS */
 
 .specs {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+
   border: 1px solid #1d2b38;
+
   border-radius: 20px;
+
   overflow: hidden;
 }
 
 .spec {
   padding: 22px 25px;
+
   border-bottom: 1px solid #1d2b38;
 }
 
@@ -274,80 +455,118 @@ li {
 
 .spec strong {
   display: block;
+
   color: #4f9cff;
+
   font-size: 13px;
+
   letter-spacing: 2px;
+
   margin-bottom: 8px;
 }
 
 .spec span {
   color: #aab4bd;
+
   font-size: 17px;
 }
+
 
 /* WHO */
 
 .best-grid {
   display: grid;
+
   grid-template-columns: 1fr 1fr;
+
   gap: 25px;
 }
 
 .best-card {
   padding: 30px;
+
   background: #0a1015;
+
   border: 1px solid #1d2b38;
+
   border-radius: 20px;
 }
 
 .best-card h3 {
   font-size: 25px;
-  margin-top: 0;
 }
 
 .best-card p {
   color: #9da8b1;
+
   line-height: 1.6;
+
   font-size: 17px;
 }
+
+
+/* RATING */
+
+.score {
+  font-size: 70px;
+
+  font-weight: 900;
+
+  color: #4f9cff;
+
+  margin: 15px 0 25px;
+}
+
 
 /* DISCLOSURE */
 
 .disclosure {
   padding: 28px;
+
   border-left: 3px solid #4f9cff;
+
   background: #080d12;
 }
 
 .disclosure p {
   color: #7f8b94;
+
   line-height: 1.6;
+
   font-size: 14px;
+
   margin: 0;
 }
+
 
 /* FOOTER */
 
 footer {
   border-top: 1px solid #1c252d;
+
   padding: 50px 6%;
+
   color: #69747d;
 }
 
 .footer-inner {
   max-width: 1300px;
+
   margin: auto;
 }
 
 .footer-logo {
   font-size: 25px;
+
   font-weight: 800;
+
   letter-spacing: 5px;
 }
 
 .footer-logo span {
   color: #4f9cff;
 }
+
 
 /* MOBILE */
 
@@ -359,6 +578,7 @@ footer {
 
   .logo {
     font-size: 32px;
+
     letter-spacing: 6px;
   }
 
@@ -371,12 +591,17 @@ footer {
   }
 
   .hero {
-    padding: 60px 6%;
+    padding: 55px 6% 70px;
   }
 
   .hero-grid {
     grid-template-columns: 1fr;
-    gap: 40px;
+
+    gap: 45px;
+  }
+
+  .product-showcase {
+    min-height: 430px;
   }
 
   h1 {
@@ -401,15 +626,19 @@ footer {
     border-right: none;
   }
 
-  .spec:last-child {
-    border-bottom: none;
+  .bag {
+    transform: scale(.82);
   }
+
 }
 
 </style>
+
 </head>
 
+
 <body>
+
 
 <header>
 
@@ -420,11 +649,17 @@ SPIES<span>HUB</span>
 </div>
 
 <nav>
+
 <a href="index.html">Home</a>
+
 <a href="reviews.html">Reviews</a>
+
 <a href="categories.html">Categories</a>
+
 <a href="deals.html">Deals</a>
+
 <a href="about.html">About</a>
+
 </nav>
 
 </div>
@@ -432,27 +667,38 @@ SPIES<span>HUB</span>
 </header>
 
 
+
 <section class="hero">
 
 <div class="hero-inner">
+
 
 <div class="breadcrumb">
 SPIESHUB / BAGS & PACKS / REVIEW
 </div>
 
+
 <div class="hero-grid">
 
 
-<div>
+<div class="product-showcase">
 
-<img
-class="product-image"
-src="https://www.511tactical.com/media/catalog/product/5/6/56563_019_1.jpg"
-alt="5.11 RUSH 24 2.0 37L Backpack"
-onerror="this.style.display='none'"
->
+<div class="bag">
+
+<div class="bag-top"></div>
+
+<div class="bag-front"></div>
+
+<div class="molle"></div>
 
 </div>
+
+<div class="product-label">
+RUSH 24 • 2.0 • 37L
+</div>
+
+</div>
+
 
 
 <div>
@@ -461,23 +707,35 @@ onerror="this.style.display='none'"
 BAGS & PACKS
 </div>
 
+
 <h1>
-5.11 RUSH 24 2.0<br>
-<span>37L</span>
+
+5.11 RUSH 24<br>
+
+<span>2.0 • 37L</span>
+
 </h1>
+
 
 <div class="rating">
 ★★★★★
 </div>
 
+
 <p class="verdict">
+
 A proven mid-sized pack designed to bridge the gap between
 everyday carry and serious field use.
+
 </p>
 
+
 <div class="price">
+
 AUD <span>$199.99</span>
+
 </div>
+
 
 <a
 class="button"
@@ -485,10 +743,14 @@ href="https://www.511tactical.com/au-en/rush24-2-0-backpack.html"
 target="_blank"
 rel="noopener"
 >
+
 Check current price →
+
 </a>
 
+
 </div>
+
 
 </div>
 
@@ -497,7 +759,9 @@ Check current price →
 </section>
 
 
+
 <main class="main">
+
 
 
 <section class="section">
@@ -506,29 +770,43 @@ Check current price →
 SPIESHUB VERDICT
 </div>
 
+
 <h2>
 Built to <span>carry.</span>
 </h2>
 
+
 <div class="verdict-box">
 
 <p>
-The RUSH 24 2.0 sits in an interesting middle ground. At 37 litres,
-it's considerably larger than a typical everyday backpack but
-doesn't move into oversized expedition-pack territory. That makes
-it a versatile option for people who want one bag that can cover
-work, travel, outdoor use and heavier everyday carry.
+
+The RUSH 24 2.0 sits in an interesting middle ground.
+At 37 litres, it is considerably larger than a typical
+everyday backpack but doesn't move into oversized expedition
+pack territory.
+
 </p>
 
 <p>
-Its strengths are organisation, durability and modularity. The
-trade-off is that it is a substantial pack, and its tactical styling
-won't appeal to everyone.
+
+That makes it a versatile option for people who want one bag
+that can cover work, travel, outdoor use and heavier everyday
+carry.
+
+</p>
+
+<p>
+
+Its strengths are organisation, durability and modularity.
+The trade-off is that it is a substantial pack, and its
+tactical styling won't appeal to everyone.
+
 </p>
 
 </div>
 
 </section>
+
 
 
 <section class="section">
@@ -537,44 +815,88 @@ won't appeal to everyone.
 PROS & CONSIDERATIONS
 </div>
 
+
 <h2>
 The good & the <span>trade-offs.</span>
 </h2>
 
+
 <div class="pros-cons">
+
 
 <div class="pros">
 
-<h3>What we like</h3>
+<h3>
+What we like
+</h3>
+
 
 <ul>
-<li>37L capacity gives plenty of usable space</li>
-<li>Strong organisation throughout the pack</li>
-<li>Padded laptop sleeve for up to 15" laptop</li>
-<li>MOLLE attachment points provide modularity</li>
-<li>Water-repellent 1050D nylon construction</li>
-<li>Hydration compartment</li>
+
+<li>
+37L capacity gives plenty of usable space
+</li>
+
+<li>
+Strong organisation throughout the pack
+</li>
+
+<li>
+Padded laptop sleeve for up to 15" laptop
+</li>
+
+<li>
+MOLLE attachment points provide modularity
+</li>
+
+<li>
+Water-repellent nylon construction
+</li>
+
+<li>
+Hydration compartment
+</li>
+
 </ul>
 
 </div>
+
 
 
 <div class="cons">
 
-<h3>Things to consider</h3>
+<h3>
+Things to consider
+</h3>
+
 
 <ul>
-<li>37L can be more pack than some everyday users need</li>
-<li>Tactical appearance isn't for everyone</li>
-<li>Multiple compartments can add complexity</li>
-<li>Weight is higher than a minimalist daypack</li>
+
+<li>
+37L can be more pack than some everyday users need
+</li>
+
+<li>
+Tactical appearance isn't for everyone
+</li>
+
+<li>
+Multiple compartments can add complexity
+</li>
+
+<li>
+Heavier than a minimalist daypack
+</li>
+
 </ul>
 
 </div>
 
+
 </div>
 
 </section>
+
 
 
 <section class="section">
@@ -583,45 +905,97 @@ The good & the <span>trade-offs.</span>
 KEY SPECIFICATIONS
 </div>
 
+
 <h2>
 The numbers.
 </h2>
 
+
 <div class="specs">
 
-<div class="spec">
-<strong>CAPACITY</strong>
-<span>37 litres / 2,275 cu in</span>
-</div>
 
 <div class="spec">
-<strong>WEIGHT</strong>
-<span>1.74 kg / 3.84 lb</span>
+
+<strong>
+CAPACITY
+</strong>
+
+<span>
+37 litres / 2,275 cu in
+</span>
+
 </div>
 
-<div class="spec">
-<strong>LAPTOP</strong>
-<span>Fits up to 15"</span>
-</div>
 
 <div class="spec">
-<strong>MATERIAL</strong>
-<span>Water-repellent 1050D nylon</span>
+
+<strong>
+WEIGHT
+</strong>
+
+<span>
+1.74 kg / 3.84 lb
+</span>
+
 </div>
 
-<div class="spec">
-<strong>HYDRATION</strong>
-<span>17" × 12.5" / 2L pocket</span>
-</div>
 
 <div class="spec">
-<strong>MAIN COMPARTMENT</strong>
-<span>20" × 12.5" × 8"</span>
+
+<strong>
+LAPTOP
+</strong>
+
+<span>
+Fits up to a 15" laptop
+</span>
+
 </div>
+
+
+<div class="spec">
+
+<strong>
+MATERIAL
+</strong>
+
+<span>
+Water-repellent high-strength nylon
+</span>
+
+</div>
+
+
+<div class="spec">
+
+<strong>
+HYDRATION
+</strong>
+
+<span>
+17" × 12.5" / 2L pocket
+</span>
+
+</div>
+
+
+<div class="spec">
+
+<strong>
+MAIN COMPARTMENT
+</strong>
+
+<span>
+20" × 12.5" × 8"
+</span>
+
+</div>
+
 
 </div>
 
 </section>
+
 
 
 <section class="section">
@@ -630,39 +1004,53 @@ The numbers.
 WHO IS IT FOR?
 </div>
 
+
 <h2>
 Where it <span>fits.</span>
 </h2>
 
+
 <div class="best-grid">
+
 
 <div class="best-card">
 
-<h3>Good choice for</h3>
+<h3>
+Good choice for
+</h3>
 
 <p>
+
 People who want a durable, highly organised backpack for
 work, travel, outdoor use, photography or carrying a larger
 amount of equipment.
+
 </p>
 
 </div>
+
 
 
 <div class="best-card">
 
-<h3>Look elsewhere if...</h3>
+<h3>
+Look elsewhere if...
+</h3>
 
 <p>
+
 You mainly want an ultra-light minimalist daypack, or you
 prefer a discreet conventional-looking backpack.
+
 </p>
 
 </div>
+
 
 </div>
 
 </section>
+
 
 
 <section class="section">
@@ -671,15 +1059,25 @@ prefer a discreet conventional-looking backpack.
 SPIESHUB RATING
 </div>
 
+
 <h2>
-Our score: <span>8.8/10</span>
+Our score
 </h2>
 
+
+<div class="score">
+8.8/10
+</div>
+
+
 <p class="section-text">
+
 A versatile and seriously capable 37L pack. Its durability,
 organisation and modularity are the big attractions. The main
 question is whether you actually need a pack this substantial.
+
 </p>
+
 
 <a
 class="button"
@@ -687,10 +1085,14 @@ href="https://www.511tactical.com/au-en/rush24-2-0-backpack.html"
 target="_blank"
 rel="noopener"
 >
+
 Check current price →
+
 </a>
 
+
 </section>
+
 
 
 <section class="section">
@@ -699,12 +1101,15 @@ Check current price →
 DISCLOSURE
 </div>
 
+
 <div class="disclosure">
 
 <p>
+
 SpiesHub may earn a commission from qualifying purchases made
 through affiliate links. Prices can change and should be checked
 with the retailer before purchasing.
+
 </p>
 
 </div>
@@ -712,7 +1117,9 @@ with the retailer before purchasing.
 </section>
 
 
+
 </main>
+
 
 
 <footer>
@@ -731,5 +1138,7 @@ Gear worth knowing. Information worth having.
 
 </footer>
 
+
 </body>
+
 </html>
