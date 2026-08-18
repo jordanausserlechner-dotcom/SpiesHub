@@ -1,1 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<title>SpiesHub | Categories</title>
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #050708;
+  color: #f4f7f8;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+  padding: 28px 7%;
+  border-bottom: 1px solid #1c252d;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(5,7,8,.96);
+}
+
+.logo {
+  font-size: 28px;
+  font-weight: 900;
+  letter-spacing: 5px;
+}
+
+.logo span {
+  color: #4d9cff;
+}
+
+nav a {
+  color: #9da7af;
+  text-decoration: none;
+  margin-left: 25px;
+  font-weight: 700;
+}
+
+nav a:hover {
+  color: #4d9cff;
+}
+
+.hero {
+  padding: 75px 7% 65px;
+  background:
+    radial-gradient(circle at 75% 25%, rgba(40,120,220,.18), transparent 35%),
+    #080b0e;
+}
+
+.tag {
+  display: inline-block;
+  border: 1px solid #315778;
+  border-radius: 30px;
+  padding: 12px 18px;
+  color: #63aaff;
+  letter-spacing: 3px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+h1 {
+  font-size: clamp(52px, 9vw, 95px);
+  line-height: .95;
+  margin: 35px 0 25px;
+  max-width: 850px;
+}
+
+h1 span {
+  color: #4d9cff;
+}
+
+.hero p {
+  color: #aab3ba;
+  font-size: 20px;
+  line-height: 1.6;
+  max-width: 700px;
+}
+
+.container {
+  padding: 65px 7%;
+}
+
+.section-title {
+  font-size: 42px;
+  margin-bottom: 12px;
+}
+
+.section-intro {
+  color: #8e989f;
+  font-size: 18px;
+  margin-bottom: 40px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+.card {
+  display: block;
+  min-height: 260px;
+  padding: 30px;
+  border-radius: 18px;
+  border: 1px solid #202b34;
+  background:
+    radial-gradient(circle at 90% 10%, rgba(77,156,255,.13), transparent 35%),
+    #0c1115;
+  color: white;
+  text-decoration: none;
+  transition: .25s;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  border-color: #4d9cff;
+}
+
+.number {
+  color: #4d9cff;
+  font-size: 13px;
+  font-weight: bold;
+  letter-spacing: 3px;
+}
+
+.card h2 {
+  font-size: 30px;
+  margin: 22px 0 12px;
+}
+
+.card p {
+  color: #919ca4;
+  line-height: 1.55;
+  font-size: 16px;
+}
+
+.arrow {
+  display: inline-block;
+  margin-top: 18px;
+  color: #4d9cff;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+footer {
+  border-top: 1px solid #20272d;
+  padding: 40px 7%;
+  color: #707a82;
+  margin-top: 30px;
+}
+
+@media(max-width:700px) {
+
+  header {
+    display: block;
+  }
+
+  nav {
+    margin-top: 20px;
+  }
+
+  nav a {
+    margin: 0 14px 0 0;
+    font-size: 14px;
+  }
+
+  .card {
+    min-height: 230px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+
+  <div class="logo">
+    SPIES<span>HUB</span>
+  </div>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="index.html#reviews">Reviews</a>
+    <a href="categories.html">Categories</a>
+    <a href="index.html#deals">Deals</a>
+    <a href="index.html#about">About</a>
+  </nav>
+
+</header>
+
+
+<section class="hero">
+
+  <div class="tag">
+    EXPLORE THE GEAR
+  </div>
+
+  <h1>
+    Find your<br>
+    <span>gear category.</span>
+  </h1>
+
+  <p>
+    Explore equipment, technology and field gear
+    reviewed for people who actually use it.
+  </p>
+
+</section>
+
+
+<section class="container">
+
+  <h2 class="section-title">
+    Categories
+  </h2>
+
+  <p class="section-intro">
+    Start exploring the equipment worth knowing about.
+  </p>
+
+
+  <div class="grid">
+
+
+    <a class="card" href="bags.html">
+
+      <div class="number">01 • CARRY</div>
+
+      <h2>Bags & Packs</h2>
+
+      <p>
+        Tactical packs, field bags, travel bags
+        and everyday carry systems.
+      </p>
+
+      <div class="arrow">
+        Explore →
+      </div>
+
+    </a>
+
+
+    <a class="card" href="#">
+
+      <div class="number">02 • AIR</div>
+
+      <h2>Drones</h2>
+
+      <p>
+        Drones, accessories and aerial technology
+        for observation, photography and field use.
+      </p>
+
+      <div class="arrow">
+        Coming soon →
+      </div>
+
+    </a>
+
+
+    <a class="card" href="#">
+
+      <div class="number">03 • OPTICS</div>
+
+      <h2>Optics</h2>
+
+      <p>
+        Binoculars, scopes, thermal equipment
+        and optical technology.
+      </p>
+
+      <div class="arrow">
+        Coming soon →
+      </div>
+
+    </a>
+
+
+    <a class="card" href="#">
+
+      <div class="number">04 • IMAGE</div>
+
+      <h2>Cameras</h2>
+
+      <p>
+        Cameras, lenses, action cameras and
+        equipment for capturing the field.
+      </p>
+
+      <div class="arrow">
+        Coming soon →
+      </div>
+
+    </a>
+
+
+    <a class="card" href="#">
+
+      <div class="number">05 • TECH</div>
+
+      <h2>Surveillance Tech</h2>
+
+      <p>
+        Surveillance technology, monitoring equipment
+        and information-gathering tools.
+      </p>
+
+      <div class="arrow">
+        Coming soon →
+      </div>
+
+    </a>
+
+
+    <a class="card" href="#">
+
+      <div class="number">06 • FIELD</div>
+
+      <h2>Field Gear</h2>
+
+      <p>
+        Equipment designed for demanding environments,
+        outdoor work and extended use.
+      </p>
+
+      <div class="arrow">
+        Coming soon →
+      </div>
+
+    </a>
+
+
+    <a class="card" href="#">
+
+      <div class="number">07 • EVERYDAY</div>
+
+      <h2>Everyday Tech</h2>
+
+      <p>
+        Useful technology, gadgets and equipment
+        that earn a place in your everyday kit.
+      </p>
+
+      <div class="arrow">
+        Coming soon →
+      </div>
+
+    </a>
+
+
+    <a class="card" href="#">
+
+      <div class="number">08 • MORE</div>
+
+      <h2>New & Noteworthy</h2>
+
+      <p>
+        Interesting new equipment and technology
+        that deserves a closer look.
+      </p>
+
+      <div class="arrow">
+        Coming soon →
+      </div>
+
+    </a>
+
+
+  </div>
+
+</section>
+
+
+<footer>
+
+  <strong>
+    SPIES<span style="color:#4d9cff;">HUB</span>
+  </strong>
+
+  <br><br>
+
+  Gear reviewed by people who know the gear.
+
+</footer>
+
+</body>
+</html>
