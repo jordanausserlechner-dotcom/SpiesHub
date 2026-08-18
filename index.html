@@ -4,880 +4,720 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>SpiesHub | Gear Worth Knowing</title>
-
-<meta name="description" content="SpiesHub reviews tactical gear, bags, optics, cameras, drones, surveillance technology and field equipment.">
+<title>SpiesHub | Gear Reviews & Field Technology</title>
 
 <style>
-
 * {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+    box-sizing: border-box;
 }
 
 html {
-  scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
-  background: #05070a;
-  color: #f4f7fa;
-  line-height: 1.6;
+    margin: 0;
+    background: #050708;
+    color: #f4f7f8;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-img {
-  width: 100%;
-  display: block;
-}
-
-.container {
-  width: min(1180px, 92%);
-  margin: auto;
-}
-
-/* =========================
-   HEADER
-========================= */
+/* HEADER */
 
 header {
-  border-bottom: 1px solid #18212b;
-  background: rgba(5,7,10,0.96);
-  position: sticky;
-  top: 0;
-  z-index: 50;
-  backdrop-filter: blur(12px);
+    padding: 28px 6%;
+    border-bottom: 1px solid #1c252d;
+    background: #050708;
 }
 
-.nav {
-  min-height: 82px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 30px;
+.header-inner {
+    max-width: 1250px;
+    margin: auto;
 }
 
 .logo {
-  font-size: 28px;
-  font-weight: 900;
-  letter-spacing: 6px;
-  white-space: nowrap;
+    font-size: 42px;
+    font-weight: 900;
+    letter-spacing: 8px;
+    margin-bottom: 28px;
 }
 
 .logo span {
-  color: #4da3ff;
+    color: #4f9cff;
 }
 
 nav {
-  display: flex;
-  gap: 26px;
-  font-weight: 600;
-  color: #aeb8c2;
+    display: flex;
+    gap: 38px;
+    flex-wrap: wrap;
 }
 
 nav a {
-  transition: .2s;
+    color: #9da8b2;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 700;
 }
 
 nav a:hover {
-  color: #4da3ff;
+    color: #4f9cff;
 }
 
-/* =========================
-   HERO
-========================= */
+/* HERO */
 
 .hero {
-  min-height: 650px;
-  display: flex;
-  align-items: center;
-  position: relative;
-  overflow: hidden;
-  background:
-    linear-gradient(90deg, #05070a 10%, rgba(5,7,10,.82) 45%, rgba(5,7,10,.35)),
-    url("https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=1800&q=85")
-    center/cover;
+    padding: 95px 6% 110px;
+    background:
+        radial-gradient(circle at 80% 20%, rgba(43,111,184,.18), transparent 35%),
+        linear-gradient(180deg, #091019 0%, #050708 100%);
 }
 
-.hero::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(circle at 75% 45%, rgba(55,145,255,.18), transparent 35%);
-  pointer-events: none;
+.hero-inner {
+    max-width: 1250px;
+    margin: auto;
 }
 
-.hero-content {
-  max-width: 720px;
-  position: relative;
-  z-index: 2;
-  padding: 80px 0;
+.eyebrow {
+    display: inline-block;
+    padding: 16px 30px;
+    border: 1px solid #2c5d87;
+    border-radius: 50px;
+    color: #4f9cff;
+    font-size: 15px;
+    font-weight: 800;
+    letter-spacing: 5px;
+    margin-bottom: 38px;
 }
 
-.kicker {
-  display: inline-block;
-  border: 1px solid #315b80;
-  color: #66b4ff;
-  padding: 10px 18px;
-  border-radius: 999px;
-  text-transform: uppercase;
-  letter-spacing: 4px;
-  font-size: 12px;
-  font-weight: 800;
-  margin-bottom: 28px;
-  background: rgba(5,10,16,.65);
+.hero h1 {
+    max-width: 950px;
+    font-size: clamp(55px, 8vw, 105px);
+    line-height: .95;
+    margin: 0 0 35px;
+    letter-spacing: -4px;
 }
 
-h1 {
-  font-size: clamp(52px, 8vw, 94px);
-  line-height: .96;
-  letter-spacing: -4px;
-  margin-bottom: 30px;
-}
-
-.blue {
-  color: #4da3ff;
+.hero h1 span {
+    color: #4f9cff;
 }
 
 .hero p {
-  color: #aeb8c2;
-  font-size: 20px;
-  max-width: 650px;
-  margin-bottom: 35px;
+    max-width: 850px;
+    color: #a7b1ba;
+    font-size: 24px;
+    line-height: 1.7;
+    margin-bottom: 40px;
 }
 
-.buttons {
-  display: flex;
-  gap: 14px;
-  flex-wrap: wrap;
+.button {
+    display: inline-block;
+    background: #4f9cff;
+    color: #050708;
+    text-decoration: none;
+    padding: 18px 28px;
+    border-radius: 8px;
+    font-weight: 800;
+    font-size: 17px;
+    margin-right: 10px;
 }
 
-.btn {
-  padding: 15px 24px;
-  border-radius: 8px;
-  font-weight: 800;
-  border: 1px solid #273746;
-  background: #10161d;
+.button.secondary {
+    background: transparent;
+    color: #f4f7f8;
+    border: 1px solid #34404b;
 }
 
-.btn.primary {
-  background: #4da3ff;
-  color: #03101d;
-  border-color: #4da3ff;
+/* SECTIONS */
+
+.section {
+    padding: 90px 6%;
 }
 
-.btn:hover {
-  transform: translateY(-2px);
+.section-inner {
+    max-width: 1250px;
+    margin: auto;
 }
 
-/* =========================
-   SECTION
-========================= */
-
-section {
-  padding: 90px 0;
+.section-label {
+    color: #4f9cff;
+    font-size: 14px;
+    font-weight: 800;
+    letter-spacing: 5px;
+    margin-bottom: 18px;
 }
 
-.section-head {
-  display: flex;
-  align-items: end;
-  justify-content: space-between;
-  gap: 25px;
-  margin-bottom: 35px;
+.section h2 {
+    font-size: clamp(40px, 6vw, 70px);
+    margin: 0 0 45px;
+    letter-spacing: -2px;
 }
 
-.section-head h2 {
-  font-size: 42px;
-  letter-spacing: -1px;
+/* FEATURED */
+
+.featured-grid {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    gap: 25px;
 }
 
-.section-head p {
-  color: #8995a1;
-  max-width: 500px;
+.feature-card {
+    background: #0c1218;
+    border: 1px solid #1d2a35;
+    border-radius: 18px;
+    overflow: hidden;
 }
 
-/* =========================
-   CATEGORY GRID
-========================= */
-
-.categories {
-  background: #080c11;
+.feature-image {
+    height: 430px;
+    background-size: cover;
+    background-position: center;
 }
 
-.category-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 18px;
-}
-
-.category {
-  position: relative;
-  height: 270px;
-  overflow: hidden;
-  border-radius: 14px;
-  border: 1px solid #1c2935;
-  background: #0c1117;
-}
-
-.category img {
-  height: 100%;
-  object-fit: cover;
-  transition: transform .5s;
-  opacity: .72;
-}
-
-.category:hover img {
-  transform: scale(1.06);
-}
-
-.category::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(transparent 20%, rgba(0,0,0,.9));
-}
-
-.category-info {
-  position: absolute;
-  bottom: 20px;
-  left: 20px;
-  z-index: 2;
-}
-
-.category-info h3 {
-  font-size: 23px;
-}
-
-.category-info p {
-  color: #aeb8c2;
-  font-size: 13px;
-}
-
-/* =========================
-   FEATURED REVIEWS
-========================= */
-
-.review-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 22px;
-}
-
-.review {
-  background: #0b1016;
-  border: 1px solid #1c2935;
-  border-radius: 14px;
-  overflow: hidden;
-  transition: .25s;
-}
-
-.review:hover {
-  transform: translateY(-5px);
-  border-color: #315b80;
-}
-
-.review-image {
-  height: 230px;
-  object-fit: cover;
-}
-
-.review-body {
-  padding: 24px;
-}
-
-.tag {
-  color: #4da3ff;
-  font-size: 11px;
-  font-weight: 800;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-}
-
-.review h3 {
-  font-size: 23px;
-  margin: 8px 0 10px;
-}
-
-.review p {
-  color: #8f9ba7;
-  font-size: 14px;
-}
-
-.rating {
-  margin-top: 18px;
-  color: #4da3ff;
-  font-weight: 800;
-}
-
-/* =========================
-   FEATURED BANNER
-========================= */
-
-.feature-banner {
-  border-top: 1px solid #18212b;
-  border-bottom: 1px solid #18212b;
-  background:
-    linear-gradient(90deg, rgba(5,7,10,.97), rgba(5,7,10,.55)),
-    url("https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?auto=format&fit=crop&w=1800&q=85")
-    center/cover;
+.feature-card.small .feature-image {
+    height: 250px;
 }
 
 .feature-content {
-  max-width: 650px;
+    padding: 28px;
 }
 
-.feature-content h2 {
-  font-size: 48px;
-  line-height: 1.05;
-  margin-bottom: 18px;
+.feature-content h3 {
+    font-size: 32px;
+    margin: 0 0 12px;
 }
 
 .feature-content p {
-  color: #aeb8c2;
-  margin-bottom: 25px;
+    color: #929da7;
+    font-size: 17px;
+    line-height: 1.6;
 }
 
-/* =========================
-   FOOTER
-========================= */
+.tag {
+    color: #4f9cff;
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 3px;
+}
+
+/* CATEGORIES */
+
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.category {
+    min-height: 220px;
+    padding: 30px;
+    border-radius: 16px;
+    background:
+        radial-gradient(circle at 90% 10%, rgba(60,130,210,.16), transparent 40%),
+        #0b1116;
+    border: 1px solid #1d2a35;
+    text-decoration: none;
+    color: white;
+    transition: .25s;
+}
+
+.category:hover {
+    transform: translateY(-5px);
+    border-color: #4f9cff;
+}
+
+.category-number {
+    color: #4f9cff;
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 4px;
+}
+
+.category h3 {
+    font-size: 30px;
+    margin: 35px 0 12px;
+}
+
+.category p {
+    color: #929da7;
+    line-height: 1.5;
+}
+
+/* REVIEWS */
+
+.reviews {
+    background: #080d12;
+}
+
+.review-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.review {
+    background: #0c1218;
+    border: 1px solid #1d2a35;
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.review-image {
+    height: 220px;
+    background-size: cover;
+    background-position: center;
+    background-color: #111820;
+}
+
+.review-content {
+    padding: 25px;
+}
+
+.review-content h3 {
+    font-size: 25px;
+    margin: 10px 0;
+}
+
+.stars {
+    color: #4f9cff;
+    letter-spacing: 3px;
+}
+
+.review-content p {
+    color: #929da7;
+    line-height: 1.6;
+}
+
+/* CTA */
+
+.cta {
+    margin-top: 50px;
+    padding: 65px 40px;
+    border: 1px solid #244b6d;
+    border-radius: 20px;
+    text-align: center;
+    background:
+        radial-gradient(circle at center, rgba(49,117,190,.15), transparent 60%),
+        #080e14;
+}
+
+.cta h2 {
+    margin-bottom: 20px;
+}
+
+.cta p {
+    color: #929da7;
+    max-width: 650px;
+    margin: 0 auto 30px;
+    line-height: 1.6;
+}
+
+/* ABOUT */
+
+.about-text {
+    max-width: 800px;
+    color: #929da7;
+    font-size: 22px;
+    line-height: 1.8;
+}
+
+/* FOOTER */
 
 footer {
-  border-top: 1px solid #18212b;
-  padding: 55px 0;
-  background: #030507;
+    border-top: 1px solid #1c252d;
+    padding: 50px 6%;
+    color: #69747e;
 }
 
-.footer-grid {
-  display: grid;
-  grid-template-columns: 2fr 1fr 1fr;
-  gap: 40px;
+.footer-inner {
+    max-width: 1250px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    flex-wrap: wrap;
 }
 
-footer p {
-  color: #737f8b;
-  margin-top: 12px;
-  max-width: 500px;
+.footer-logo {
+    font-size: 25px;
+    font-weight: 900;
+    letter-spacing: 5px;
 }
 
-footer h4 {
-  margin-bottom: 12px;
+.footer-logo span {
+    color: #4f9cff;
 }
 
-footer a {
-  display: block;
-  color: #8995a1;
-  margin: 7px 0;
+/* MOBILE */
+
+@media (max-width: 800px) {
+
+    header {
+        padding: 25px 6%;
+    }
+
+    .logo {
+        font-size: 31px;
+        letter-spacing: 6px;
+    }
+
+    nav {
+        gap: 22px;
+    }
+
+    nav a {
+        font-size: 16px;
+    }
+
+    .hero {
+        padding-top: 65px;
+    }
+
+    .hero h1 {
+        font-size: 58px;
+        letter-spacing: -3px;
+    }
+
+    .hero p {
+        font-size: 19px;
+    }
+
+    .featured-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .category-grid,
+    .review-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .feature-image {
+        height: 300px;
+    }
+
+    .section {
+        padding: 70px 6%;
+    }
 }
-
-footer a:hover {
-  color: #4da3ff;
-}
-
-.copyright {
-  border-top: 1px solid #151d25;
-  margin-top: 40px;
-  padding-top: 20px;
-  color: #59636d;
-  font-size: 13px;
-}
-
-/* =========================
-   MOBILE
-========================= */
-
-@media (max-width: 850px) {
-
-  .nav {
-    min-height: 70px;
-  }
-
-  .logo {
-    font-size: 21px;
-    letter-spacing: 4px;
-  }
-
-  nav {
-    gap: 14px;
-    font-size: 13px;
-    overflow-x: auto;
-    max-width: 60%;
-  }
-
-  .hero {
-    min-height: 680px;
-  }
-
-  h1 {
-    font-size: 57px;
-    letter-spacing: -2px;
-  }
-
-  .hero p {
-    font-size: 17px;
-  }
-
-  .category-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .review-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .section-head {
-    display: block;
-  }
-
-  .section-head h2 {
-    font-size: 34px;
-    margin-bottom: 10px;
-  }
-
-  .feature-content h2 {
-    font-size: 38px;
-  }
-
-  .footer-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-@media (max-width: 500px) {
-
-  .container {
-    width: 90%;
-  }
-
-  .category {
-    height: 210px;
-  }
-
-  .hero {
-    min-height: 620px;
-  }
-
-  h1 {
-    font-size: 51px;
-  }
-
-  .kicker {
-    font-size: 10px;
-    letter-spacing: 3px;
-  }
-
-  nav {
-    max-width: 58%;
-  }
-}
-
 </style>
 </head>
 
 <body>
 
 <header>
-  <div class="container nav">
+<div class="header-inner">
 
-    <a href="#" class="logo">
-      SPIES<span>HUB</span>
-    </a>
+<div class="logo">
+SPIES<span>HUB</span>
+</div>
 
-    <nav>
-      <a href="#">Home</a>
-      <a href="#reviews">Reviews</a>
-      <a href="#categories">Categories</a>
-      <a href="#deals">Deals</a>
-      <a href="#about">About</a>
-    </nav>
+<nav>
+<a href="index.html">Home</a>
+<a href="#reviews">Reviews</a>
+<a href="categories.html">Categories</a>
+<a href="#deals">Deals</a>
+<a href="#about">About</a>
+</nav>
 
-  </div>
+</div>
 </header>
 
 
 <!-- HERO -->
 
-<main>
-
 <section class="hero">
+<div class="hero-inner">
 
-  <div class="container">
+<div class="eyebrow">
+EQUIPMENT • TECHNOLOGY • FIELD GEAR
+</div>
 
-    <div class="hero-content">
+<h1>
+Gear worth<br>
+knowing.<br>
+<span>Information worth having.</span>
+</h1>
 
-      <div class="kicker">
-        Equipment • Technology • Field Gear
-      </div>
+<p>
+SpiesHub explores the equipment worth knowing about — from drones and surveillance technology to bags, optics, cameras, field gear and everyday technology.
+</p>
 
-      <h1>
-        Gear reviewed by people who
-        <span class="blue">know the gear.</span>
-      </h1>
+<a class="button" href="#reviews">
+Explore Reviews →
+</a>
 
-      <p>
-        SpiesHub explores the equipment worth knowing about —
-        from bags and optics to cameras, drones, surveillance
-        technology and field gear.
-      </p>
+<a class="button secondary" href="categories.html">
+Browse Categories
+</a>
 
-      <div class="buttons">
-        <a href="#reviews" class="btn primary">
-          Explore Reviews
-        </a>
+</div>
+</section>
 
-        <a href="#categories" class="btn">
-          Browse Categories
-        </a>
-      </div>
 
-    </div>
+<!-- FEATURED -->
 
-  </div>
+<section class="section">
 
+<div class="section-inner">
+
+<div class="section-label">
+FEATURED
+</div>
+
+<h2>Gear in focus.</h2>
+
+<div class="featured-grid">
+
+<div class="feature-card">
+
+<div class="feature-image"
+style="background-image:url('https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=1200&q=85');">
+</div>
+
+<div class="feature-content">
+
+<div class="tag">FIELD GEAR</div>
+
+<h3>Bags built for the field.</h3>
+
+<p>
+What makes a good field pack? We look at durability, organisation, comfort and real-world usefulness.
+</p>
+
+<a class="button" href="bags.html">View Bags →</a>
+
+</div>
+</div>
+
+
+<div class="feature-card small">
+
+<div class="feature-image"
+style="background-image:url('https://images.unsplash.com/photo-1473968512647-3e447244af8f?auto=format&fit=crop&w=1000&q=85');">
+</div>
+
+<div class="feature-content">
+
+<div class="tag">AIR TECHNOLOGY</div>
+
+<h3>Drones</h3>
+
+<p>
+Aerial technology for observation, photography and field use.
+</p>
+
+</div>
+</div>
+
+</div>
+</div>
 </section>
 
 
 <!-- CATEGORIES -->
 
-<section class="categories" id="categories">
+<section class="section">
 
-  <div class="container">
+<div class="section-inner">
 
-    <div class="section-head">
+<div class="section-label">
+EXPLORE
+</div>
 
-      <div>
-        <div class="tag">Explore the gear</div>
-        <h2>Categories</h2>
-      </div>
+<h2>Categories.</h2>
 
-      <p>
-        Equipment selected for people who spend time
-        in the field, behind the camera or simply want
-        better gear.
-      </p>
+<div class="category-grid">
 
-    </div>
+<a class="category" href="bags.html">
+<div class="category-number">01 • CARRY</div>
+<h3>Bags & Packs</h3>
+<p>
+Tactical packs, field bags, travel bags and everyday carry systems.
+</p>
+</a>
 
+<a class="category" href="categories.html">
+<div class="category-number">02 • AIR</div>
+<h3>Drones</h3>
+<p>
+Drones, accessories and aerial technology for observation and photography.
+</p>
+</a>
 
-    <div class="category-grid">
+<a class="category" href="categories.html">
+<div class="category-number">03 • OPTICS</div>
+<h3>Optics</h3>
+<p>
+Binoculars, thermal technology, scopes and optical equipment.
+</p>
+</a>
 
-      <a class="category" href="#">
-        <img
-          src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=900&q=85"
-          alt="Tactical backpack">
-        <div class="category-info">
-          <h3>Bags & Backpacks</h3>
-          <p>Everyday, travel & field carry</p>
-        </div>
-      </a>
+<a class="category" href="categories.html">
+<div class="category-number">04 • VISION</div>
+<h3>Cameras</h3>
+<p>
+Cameras, action cameras and equipment for capturing the field.
+</p>
+</a>
 
+<a class="category" href="categories.html">
+<div class="category-number">05 • TECH</div>
+<h3>Everyday Tech</h3>
+<p>
+Useful technology, gadgets and equipment worth knowing about.
+</p>
+</a>
 
-      <a class="category" href="#">
-        <img
-          src="https://images.unsplash.com/photo-1519671282425-5e6f0f5d8a1b?auto=format&fit=crop&w=900&q=85"
-          alt="Optics">
-        <div class="category-info">
-          <h3>Optics</h3>
-          <p>Binoculars, scopes & observation</p>
-        </div>
-      </a>
+<a class="category" href="categories.html">
+<div class="category-number">06 • FIELD</div>
+<h3>Field Gear</h3>
+<p>
+Practical equipment designed for demanding environments.
+</p>
+</a>
 
-
-      <a class="category" href="#">
-        <img
-          src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&w=900&q=85"
-          alt="Camera">
-        <div class="category-info">
-          <h3>Cameras</h3>
-          <p>Photography & video equipment</p>
-        </div>
-      </a>
-
-
-      <a class="category" href="#">
-        <img
-          src="https://images.unsplash.com/photo-1473968512647-3e447244af8f?auto=format&fit=crop&w=900&q=85"
-          alt="Drone">
-        <div class="category-info">
-          <h3>Drones</h3>
-          <p>Aerial platforms & accessories</p>
-        </div>
-      </a>
-
-
-      <a class="category" href="#">
-        <img
-          src="https://images.unsplash.com/photo-1557597774-9d273605dfa9?auto=format&fit=crop&w=900&q=85"
-          alt="Technology">
-        <div class="category-info">
-          <h3>Surveillance</h3>
-          <p>CCTV, cameras & monitoring</p>
-        </div>
-      </a>
-
-
-      <a class="category" href="#">
-        <img
-          src="https://images.unsplash.com/photo-1551632811-561732d1e306?auto=format&fit=crop&w=900&q=85"
-          alt="Outdoor field gear">
-        <div class="category-info">
-          <h3>Field Gear</h3>
-          <p>Outdoor & expedition equipment</p>
-        </div>
-      </a>
-
-
-      <a class="category" href="#">
-        <img
-          src="https://images.unsplash.com/photo-1517336714739-489689fd1ca8?auto=format&fit=crop&w=900&q=85"
-          alt="Technology">
-        <div class="category-info">
-          <h3>Everyday Tech</h3>
-          <p>Technology worth carrying</p>
-        </div>
-      </a>
-
-
-      <a class="category" href="#">
-        <img
-          src="https://images.unsplash.com/photo-1502920917128-1aa500764cbd?auto=format&fit=crop&w=900&q=85"
-          alt="Camera equipment">
-        <div class="category-info">
-          <h3>Accessories</h3>
-          <p>The gear that completes the kit</p>
-        </div>
-      </a>
-
-    </div>
-
-  </div>
-
+</div>
+</div>
 </section>
 
 
 <!-- REVIEWS -->
 
-<section id="reviews">
+<section class="section reviews" id="reviews">
 
-  <div class="container">
+<div class="section-inner">
 
-    <div class="section-head">
+<div class="section-label">
+LATEST REVIEWS
+</div>
 
-      <div>
-        <div class="tag">Field tested</div>
-        <h2>Featured Reviews</h2>
-      </div>
+<h2>Worth knowing.</h2>
 
-      <p>
-        Straightforward reviews focused on what the
-        equipment actually does in the real world.
-      </p>
-
-    </div>
+<div class="review-grid">
 
 
-    <div class="review-grid">
+<div class="review">
+
+<div class="review-image"
+style="background-image:url('https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=900&q=85');">
+</div>
+
+<div class="review-content">
+
+<div class="stars">★★★★★</div>
+
+<h3>Field Packs</h3>
+
+<p>
+What to look for when choosing a durable pack for field use.
+</p>
+
+<a class="button" href="bags.html">Read Review →</a>
+
+</div>
+</div>
 
 
-      <article class="review">
+<div class="review">
 
-        <img
-          class="review-image"
-          src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=1000&q=85"
-          alt="Backpack">
+<div class="review-image"
+style="background-image:url('https://images.unsplash.com/photo-1511499767150-a48a237f0083?auto=format&fit=crop&w=900&q=85');">
+</div>
 
-        <div class="review-body">
+<div class="review-content">
 
-          <div class="tag">Bags</div>
+<div class="stars">★★★★★</div>
 
-          <h3>Best Everyday Carry Backpacks</h3>
+<h3>Optics</h3>
 
-          <p>
-            What makes a good everyday backpack and
-            which features actually matter?
-          </p>
+<p>
+Binoculars, scopes and optical equipment — what features actually matter?
+</p>
 
-          <div class="rating">
-            ★★★★★
-          </div>
+<a class="button secondary" href="categories.html">Coming Soon</a>
 
-        </div>
-
-      </article>
+</div>
+</div>
 
 
-      <article class="review">
+<div class="review">
 
-        <img
-          class="review-image"
-          src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&w=1000&q=85"
-          alt="Camera">
+<div class="review-image"
+style="background-image:url('https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=900&q=85');">
+</div>
 
-        <div class="review-body">
+<div class="review-content">
 
-          <div class="tag">Cameras</div>
+<div class="stars">★★★★★</div>
 
-          <h3>Camera Gear Worth Carrying</h3>
+<h3>Everyday Tech</h3>
 
-          <p>
-            Practical camera equipment for people
-            who actually use it in the field.
-          </p>
+<p>
+Useful technology and gadgets that can make life easier in the field and everyday life.
+</p>
 
-          <div class="rating">
-            ★★★★★
-          </div>
+<a class="button secondary" href="categories.html">Coming Soon</a>
 
-        </div>
+</div>
+</div>
 
-      </article>
+</div>
 
 
-      <article class="review">
+<!-- CTA -->
 
-        <img
-          class="review-image"
-          src="https://images.unsplash.com/photo-1473968512647-3e447244af8f?auto=format&fit=crop&w=1000&q=85"
-          alt="Drone">
+<div class="cta" id="deals">
 
-        <div class="review-body">
+<h2>Good gear shouldn't be hard to find.</h2>
 
-          <div class="tag">Drones</div>
+<p>
+SpiesHub brings together useful reviews, comparisons and eventually the best deals from across the gear world.
+</p>
 
-          <h3>Drone Equipment Guide</h3>
+<a class="button" href="categories.html">
+Explore SpiesHub →
+</a>
 
-          <p>
-            The platforms, accessories and features
-            worth paying attention to.
-          </p>
+</div>
 
-          <div class="rating">
-            ★★★★★
-          </div>
-
-        </div>
-
-      </article>
-
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- FEATURE -->
-
-<section class="feature-banner" id="deals">
-
-  <div class="container">
-
-    <div class="feature-content">
-
-      <div class="tag">SpiesHub Picks</div>
-
-      <h2>
-        Don't buy the gear.
-        <span class="blue">Know the gear.</span>
-      </h2>
-
-      <p>
-        We cut through the marketing and focus on the
-        equipment, features and details that actually matter.
-      </p>
-
-      <a href="#reviews" class="btn primary">
-        See Our Picks
-      </a>
-
-    </div>
-
-  </div>
-
+</div>
 </section>
 
 
 <!-- ABOUT -->
 
-<section id="about">
+<section class="section" id="about">
 
-  <div class="container">
+<div class="section-inner">
 
-    <div class="section-head">
+<div class="section-label">
+ABOUT SPIESHUB
+</div>
 
-      <div>
-        <div class="tag">About SpiesHub</div>
-        <h2>Built around better gear.</h2>
-      </div>
+<h2>Know the gear.</h2>
 
-      <p>
-        SpiesHub is an independent gear and technology
-        resource covering equipment for field work,
-        travel, photography, observation and everyday use.
-      </p>
+<p class="about-text">
+SpiesHub is built around one simple idea: finding equipment that is actually worth knowing about.
 
-    </div>
+From tactical and field equipment to drones, cameras, optics and technology, we focus on useful information rather than hype.
+</p>
 
-  </div>
-
+</div>
 </section>
-
-</main>
 
 
 <footer>
 
-  <div class="container">
+<div class="footer-inner">
 
-    <div class="footer-grid">
+<div class="footer-logo">
+SPIES<span>HUB</span>
+</div>
 
-      <div>
+<div>
+© 2026 SpiesHub. Gear worth knowing.
+</div>
 
-        <div class="logo">
-          SPIES<span>HUB</span>
-        </div>
-
-        <p>
-          Gear worth knowing. Information worth having.
-        </p>
-
-      </div>
-
-
-      <div>
-
-        <h4>Explore</h4>
-
-        <a href="#reviews">Reviews</a>
-        <a href="#categories">Categories</a>
-        <a href="#deals">Deals</a>
-
-      </div>
-
-
-      <div>
-
-        <h4>SpiesHub</h4>
-
-        <a href="#about">About</a>
-        <a href="#">Contact</a>
-
-      </div>
-
-    </div>
-
-
-    <div class="copyright">
-      © 2026 SpiesHub. All rights reserved.
-    </div>
-
-  </div>
+</div>
 
 </footer>
 
