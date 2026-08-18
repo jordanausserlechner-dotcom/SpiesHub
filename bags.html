@@ -1,1 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<title>SpiesHub | Bags & Packs</title>
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #050708;
+  color: #f4f7f8;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+  padding: 28px 7%;
+  border-bottom: 1px solid #1c252d;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  background: rgba(5,7,8,0.95);
+  backdrop-filter: blur(12px);
+  z-index: 10;
+}
+
+.logo {
+  font-size: 28px;
+  font-weight: 900;
+  letter-spacing: 5px;
+}
+
+.logo span {
+  color: #4d9cff;
+}
+
+nav a {
+  color: #9da7af;
+  text-decoration: none;
+  margin-left: 25px;
+  font-weight: 700;
+}
+
+nav a:hover {
+  color: #4d9cff;
+}
+
+.hero {
+  padding: 80px 7% 55px;
+  background:
+    radial-gradient(circle at 75% 30%, rgba(40,120,220,.18), transparent 35%),
+    #080b0e;
+}
+
+.tag {
+  display: inline-block;
+  border: 1px solid #315778;
+  border-radius: 30px;
+  padding: 12px 18px;
+  color: #63aaff;
+  letter-spacing: 3px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+h1 {
+  font-size: clamp(48px, 8vw, 90px);
+  line-height: .95;
+  margin: 35px 0 25px;
+  max-width: 900px;
+}
+
+h1 span {
+  color: #4d9cff;
+}
+
+.hero p {
+  color: #aab3ba;
+  font-size: 20px;
+  line-height: 1.6;
+  max-width: 720px;
+}
+
+.container {
+  padding: 55px 7%;
+}
+
+.section-title {
+  font-size: 36px;
+  margin-bottom: 35px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+}
+
+.card {
+  background: #0c1115;
+  border: 1px solid #202b34;
+  border-radius: 18px;
+  overflow: hidden;
+  transition: .25s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  border-color: #4d9cff;
+}
+
+.card img {
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+  display: block;
+}
+
+.card-content {
+  padding: 23px;
+}
+
+.category {
+  color: #4d9cff;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.card h2 {
+  margin: 12px 0;
+  font-size: 24px;
+}
+
+.card p {
+  color: #929da5;
+  line-height: 1.5;
+}
+
+.button {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 12px 18px;
+  background: #4d9cff;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+}
+
+footer {
+  border-top: 1px solid #20272d;
+  padding: 40px 7%;
+  color: #707a82;
+  margin-top: 40px;
+}
+
+@media(max-width:700px) {
+  header {
+    display: block;
+  }
+
+  nav {
+    margin-top: 20px;
+  }
+
+  nav a {
+    margin: 0 15px 0 0;
+    font-size: 14px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+
+  <div class="logo">
+    SPIES<span>HUB</span>
+  </div>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="index.html#reviews">Reviews</a>
+    <a href="index.html#categories">Categories</a>
+    <a href="index.html#deals">Deals</a>
+    <a href="index.html#about">About</a>
+  </nav>
+
+</header>
+
+<section class="hero">
+
+  <div class="tag">FIELD GEAR • BAGS • PACKS</div>
+
+  <h1>
+    Bags built for<br>
+    <span>the field.</span>
+  </h1>
+
+  <p>
+    Field bags, packs and carry systems worth knowing about.
+    We look at durability, organisation, comfort and real-world usefulness.
+  </p>
+
+</section>
+
+<section class="container">
+
+  <h2 class="section-title">Bags worth knowing.</h2>
+
+  <div class="grid">
+
+    <article class="card">
+
+      <img
+        src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=1200&q=80"
+        alt="Tactical backpack">
+
+      <div class="card-content">
+
+        <div class="category">TACTICAL PACKS</div>
+
+        <h2>Everyday Tactical Packs</h2>
+
+        <p>
+          What makes a tactical backpack actually useful
+          when you're carrying equipment every day?
+        </p>
+
+        <a class="button" href="#">Read Review</a>
+
+      </div>
+
+    </article>
+
+
+    <article class="card">
+
+      <img
+        src="https://images.unsplash.com/photo-1622560480605-d83c853bc5c3?auto=format&fit=crop&w=1200&q=80"
+        alt="Outdoor backpack">
+
+      <div class="card-content">
+
+        <div class="category">FIELD GEAR</div>
+
+        <h2>Field & Outdoor Bags</h2>
+
+        <p>
+          Packs designed for long days outdoors,
+          travel and demanding environments.
+        </p>
+
+        <a class="button" href="#">Read Review</a>
+
+      </div>
+
+    </article>
+
+
+    <article class="card">
+
+      <img
+        src="https://images.unsplash.com/photo-1556306535-0f09a537f0a3?auto=format&fit=crop&w=1200&q=80"
+        alt="Travel bag">
+
+      <div class="card-content">
+
+        <div class="category">TRAVEL</div>
+
+        <h2>Travel & Carry</h2>
+
+        <p>
+          Practical bags for travel, equipment transport
+          and everyday carry.
+        </p>
+
+        <a class="button" href="#">Read Review</a>
+
+      </div>
+
+    </article>
+
+
+    <article class="card">
+
+      <img
+        src="https://images.unsplash.com/photo-1581605405669-fcdf81165afa?auto=format&fit=crop&w=1200&q=80"
+        alt="Camera equipment bag">
+
+      <div class="card-content">
+
+        <div class="category">CAMERA & TECH</div>
+
+        <h2>Camera & Equipment Bags</h2>
+
+        <p>
+          Protection, organisation and access for cameras,
+          drones and other valuable equipment.
+        </p>
+
+        <a class="button" href="#">Read Review</a>
+
+      </div>
+
+    </article>
+
+  </div>
+
+</section>
+
+<footer>
+
+  <strong>SPIES<span style="color:#4d9cff;">HUB</span></strong>
+
+  <br><br>
+
+  Gear reviewed by people who know the gear.
+
+</footer>
+
+</body>
+</html>
