@@ -1,1 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<title>SpiesHub | Deals</title>
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: #050708;
+  color: #f4f7f8;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+  padding: 28px 6%;
+  border-bottom: 1px solid #1c252d;
+  background: #050708;
+}
+
+.logo {
+  font-size: 42px;
+  font-weight: 800;
+  letter-spacing: 8px;
+  margin-bottom: 28px;
+}
+
+.logo span {
+  color: #4f9cff;
+}
+
+nav {
+  display: flex;
+  gap: 38px;
+  flex-wrap: wrap;
+}
+
+nav a {
+  color: #aab4bd;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+nav a:hover {
+  color: #4f9cff;
+}
+
+.hero {
+  padding: 80px 7% 70px;
+  background:
+    radial-gradient(circle at 80% 20%, #10243b 0%, #071018 35%, #050708 75%);
+}
+
+.eyebrow {
+  display: inline-block;
+  border: 1px solid #28629a;
+  border-radius: 50px;
+  padding: 14px 28px;
+  color: #4f9cff;
+  font-size: 15px;
+  font-weight: 800;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+}
+
+h1 {
+  font-size: clamp(52px, 9vw, 100px);
+  line-height: .95;
+  margin: 45px 0 25px;
+}
+
+h1 span {
+  color: #4f9cff;
+}
+
+.hero p {
+  max-width: 760px;
+  color: #aab4bd;
+  font-size: 24px;
+  line-height: 1.65;
+}
+
+.deals {
+  padding: 70px 7% 100px;
+}
+
+.section-title {
+  font-size: 48px;
+  margin-bottom: 15px;
+}
+
+.section-text {
+  color: #9da8b1;
+  font-size: 20px;
+  line-height: 1.6;
+  max-width: 700px;
+  margin-bottom: 50px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px;
+}
+
+.card {
+  background: #0a1015;
+  border: 1px solid #1d2b37;
+  border-radius: 28px;
+  overflow: hidden;
+}
+
+.card-image {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  display: block;
+}
+
+.card-content {
+  padding: 34px;
+}
+
+.tag {
+  color: #4f9cff;
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-size: 34px;
+  margin: 18px 0;
+}
+
+.card p {
+  color: #9da8b1;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.price {
+  font-size: 26px;
+  font-weight: 800;
+  margin-top: 25px;
+}
+
+.price span {
+  color: #4f9cff;
+}
+
+.deal-button {
+  display: inline-block;
+  margin-top: 22px;
+  padding: 15px 24px;
+  border-radius: 8px;
+  background: #4f9cff;
+  color: #050708;
+  text-decoration: none;
+  font-size: 17px;
+  font-weight: 800;
+}
+
+.deal-button:hover {
+  background: #ffffff;
+}
+
+.notice {
+  margin-top: 60px;
+  padding: 30px;
+  border-left: 3px solid #4f9cff;
+  background: #080d12;
+  color: #9da8b1;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+footer {
+  border-top: 1px solid #1c252d;
+  padding: 45px 7%;
+  color: #69747d;
+}
+
+@media (max-width: 700px) {
+
+  header {
+    padding: 28px 5%;
+  }
+
+  .logo {
+    font-size: 32px;
+    letter-spacing: 6px;
+  }
+
+  nav {
+    gap: 22px;
+  }
+
+  nav a {
+    font-size: 16px;
+  }
+
+  .hero {
+    padding: 60px 6% 50px;
+  }
+
+  .eyebrow {
+    font-size: 12px;
+    letter-spacing: 3px;
+    line-height: 1.5;
+  }
+
+  h1 {
+    font-size: 58px;
+  }
+
+  .hero p {
+    font-size: 19px;
+  }
+
+  .deals {
+    padding: 50px 6% 70px;
+  }
+
+  .section-title {
+    font-size: 40px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .card-image {
+    height: 230px;
+  }
+
+  h2 {
+    font-size: 30px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+
+  <div class="logo">
+    SPIES<span>HUB</span>
+  </div>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="reviews.html">Reviews</a>
+    <a href="categories.html">Categories</a>
+    <a href="deals.html">Deals</a>
+    <a href="about.html">About</a>
+  </nav>
+
+</header>
+
+
+<section class="hero">
+
+  <div class="eyebrow">
+    GEAR • VALUE • DEALS
+  </div>
+
+  <h1>
+    Gear worth<br>
+    <span>buying.</span>
+  </h1>
+
+  <p>
+    Useful gear, worthwhile prices and products we think
+    deserve a closer look. SpiesHub deals will focus on
+    equipment that offers genuine value.
+  </p>
+
+</section>
+
+
+<section class="deals">
+
+  <h2 class="section-title">
+    Featured deals.
+  </h2>
+
+  <p class="section-text">
+    We're building a collection of products worth knowing about.
+    Affiliate links will be added as SpiesHub grows.
+  </p>
+
+
+  <div class="grid">
+
+
+    <!-- DEAL 1 -->
+
+    <div class="card">
+
+      <img
+      class="card-image"
+      src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=1200&q=85"
+      alt="Outdoor backpack">
+
+      <div class="card-content">
+
+        <div class="tag">
+          BAGS & PACKS
+        </div>
+
+        <h2>
+          Field & Tactical Bags
+        </h2>
+
+        <p>
+          Packs and bags selected for durability,
+          organisation, comfort and everyday field use.
+        </p>
+
+        <div class="price">
+          <span>Deals coming soon</span>
+        </div>
+
+        <a class="deal-button" href="#">
+          View Deal →
+        </a>
+
+      </div>
+
+    </div>
+
+
+    <!-- DEAL 2 -->
+
+    <div class="card">
+
+      <img
+      class="card-image"
+      src="https://images.unsplash.com/photo-1473968512647-3e447244af8f?auto=format&fit=crop&w=1200&q=85"
+      alt="Drone">
+
+      <div class="card-content">
+
+        <div class="tag">
+          DRONES
+        </div>
+
+        <h2>
+          Drone Equipment
+        </h2>
+
+        <p>
+          Drones and accessories selected for aerial
+          photography, observation and field use.
+        </p>
+
+        <div class="price">
+          <span>Deals coming soon</span>
+        </div>
+
+        <a class="deal-button" href="#">
+          View Deal →
+        </a>
+
+      </div>
+
+    </div>
+
+
+    <!-- DEAL 3 -->
+
+    <div class="card">
+
+      <img
+      class="card-image"
+      src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&w=1200&q=85"
+      alt="Camera">
+
+      <div class="card-content">
+
+        <div class="tag">
+          CAMERAS
+        </div>
+
+        <h2>
+          Cameras & Video
+        </h2>
+
+        <p>
+          Cameras and video equipment for photography,
+          documentation and content creation.
+        </p>
+
+        <div class="price">
+          <span>Deals coming soon</span>
+        </div>
+
+        <a class="deal-button" href="#">
+          View Deal →
+        </a>
+
+      </div>
+
+    </div>
+
+
+    <!-- DEAL 4 -->
+
+    <div class="card">
+
+      <img
+      class="card-image"
+      src="https://images.unsplash.com/photo-1511497584788-876760111969?auto=format&fit=crop&w=1200&q=85"
+      alt="Outdoor optics">
+
+      <div class="card-content">
+
+        <div class="tag">
+          OPTICS
+        </div>
+
+        <h2>
+          Observation Gear
+        </h2>
+
+        <p>
+          Binoculars and optical equipment compared
+          for clarity, durability and value.
+        </p>
+
+        <div class="price">
+          <span>Deals coming soon</span>
+        </div>
+
+        <a class="deal-button" href="#">
+          View Deal →
+        </a>
+
+      </div>
+
+    </div>
+
+
+  </div>
+
+
+  <div class="notice">
+
+    <strong>How SpiesHub deals work</strong><br><br>
+
+    We will highlight products we believe are worth considering.
+    Some links may eventually be affiliate links, meaning SpiesHub
+    may earn a commission if you purchase through one of them,
+    at no additional cost to you.
+
+  </div>
+
+</section>
+
+
+<footer>
+
+  © 2026 SpiesHub — Gear worth knowing.
+
+</footer>
+
+</body>
+</html>
