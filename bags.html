@@ -1,330 +1,506 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
 
-<title>SpiesHub | Bags & Packs</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<style>
-* {
-  box-sizing: border-box;
-}
+  <title>Tactical Bags & Backpacks | SpiesHub</title>
 
-body {
-  margin: 0;
-  background: #050708;
-  color: #f4f7f8;
-  font-family: Arial, Helvetica, sans-serif;
-}
+  <meta name="description" content="Discover tactical bags, tactical backpacks, EDC bags and outdoor packs from leading retailers. Compare gear and view the latest deals at SpiesHub.">
 
-header {
-  padding: 28px 7%;
-  border-bottom: 1px solid #1c252d;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: sticky;
-  top: 0;
-  background: rgba(5,7,8,0.95);
-  backdrop-filter: blur(12px);
-  z-index: 10;
-}
+  <meta name="keywords" content="tactical bags, tactical backpacks, military backpacks, EDC bags, tactical gear bags, outdoor backpacks, MOLLE bags">
 
-.logo {
-  font-size: 28px;
-  font-weight: 900;
-  letter-spacing: 5px;
-}
+  <meta name="robots" content="index, follow">
 
-.logo span {
-  color: #4d9cff;
-}
+  <meta property="og:title" content="Tactical Bags & Backpacks | SpiesHub">
+  <meta property="og:description" content="Explore tactical bags, backpacks and everyday carry packs from leading retailers.">
+  <meta property="og:type" content="website">
 
-nav a {
-  color: #9da7af;
-  text-decoration: none;
-  margin-left: 25px;
-  font-weight: 700;
-}
+  <style>
+    * {
+      box-sizing: border-box;
+    }
 
-nav a:hover {
-  color: #4d9cff;
-}
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #0b0f0d;
+      color: #f1f1f1;
+    }
 
-.hero {
-  padding: 80px 7% 55px;
-  background:
-    radial-gradient(circle at 75% 30%, rgba(40,120,220,.18), transparent 35%),
-    #080b0e;
-}
+    header {
+      background: #111713;
+      border-bottom: 1px solid #293129;
+      padding: 18px 25px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
 
-.tag {
-  display: inline-block;
-  border: 1px solid #315778;
-  border-radius: 30px;
-  padding: 12px 18px;
-  color: #63aaff;
-  letter-spacing: 3px;
-  font-size: 12px;
-  font-weight: bold;
-}
+    .logo {
+      font-size: 28px;
+      font-weight: bold;
+      color: #ffffff;
+      text-decoration: none;
+      letter-spacing: 1px;
+    }
 
-h1 {
-  font-size: clamp(48px, 8vw, 90px);
-  line-height: .95;
-  margin: 35px 0 25px;
-  max-width: 900px;
-}
+    .logo span {
+      color: #8fa66f;
+    }
 
-h1 span {
-  color: #4d9cff;
-}
+    nav {
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
 
-.hero p {
-  color: #aab3ba;
-  font-size: 20px;
-  line-height: 1.6;
-  max-width: 720px;
-}
+    nav a {
+      color: #d7ddd7;
+      text-decoration: none;
+      font-size: 14px;
+    }
 
-.container {
-  padding: 55px 7%;
-}
+    nav a:hover {
+      color: #a8bd82;
+    }
 
-.section-title {
-  font-size: 36px;
-  margin-bottom: 35px;
-}
+    .hero {
+      max-width: 1200px;
+      margin: auto;
+      padding: 55px 25px 35px;
+    }
 
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 25px;
-}
+    .hero-label {
+      color: #9db477;
+      font-size: 13px;
+      font-weight: bold;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
 
-.card {
-  background: #0c1115;
-  border: 1px solid #202b34;
-  border-radius: 18px;
-  overflow: hidden;
-  transition: .25s;
-}
+    h1 {
+      font-size: 42px;
+      margin: 0 0 15px;
+    }
 
-.card:hover {
-  transform: translateY(-5px);
-  border-color: #4d9cff;
-}
+    .hero p {
+      max-width: 720px;
+      color: #b9c0ba;
+      line-height: 1.7;
+      font-size: 16px;
+    }
 
-.card img {
-  width: 100%;
-  height: 230px;
-  object-fit: cover;
-  display: block;
-}
+    .affiliate-note {
+      max-width: 1200px;
+      margin: 0 auto 25px;
+      padding: 0 25px;
+      color: #89938b;
+      font-size: 12px;
+    }
 
-.card-content {
-  padding: 23px;
-}
+    .products {
+      max-width: 1200px;
+      margin: auto;
+      padding: 10px 25px 60px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 22px;
+    }
 
-.category {
-  color: #4d9cff;
-  font-size: 12px;
-  font-weight: bold;
-  letter-spacing: 2px;
-}
+    .product {
+      background: #141a16;
+      border: 1px solid #293129;
+      border-radius: 10px;
+      overflow: hidden;
+      transition: transform 0.2s ease, border-color 0.2s ease;
+    }
 
-.card h2 {
-  margin: 12px 0;
-  font-size: 24px;
-}
+    .product:hover {
+      transform: translateY(-4px);
+      border-color: #64784d;
+    }
 
-.card p {
-  color: #929da5;
-  line-height: 1.5;
-}
+    .product-image {
+      height: 220px;
+      background: #202720;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #727b73;
+      font-size: 13px;
+      text-align: center;
+      padding: 20px;
+    }
 
-.button {
-  display: inline-block;
-  margin-top: 12px;
-  padding: 12px 18px;
-  background: #4d9cff;
-  color: white;
-  text-decoration: none;
-  border-radius: 8px;
-  font-weight: bold;
-}
+    .product-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
 
-footer {
-  border-top: 1px solid #20272d;
-  padding: 40px 7%;
-  color: #707a82;
-  margin-top: 40px;
-}
+    .product-content {
+      padding: 20px;
+    }
 
-@media(max-width:700px) {
-  header {
-    display: block;
-  }
+    .category {
+      color: #8fa66f;
+      font-size: 11px;
+      font-weight: bold;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
 
-  nav {
-    margin-top: 20px;
-  }
+    h2 {
+      font-size: 19px;
+      margin: 8px 0 10px;
+      line-height: 1.3;
+    }
 
-  nav a {
-    margin: 0 15px 0 0;
-    font-size: 14px;
-  }
-}
-</style>
+    .description {
+      color: #aeb6af;
+      font-size: 14px;
+      line-height: 1.6;
+      min-height: 67px;
+    }
+
+    .rating {
+      color: #d2b65d;
+      font-size: 14px;
+      margin: 12px 0;
+    }
+
+    .price {
+      font-size: 20px;
+      font-weight: bold;
+      margin: 12px 0 16px;
+    }
+
+    .retailer {
+      color: #7f8981;
+      font-size: 12px;
+      margin-bottom: 12px;
+    }
+
+    .deal-button {
+      display: block;
+      width: 100%;
+      text-align: center;
+      background: #8fa66f;
+      color: #10140f;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 13px;
+      border-radius: 6px;
+      transition: background 0.2s ease;
+    }
+
+    .deal-button:hover {
+      background: #a9bd85;
+    }
+
+    .seo-section {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 20px 25px 70px;
+      color: #aeb6af;
+      line-height: 1.8;
+    }
+
+    .seo-section h2 {
+      font-size: 26px;
+      color: #ffffff;
+    }
+
+    footer {
+      border-top: 1px solid #293129;
+      background: #111713;
+      padding: 30px 25px;
+      text-align: center;
+      color: #747d76;
+      font-size: 13px;
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 32px;
+      }
+
+      .hero {
+        padding-top: 35px;
+      }
+
+      nav {
+        width: 100%;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
 <header>
 
-  <div class="logo">
-    SPIES<span>HUB</span>
-  </div>
+  <a href="index.html" class="logo">
+    SP<span>IES</span>HUB
+  </a>
 
   <nav>
     <a href="index.html">Home</a>
-    <a href="index.html#reviews">Reviews</a>
-    <a href="index.html#categories">Categories</a>
-    <a href="index.html#deals">Deals</a>
-    <a href="index.html#about">About</a>
+    <a href="categories.html">Categories</a>
+    <a href="deals.html">Deals</a>
+    <a href="reviews.html">Reviews</a>
+    <a href="about.html">About</a>
   </nav>
 
 </header>
 
+
 <section class="hero">
 
-  <div class="tag">FIELD GEAR • BAGS • PACKS</div>
+  <div class="hero-label">
+    SpiesHub Gear
+  </div>
 
-  <h1>
-    Bags built for<br>
-    <span>the field.</span>
-  </h1>
+  <h1>Tactical Bags & Backpacks</h1>
 
   <p>
-    Field bags, packs and carry systems worth knowing about.
-    We look at durability, organisation, comfort and real-world usefulness.
+    Explore tactical bags, backpacks, EDC packs and outdoor gear from leading
+    retailers. SpiesHub helps you discover useful gear and find the best
+    available deals.
   </p>
 
 </section>
 
-<section class="container">
 
-  <h2 class="section-title">Bags worth knowing.</h2>
+<div class="affiliate-note">
+  SpiesHub may earn a commission when you purchase through some of the links on this page.
+</div>
 
-  <div class="grid">
 
-    <article class="card">
+<section class="products">
 
-      <img
-        src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=1200&q=80"
-        alt="Tactical backpack">
 
-      <div class="card-content">
+  <!-- PRODUCT 1 -->
 
-        <div class="category">TACTICAL PACKS</div>
+  <article class="product">
 
-        <h2>Everyday Tactical Packs</h2>
+    <div class="product-image">
+      PRODUCT IMAGE
+    </div>
 
-        <p>
-          What makes a tactical backpack actually useful
-          when you're carrying equipment every day?
-        </p>
+    <div class="product-content">
 
-        <a class="button" href="#">Read Review</a>
-
+      <div class="category">
+        Tactical Backpack
       </div>
 
-    </article>
+      <h2>
+        5.11 Tactical Backpack
+      </h2>
 
-
-    <article class="card">
-
-      <img
-        src="https://images.unsplash.com/photo-1622560480605-d83c853bc5c3?auto=format&fit=crop&w=1200&q=80"
-        alt="Outdoor backpack">
-
-      <div class="card-content">
-
-        <div class="category">FIELD GEAR</div>
-
-        <h2>Field & Outdoor Bags</h2>
-
-        <p>
-          Packs designed for long days outdoors,
-          travel and demanding environments.
-        </p>
-
-        <a class="button" href="#">Read Review</a>
-
+      <div class="description">
+        Rugged tactical backpack suitable for everyday carry,
+        outdoor use and tactical applications.
       </div>
 
-    </article>
-
-
-    <article class="card">
-
-      <img
-        src="https://images.unsplash.com/photo-1556306535-0f09a537f0a3?auto=format&fit=crop&w=1200&q=80"
-        alt="Travel bag">
-
-      <div class="card-content">
-
-        <div class="category">TRAVEL</div>
-
-        <h2>Travel & Carry</h2>
-
-        <p>
-          Practical bags for travel, equipment transport
-          and everyday carry.
-        </p>
-
-        <a class="button" href="#">Read Review</a>
-
+      <div class="rating">
+        ★★★★★
       </div>
 
-    </article>
-
-
-    <article class="card">
-
-      <img
-        src="https://images.unsplash.com/photo-1581605405669-fcdf81165afa?auto=format&fit=crop&w=1200&q=80"
-        alt="Camera equipment bag">
-
-      <div class="card-content">
-
-        <div class="category">CAMERA & TECH</div>
-
-        <h2>Camera & Equipment Bags</h2>
-
-        <p>
-          Protection, organisation and access for cameras,
-          drones and other valuable equipment.
-        </p>
-
-        <a class="button" href="#">Read Review</a>
-
+      <div class="price">
+        Check Price
       </div>
 
-    </article>
+      <div class="retailer">
+        Available from 5.11
+      </div>
 
-  </div>
+      <!-- REPLACE THIS URL WITH YOUR 5.11 AFFILIATE LINK -->
+
+      <a
+        href="YOUR_511_AFFILIATE_LINK_HERE"
+        class="deal-button"
+        target="_blank"
+        rel="nofollow sponsored noopener">
+        VIEW DEAL
+      </a>
+
+    </div>
+
+  </article>
+
+
+  <!-- PRODUCT 2 -->
+
+  <article class="product">
+
+    <div class="product-image">
+      PRODUCT IMAGE
+    </div>
+
+    <div class="product-content">
+
+      <div class="category">
+        EDC Bag
+      </div>
+
+      <h2>
+        Everyday Carry Backpack
+      </h2>
+
+      <div class="description">
+        Versatile everyday carry backpack designed for work,
+        travel and carrying essential equipment.
+      </div>
+
+      <div class="rating">
+        ★★★★★
+      </div>
+
+      <div class="price">
+        Check Price
+      </div>
+
+      <div class="retailer">
+        Retailer coming soon
+      </div>
+
+      <a
+        href="#"
+        class="deal-button"
+        rel="nofollow sponsored">
+        VIEW DEAL
+      </a>
+
+    </div>
+
+  </article>
+
+
+  <!-- PRODUCT 3 -->
+
+  <article class="product">
+
+    <div class="product-image">
+      PRODUCT IMAGE
+    </div>
+
+    <div class="product-content">
+
+      <div class="category">
+        Tactical Gear
+      </div>
+
+      <h2>
+        MOLLE Tactical Pack
+      </h2>
+
+      <div class="description">
+        Modular tactical pack featuring MOLLE attachment points
+        for additional equipment and accessories.
+      </div>
+
+      <div class="rating">
+        ★★★★☆
+      </div>
+
+      <div class="price">
+        Check Price
+      </div>
+
+      <div class="retailer">
+        Retailer coming soon
+      </div>
+
+      <a
+        href="#"
+        class="deal-button"
+        rel="nofollow sponsored">
+        VIEW DEAL
+      </a>
+
+    </div>
+
+  </article>
+
+
+  <!-- PRODUCT 4 -->
+
+  <article class="product">
+
+    <div class="product-image">
+      PRODUCT IMAGE
+    </div>
+
+    <div class="product-content">
+
+      <div class="category">
+        Outdoor Gear
+      </div>
+
+      <h2>
+        Outdoor Tactical Pack
+      </h2>
+
+      <div class="description">
+        Durable outdoor backpack designed for hiking,
+        camping and extended outdoor adventures.
+      </div>
+
+      <div class="rating">
+        ★★★★☆
+      </div>
+
+      <div class="price">
+        Check Price
+      </div>
+
+      <div class="retailer">
+        Retailer coming soon
+      </div>
+
+      <a
+        href="#"
+        class="deal-button"
+        rel="nofollow sponsored">
+        VIEW DEAL
+      </a>
+
+    </div>
+
+  </article>
 
 </section>
 
+
+<section class="seo-section">
+
+  <h2>Tactical Bags & Everyday Carry Gear</h2>
+
+  <p>
+    Finding the right tactical bag can make a big difference when carrying
+    equipment, electronics, outdoor supplies or everyday essentials.
+    SpiesHub helps you discover tactical backpacks, EDC bags, MOLLE packs
+    and outdoor backpacks from established retailers.
+  </p>
+
+  <p>
+    Whether you're looking for a tactical backpack for everyday carry,
+    a durable outdoor pack or a modular MOLLE bag, browse our recommended
+    gear and compare available products before purchasing.
+  </p>
+
+</section>
+
+
 <footer>
 
-  <strong>SPIES<span style="color:#4d9cff;">HUB</span></strong>
-
-  <br><br>
-
-  Gear reviewed by people who know the gear.
+  © 2026 SpiesHub. All rights reserved.
 
 </footer>
 
