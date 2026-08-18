@@ -7,6 +7,7 @@
 <title>SpiesHub | Gear Reviews & Field Technology</title>
 
 <style>
+
 * {
     box-sizing: border-box;
 }
@@ -49,7 +50,8 @@ header {
 nav {
     display: flex;
     gap: 38px;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
+    align-items: center;
 }
 
 nav a {
@@ -57,6 +59,7 @@ nav a {
     text-decoration: none;
     font-size: 18px;
     font-weight: 700;
+    white-space: nowrap;
 }
 
 nav a:hover {
@@ -352,33 +355,50 @@ footer {
 @media (max-width: 800px) {
 
     header {
-        padding: 25px 6%;
+        padding: 22px 5%;
     }
 
     .logo {
-        font-size: 31px;
-        letter-spacing: 6px;
+        font-size: 30px;
+        letter-spacing: 5px;
+        margin-bottom: 22px;
     }
 
     nav {
-        gap: 22px;
+        gap: 0;
+        justify-content: space-between;
+        width: 100%;
     }
 
     nav a {
-        font-size: 16px;
+        font-size: 14px;
+        letter-spacing: -0.2px;
     }
 
     .hero {
-        padding-top: 65px;
+        padding: 65px 6% 85px;
+    }
+
+    .eyebrow {
+        padding: 14px 20px;
+        font-size: 12px;
+        letter-spacing: 3px;
     }
 
     .hero h1 {
-        font-size: 58px;
+        font-size: 56px;
         letter-spacing: -3px;
     }
 
     .hero p {
         font-size: 19px;
+        line-height: 1.65;
+    }
+
+    .button {
+        padding: 16px 20px;
+        font-size: 15px;
+        margin-bottom: 10px;
     }
 
     .featured-grid {
@@ -397,13 +417,38 @@ footer {
     .section {
         padding: 70px 6%;
     }
+
+    .section h2 {
+        font-size: 48px;
+    }
+
 }
+
+/* SMALL PHONES */
+
+@media (max-width: 390px) {
+
+    .logo {
+        font-size: 27px;
+    }
+
+    nav a {
+        font-size: 12px;
+    }
+
+    .hero h1 {
+        font-size: 50px;
+    }
+
+}
+
 </style>
 </head>
 
 <body>
 
 <header>
+
 <div class="header-inner">
 
 <div class="logo">
@@ -422,9 +467,8 @@ SPIES<span>HUB</span>
 </header>
 
 
-<!-- HERO -->
-
 <section class="hero">
+
 <div class="hero-inner">
 
 <div class="eyebrow">
@@ -450,10 +494,9 @@ Browse Categories
 </a>
 
 </div>
+
 </section>
 
-
-<!-- FEATURED -->
 
 <section class="section">
 
@@ -512,8 +555,6 @@ Aerial technology for observation, photography and field use.
 </div>
 </section>
 
-
-<!-- CATEGORIES -->
 
 <section class="section">
 
@@ -580,8 +621,6 @@ Practical equipment designed for demanding environments.
 </section>
 
 
-<!-- REVIEWS -->
-
 <section class="section reviews" id="reviews">
 
 <div class="section-inner">
@@ -593,7 +632,6 @@ LATEST REVIEWS
 <h2>Worth knowing.</h2>
 
 <div class="review-grid">
-
 
 <div class="review">
 
@@ -663,8 +701,6 @@ Useful technology and gadgets that can make life easier in the field and everyda
 </div>
 
 
-<!-- CTA -->
-
 <div class="cta" id="deals">
 
 <h2>Good gear shouldn't be hard to find.</h2>
@@ -682,8 +718,6 @@ Explore SpiesHub →
 </div>
 </section>
 
-
-<!-- ABOUT -->
 
 <section class="section" id="about">
 
