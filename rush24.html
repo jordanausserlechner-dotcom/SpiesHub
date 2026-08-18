@@ -1,1 +1,735 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<title>SpiesHub | 5.11 RUSH 24 2.0 Review</title>
+
+<meta name="description" content="SpiesHub review of the 5.11 RUSH 24 2.0 37L backpack. Features, specifications, pros, cons and value.">
+
+<style>
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: #050708;
+  color: #f4f7f8;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+  padding: 28px 6%;
+  border-bottom: 1px solid #1c252d;
+  background: #050708;
+}
+
+.header-inner {
+  max-width: 1300px;
+  margin: auto;
+}
+
+.logo {
+  font-size: 42px;
+  font-weight: 800;
+  letter-spacing: 8px;
+  margin-bottom: 28px;
+}
+
+.logo span {
+  color: #4f9cff;
+}
+
+nav {
+  display: flex;
+  gap: 38px;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+nav a {
+  color: #aab4bd;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+nav a:hover {
+  color: #4f9cff;
+}
+
+/* HERO */
+
+.hero {
+  padding: 85px 6%;
+  background:
+    radial-gradient(circle at 85% 15%, #10243b 0%, #071018 35%, #050708 75%);
+}
+
+.hero-inner {
+  max-width: 1300px;
+  margin: auto;
+}
+
+.breadcrumb {
+  color: #4f9cff;
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 3px;
+  margin-bottom: 30px;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.1fr .9fr;
+  gap: 55px;
+  align-items: center;
+}
+
+.product-image {
+  width: 100%;
+  border-radius: 22px;
+  display: block;
+  background: #0b1116;
+  border: 1px solid #1d2b38;
+}
+
+.category {
+  color: #4f9cff;
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 5px;
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-size: clamp(48px, 7vw, 82px);
+  line-height: .95;
+  letter-spacing: -4px;
+  margin: 0 0 25px;
+}
+
+h1 span {
+  color: #4f9cff;
+}
+
+.rating {
+  color: #4f9cff;
+  font-size: 22px;
+  letter-spacing: 3px;
+  margin-bottom: 25px;
+}
+
+.verdict {
+  color: #aab4bd;
+  font-size: 20px;
+  line-height: 1.65;
+}
+
+.price {
+  font-size: 30px;
+  font-weight: 800;
+  margin: 30px 0;
+}
+
+.price span {
+  color: #4f9cff;
+}
+
+.button {
+  display: inline-block;
+  background: #4f9cff;
+  color: #050708;
+  text-decoration: none;
+  padding: 17px 26px;
+  border-radius: 8px;
+  font-weight: 800;
+  font-size: 17px;
+}
+
+.button:hover {
+  background: white;
+}
+
+/* MAIN */
+
+.main {
+  max-width: 1200px;
+  margin: auto;
+  padding: 90px 6%;
+}
+
+.section {
+  margin-bottom: 90px;
+}
+
+.label {
+  color: #4f9cff;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 5px;
+  margin-bottom: 18px;
+}
+
+h2 {
+  font-size: clamp(40px, 6vw, 65px);
+  line-height: 1;
+  letter-spacing: -3px;
+  margin: 0 0 25px;
+}
+
+h2 span {
+  color: #4f9cff;
+}
+
+.section-text {
+  color: #9da8b1;
+  font-size: 20px;
+  line-height: 1.75;
+  max-width: 850px;
+}
+
+/* VERDICT BOX */
+
+.verdict-box {
+  background: #0a1015;
+  border: 1px solid #244b6d;
+  border-radius: 20px;
+  padding: 35px;
+}
+
+.verdict-box p {
+  color: #aab4bd;
+  font-size: 19px;
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* PROS CONS */
+
+.pros-cons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+}
+
+.pros,
+.cons {
+  background: #0a1015;
+  border: 1px solid #1d2b38;
+  border-radius: 20px;
+  padding: 30px;
+}
+
+.pros h3,
+.cons h3 {
+  margin-top: 0;
+  font-size: 24px;
+}
+
+.pros h3 {
+  color: #4f9cff;
+}
+
+.cons h3 {
+  color: #aab4bd;
+}
+
+ul {
+  padding-left: 20px;
+  margin-bottom: 0;
+}
+
+li {
+  color: #9da8b1;
+  margin-bottom: 13px;
+  line-height: 1.5;
+}
+
+/* SPECS */
+
+.specs {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  border: 1px solid #1d2b38;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.spec {
+  padding: 22px 25px;
+  border-bottom: 1px solid #1d2b38;
+}
+
+.spec:nth-child(odd) {
+  border-right: 1px solid #1d2b38;
+}
+
+.spec strong {
+  display: block;
+  color: #4f9cff;
+  font-size: 13px;
+  letter-spacing: 2px;
+  margin-bottom: 8px;
+}
+
+.spec span {
+  color: #aab4bd;
+  font-size: 17px;
+}
+
+/* WHO */
+
+.best-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+}
+
+.best-card {
+  padding: 30px;
+  background: #0a1015;
+  border: 1px solid #1d2b38;
+  border-radius: 20px;
+}
+
+.best-card h3 {
+  font-size: 25px;
+  margin-top: 0;
+}
+
+.best-card p {
+  color: #9da8b1;
+  line-height: 1.6;
+  font-size: 17px;
+}
+
+/* DISCLOSURE */
+
+.disclosure {
+  padding: 28px;
+  border-left: 3px solid #4f9cff;
+  background: #080d12;
+}
+
+.disclosure p {
+  color: #7f8b94;
+  line-height: 1.6;
+  font-size: 14px;
+  margin: 0;
+}
+
+/* FOOTER */
+
+footer {
+  border-top: 1px solid #1c252d;
+  padding: 50px 6%;
+  color: #69747d;
+}
+
+.footer-inner {
+  max-width: 1300px;
+  margin: auto;
+}
+
+.footer-logo {
+  font-size: 25px;
+  font-weight: 800;
+  letter-spacing: 5px;
+}
+
+.footer-logo span {
+  color: #4f9cff;
+}
+
+/* MOBILE */
+
+@media (max-width: 800px) {
+
+  header {
+    padding: 28px 5%;
+  }
+
+  .logo {
+    font-size: 32px;
+    letter-spacing: 6px;
+  }
+
+  nav {
+    gap: 22px;
+  }
+
+  nav a {
+    font-size: 16px;
+  }
+
+  .hero {
+    padding: 60px 6%;
+  }
+
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  h1 {
+    font-size: 55px;
+  }
+
+  .verdict {
+    font-size: 18px;
+  }
+
+  .main {
+    padding: 70px 6%;
+  }
+
+  .pros-cons,
+  .best-grid,
+  .specs {
+    grid-template-columns: 1fr;
+  }
+
+  .spec:nth-child(odd) {
+    border-right: none;
+  }
+
+  .spec:last-child {
+    border-bottom: none;
+  }
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+<div class="header-inner">
+
+<div class="logo">
+SPIES<span>HUB</span>
+</div>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="reviews.html">Reviews</a>
+<a href="categories.html">Categories</a>
+<a href="deals.html">Deals</a>
+<a href="about.html">About</a>
+</nav>
+
+</div>
+
+</header>
+
+
+<section class="hero">
+
+<div class="hero-inner">
+
+<div class="breadcrumb">
+SPIESHUB / BAGS & PACKS / REVIEW
+</div>
+
+<div class="hero-grid">
+
+
+<div>
+
+<img
+class="product-image"
+src="https://www.511tactical.com/media/catalog/product/5/6/56563_019_1.jpg"
+alt="5.11 RUSH 24 2.0 37L Backpack"
+onerror="this.style.display='none'"
+>
+
+</div>
+
+
+<div>
+
+<div class="category">
+BAGS & PACKS
+</div>
+
+<h1>
+5.11 RUSH 24 2.0<br>
+<span>37L</span>
+</h1>
+
+<div class="rating">
+★★★★★
+</div>
+
+<p class="verdict">
+A proven mid-sized pack designed to bridge the gap between
+everyday carry and serious field use.
+</p>
+
+<div class="price">
+AUD <span>$199.99</span>
+</div>
+
+<a
+class="button"
+href="https://www.511tactical.com/au-en/rush24-2-0-backpack.html"
+target="_blank"
+rel="noopener"
+>
+Check current price →
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<main class="main">
+
+
+<section class="section">
+
+<div class="label">
+SPIESHUB VERDICT
+</div>
+
+<h2>
+Built to <span>carry.</span>
+</h2>
+
+<div class="verdict-box">
+
+<p>
+The RUSH 24 2.0 sits in an interesting middle ground. At 37 litres,
+it's considerably larger than a typical everyday backpack but
+doesn't move into oversized expedition-pack territory. That makes
+it a versatile option for people who want one bag that can cover
+work, travel, outdoor use and heavier everyday carry.
+</p>
+
+<p>
+Its strengths are organisation, durability and modularity. The
+trade-off is that it is a substantial pack, and its tactical styling
+won't appeal to everyone.
+</p>
+
+</div>
+
+</section>
+
+
+<section class="section">
+
+<div class="label">
+PROS & CONSIDERATIONS
+</div>
+
+<h2>
+The good & the <span>trade-offs.</span>
+</h2>
+
+<div class="pros-cons">
+
+<div class="pros">
+
+<h3>What we like</h3>
+
+<ul>
+<li>37L capacity gives plenty of usable space</li>
+<li>Strong organisation throughout the pack</li>
+<li>Padded laptop sleeve for up to 15" laptop</li>
+<li>MOLLE attachment points provide modularity</li>
+<li>Water-repellent 1050D nylon construction</li>
+<li>Hydration compartment</li>
+</ul>
+
+</div>
+
+
+<div class="cons">
+
+<h3>Things to consider</h3>
+
+<ul>
+<li>37L can be more pack than some everyday users need</li>
+<li>Tactical appearance isn't for everyone</li>
+<li>Multiple compartments can add complexity</li>
+<li>Weight is higher than a minimalist daypack</li>
+</ul>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section class="section">
+
+<div class="label">
+KEY SPECIFICATIONS
+</div>
+
+<h2>
+The numbers.
+</h2>
+
+<div class="specs">
+
+<div class="spec">
+<strong>CAPACITY</strong>
+<span>37 litres / 2,275 cu in</span>
+</div>
+
+<div class="spec">
+<strong>WEIGHT</strong>
+<span>1.74 kg / 3.84 lb</span>
+</div>
+
+<div class="spec">
+<strong>LAPTOP</strong>
+<span>Fits up to 15"</span>
+</div>
+
+<div class="spec">
+<strong>MATERIAL</strong>
+<span>Water-repellent 1050D nylon</span>
+</div>
+
+<div class="spec">
+<strong>HYDRATION</strong>
+<span>17" × 12.5" / 2L pocket</span>
+</div>
+
+<div class="spec">
+<strong>MAIN COMPARTMENT</strong>
+<span>20" × 12.5" × 8"</span>
+</div>
+
+</div>
+
+</section>
+
+
+<section class="section">
+
+<div class="label">
+WHO IS IT FOR?
+</div>
+
+<h2>
+Where it <span>fits.</span>
+</h2>
+
+<div class="best-grid">
+
+<div class="best-card">
+
+<h3>Good choice for</h3>
+
+<p>
+People who want a durable, highly organised backpack for
+work, travel, outdoor use, photography or carrying a larger
+amount of equipment.
+</p>
+
+</div>
+
+
+<div class="best-card">
+
+<h3>Look elsewhere if...</h3>
+
+<p>
+You mainly want an ultra-light minimalist daypack, or you
+prefer a discreet conventional-looking backpack.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section class="section">
+
+<div class="label">
+SPIESHUB RATING
+</div>
+
+<h2>
+Our score: <span>8.8/10</span>
+</h2>
+
+<p class="section-text">
+A versatile and seriously capable 37L pack. Its durability,
+organisation and modularity are the big attractions. The main
+question is whether you actually need a pack this substantial.
+</p>
+
+<a
+class="button"
+href="https://www.511tactical.com/au-en/rush24-2-0-backpack.html"
+target="_blank"
+rel="noopener"
+>
+Check current price →
+</a>
+
+</section>
+
+
+<section class="section">
+
+<div class="label">
+DISCLOSURE
+</div>
+
+<div class="disclosure">
+
+<p>
+SpiesHub may earn a commission from qualifying purchases made
+through affiliate links. Prices can change and should be checked
+with the retailer before purchasing.
+</p>
+
+</div>
+
+</section>
+
+
+</main>
+
+
+<footer>
+
+<div class="footer-inner">
+
+<div class="footer-logo">
+SPIES<span>HUB</span>
+</div>
+
+<p>
+Gear worth knowing. Information worth having.
+</p>
+
+</div>
+
+</footer>
+
+</body>
+</html>
