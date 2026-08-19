@@ -8,8 +8,6 @@
 
 <meta name="description" content="SpiesHub explores tactical gear, security equipment, technology, everyday carry, outdoor equipment and gear worth knowing about.">
 
-<meta name="keywords" content="tactical gear, security equipment, tactical technology, EDC, everyday carry, outdoor gear, optics, CCTV, tracking devices, tactical bags">
-
 <meta name="robots" content="index, follow">
 
 <style>
@@ -54,7 +52,9 @@ a {
     margin: 0 auto;
 }
 
-/* HEADER */
+/* =========================
+   HEADER
+========================= */
 
 header {
     position: sticky;
@@ -102,7 +102,9 @@ header {
     color: var(--text);
 }
 
-/* HERO */
+/* =========================
+   HERO
+========================= */
 
 .hero {
     min-height: 650px;
@@ -216,7 +218,9 @@ header {
     border-color: var(--olive);
 }
 
-/* GENERAL SECTIONS */
+/* =========================
+   GENERAL SECTIONS
+========================= */
 
 section {
     padding: 80px 0;
@@ -248,55 +252,9 @@ section {
     white-space: nowrap;
 }
 
-/* CATEGORIES */
-
-.categories {
-    background: var(--bg-soft);
-}
-
-.category-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 14px;
-}
-
-.category-card {
-    min-height: 145px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    padding: 22px;
-    background: var(--card);
-    border: 1px solid var(--border);
-    border-radius: 6px;
-    transition: 0.25s ease;
-}
-
-.category-card:hover {
-    background: var(--card-hover);
-    border-color: var(--olive);
-    transform: translateY(-3px);
-}
-
-.category-number {
-    color: var(--olive-light);
-    font-size: 11px;
-    font-weight: 800;
-    letter-spacing: 2px;
-    margin-bottom: 9px;
-}
-
-.category-card h3 {
-    font-size: 18px;
-    margin-bottom: 5px;
-}
-
-.category-card p {
-    color: var(--muted);
-    font-size: 13px;
-}
-
-/* FEATURED PRODUCTS */
+/* =========================
+   FEATURED GEAR
+========================= */
 
 .featured-grid {
     display: grid;
@@ -370,7 +328,9 @@ section {
     font-weight: 800;
 }
 
-/* DEALS */
+/* =========================
+   DEALS
+========================= */
 
 .deals {
     background: var(--bg-soft);
@@ -378,6 +338,7 @@ section {
 
 .deal-box {
     border: 1px solid var(--olive);
+
     background:
         linear-gradient(
             120deg,
@@ -404,7 +365,9 @@ section {
     max-width: 650px;
 }
 
-/* WHY SPIESHUB */
+/* =========================
+   WHY SPIESHUB
+========================= */
 
 .why-grid {
     display: grid;
@@ -428,7 +391,9 @@ section {
     font-size: 14px;
 }
 
-/* REVIEWS / BLOG */
+/* =========================
+   REVIEWS / BLOG
+========================= */
 
 .content-grid {
     display: grid;
@@ -462,7 +427,9 @@ section {
     margin-bottom: 20px;
 }
 
-/* CTA */
+/* =========================
+   CTA
+========================= */
 
 .cta {
     background:
@@ -492,7 +459,9 @@ section {
     margin-bottom: 28px;
 }
 
-/* FOOTER */
+/* =========================
+   FOOTER
+========================= */
 
 footer {
     background: #080a09;
@@ -541,7 +510,9 @@ footer {
     gap: 20px;
 }
 
-/* MOBILE */
+/* =========================
+   MOBILE
+========================= */
 
 @media (max-width: 850px) {
 
@@ -559,10 +530,6 @@ footer {
 
     .hero-content {
         padding: 70px 0;
-    }
-
-    .category-grid {
-        grid-template-columns: repeat(2, 1fr);
     }
 
     .featured-grid {
@@ -606,10 +573,6 @@ footer {
         font-size: 16px;
     }
 
-    .category-grid {
-        grid-template-columns: 1fr;
-    }
-
     .footer-grid {
         grid-template-columns: 1fr;
     }
@@ -628,7 +591,9 @@ footer {
 
 <body>
 
-<!-- HEADER -->
+<!-- =========================
+     HEADER
+========================= -->
 
 <header>
 
@@ -659,7 +624,7 @@ footer {
                 </li>
 
                 <li>
-                    <a href="categories.html">BLOG</a>
+                    <a href="blog.html">BLOG</a>
                 </li>
 
                 <li>
@@ -677,7 +642,9 @@ footer {
 
 <main>
 
-<!-- HERO -->
+<!-- =========================
+     HERO
+========================= -->
 
 <section class="hero">
 
@@ -719,96 +686,9 @@ footer {
 </section>
 
 
-<!-- EXPLORE PRODUCTS -->
-
-<section class="categories">
-
-    <div class="container">
-
-        <div class="section-heading">
-
-            <div>
-
-                <div class="eyebrow">
-                    EXPLORE
-                </div>
-
-                <h2>
-                    Find the right gear.
-                </h2>
-
-            </div>
-
-            <p>
-                Browse equipment across tactical, security, technology,
-                outdoor and everyday-use categories.
-            </p>
-
-            <a href="categories.html" class="view-all">
-                VIEW ALL PRODUCTS →
-            </a>
-
-        </div>
-
-
-        <div class="category-grid">
-
-            <a href="categories.html" class="category-card">
-                <div class="category-number">01</div>
-                <h3>Tactical Gear</h3>
-                <p>Field equipment and tactical essentials.</p>
-            </a>
-
-            <a href="categories.html" class="category-card">
-                <div class="category-number">02</div>
-                <h3>CCTV & Security</h3>
-                <p>Security cameras and surveillance technology.</p>
-            </a>
-
-            <a href="categories.html" class="category-card">
-                <div class="category-number">03</div>
-                <h3>Tracking Devices</h3>
-                <p>Tracking and location technology.</p>
-            </a>
-
-            <a href="categories.html" class="category-card">
-                <div class="category-number">04</div>
-                <h3>Optics</h3>
-                <p>Optics, observation and visual equipment.</p>
-            </a>
-
-            <a href="bags.html" class="category-card">
-                <div class="category-number">05</div>
-                <h3>Bags & Backpacks</h3>
-                <p>Carry systems for work, travel and the field.</p>
-            </a>
-
-            <a href="categories.html" class="category-card">
-                <div class="category-number">06</div>
-                <h3>Everyday Carry</h3>
-                <p>Useful equipment for everyday life.</p>
-            </a>
-
-            <a href="categories.html" class="category-card">
-                <div class="category-number">07</div>
-                <h3>Lighting</h3>
-                <p>Torches, lights and illumination equipment.</p>
-            </a>
-
-            <a href="categories.html" class="category-card">
-                <div class="category-number">08</div>
-                <h3>Electronics</h3>
-                <p>Technology worth having on your radar.</p>
-            </a>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- FEATURED GEAR -->
+<!-- =========================
+     FEATURED GEAR
+========================= -->
 
 <section>
 
@@ -832,6 +712,10 @@ footer {
                 A selection of products we're currently highlighting.
                 This section will eventually be populated dynamically.
             </p>
+
+            <a href="categories.html" class="view-all">
+                VIEW PRODUCTS →
+            </a>
 
         </div>
 
@@ -934,7 +818,9 @@ footer {
 </section>
 
 
-<!-- DEALS -->
+<!-- =========================
+     DEALS
+========================= -->
 
 <section class="deals">
 
@@ -970,7 +856,9 @@ footer {
 </section>
 
 
-<!-- WHY SPIESHUB -->
+<!-- =========================
+     WHY SPIESHUB
+========================= -->
 
 <section>
 
@@ -1043,7 +931,9 @@ footer {
 </section>
 
 
-<!-- REVIEWS -->
+<!-- =========================
+     REVIEWS
+========================= -->
 
 <section class="categories">
 
@@ -1123,7 +1013,9 @@ footer {
 </section>
 
 
-<!-- BLOG -->
+<!-- =========================
+     BLOG
+========================= -->
 
 <section>
 
@@ -1143,7 +1035,7 @@ footer {
 
             </div>
 
-            <a href="categories.html" class="view-all">
+            <a href="blog.html" class="view-all">
                 VIEW BLOG →
             </a>
 
@@ -1167,7 +1059,7 @@ footer {
                     security, outdoor gear and everyday carry.
                 </p>
 
-                <a href="categories.html" class="card-link">
+                <a href="blog.html" class="card-link">
                     READ ARTICLES →
                 </a>
 
@@ -1189,7 +1081,7 @@ footer {
                     brands and equipment entering the market.
                 </p>
 
-                <a href="categories.html" class="card-link">
+                <a href="blog.html" class="card-link">
                     EXPLORE SPIESHUB →
                 </a>
 
@@ -1202,7 +1094,9 @@ footer {
 </section>
 
 
-<!-- CTA -->
+<!-- =========================
+     CTA
+========================= -->
 
 <section class="cta">
 
@@ -1236,7 +1130,9 @@ footer {
 </main>
 
 
-<!-- FOOTER -->
+<!-- =========================
+     FOOTER
+========================= -->
 
 <footer>
 
@@ -1265,14 +1161,14 @@ footer {
                 <a href="categories.html">Products</a>
                 <a href="deals.html">Deals</a>
                 <a href="reviews.html">Reviews</a>
-                <a href="categories.html">Blog</a>
+                <a href="blog.html">Blog</a>
 
             </div>
 
 
             <div class="footer-column">
 
-                <h4>CATEGORIES</h4>
+                <h4>PRODUCTS</h4>
 
                 <a href="categories.html">Tactical Gear</a>
                 <a href="categories.html">Security</a>
