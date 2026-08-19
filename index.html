@@ -1,837 +1,292 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
 <meta charset="UTF-8">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>SpiesHub | Tactical • Security • Technology</title>
+<title>SpiesHub | Gear Worth Knowing About</title>
 
-<meta
-name="description"
-content="SpiesHub — tactical gear, security technology and equipment worth knowing about."
->
+<meta name="description" content="SpiesHub explores tactical equipment, security technology, everyday carry, outdoor gear and field-ready products worth knowing about.">
 
 <style>
-
 :root {
-    --black: #090b0a;
-    --charcoal: #101310;
-    --olive: #71845a;
-    --olive-light: #91a578;
-    --white: #f1f2ed;
-    --muted: #9da39a;
-    --border: #292f2a;
-    --max: 1180px;
+  --bg: #0b0d0c;
+  --card: #111512;
+  --line: #293029;
+  --text: #f2f3ef;
+  --muted: #a8afa5;
+  --accent: #8ca879;
 }
 
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
 }
 
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    background: var(--black);
-    color: var(--white);
-    line-height: 1.6;
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-a {
-    color: inherit;
-    text-decoration: none;
-}
-
-.container {
-    width: min(92%, var(--max));
-    margin: 0 auto;
-}
-
-
-/* =========================
-   HEADER
-========================= */
+/* HEADER */
 
 header {
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    background: rgba(9, 11, 10, 0.97);
-    border-bottom: 1px solid var(--border);
-}
-
-.nav {
-    min-height: 72px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  border-bottom: 1px solid var(--line);
+  padding: 24px 6%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .logo {
-    font-size: 25px;
-    font-weight: 800;
-    letter-spacing: 1px;
+  font-size: 32px;
+  font-weight: 800;
+  letter-spacing: -1px;
 }
 
 .logo span {
-    color: var(--olive-light);
+  color: var(--accent);
 }
 
-.desktop-nav {
-    display: flex;
-    gap: 26px;
-    align-items: center;
+nav a {
+  color: var(--text);
+  text-decoration: none;
+  margin-left: 22px;
+  font-size: 14px;
+  font-weight: 700;
 }
 
-.desktop-nav a {
-    color: var(--muted);
-    font-size: 13px;
-    font-weight: 800;
-    letter-spacing: .5px;
+nav a:hover {
+  color: var(--accent);
 }
 
-.desktop-nav a:hover {
-    color: var(--white);
-}
-
-
-/* =========================
-   MOBILE MENU BUTTON
-========================= */
-
-.menu-button {
-    display: none;
-    width: 44px;
-    height: 44px;
-    border: 1px solid var(--border);
-    border-radius: 5px;
-    background: #151916;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    gap: 5px;
-    cursor: pointer;
-}
-
-.menu-button span {
-    width: 21px;
-    height: 2px;
-    background: var(--white);
-}
-
-
-/* =========================
-   MOBILE MENU
-========================= */
-
-.mobile-menu {
-    display: none;
-    background: var(--charcoal);
-    border-top: 1px solid var(--border);
-}
-
-.mobile-menu.open {
-    display: block;
-}
-
-.mobile-menu a {
-    display: block;
-    padding: 18px 6%;
-    border-bottom: 1px solid var(--border);
-    font-size: 14px;
-    font-weight: 800;
-}
-
-.mobile-menu a:hover {
-    color: var(--olive-light);
-}
-
-
-/* =========================
-   HERO
-========================= */
+/* HERO */
 
 .hero {
-    min-height: 650px;
-    display: flex;
-    align-items: center;
-    position: relative;
-    overflow: hidden;
-    border-bottom: 1px solid var(--border);
-
-    background:
-        radial-gradient(
-            circle at 82% 30%,
-            rgba(113,132,90,.13),
-            transparent 32%
-        ),
-        linear-gradient(
-            135deg,
-            #090b0a,
-            #111511 55%,
-            #090b0a
-        );
+  max-width: 1200px;
+  margin: auto;
+  padding: 100px 6% 85px;
 }
 
-.hero::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    pointer-events: none;
-
-    background-image:
-        linear-gradient(
-            rgba(255,255,255,.025) 1px,
-            transparent 1px
-        ),
-        linear-gradient(
-            90deg,
-            rgba(255,255,255,.025) 1px,
-            transparent 1px
-        );
-
-    background-size: 55px 55px;
+.eyebrow {
+  color: var(--accent);
+  font-size: 15px;
+  font-weight: 800;
+  letter-spacing: 4px;
+  margin-bottom: 25px;
 }
 
-.hero-content {
-    position: relative;
-    z-index: 2;
-    max-width: 850px;
-    padding: 90px 0;
+h1 {
+  font-size: clamp(52px, 10vw, 100px);
+  line-height: .92;
+  letter-spacing: -5px;
+  margin: 0 0 30px;
 }
 
-
-/* =========================
-   HERO KICKER
-========================= */
-
-.hero-kicker {
-    color: var(--white);
-    font-size: 15px;
-    font-weight: 800;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    margin-bottom: 18px;
+h1 span {
+  color: var(--accent);
 }
 
-.hero-kicker span {
-    color: var(--olive-light);
+.intro {
+  max-width: 760px;
+  color: var(--muted);
+  font-size: 20px;
+  line-height: 1.65;
+  margin: 0;
 }
 
+/* MAIN PAGE LINKS */
 
-/* =========================
-   HERO TYPES
-========================= */
-
-.hero-types {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 9px;
-    margin-bottom: 26px;
+.categories {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 6% 90px;
 }
 
-.hero-types span {
-    color: var(--olive-light);
-    font-size: 12px;
-    font-weight: 800;
-    letter-spacing: 2px;
+.category {
+  display: block;
+  border-top: 1px solid var(--line);
+  padding: 38px 0;
+  text-decoration: none;
+  color: var(--text);
+  transition: padding-left .2s ease;
 }
 
-.hero-types span:not(:last-child)::after {
-    content: "•";
-    margin-left: 9px;
-    color: #59634f;
+.category:last-child {
+  border-bottom: 1px solid var(--line);
 }
 
-
-/* =========================
-   HERO HEADING
-========================= */
-
-.hero h1 {
-    font-size: clamp(46px, 7vw, 78px);
-    line-height: .96;
-    letter-spacing: -2px;
-    margin-bottom: 28px;
+.category:hover {
+  padding-left: 12px;
 }
 
-.hero h1 span {
-    color: var(--olive-light);
+.category h2 {
+  margin: 0;
+  font-size: clamp(38px, 7vw, 72px);
+  line-height: 1;
+  letter-spacing: -3px;
 }
 
-.hero-description {
-    max-width: 650px;
-    color: var(--muted);
-    font-size: 17px;
-    margin-bottom: 35px;
+.category h2 span {
+  color: var(--accent);
 }
 
-.hero-buttons {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 12px;
+.category p {
+  max-width: 700px;
+  margin: 14px 0 0;
+  color: var(--muted);
+  font-size: 17px;
+  line-height: 1.5;
 }
 
-
-/* =========================
-   BUTTONS
-========================= */
-
-.btn {
-    display: inline-block;
-    padding: 14px 22px;
-    border-radius: 4px;
-    font-size: 13px;
-    font-weight: 800;
-    letter-spacing: .6px;
+.arrow {
+  display: inline-block;
+  margin-top: 15px;
+  color: var(--accent);
+  font-weight: 800;
+  font-size: 15px;
+  letter-spacing: 1px;
 }
 
-.btn-primary {
-    background: var(--olive);
-}
+/* MOBILE */
 
-.btn-primary:hover {
-    background: var(--olive-light);
-}
+@media (max-width: 700px) {
 
-.btn-secondary {
-    border: 1px solid var(--border);
-    background: rgba(255,255,255,.02);
-}
+  header {
+    padding: 22px 6%;
+  }
 
-.btn-secondary:hover {
-    border-color: var(--olive);
-}
+  nav {
+    display: none;
+  }
 
+  .hero {
+    padding: 70px 6% 65px;
+  }
 
-/* =========================
-   MAIN PAGE SECTIONS
-========================= */
+  h1 {
+    font-size: 56px;
+    letter-spacing: -3px;
+  }
 
-.page-section {
-    min-height: 310px;
-    padding: 75px 0;
-    border-bottom: 1px solid var(--border);
-}
+  .intro {
+    font-size: 18px;
+  }
 
-.page-section:nth-child(even) {
-    background: var(--charcoal);
-}
+  .category {
+    padding: 32px 0;
+  }
 
-.section-number {
-    color: var(--olive-light);
-    font-size: 11px;
-    font-weight: 800;
-    letter-spacing: 3px;
-    margin-bottom: 10px;
-}
+  .category h2 {
+    font-size: 48px;
+  }
 
-.page-section h2 {
-    font-size: clamp(34px, 5vw, 52px);
-    line-height: 1;
-    margin-bottom: 15px;
-}
-
-.page-section p {
-    color: var(--muted);
-    max-width: 650px;
+  .category p {
     font-size: 16px;
-    margin-bottom: 25px;
+  }
 }
-
-.section-link {
-    display: inline-block;
-    color: var(--olive-light);
-    font-size: 13px;
-    font-weight: 800;
-    letter-spacing: .5px;
-}
-
-.section-link:hover {
-    color: var(--white);
-}
-
-
-/* =========================
-   FOOTER
-========================= */
-
-footer {
-    padding: 30px 0;
-    background: #070807;
-}
-
-.footer-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 20px;
-}
-
-.footer-brand {
-    font-size: 20px;
-    font-weight: 800;
-}
-
-.footer-brand span {
-    color: var(--olive-light);
-}
-
-.footer-text {
-    color: #686e67;
-    font-size: 10px;
-    letter-spacing: 1px;
-}
-
-
-/* =========================
-   MOBILE
-========================= */
-
-@media (max-width: 850px) {
-
-    .desktop-nav {
-        display: none;
-    }
-
-    .menu-button {
-        display: flex;
-    }
-
-    .hero {
-        min-height: 600px;
-    }
-
-    .hero-content {
-        padding: 75px 0;
-    }
-
-    .hero h1 {
-        font-size: 49px;
-    }
-
-    .page-section {
-        min-height: 280px;
-        padding: 65px 0;
-    }
-
-    .footer-content {
-        align-items: flex-start;
-        flex-direction: column;
-    }
-
-}
-
-@media (max-width: 520px) {
-
-    .hero-kicker {
-        font-size: 13px;
-        letter-spacing: 1.5px;
-    }
-
-    .hero h1 {
-        font-size: 43px;
-    }
-
-    .hero-description {
-        font-size: 15px;
-    }
-
-    .hero-types {
-        gap: 6px;
-    }
-
-    .hero-types span {
-        font-size: 10px;
-        letter-spacing: 1.5px;
-    }
-
-    .page-section h2 {
-        font-size: 38px;
-    }
-
-}
-
 </style>
-
 </head>
 
 <body>
 
-
-<!-- HEADER -->
-
 <header>
 
-<div class="container nav">
+  <div class="logo">
+    Spies<span>Hub</span>
+  </div>
 
-<a href="index.html" class="logo">
-Spies<span>Hub</span>
-</a>
-
-
-<nav class="desktop-nav">
-
-<a href="index.html">
-HOME
-</a>
-
-<a href="products.html">
-PRODUCTS
-</a>
-
-<a href="deals.html">
-DEALS
-</a>
-
-<a href="reviews.html">
-REVIEWS
-</a>
-
-<a href="blog.html">
-BLOG
-</a>
-
-<a href="about.html">
-ABOUT
-</a>
-
-</nav>
-
-
-<button
-class="menu-button"
-id="menuButton"
-aria-label="Open menu"
-aria-expanded="false"
->
-
-<span></span>
-<span></span>
-<span></span>
-
-</button>
-
-</div>
-
-
-<div
-class="mobile-menu"
-id="mobileMenu"
->
-
-<a href="index.html">HOME</a>
-
-<a href="products.html">PRODUCTS</a>
-
-<a href="deals.html">DEALS</a>
-
-<a href="reviews.html">REVIEWS</a>
-
-<a href="blog.html">BLOG</a>
-
-<a href="about.html">ABOUT</a>
-
-</div>
+  <nav>
+    <a href="index.html">HOME</a>
+    <a href="products.html">PRODUCTS</a>
+    <a href="deals.html">DEALS</a>
+    <a href="reviews.html">REVIEWS</a>
+    <a href="about.html">ABOUT</a>
+  </nav>
 
 </header>
 
 
-<main>
+<section class="hero">
 
+  <div class="eyebrow">
+    PEOPLE WHO KNOW THE GEAR
+  </div>
 
-<!-- HOME / HERO -->
+  <h1>
+    GEAR WORTH<br>
+    <span>KNOWING ABOUT.</span>
+  </h1>
 
-<section class="hero" id="home">
-
-<div class="container">
-
-<div class="hero-content">
-
-
-<div class="hero-kicker">
-FOR PEOPLE WHO KNOW <span>THE GEAR.</span>
-</div>
-
-
-<div class="hero-types">
-
-<span>TACTICAL</span>
-<span>SECURITY</span>
-<span>TECHNOLOGY</span>
-
-</div>
-
-
-<h1>
-GEAR WORTH<br>
-<span>KNOWING ABOUT.</span>
-</h1>
-
-
-<p class="hero-description">
-Tactical equipment, security technology, everyday carry,
-outdoor gear and field-ready products worth putting on your radar.
-</p>
-
-
-<div class="hero-buttons">
-
-<a
-href="products.html"
-class="btn btn-primary"
->
-EXPLORE PRODUCTS
-</a>
-
-
-<a
-href="deals.html"
-class="btn btn-secondary"
->
-VIEW DEALS
-</a>
-
-</div>
-
-</div>
-
-</div>
+  <p class="intro">
+    Tactical equipment, security technology, everyday carry,
+    outdoor gear and field-ready products worth putting on your radar.
+  </p>
 
 </section>
 
 
-<!-- PRODUCTS -->
+<section class="categories">
 
-<section class="page-section" id="products">
+  <a class="category" href="tactical.html">
 
-<div class="container">
+    <h2>
+      TACTICAL<span>.</span>
+    </h2>
 
-<div class="section-number">
-01 / PRODUCTS
-</div>
+    <p>
+      Equipment built for demanding environments, field use
+      and people who expect more from their gear.
+    </p>
 
-<h2>
-PRODUCTS
-</h2>
+    <div class="arrow">
+      EXPLORE TACTICAL →
+    </div>
 
-<p>
-Explore tactical gear, security equipment, technology,
-everyday carry, outdoor equipment and more.
-</p>
-
-<a
-href="products.html"
-class="section-link"
->
-EXPLORE THE PRODUCT DIRECTORY →
-</a>
-
-</div>
-
-</section>
+  </a>
 
 
-<!-- DEALS -->
+  <a class="category" href="security.html">
 
-<section class="page-section" id="deals">
+    <h2>
+      SECURITY<span>.</span>
+    </h2>
 
-<div class="container">
+    <p>
+      Security technology, smart protection and practical
+      equipment designed around awareness.
+    </p>
 
-<div class="section-number">
-02 / DEALS
-</div>
+    <div class="arrow">
+      EXPLORE SECURITY →
+    </div>
 
-<h2>
-DEALS
-</h2>
+  </a>
 
-<p>
-Worthwhile offers, promotions and opportunities
-from brands and retailers featured by SpiesHub.
-</p>
 
-<a
-href="deals.html"
-class="section-link"
->
-VIEW CURRENT DEALS →
-</a>
+  <a class="category" href="products.html">
 
-</div>
+    <h2>
+      TECHNOLOGY<span>.</span>
+    </h2>
+
+    <p>
+      Useful technology, emerging gear and smart equipment
+      worth knowing about.
+    </p>
+
+    <div class="arrow">
+      EXPLORE TECHNOLOGY →
+    </div>
+
+  </a>
 
 </section>
-
-
-<!-- REVIEWS -->
-
-<section class="page-section" id="reviews">
-
-<div class="container">
-
-<div class="section-number">
-03 / REVIEWS
-</div>
-
-<h2>
-REVIEWS
-</h2>
-
-<p>
-Product reviews, comparisons and practical breakdowns
-designed to help you decide what gear makes sense.
-</p>
-
-<a
-href="reviews.html"
-class="section-link"
->
-EXPLORE REVIEWS →
-</a>
-
-</div>
-
-</section>
-
-
-<!-- BLOG -->
-
-<section class="page-section" id="blog">
-
-<div class="container">
-
-<div class="section-number">
-04 / BLOG
-</div>
-
-<h2>
-BLOG
-</h2>
-
-<p>
-Gear guides, useful information, technology,
-equipment stories and things worth knowing.
-</p>
-
-<a
-href="blog.html"
-class="section-link"
->
-READ THE LATEST →
-</a>
-
-</div>
-
-</section>
-
-
-<!-- ABOUT -->
-
-<section class="page-section" id="about">
-
-<div class="container">
-
-<div class="section-number">
-05 / ABOUT
-</div>
-
-<h2>
-ABOUT
-</h2>
-
-<p>
-SpiesHub is built around discovering useful,
-interesting and capable equipment — from professional
-environments to outdoor and everyday use.
-</p>
-
-<a
-href="about.html"
-class="section-link"
->
-ABOUT SPIESHUB →
-</a>
-
-</div>
-
-</section>
-
-
-</main>
-
-
-<!-- FOOTER -->
-
-<footer>
-
-<div class="container footer-content">
-
-<div class="footer-brand">
-Spies<span>Hub</span>
-</div>
-
-<div class="footer-text">
-TACTICAL • SECURITY • TECHNOLOGY
-&nbsp; | &nbsp;
-© 2026 SPIESHUB
-</div>
-
-</div>
-
-</footer>
-
-
-<script>
-
-const menuButton =
-document.getElementById("menuButton");
-
-const mobileMenu =
-document.getElementById("mobileMenu");
-
-
-menuButton.addEventListener(
-"click",
-function() {
-
-const isOpen =
-mobileMenu.classList.toggle("open");
-
-menuButton.setAttribute(
-"aria-expanded",
-isOpen ? "true" : "false"
-);
-
-});
-
-
-document
-.querySelectorAll(".mobile-menu a")
-.forEach(function(link) {
-
-link.addEventListener(
-"click",
-function() {
-
-mobileMenu.classList.remove("open");
-
-menuButton.setAttribute(
-"aria-expanded",
-"false"
-);
-
-});
-
-});
-
-</script>
-
 
 </body>
 </html>
