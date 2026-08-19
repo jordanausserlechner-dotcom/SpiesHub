@@ -1,1 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<title>SpiesHub | Security Gear & Technology</title>
+
+<meta name="description" content="SpiesHub explores security technology, surveillance, personal security, smart locks, cameras and field-ready security gear.">
+
+<style>
+:root {
+  --bg: #0b0d0c;
+  --bg-soft: #111412;
+  --card: #151916;
+  --line: #293029;
+  --text: #f2f3ef;
+  --muted: #a8afa5;
+  --accent: #8ca879;
+  --accent-dark: #718b61;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+}
+
+header {
+  border-bottom: 1px solid var(--line);
+  padding: 24px 6%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 32px;
+  font-weight: 800;
+  letter-spacing: -1px;
+}
+
+.logo span {
+  color: var(--accent);
+}
+
+nav a {
+  color: var(--text);
+  text-decoration: none;
+  margin-left: 25px;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+nav a:hover {
+  color: var(--accent);
+}
+
+.hero {
+  padding: 90px 6% 70px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.eyebrow {
+  color: var(--accent);
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 4px;
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-size: clamp(48px, 9vw, 86px);
+  line-height: 0.95;
+  margin: 0 0 25px;
+  letter-spacing: -3px;
+}
+
+h1 span {
+  color: var(--accent);
+}
+
+.intro {
+  color: var(--muted);
+  font-size: 20px;
+  max-width: 720px;
+}
+
+.section {
+  padding: 20px 6% 80px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  padding: 30px;
+  border-radius: 4px;
+}
+
+.card h2 {
+  margin-top: 0;
+  font-size: 25px;
+}
+
+.card p {
+  color: var(--muted);
+}
+
+.card a {
+  display: inline-block;
+  margin-top: 10px;
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 800;
+}
+
+.card a:hover {
+  color: var(--text);
+}
+
+footer {
+  display: none;
+}
+
+@media (max-width: 700px) {
+
+  header {
+    padding: 22px 6%;
+  }
+
+  nav {
+    display: none;
+  }
+
+  .hero {
+    padding: 65px 6% 50px;
+  }
+
+  h1 {
+    font-size: 54px;
+  }
+
+  .intro {
+    font-size: 18px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    padding: 25px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+
+  <div class="logo">
+    Spies<span>Hub</span>
+  </div>
+
+  <nav>
+    <a href="index.html">HOME</a>
+    <a href="products.html">PRODUCTS</a>
+    <a href="deals.html">DEALS</a>
+    <a href="reviews.html">REVIEWS</a>
+    <a href="about.html">ABOUT</a>
+  </nav>
+
+</header>
+
+
+<section class="hero">
+
+  <div class="eyebrow">
+    SECURITY • TECHNOLOGY • AWARENESS
+  </div>
+
+  <h1>
+    SECURITY<br>
+    <span>WORTH KNOWING.</span>
+  </h1>
+
+  <p class="intro">
+    Practical security technology, smart protection and field-ready
+    equipment for people who take awareness seriously.
+  </p>
+
+</section>
+
+
+<section class="section">
+
+  <div class="grid">
+
+    <div class="card">
+      <h2>Security Cameras</h2>
+      <p>
+        Explore cameras, compact monitoring systems and smart security
+        technology designed to keep an eye on what matters.
+      </p>
+      <a href="products.html">Explore products →</a>
+    </div>
+
+
+    <div class="card">
+      <h2>Smart Security</h2>
+      <p>
+        Smart locks, sensors, alarms and connected devices that can make
+        homes, vehicles and everyday spaces more secure.
+      </p>
+      <a href="products.html">Explore products →</a>
+    </div>
+
+
+    <div class="card">
+      <h2>Personal Security</h2>
+      <p>
+        Practical equipment and technology designed around awareness,
+        preparedness and everyday personal security.
+      </p>
+      <a href="products.html">Explore products →</a>
+    </div>
+
+
+    <div class="card">
+      <h2>Security Technology</h2>
+      <p>
+        From emerging technology to proven equipment, we look at the
+        products and systems worth knowing about.
+      </p>
+      <a href="reviews.html">See reviews →</a>
+    </div>
+
+  </div>
+
+</section>
+
+</body>
+</html>
