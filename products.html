@@ -1,908 +1,297 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
 <meta charset="UTF-8">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Products | SpiesHub</title>
+<title>SpiesHub | Products</title>
 
-<meta
-name="description"
-content="Explore the SpiesHub product directory covering tactical gear, security, tracking, optics, footwear, bags, everyday carry, clothing, lighting, electronics, outdoor gear and communications."
->
+<meta name="description" content="Explore tactical gear, security technology, everyday carry, outdoor equipment and field-ready products at SpiesHub.">
 
 <style>
-
 :root {
-    --black: #090b0a;
-    --charcoal: #101310;
-    --card: #151916;
-    --olive: #71845a;
-    --olive-light: #91a578;
-    --white: #f1f2ed;
-    --muted: #9da39a;
-    --border: #292f2a;
-    --max: 1180px;
+  --bg: #0b0d0c;
+  --card: #111512;
+  --line: #293029;
+  --text: #f2f3ef;
+  --muted: #a8afa5;
+  --accent: #8ca879;
 }
 
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-html {
-    scroll-behavior: smooth;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    background: var(--black);
-    color: var(--white);
-    line-height: 1.6;
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: Arial, Helvetica, sans-serif;
 }
-
-a {
-    color: inherit;
-    text-decoration: none;
-}
-
-.container {
-    width: min(92%, var(--max));
-    margin: 0 auto;
-}
-
-
-/* =========================
-   HEADER
-========================= */
 
 header {
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    background: rgba(9, 11, 10, 0.97);
-    border-bottom: 1px solid var(--border);
-}
-
-.nav {
-    min-height: 72px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  border-bottom: 1px solid var(--line);
+  padding: 24px 6%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .logo {
-    font-size: 25px;
-    font-weight: 800;
-    letter-spacing: 1px;
+  font-size: 32px;
+  font-weight: 800;
+  letter-spacing: -1px;
 }
 
 .logo span {
-    color: var(--olive-light);
+  color: var(--accent);
 }
 
-.desktop-nav {
-    display: flex;
-    gap: 26px;
-    align-items: center;
+nav a {
+  color: var(--text);
+  text-decoration: none;
+  margin-left: 22px;
+  font-size: 14px;
+  font-weight: 700;
 }
 
-.desktop-nav a {
-    color: var(--muted);
-    font-size: 13px;
-    font-weight: 800;
-    letter-spacing: .5px;
+nav a:hover {
+  color: var(--accent);
 }
 
-.desktop-nav a:hover {
-    color: var(--white);
+.hero {
+  padding: 75px 6% 55px;
+  max-width: 1150px;
+  margin: auto;
 }
 
-.desktop-nav .active {
-    color: var(--white);
+.eyebrow {
+  color: var(--accent);
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 4px;
+  margin-bottom: 18px;
 }
 
+h1 {
+  font-size: clamp(52px, 10vw, 90px);
+  line-height: .92;
+  letter-spacing: -4px;
+  margin: 0 0 25px;
+}
 
-/* =========================
-   MOBILE MENU
-========================= */
+h1 span {
+  color: var(--accent);
+}
 
-.menu-button {
+.intro {
+  max-width: 700px;
+  color: var(--muted);
+  font-size: 20px;
+  line-height: 1.6;
+}
+
+.section {
+  max-width: 1150px;
+  margin: auto;
+  padding: 10px 6% 80px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  padding: 32px;
+  min-height: 220px;
+}
+
+.card h2 {
+  margin: 0 0 12px;
+  font-size: 28px;
+}
+
+.card p {
+  color: var(--muted);
+  line-height: 1.6;
+  margin-bottom: 22px;
+}
+
+.card a {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 800;
+}
+
+.card a:hover {
+  color: var(--text);
+}
+
+@media (max-width: 700px) {
+
+  header {
+    padding: 22px 6%;
+  }
+
+  nav {
     display: none;
-    width: 44px;
-    height: 44px;
-    border: 1px solid var(--border);
-    border-radius: 5px;
-    background: var(--card);
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    gap: 5px;
-    cursor: pointer;
-}
+  }
 
-.menu-button span {
-    width: 21px;
-    height: 2px;
-    background: var(--white);
-}
+  .hero {
+    padding: 60px 6% 45px;
+  }
 
-.mobile-menu {
-    display: none;
-    background: var(--charcoal);
-    border-top: 1px solid var(--border);
-}
+  h1 {
+    font-size: 56px;
+  }
 
-.mobile-menu.open {
-    display: block;
-}
-
-.mobile-menu a {
-    display: block;
-    padding: 18px 6%;
-    border-bottom: 1px solid var(--border);
-    font-size: 14px;
-    font-weight: 800;
-}
-
-.mobile-menu a:hover {
-    color: var(--olive-light);
-}
-
-
-/* =========================
-   PAGE INTRO
-========================= */
-
-.page-intro {
-    padding: 95px 0 70px;
-    border-bottom: 1px solid var(--border);
-
-    background:
-        radial-gradient(
-            circle at 80% 20%,
-            rgba(113,132,90,.12),
-            transparent 32%
-        ),
-        linear-gradient(
-            135deg,
-            #090b0a,
-            #111511 55%,
-            #090b0a
-        );
-}
-
-.kicker {
-    color: var(--olive-light);
-    font-size: 12px;
-    font-weight: 800;
-    letter-spacing: 3px;
-    margin-bottom: 16px;
-}
-
-.page-intro h1 {
-    font-size: clamp(48px, 7vw, 76px);
-    line-height: .95;
-    letter-spacing: -2px;
-    margin-bottom: 25px;
-}
-
-.page-intro h1 span {
-    color: var(--olive-light);
-}
-
-.page-intro p {
-    max-width: 680px;
-    color: var(--muted);
-    font-size: 17px;
-}
-
-
-/* =========================
-   PRODUCT DIRECTORY
-========================= */
-
-.products-section {
-    padding: 75px 0 90px;
-}
-
-.section-heading {
-    margin-bottom: 35px;
-}
-
-.section-heading h2 {
-    font-size: 28px;
-    letter-spacing: .5px;
-    margin-bottom: 8px;
-}
-
-.section-heading p {
-    color: var(--muted);
-    font-size: 15px;
-}
-
-
-/* CATEGORY GRID */
-
-.category-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 14px;
-}
-
-.category-card {
-    min-height: 170px;
-    padding: 27px;
-    background: var(--card);
-    border: 1px solid var(--border);
-    border-radius: 6px;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-
-    transition:
-        transform .2s ease,
-        border-color .2s ease,
-        background .2s ease;
-}
-
-.category-card:hover {
-    transform: translateY(-3px);
-    border-color: var(--olive);
-    background: #181d19;
-}
-
-.category-number {
-    color: var(--olive-light);
-    font-size: 11px;
-    font-weight: 800;
-    letter-spacing: 2px;
-}
-
-.category-card h3 {
-    font-size: 21px;
-    line-height: 1.15;
-    margin-top: 25px;
-}
-
-.category-card p {
-    color: var(--muted);
-    font-size: 13px;
-    margin-top: 8px;
-}
-
-.category-arrow {
-    color: var(--olive-light);
+  .intro {
     font-size: 18px;
-    margin-top: 20px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    padding: 26px;
+  }
 }
-
-
-/* =========================
-   FOOTER
-========================= */
-
-footer {
-    padding: 30px 0;
-    background: #070807;
-    border-top: 1px solid var(--border);
-}
-
-.footer-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 20px;
-}
-
-.footer-brand {
-    font-size: 20px;
-    font-weight: 800;
-}
-
-.footer-brand span {
-    color: var(--olive-light);
-}
-
-.footer-text {
-    color: #686e67;
-    font-size: 10px;
-    letter-spacing: 1px;
-}
-
-
-/* =========================
-   MOBILE
-========================= */
-
-@media (max-width: 850px) {
-
-    .desktop-nav {
-        display: none;
-    }
-
-    .menu-button {
-        display: flex;
-    }
-
-    .category-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .page-intro {
-        padding: 75px 0 60px;
-    }
-
-    .footer-content {
-        align-items: flex-start;
-        flex-direction: column;
-    }
-}
-
-@media (max-width: 560px) {
-
-    .category-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .page-intro h1 {
-        font-size: 48px;
-    }
-
-    .page-intro p {
-        font-size: 15px;
-    }
-
-    .category-card {
-        min-height: 150px;
-    }
-}
-
 </style>
-
 </head>
 
 <body>
 
-
-<!-- =========================
-     HEADER
-========================= -->
-
 <header>
 
-<div class="container nav">
+  <div class="logo">
+    Spies<span>Hub</span>
+  </div>
 
-<a href="index.html" class="logo">
-Spies<span>Hub</span>
-</a>
-
-<nav class="desktop-nav">
-
-<a href="index.html">HOME</a>
-
-<a href="products.html" class="active">
-PRODUCTS
-</a>
-
-<a href="deals.html">
-DEALS
-</a>
-
-<a href="reviews.html">
-REVIEWS
-</a>
-
-<a href="blog.html">
-BLOG
-</a>
-
-<a href="about.html">
-ABOUT
-</a>
-
-</nav>
-
-
-<button
-class="menu-button"
-id="menuButton"
-aria-label="Open menu"
-aria-expanded="false"
->
-
-<span></span>
-<span></span>
-<span></span>
-
-</button>
-
-</div>
-
-
-<div
-class="mobile-menu"
-id="mobileMenu"
->
-
-<a href="index.html">HOME</a>
-
-<a href="products.html">PRODUCTS</a>
-
-<a href="deals.html">DEALS</a>
-
-<a href="reviews.html">REVIEWS</a>
-
-<a href="blog.html">BLOG</a>
-
-<a href="about.html">ABOUT</a>
-
-</div>
+  <nav>
+    <a href="index.html">HOME</a>
+    <a href="products.html">PRODUCTS</a>
+    <a href="deals.html">DEALS</a>
+    <a href="reviews.html">REVIEWS</a>
+    <a href="about.html">ABOUT</a>
+  </nav>
 
 </header>
 
 
-<main>
+<section class="hero">
 
+  <div class="eyebrow">
+    PEOPLE WHO KNOW THE GEAR
+  </div>
 
-<!-- =========================
-     INTRO
-========================= -->
+  <h1>
+    EXPLORE<br>
+    <span>PRODUCTS.</span>
+  </h1>
 
-<section class="page-intro">
-
-<div class="container">
-
-<div class="kicker">
-SPIESHUB PRODUCT DIRECTORY
-</div>
-
-<h1>
-PRODUCTS<br>
-<span>WORTH KNOWING.</span>
-</h1>
-
-<p>
-Explore tactical equipment, security technology,
-everyday carry, outdoor gear and other products
-selected for people who know their gear.
-</p>
-
-</div>
+  <p class="intro">
+    Tactical equipment, security technology, everyday carry,
+    outdoor gear and field-ready products worth knowing about.
+  </p>
 
 </section>
 
 
-<!-- =========================
-     DIRECTORY
-========================= -->
+<section class="section">
 
-<section class="products-section">
+  <div class="grid">
 
-<div class="container">
+    <div class="card">
+      <h2>Tactical</h2>
 
+      <p>
+        Equipment built for demanding environments, field use
+        and people who expect more from their gear.
+      </p>
 
-<div class="section-heading">
+      <a href="tactical.html">
+        Explore Tactical →
+      </a>
+    </div>
 
-<h2>
-EXPLORE PRODUCTS
-</h2>
 
-<p>
-Choose a category to explore the gear inside.
-</p>
+    <div class="card">
+      <h2>Security</h2>
 
-</div>
+      <p>
+        Security technology, cameras, smart protection and
+        practical equipment designed around awareness.
+      </p>
 
+      <a href="security.html">
+        Explore Security →
+      </a>
+    </div>
 
-<div class="category-grid">
 
+    <div class="card">
+      <h2>Everyday Carry</h2>
 
-<!-- 01 -->
+      <p>
+        Useful everyday equipment, bags, tools and accessories
+        selected for practicality and reliability.
+      </p>
 
-<a href="tactical.html" class="category-card">
+      <a href="bags.html">
+        Explore Everyday Carry →
+      </a>
+    </div>
 
-<div>
 
-<div class="category-number">
-01
-</div>
+    <div class="card">
+      <h2>Technology</h2>
 
-<h3>
-Tactical Gear
-</h3>
+      <p>
+        Smart devices, useful technology and emerging gear
+        that deserves a place on your radar.
+      </p>
 
-<p>
-Field equipment and tactical essentials.
-</p>
+      <a href="reviews.html">
+        Explore Technology →
+      </a>
+    </div>
 
-</div>
 
-<div class="category-arrow">
-→
-</div>
+    <div class="card">
+      <h2>Outdoor</h2>
 
-</a>
+      <p>
+        Field-ready outdoor equipment for camping, adventure,
+        travel and getting off the beaten track.
+      </p>
 
+      <a href="products.html">
+        Explore Outdoor →
+      </a>
+    </div>
 
-<!-- 02 -->
 
-<a href="security.html" class="category-card">
+    <div class="card">
+      <h2>Featured Gear</h2>
 
-<div>
+      <p>
+        A changing selection of products and equipment
+        worth taking a closer look at.
+      </p>
 
-<div class="category-number">
-02
-</div>
+      <a href="deals.html">
+        View Featured Gear →
+      </a>
+    </div>
 
-<h3>
-CCTV & Security
-</h3>
-
-<p>
-Security cameras, surveillance and protection technology.
-</p>
-
-</div>
-
-<div class="category-arrow">
-→
-</div>
-
-</a>
-
-
-<!-- 03 -->
-
-<a href="tracking.html" class="category-card">
-
-<div>
-
-<div class="category-number">
-03
-</div>
-
-<h3>
-Tracking Devices
-</h3>
-
-<p>
-Trackers, location technology and monitoring devices.
-</p>
-
-</div>
-
-<div class="category-arrow">
-→
-</div>
-
-</a>
-
-
-<!-- 04 -->
-
-<a href="optics.html" class="category-card">
-
-<div>
-
-<div class="category-number">
-04
-</div>
-
-<h3>
-Optics
-</h3>
-
-<p>
-Optical equipment, observation and viewing gear.
-</p>
-
-</div>
-
-<div class="category-arrow">
-→
-</div>
-
-</a>
-
-
-<!-- 05 -->
-
-<a href="footwear.html" class="category-card">
-
-<div>
-
-<div class="category-number">
-05
-</div>
-
-<h3>
-Footwear
-</h3>
-
-<p>
-Field, tactical, work and outdoor footwear.
-</p>
-
-</div>
-
-<div class="category-arrow">
-→
-</div>
-
-</a>
-
-
-<!-- 06 -->
-
-<a href="bags.html" class="category-card">
-
-<div>
-
-<div class="category-number">
-06
-</div>
-
-<h3>
-Bags & Backpacks
-</h3>
-
-<p>
-Backpacks, packs, bags and load-carrying equipment.
-</p>
-
-</div>
-
-<div class="category-arrow">
-→
-</div>
-
-</a>
-
-
-<!-- 07 -->
-
-<a href="edc.html" class="category-card">
-
-<div>
-
-<div class="category-number">
-07
-</div>
-
-<h3>
-Everyday Carry
-</h3>
-
-<p>
-Practical equipment for everyday use.
-</p>
-
-</div>
-
-<div class="category-arrow">
-→
-</div>
-
-</a>
-
-
-<!-- 08 -->
-
-<a href="clothing.html" class="category-card">
-
-<div>
-
-<div class="category-number">
-08
-</div>
-
-<h3>
-Clothing
-</h3>
-
-<p>
-Tactical, outdoor and everyday clothing.
-</p>
-
-</div>
-
-<div class="category-arrow">
-→
-</div>
-
-</a>
-
-
-<!-- 09 -->
-
-<a href="lighting.html" class="category-card">
-
-<div>
-
-<div class="category-number">
-09
-</div>
-
-<h3>
-Lighting
-</h3>
-
-<p>
-Torches, headlamps and portable lighting.
-</p>
-
-</div>
-
-<div class="category-arrow">
-→
-</div>
-
-</a>
-
-
-<!-- 10 -->
-
-<a href="electronics.html" class="category-card">
-
-<div>
-
-<div class="category-number">
-10
-</div>
-
-<h3>
-Electronics
-</h3>
-
-<p>
-Useful technology and electronic equipment.
-</p>
-
-</div>
-
-<div class="category-arrow">
-→
-</div>
-
-</a>
-
-
-<!-- 11 -->
-
-<a href="outdoor.html" class="category-card">
-
-<div>
-
-<div class="category-number">
-11
-</div>
-
-<h3>
-Outdoor
-</h3>
-
-<p>
-Equipment for outdoor activities and adventure.
-</p>
-
-</div>
-
-<div class="category-arrow">
-→
-</div>
-
-</a>
-
-
-<!-- 12 -->
-
-<a href="communications.html" class="category-card">
-
-<div>
-
-<div class="category-number">
-12
-</div>
-
-<h3>
-Communications
-</h3>
-
-<p>
-Communication equipment and related technology.
-</p>
-
-</div>
-
-<div class="category-arrow">
-→
-</div>
-
-</a>
-
-
-</div>
-
-</div>
+  </div>
 
 </section>
-
-</main>
-
-
-<!-- =========================
-     FOOTER
-========================= -->
-
-<footer>
-
-<div class="container footer-content">
-
-<div class="footer-brand">
-Spies<span>Hub</span>
-</div>
-
-<div class="footer-text">
-TACTICAL • SECURITY • TECHNOLOGY
-&nbsp; | &nbsp;
-© 2026 SPIESHUB
-</div>
-
-</div>
-
-</footer>
-
-
-<script>
-
-const menuButton =
-document.getElementById("menuButton");
-
-const mobileMenu =
-document.getElementById("mobileMenu");
-
-
-menuButton.addEventListener(
-"click",
-function() {
-
-const isOpen =
-mobileMenu.classList.toggle("open");
-
-menuButton.setAttribute(
-"aria-expanded",
-isOpen ? "true" : "false"
-);
-
-});
-
-
-document
-.querySelectorAll(".mobile-menu a")
-.forEach(function(link) {
-
-link.addEventListener(
-"click",
-function() {
-
-mobileMenu.classList.remove("open");
-
-menuButton.setAttribute(
-"aria-expanded",
-"false"
-);
-
-});
-
-});
-
-</script>
-
 
 </body>
 </html>
