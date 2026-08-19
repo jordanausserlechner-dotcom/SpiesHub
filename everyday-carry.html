@@ -1,1 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<title>SpiesHub | Everyday Carry</title>
+
+<meta name="description" content="SpiesHub Everyday Carry — practical everyday gear, bags, tools, lighting, technology and accessories worth knowing about.">
+
+<style>
+:root {
+  --bg: #0b0d0c;
+  --card: #111512;
+  --line: #293029;
+  --text: #f2f3ef;
+  --muted: #a8afa5;
+  --accent: #8ca879;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+  border-bottom: 1px solid var(--line);
+  padding: 24px 6%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 32px;
+  font-weight: 800;
+  letter-spacing: -1px;
+}
+
+.logo span {
+  color: var(--accent);
+}
+
+nav a {
+  color: var(--text);
+  text-decoration: none;
+  margin-left: 22px;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+nav a:hover {
+  color: var(--accent);
+}
+
+.hero {
+  max-width: 1150px;
+  margin: auto;
+  padding: 80px 6% 60px;
+}
+
+.eyebrow {
+  color: var(--accent);
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 4px;
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-size: clamp(50px, 9vw, 88px);
+  line-height: .92;
+  letter-spacing: -4px;
+  margin: 0 0 25px;
+}
+
+h1 span {
+  color: var(--accent);
+}
+
+.intro {
+  max-width: 720px;
+  color: var(--muted);
+  font-size: 20px;
+  line-height: 1.6;
+}
+
+.section {
+  max-width: 1150px;
+  margin: auto;
+  padding: 10px 6% 80px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  padding: 30px;
+  min-height: 210px;
+}
+
+.card h2 {
+  margin: 0 0 12px;
+  font-size: 27px;
+}
+
+.card p {
+  color: var(--muted);
+  line-height: 1.6;
+  margin-bottom: 22px;
+}
+
+.card a {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 800;
+}
+
+.card a:hover {
+  color: var(--text);
+}
+
+@media (max-width: 700px) {
+
+  header {
+    padding: 22px 6%;
+  }
+
+  nav {
+    display: none;
+  }
+
+  .hero {
+    padding: 65px 6% 50px;
+  }
+
+  h1 {
+    font-size: 54px;
+  }
+
+  .intro {
+    font-size: 18px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    padding: 25px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+
+  <div class="logo">
+    Spies<span>Hub</span>
+  </div>
+
+  <nav>
+    <a href="index.html">HOME</a>
+    <a href="products.html">PRODUCTS</a>
+    <a href="deals.html">DEALS</a>
+    <a href="reviews.html">REVIEWS</a>
+    <a href="about.html">ABOUT</a>
+  </nav>
+
+</header>
+
+
+<section class="hero">
+
+  <div class="eyebrow">
+    EVERYDAY GEAR • PRACTICAL • CAPABLE
+  </div>
+
+  <h1>
+    EVERYDAY<br>
+    <span>CARRY.</span>
+  </h1>
+
+  <p class="intro">
+    Practical gear for everyday life — bags, lighting, tools,
+    technology and useful equipment selected for people who
+    want capable gear without unnecessary clutter.
+  </p>
+
+</section>
+
+
+<section class="section">
+
+  <div class="grid">
+
+
+    <div class="card">
+
+      <h2>Bags & Backpacks</h2>
+
+      <p>
+        Everyday bags, backpacks and carry solutions designed
+        around practicality, organisation and durability.
+      </p>
+
+      <a href="bags.html">
+        Explore Bags →
+      </a>
+
+    </div>
+
+
+    <div class="card">
+
+      <h2>Lighting</h2>
+
+      <p>
+        Compact lights, torches and practical illumination
+        for everyday carry, work and outdoor use.
+      </p>
+
+      <a href="products.html">
+        Explore Lighting →
+      </a>
+
+    </div>
+
+
+    <div class="card">
+
+      <h2>Tools & Accessories</h2>
+
+      <p>
+        Useful everyday tools and accessories selected for
+        reliability, portability and practical use.
+      </p>
+
+      <a href="products.html">
+        Explore Tools →
+      </a>
+
+    </div>
+
+
+    <div class="card">
+
+      <h2>Everyday Technology</h2>
+
+      <p>
+        Compact technology and smart devices that can earn
+        their place in your everyday setup.
+      </p>
+
+      <a href="technology.html">
+        Explore Technology →
+      </a>
+
+    </div>
+
+
+  </div>
+
+</section>
+
+</body>
+</html>
