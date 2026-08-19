@@ -16,7 +16,6 @@
     --bg: #0b0d0c;
     --bg-soft: #111412;
     --card: #151916;
-    --card-hover: #1b211c;
     --olive: #71845a;
     --olive-light: #8fa574;
     --text: #f0f1eb;
@@ -70,7 +69,6 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 30px;
 }
 
 .logo {
@@ -83,23 +81,73 @@ header {
     color: var(--olive-light);
 }
 
-.nav-links {
+.desktop-nav {
     display: flex;
     align-items: center;
     gap: 28px;
-    list-style: none;
 }
 
-.nav-links a {
+.desktop-nav a {
     color: var(--muted);
     font-size: 14px;
     font-weight: 700;
-    letter-spacing: 0.5px;
-    transition: 0.2s ease;
 }
 
-.nav-links a:hover {
+.desktop-nav a:hover {
     color: var(--text);
+}
+
+/* MOBILE MENU BUTTON */
+
+.menu-button {
+    display: none;
+    width: 44px;
+    height: 44px;
+    border: 1px solid var(--border);
+    border-radius: 5px;
+    background: var(--card);
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.menu-button span {
+    width: 21px;
+    height: 2px;
+    background: var(--text);
+    display: block;
+}
+
+/* MOBILE MENU */
+
+.mobile-menu {
+    display: none;
+    background: #0d100e;
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+}
+
+.mobile-menu.open {
+    display: block;
+}
+
+.mobile-menu a {
+    display: block;
+    padding: 17px 6%;
+    border-bottom: 1px solid var(--border);
+    color: var(--text);
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.mobile-menu a:last-child {
+    border-bottom: none;
+}
+
+.mobile-menu a:hover {
+    color: var(--olive-light);
 }
 
 /* =========================
@@ -470,7 +518,7 @@ footer {
 
 .footer-grid {
     display: grid;
-    grid-template-columns: 1.5fr 1fr 1fr 1fr;
+    grid-template-columns: 1.5fr 1fr 1fr;
     gap: 40px;
     padding-bottom: 40px;
 }
@@ -516,12 +564,16 @@ footer {
 
 @media (max-width: 850px) {
 
-    .nav {
-        min-height: 68px;
+    .desktop-nav {
+        display: none;
     }
 
-    .nav-links {
-        display: none;
+    .menu-button {
+        display: flex;
+    }
+
+    .nav {
+        min-height: 68px;
     }
 
     .hero {
@@ -591,10 +643,6 @@ footer {
 
 <body>
 
-<!-- =========================
-     HEADER
-========================= -->
-
 <header>
 
     <div class="container nav">
@@ -603,37 +651,38 @@ footer {
             Spies<span>Hub</span>
         </a>
 
-        <nav>
+        <nav class="desktop-nav">
 
-            <ul class="nav-links">
-
-                <li>
-                    <a href="index.html">HOME</a>
-                </li>
-
-                <li>
-                    <a href="categories.html">PRODUCTS</a>
-                </li>
-
-                <li>
-                    <a href="deals.html">DEALS</a>
-                </li>
-
-                <li>
-                    <a href="reviews.html">REVIEWS</a>
-                </li>
-
-                <li>
-                    <a href="blog.html">BLOG</a>
-                </li>
-
-                <li>
-                    <a href="about.html">ABOUT</a>
-                </li>
-
-            </ul>
+            <a href="index.html">HOME</a>
+            <a href="categories.html">PRODUCTS</a>
+            <a href="deals.html">DEALS</a>
+            <a href="reviews.html">REVIEWS</a>
+            <a href="blog.html">BLOG</a>
+            <a href="about.html">ABOUT</a>
 
         </nav>
+
+        <button class="menu-button"
+                id="menuButton"
+                aria-label="Open menu"
+                aria-expanded="false">
+
+            <span></span>
+            <span></span>
+            <span></span>
+
+        </button>
+
+    </div>
+
+    <div class="mobile-menu" id="mobileMenu">
+
+        <a href="index.html">HOME</a>
+        <a href="categories.html">PRODUCTS</a>
+        <a href="deals.html">DEALS</a>
+        <a href="reviews.html">REVIEWS</a>
+        <a href="blog.html">BLOG</a>
+        <a href="about.html">ABOUT</a>
 
     </div>
 
@@ -641,10 +690,6 @@ footer {
 
 
 <main>
-
-<!-- =========================
-     HERO
-========================= -->
 
 <section class="hero">
 
@@ -686,10 +731,6 @@ footer {
 </section>
 
 
-<!-- =========================
-     FEATURED GEAR
-========================= -->
-
 <section>
 
     <div class="container">
@@ -710,7 +751,6 @@ footer {
 
             <p>
                 A selection of products we're currently highlighting.
-                This section will eventually be populated dynamically.
             </p>
 
             <a href="categories.html" class="view-all">
@@ -818,10 +858,6 @@ footer {
 </section>
 
 
-<!-- =========================
-     DEALS
-========================= -->
-
 <section class="deals">
 
     <div class="container">
@@ -855,10 +891,6 @@ footer {
 
 </section>
 
-
-<!-- =========================
-     WHY SPIESHUB
-========================= -->
 
 <section>
 
@@ -931,11 +963,7 @@ footer {
 </section>
 
 
-<!-- =========================
-     REVIEWS
-========================= -->
-
-<section class="categories">
+<section>
 
     <div class="container">
 
@@ -1012,10 +1040,6 @@ footer {
 
 </section>
 
-
-<!-- =========================
-     BLOG
-========================= -->
 
 <section>
 
@@ -1094,10 +1118,6 @@ footer {
 </section>
 
 
-<!-- =========================
-     CTA
-========================= -->
-
 <section class="cta">
 
     <div class="container">
@@ -1129,10 +1149,6 @@ footer {
 
 </main>
 
-
-<!-- =========================
-     FOOTER
-========================= -->
 
 <footer>
 
@@ -1168,18 +1184,6 @@ footer {
 
             <div class="footer-column">
 
-                <h4>PRODUCTS</h4>
-
-                <a href="categories.html">Tactical Gear</a>
-                <a href="categories.html">Security</a>
-                <a href="categories.html">Optics</a>
-                <a href="categories.html">Everyday Carry</a>
-
-            </div>
-
-
-            <div class="footer-column">
-
                 <h4>SPIESHUB</h4>
 
                 <a href="about.html">About</a>
@@ -1205,6 +1209,40 @@ footer {
     </div>
 
 </footer>
+
+
+<script>
+
+const menuButton = document.getElementById("menuButton");
+const mobileMenu = document.getElementById("mobileMenu");
+
+menuButton.addEventListener("click", function () {
+
+    const isOpen = mobileMenu.classList.toggle("open");
+
+    menuButton.setAttribute(
+        "aria-expanded",
+        isOpen ? "true" : "false"
+    );
+
+});
+
+document.querySelectorAll(".mobile-menu a").forEach(function(link) {
+
+    link.addEventListener("click", function() {
+
+        mobileMenu.classList.remove("open");
+
+        menuButton.setAttribute(
+            "aria-expanded",
+            "false"
+        );
+
+    });
+
+});
+
+</script>
 
 </body>
 </html>
