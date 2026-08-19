@@ -1,716 +1,1314 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>SpiesHub | Tactical Gear, Security, Technology & Everyday Carry</title>
+<title>SpiesHub | Tactical Gear, Security & Technology</title>
 
-  <meta name="description" content="SpiesHub helps you discover tactical gear, tracking devices, CCTV and security, home electronics, everyday carry, outdoor gear and more from leading retailers.">
+<meta name="description" content="SpiesHub explores tactical gear, security equipment, technology, everyday carry, outdoor equipment and gear worth knowing about.">
 
-  <meta name="keywords" content="tactical gear, tactical equipment, tracking devices, GPS trackers, CCTV, security cameras, home electronics, everyday carry, EDC, outdoor gear, tactical bags, tactical clothing">
+<meta name="keywords" content="tactical gear, security equipment, tactical technology, EDC, everyday carry, outdoor gear, optics, CCTV, tracking devices, tactical bags">
 
-  <meta name="robots" content="index, follow">
+<meta name="robots" content="index, follow">
 
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
+<style>
+
+:root {
+    --bg: #0b0d0c;
+    --bg-soft: #111412;
+    --card: #151916;
+    --card-hover: #1b211c;
+    --olive: #71845a;
+    --olive-light: #8fa574;
+    --text: #f0f1eb;
+    --muted: #a5aaa1;
+    --border: #293029;
+    --max-width: 1180px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.container {
+    width: min(92%, var(--max-width));
+    margin: 0 auto;
+}
+
+/* HEADER */
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: rgba(11, 13, 12, 0.97);
+    border-bottom: 1px solid var(--border);
+    backdrop-filter: blur(10px);
+}
+
+.nav {
+    min-height: 76px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.logo span {
+    color: var(--olive-light);
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    list-style: none;
+}
+
+.nav-links a {
+    color: var(--muted);
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    transition: 0.2s ease;
+}
+
+.nav-links a:hover {
+    color: var(--text);
+}
+
+/* HERO */
+
+.hero {
+    min-height: 650px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    border-bottom: 1px solid var(--border);
+
+    background:
+        radial-gradient(
+            circle at 80% 25%,
+            rgba(113,132,90,0.13),
+            transparent 32%
+        ),
+        linear-gradient(
+            135deg,
+            #0b0d0c 0%,
+            #111512 55%,
+            #0b0d0c 100%
+        );
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+
+    background-image:
+        linear-gradient(
+            rgba(255,255,255,0.025) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(255,255,255,0.025) 1px,
+            transparent 1px
+        );
+
+    background-size: 55px 55px;
+    mask-image: linear-gradient(to bottom, black, transparent);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 760px;
+    padding: 90px 0;
+}
+
+.eyebrow {
+    color: var(--olive-light);
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: clamp(42px, 7vw, 78px);
+    line-height: 0.98;
+    letter-spacing: -2px;
+    margin-bottom: 25px;
+}
+
+.hero h1 span {
+    color: var(--olive-light);
+}
+
+.hero p {
+    max-width: 650px;
+    color: var(--muted);
+    font-size: 18px;
+    margin-bottom: 34px;
+}
+
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 14px 22px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    transition: 0.2s ease;
+}
+
+.btn-primary {
+    background: var(--olive);
+    color: #ffffff;
+}
+
+.btn-primary:hover {
+    background: var(--olive-light);
+    transform: translateY(-1px);
+}
+
+.btn-secondary {
+    border: 1px solid var(--border);
+    background: rgba(255,255,255,0.02);
+    color: var(--text);
+}
+
+.btn-secondary:hover {
+    border-color: var(--olive);
+}
+
+/* GENERAL SECTIONS */
+
+section {
+    padding: 80px 0;
+}
+
+.section-heading {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    gap: 25px;
+    margin-bottom: 34px;
+}
+
+.section-heading h2 {
+    font-size: 34px;
+    line-height: 1.1;
+}
+
+.section-heading p {
+    color: var(--muted);
+    max-width: 570px;
+    font-size: 15px;
+}
+
+.view-all {
+    color: var(--olive-light);
+    font-size: 13px;
+    font-weight: 800;
+    white-space: nowrap;
+}
+
+/* CATEGORIES */
+
+.categories {
+    background: var(--bg-soft);
+}
+
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 14px;
+}
+
+.category-card {
+    min-height: 145px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 22px;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    transition: 0.25s ease;
+}
+
+.category-card:hover {
+    background: var(--card-hover);
+    border-color: var(--olive);
+    transform: translateY(-3px);
+}
+
+.category-number {
+    color: var(--olive-light);
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin-bottom: 9px;
+}
+
+.category-card h3 {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.category-card p {
+    color: var(--muted);
+    font-size: 13px;
+}
+
+/* FEATURED PRODUCTS */
+
+.featured-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+
+.product-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    overflow: hidden;
+    transition: 0.25s ease;
+}
+
+.product-card:hover {
+    border-color: var(--olive);
+    transform: translateY(-3px);
+}
+
+.product-visual {
+    height: 190px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(113,132,90,0.12),
+            transparent 55%
+        ),
+        #101310;
+
+    border-bottom: 1px solid var(--border);
+}
+
+.product-visual span {
+    color: #5f695a;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.product-info {
+    padding: 22px;
+}
+
+.product-label {
+    color: var(--olive-light);
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    margin-bottom: 8px;
+}
+
+.product-info h3 {
+    font-size: 21px;
+    margin-bottom: 9px;
+}
+
+.product-info p {
+    color: var(--muted);
+    font-size: 14px;
+    margin-bottom: 18px;
+}
+
+.card-link {
+    color: var(--olive-light);
+    font-size: 13px;
+    font-weight: 800;
+}
+
+/* DEALS */
+
+.deals {
+    background: var(--bg-soft);
+}
+
+.deal-box {
+    border: 1px solid var(--olive);
+    background:
+        linear-gradient(
+            120deg,
+            rgba(113,132,90,0.14),
+            rgba(113,132,90,0.03)
+        );
+
+    padding: 36px;
+    border-radius: 6px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+}
+
+.deal-box h3 {
+    font-size: 28px;
+    margin-bottom: 8px;
+}
+
+.deal-box p {
+    color: var(--muted);
+    max-width: 650px;
+}
+
+/* WHY SPIESHUB */
+
+.why-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.why-card {
+    padding: 28px;
+    border-left: 2px solid var(--olive);
+    background: var(--card);
+}
+
+.why-card h3 {
+    font-size: 19px;
+    margin-bottom: 10px;
+}
+
+.why-card p {
+    color: var(--muted);
+    font-size: 14px;
+}
+
+/* REVIEWS / BLOG */
+
+.content-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.content-card {
+    padding: 30px;
+    border: 1px solid var(--border);
+    background: var(--card);
+    border-radius: 6px;
+}
+
+.content-card .small-label {
+    color: var(--olive-light);
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+.content-card h3 {
+    font-size: 24px;
+    margin-bottom: 12px;
+}
+
+.content-card p {
+    color: var(--muted);
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+/* CTA */
+
+.cta {
+    background:
+        linear-gradient(
+            135deg,
+            #151a16,
+            #0d100e
+        );
+
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    text-align: center;
+}
+
+.cta-content {
+    max-width: 760px;
+    margin: 0 auto;
+}
+
+.cta h2 {
+    font-size: clamp(32px, 5vw, 48px);
+    margin-bottom: 15px;
+}
+
+.cta p {
+    color: var(--muted);
+    margin-bottom: 28px;
+}
+
+/* FOOTER */
+
+footer {
+    background: #080a09;
+    padding: 55px 0 25px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1fr;
+    gap: 40px;
+    padding-bottom: 40px;
+}
+
+.footer-brand p {
+    color: var(--muted);
+    max-width: 330px;
+    font-size: 14px;
+    margin-top: 15px;
+}
+
+.footer-column h4 {
+    font-size: 13px;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+.footer-column a {
+    display: block;
+    color: var(--muted);
+    font-size: 13px;
+    margin-bottom: 9px;
+}
+
+.footer-column a:hover {
+    color: var(--text);
+}
+
+.footer-bottom {
+    padding-top: 22px;
+    border-top: 1px solid var(--border);
+    color: #70756e;
+    font-size: 12px;
+
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+/* MOBILE */
+
+@media (max-width: 850px) {
+
+    .nav {
+        min-height: 68px;
     }
 
-    body {
-      font-family: Arial, Helvetica, sans-serif;
-      background: #080d0a;
-      color: #f1f3f2;
-      line-height: 1.6;
-    }
-
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
-
-    header {
-      padding: 24px 6%;
-      background: #090e0b;
-      border-bottom: 1px solid #263029;
-    }
-
-    .logo {
-      font-size: 36px;
-      font-weight: 900;
-      letter-spacing: 4px;
-      margin-bottom: 18px;
-    }
-
-    .logo span {
-      color: #9bb875;
-    }
-
-    nav {
-      display: flex;
-      gap: 25px;
-      flex-wrap: wrap;
-    }
-
-    nav a {
-      color: #c5cbc7;
-      font-size: 16px;
-    }
-
-    nav a:hover {
-      color: #a4c37b;
+    .nav-links {
+        display: none;
     }
 
     .hero {
-      padding: 70px 6% 55px;
-      min-height: 520px;
-      display: flex;
-      align-items: center;
-      background:
-        linear-gradient(
-          90deg,
-          rgba(8,13,10,0.98) 0%,
-          rgba(8,13,10,0.88) 45%,
-          rgba(8,13,10,0.55) 100%
-        ),
-        url("images/hero-tactical.jpg");
-
-      background-size: cover;
-      background-position: center;
+        min-height: 600px;
     }
 
     .hero-content {
-      max-width: 850px;
-    }
-
-    .eyebrow {
-      color: #9bb875;
-      font-weight: bold;
-      letter-spacing: 4px;
-      font-size: 14px;
-      margin-bottom: 18px;
-      text-transform: uppercase;
-    }
-
-    h1 {
-      font-size: clamp(45px, 8vw, 82px);
-      line-height: 1;
-      margin-bottom: 25px;
-    }
-
-    .hero p {
-      color: #c0c8c2;
-      font-size: 20px;
-      max-width: 760px;
-      margin-bottom: 30px;
-    }
-
-    .hero-button {
-      display: inline-block;
-      background: #9bb875;
-      color: #0b100c;
-      padding: 15px 25px;
-      border-radius: 8px;
-      font-weight: bold;
-    }
-
-    .hero-button:hover {
-      background: #b1ca8e;
-    }
-
-    .section {
-      padding: 65px 6%;
-    }
-
-    .section-title {
-      font-size: 34px;
-      margin-bottom: 10px;
-    }
-
-    .section-description {
-      color: #929b96;
-      margin-bottom: 35px;
-      max-width: 800px;
-    }
-
-    .product-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 22px;
-      max-width: 1200px;
-    }
-
-    .product {
-      background: #151c17;
-      border: 1px solid #29342c;
-      border-radius: 15px;
-      overflow: hidden;
-      transition: 0.2s;
-    }
-
-    .product:hover {
-      transform: translateY(-4px);
-      border-color: #77945b;
-    }
-
-    .product-image {
-      height: 220px;
-      background: #202920;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #69736c;
-      overflow: hidden;
-    }
-
-    .product-image img {
-      width: 100%;
-      height: 100%;
-      object-fit: contain;
-      padding: 15px;
-    }
-
-    .product-content {
-      padding: 22px;
-    }
-
-    .category {
-      color: #9bb875;
-      font-size: 12px;
-      font-weight: bold;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      margin-bottom: 8px;
-    }
-
-    .product h3 {
-      font-size: 21px;
-      margin-bottom: 10px;
-    }
-
-    .product p {
-      color: #9fa9a3;
-      font-size: 14px;
-      margin-bottom: 18px;
-    }
-
-    .deal-button {
-      display: block;
-      text-align: center;
-      background: #9bb875;
-      color: #0b100c;
-      padding: 12px;
-      border-radius: 7px;
-      font-weight: bold;
-    }
-
-    .deal-button:hover {
-      background: #b1ca8e;
+        padding: 70px 0;
     }
 
     .category-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 18px;
-      max-width: 1200px;
+        grid-template-columns: repeat(2, 1fr);
     }
 
-    .category-card {
-      min-height: 180px;
-      padding: 25px;
-      background: #121913;
-      border: 1px solid #29342c;
-      border-radius: 15px;
-      transition: 0.2s;
+    .featured-grid {
+        grid-template-columns: 1fr;
     }
 
-    .category-card:hover {
-      transform: translateY(-4px);
-      border-color: #77945b;
+    .why-grid {
+        grid-template-columns: 1fr;
     }
 
-    .category-icon {
-      font-size: 32px;
-      margin-bottom: 15px;
+    .content-grid {
+        grid-template-columns: 1fr;
     }
 
-    .category-card h3 {
-      font-size: 20px;
-      margin-bottom: 8px;
+    .deal-box {
+        flex-direction: column;
+        align-items: flex-start;
     }
 
-    .category-card p {
-      color: #929b96;
-      font-size: 14px;
+    .footer-grid {
+        grid-template-columns: 1fr 1fr;
     }
 
-    .seo {
-      max-width: 1000px;
-      padding: 20px 6% 75px;
+    .section-heading {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 520px) {
+
+    section {
+        padding: 60px 0;
     }
 
-    .seo h2 {
-      font-size: 30px;
-      margin-bottom: 15px;
+    .hero h1 {
+        font-size: 46px;
     }
 
-    .seo p {
-      color: #9fa9a3;
-      margin-bottom: 15px;
+    .hero p {
+        font-size: 16px;
     }
 
-    footer {
-      border-top: 1px solid #263029;
-      padding: 35px 6%;
-      color: #77817b;
-      font-size: 14px;
+    .category-grid {
+        grid-template-columns: 1fr;
     }
 
-    @media (max-width: 600px) {
-
-      header {
-        padding: 22px 5%;
-      }
-
-      .logo {
-        font-size: 30px;
-      }
-
-      nav {
-        gap: 17px;
-      }
-
-      .hero {
-        padding: 55px 5%;
-      }
-
-      .section,
-      .seo {
-        padding-left: 5%;
-        padding-right: 5%;
-      }
-
+    .footer-grid {
+        grid-template-columns: 1fr;
     }
-  </style>
+
+    .footer-bottom {
+        flex-direction: column;
+    }
+
+    .deal-box {
+        padding: 25px;
+    }
+}
+
+</style>
 </head>
 
 <body>
 
+<!-- HEADER -->
+
 <header>
 
-  <div class="logo">
-    SPIES<span>HUB</span>
-  </div>
+    <div class="container nav">
 
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="categories.html">Categories</a>
-    <a href="deals.html">Deals</a>
-    <a href="reviews.html">Reviews</a>
-    <a href="about.html">About</a>
-  </nav>
+        <a href="index.html" class="logo">
+            Spies<span>Hub</span>
+        </a>
+
+        <nav>
+
+            <ul class="nav-links">
+
+                <li>
+                    <a href="index.html">HOME</a>
+                </li>
+
+                <li>
+                    <a href="categories.html">PRODUCTS</a>
+                </li>
+
+                <li>
+                    <a href="deals.html">DEALS</a>
+                </li>
+
+                <li>
+                    <a href="reviews.html">REVIEWS</a>
+                </li>
+
+                <li>
+                    <a href="categories.html">BLOG</a>
+                </li>
+
+                <li>
+                    <a href="about.html">ABOUT</a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </div>
 
 </header>
 
+
+<main>
 
 <!-- HERO -->
 
 <section class="hero">
 
-  <div class="hero-content">
+    <div class="container">
 
-    <div class="eyebrow">
-      Tactical • Security • Technology
+        <div class="hero-content">
+
+            <div class="eyebrow">
+                TACTICAL • SECURITY • TECHNOLOGY
+            </div>
+
+            <h1>
+                GEAR WORTH<br>
+                <span>KNOWING ABOUT.</span>
+            </h1>
+
+            <p>
+                SpiesHub explores tactical equipment, security technology,
+                everyday carry, outdoor gear and field-ready products worth
+                putting on your radar.
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="categories.html" class="btn btn-primary">
+                    EXPLORE PRODUCTS
+                </a>
+
+                <a href="deals.html" class="btn btn-secondary">
+                    VIEW DEALS
+                </a>
+
+            </div>
+
+        </div>
+
     </div>
 
-    <h1>
-      Gear Worth Knowing About.
-    </h1>
+</section>
 
-    <p>
-      Discover tactical gear, tracking devices, CCTV and security,
-      home electronics, everyday carry, outdoor equipment and more.
-      SpiesHub brings useful products from leading retailers together
-      in one place.
-    </p>
 
-    <a href="categories.html" class="hero-button">
-      EXPLORE CATEGORIES →
-    </a>
+<!-- EXPLORE PRODUCTS -->
 
-  </div>
+<section class="categories">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <div>
+
+                <div class="eyebrow">
+                    EXPLORE
+                </div>
+
+                <h2>
+                    Find the right gear.
+                </h2>
+
+            </div>
+
+            <p>
+                Browse equipment across tactical, security, technology,
+                outdoor and everyday-use categories.
+            </p>
+
+            <a href="categories.html" class="view-all">
+                VIEW ALL PRODUCTS →
+            </a>
+
+        </div>
+
+
+        <div class="category-grid">
+
+            <a href="categories.html" class="category-card">
+                <div class="category-number">01</div>
+                <h3>Tactical Gear</h3>
+                <p>Field equipment and tactical essentials.</p>
+            </a>
+
+            <a href="categories.html" class="category-card">
+                <div class="category-number">02</div>
+                <h3>CCTV & Security</h3>
+                <p>Security cameras and surveillance technology.</p>
+            </a>
+
+            <a href="categories.html" class="category-card">
+                <div class="category-number">03</div>
+                <h3>Tracking Devices</h3>
+                <p>Tracking and location technology.</p>
+            </a>
+
+            <a href="categories.html" class="category-card">
+                <div class="category-number">04</div>
+                <h3>Optics</h3>
+                <p>Optics, observation and visual equipment.</p>
+            </a>
+
+            <a href="bags.html" class="category-card">
+                <div class="category-number">05</div>
+                <h3>Bags & Backpacks</h3>
+                <p>Carry systems for work, travel and the field.</p>
+            </a>
+
+            <a href="categories.html" class="category-card">
+                <div class="category-number">06</div>
+                <h3>Everyday Carry</h3>
+                <p>Useful equipment for everyday life.</p>
+            </a>
+
+            <a href="categories.html" class="category-card">
+                <div class="category-number">07</div>
+                <h3>Lighting</h3>
+                <p>Torches, lights and illumination equipment.</p>
+            </a>
+
+            <a href="categories.html" class="category-card">
+                <div class="category-number">08</div>
+                <h3>Electronics</h3>
+                <p>Technology worth having on your radar.</p>
+            </a>
+
+        </div>
+
+    </div>
 
 </section>
 
 
-<!-- FEATURED PRODUCTS -->
+<!-- FEATURED GEAR -->
 
-<section class="section">
+<section>
 
-  <h2 class="section-title">
-    Featured Finds
-  </h2>
+    <div class="container">
 
-  <p class="section-description">
-    Our featured products across tactical gear, security,
-    technology and everyday carry.
-  </p>
+        <div class="section-heading">
 
+            <div>
 
-  <div class="product-grid">
+                <div class="eyebrow">
+                    FEATURED
+                </div>
 
+                <h2>
+                    Gear worth a closer look.
+                </h2>
 
-    <!-- PRODUCT 1 -->
+            </div>
 
-    <article class="product">
+            <p>
+                A selection of products we're currently highlighting.
+                This section will eventually be populated dynamically.
+            </p>
 
-      <div class="product-image">
-
-        <!-- Awin product image will go here -->
-
-        <img
-          src="images/product-placeholder.jpg"
-          alt="Tactical backpack">
-
-      </div>
-
-      <div class="product-content">
-
-        <div class="category">
-          Tactical Gear
         </div>
 
-        <h3>
-          Tactical Backpack
-        </h3>
 
-        <p>
-          Rugged tactical backpack suitable for everyday carry,
-          outdoor use and equipment storage.
-        </p>
+        <div class="featured-grid">
 
-        <!-- Awin affiliate link will go here -->
+            <article class="product-card">
 
-        <a
-          href="#"
-          class="deal-button"
-          rel="nofollow sponsored">
-          VIEW DEAL →
-        </a>
+                <div class="product-visual">
+                    <span>FEATURED GEAR</span>
+                </div>
 
-      </div>
+                <div class="product-info">
 
-    </article>
+                    <div class="product-label">
+                        TACTICAL
+                    </div>
+
+                    <h3>
+                        Featured Tactical Gear
+                    </h3>
+
+                    <p>
+                        Selected equipment for people who need dependable
+                        gear in demanding environments.
+                    </p>
+
+                    <a href="categories.html" class="card-link">
+                        EXPLORE GEAR →
+                    </a>
+
+                </div>
+
+            </article>
 
 
-    <!-- PRODUCT 2 -->
+            <article class="product-card">
 
-    <article class="product">
+                <div class="product-visual">
+                    <span>FEATURED GEAR</span>
+                </div>
 
-      <div class="product-image">
+                <div class="product-info">
 
-        <img
-          src="images/product-placeholder.jpg"
-          alt="GPS tracking device">
+                    <div class="product-label">
+                        TECHNOLOGY
+                    </div>
 
-      </div>
+                    <h3>
+                        Smart Security Tech
+                    </h3>
 
-      <div class="product-content">
+                    <p>
+                        Security and technology products selected for
+                        practical real-world use.
+                    </p>
 
-        <div class="category">
-          Tracking Devices
+                    <a href="categories.html" class="card-link">
+                        EXPLORE GEAR →
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <article class="product-card">
+
+                <div class="product-visual">
+                    <span>FEATURED GEAR</span>
+                </div>
+
+                <div class="product-info">
+
+                    <div class="product-label">
+                        EVERYDAY CARRY
+                    </div>
+
+                    <h3>
+                        Everyday Essentials
+                    </h3>
+
+                    <p>
+                        Compact equipment designed to be useful wherever
+                        the day takes you.
+                    </p>
+
+                    <a href="categories.html" class="card-link">
+                        EXPLORE GEAR →
+                    </a>
+
+                </div>
+
+            </article>
+
         </div>
 
-        <h3>
-          GPS Tracking Device
-        </h3>
-
-        <p>
-          Compact tracking technology for vehicles, equipment
-          and everyday applications.
-        </p>
-
-        <a
-          href="#"
-          class="deal-button"
-          rel="nofollow sponsored">
-          VIEW DEAL →
-        </a>
-
-      </div>
-
-    </article>
-
-
-    <!-- PRODUCT 3 -->
-
-    <article class="product">
-
-      <div class="product-image">
-
-        <img
-          src="images/product-placeholder.jpg"
-          alt="CCTV security camera">
-
-      </div>
-
-      <div class="product-content">
-
-        <div class="category">
-          CCTV & Security
-        </div>
-
-        <h3>
-          Smart Security Camera
-        </h3>
-
-        <p>
-          Smart security camera technology for monitoring
-          your home and property.
-        </p>
-
-        <a
-          href="#"
-          class="deal-button"
-          rel="nofollow sponsored">
-          VIEW DEAL →
-        </a>
-
-      </div>
-
-    </article>
-
-
-    <!-- PRODUCT 4 -->
-
-    <article class="product">
-
-      <div class="product-image">
-
-        <img
-          src="images/product-placeholder.jpg"
-          alt="Everyday carry gear">
-
-      </div>
-
-      <div class="product-content">
-
-        <div class="category">
-          Everyday Carry
-        </div>
-
-        <h3>
-          Everyday Carry Pack
-        </h3>
-
-        <p>
-          Practical everyday carry equipment for organising
-          essential gear and electronics.
-        </p>
-
-        <a
-          href="#"
-          class="deal-button"
-          rel="nofollow sponsored">
-          VIEW DEAL →
-        </a>
-
-      </div>
-
-    </article>
-
-
-  </div>
+    </div>
 
 </section>
 
 
-<!-- CATEGORIES -->
+<!-- DEALS -->
 
-<section class="section">
+<section class="deals">
 
-  <h2 class="section-title">
-    Explore SpiesHub
-  </h2>
+    <div class="container">
 
-  <p class="section-description">
-    Browse our main product categories.
-  </p>
+        <div class="deal-box">
 
+            <div>
 
-  <div class="category-grid">
+                <div class="eyebrow">
+                    DEALS & OFFERS
+                </div>
 
+                <h3>
+                    Find gear worth buying.
+                </h3>
 
-    <a href="categories.html" class="category-card">
+                <p>
+                    We'll highlight worthwhile offers, promotions and
+                    opportunities across the brands and retailers we work with.
+                </p>
 
-      <div class="category-icon">🎯</div>
+            </div>
 
-      <h3>
-        Tactical Gear
-      </h3>
+            <a href="deals.html" class="btn btn-primary">
+                SEE CURRENT DEALS
+            </a>
 
-      <p>
-        Tactical equipment and practical field gear.
-      </p>
+        </div>
 
-    </a>
-
-
-    <a href="categories.html#tracking-devices" class="category-card">
-
-      <div class="category-icon">📡</div>
-
-      <h3>
-        Tracking Devices
-      </h3>
-
-      <p>
-        GPS trackers and smart tracking technology.
-      </p>
-
-    </a>
-
-
-    <a href="categories.html#cctv-security" class="category-card">
-
-      <div class="category-icon">📹</div>
-
-      <h3>
-        CCTV & Security
-      </h3>
-
-      <p>
-        Security cameras and surveillance technology.
-      </p>
-
-    </a>
-
-
-    <a href="categories.html#home-electronics" class="category-card">
-
-      <div class="category-icon">🏠</div>
-
-      <h3>
-        Home Electronics
-      </h3>
-
-      <p>
-        Smart home devices and useful technology.
-      </p>
-
-    </a>
-
-
-    <a href="categories.html#edc" class="category-card">
-
-      <div class="category-icon">🔦</div>
-
-      <h3>
-        Everyday Carry
-      </h3>
-
-      <p>
-        Useful EDC gear for everyday life.
-      </p>
-
-    </a>
-
-
-    <a href="categories.html#outdoor-gear" class="category-card">
-
-      <div class="category-icon">🏕️</div>
-
-      <h3>
-        Outdoor Gear
-      </h3>
-
-      <p>
-        Camping, hiking and outdoor equipment.
-      </p>
-
-    </a>
-
-
-    <a href="categories.html#tactical-clothing" class="category-card">
-
-      <div class="category-icon">👕</div>
-
-      <h3>
-        Tactical Clothing
-      </h3>
-
-      <p>
-        Durable tactical and outdoor apparel.
-      </p>
-
-    </a>
-
-
-    <a href="bags.html" class="category-card">
-
-      <div class="category-icon">🎒</div>
-
-      <h3>
-        Bags & Backpacks
-      </h3>
-
-      <p>
-        Tactical bags, backpacks and EDC packs.
-      </p>
-
-    </a>
-
-
-  </div>
+    </div>
 
 </section>
 
 
-<!-- SEO CONTENT -->
+<!-- WHY SPIESHUB -->
 
-<section class="seo">
+<section>
 
-  <h2>
-    Tactical Gear, Security Technology & Everyday Carry
-  </h2>
+    <div class="container">
 
-  <p>
-    SpiesHub is a product discovery website covering tactical gear,
-    tracking devices, CCTV and security, home electronics,
-    everyday carry equipment and outdoor gear.
-  </p>
+        <div class="section-heading">
 
-  <p>
-    Our goal is to make it easier to discover useful products
-    from established online retailers. From tactical backpacks
-    and outdoor equipment to GPS tracking devices, security
-    cameras and smart home electronics, SpiesHub brings different
-    types of gear together in one place.
-  </p>
+            <div>
 
-  <p>
-    Browse our categories, discover featured products and use
-    SpiesHub to find equipment that suits your needs.
-  </p>
+                <div class="eyebrow">
+                    THE SPIESHUB APPROACH
+                </div>
+
+                <h2>
+                    Why SpiesHub?
+                </h2>
+
+            </div>
+
+        </div>
+
+
+        <div class="why-grid">
+
+            <div class="why-card">
+
+                <h3>
+                    Gear-focused
+                </h3>
+
+                <p>
+                    We focus on equipment, technology and products that
+                    solve real problems or are simply worth knowing about.
+                </p>
+
+            </div>
+
+
+            <div class="why-card">
+
+                <h3>
+                    Practical selection
+                </h3>
+
+                <p>
+                    Products are selected with practical use in mind,
+                    from professional environments to outdoor and everyday use.
+                </p>
+
+            </div>
+
+
+            <div class="why-card">
+
+                <h3>
+                    Independent discovery
+                </h3>
+
+                <p>
+                    SpiesHub helps you discover products, compare options
+                    and decide what deserves a closer look.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
 
 </section>
 
+
+<!-- REVIEWS -->
+
+<section class="categories">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <div>
+
+                <div class="eyebrow">
+                    REVIEWS
+                </div>
+
+                <h2>
+                    Tested. Compared. Explained.
+                </h2>
+
+            </div>
+
+            <a href="reviews.html" class="view-all">
+                VIEW REVIEWS →
+            </a>
+
+        </div>
+
+
+        <div class="content-grid">
+
+            <article class="content-card">
+
+                <div class="small-label">
+                    PRODUCT REVIEW
+                </div>
+
+                <h3>
+                    Reviews that help you decide.
+                </h3>
+
+                <p>
+                    Detailed reviews and comparisons will help break down
+                    features, strengths, weaknesses and who each product
+                    is actually suited for.
+                </p>
+
+                <a href="reviews.html" class="card-link">
+                    EXPLORE REVIEWS →
+                </a>
+
+            </article>
+
+
+            <article class="content-card">
+
+                <div class="small-label">
+                    COMPARISONS
+                </div>
+
+                <h3>
+                    Which gear makes sense for you?
+                </h3>
+
+                <p>
+                    As SpiesHub grows, we'll build head-to-head comparisons
+                    to make choosing between similar products easier.
+                </p>
+
+                <a href="reviews.html" class="card-link">
+                    SEE COMPARISONS →
+                </a>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- BLOG -->
+
+<section>
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <div>
+
+                <div class="eyebrow">
+                    FROM THE HUB
+                </div>
+
+                <h2>
+                    Latest from SpiesHub.
+                </h2>
+
+            </div>
+
+            <a href="categories.html" class="view-all">
+                VIEW BLOG →
+            </a>
+
+        </div>
+
+
+        <div class="content-grid">
+
+            <article class="content-card">
+
+                <div class="small-label">
+                    FIELD GUIDE
+                </div>
+
+                <h3>
+                    Gear guides and useful information.
+                </h3>
+
+                <p>
+                    Practical articles covering equipment, technology,
+                    security, outdoor gear and everyday carry.
+                </p>
+
+                <a href="categories.html" class="card-link">
+                    READ ARTICLES →
+                </a>
+
+            </article>
+
+
+            <article class="content-card">
+
+                <div class="small-label">
+                    GEAR INTELLIGENCE
+                </div>
+
+                <h3>
+                    New equipment worth knowing about.
+                </h3>
+
+                <p>
+                    Keep up with interesting products, new technology,
+                    brands and equipment entering the market.
+                </p>
+
+                <a href="categories.html" class="card-link">
+                    EXPLORE SPIESHUB →
+                </a>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- CTA -->
+
+<section class="cta">
+
+    <div class="container">
+
+        <div class="cta-content">
+
+            <div class="eyebrow">
+                SPIESHUB
+            </div>
+
+            <h2>
+                Gear worth knowing about.
+            </h2>
+
+            <p>
+                Explore tactical equipment, security technology,
+                everyday carry and more.
+            </p>
+
+            <a href="categories.html" class="btn btn-primary">
+                EXPLORE PRODUCTS
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+</main>
+
+
+<!-- FOOTER -->
 
 <footer>
 
-  <p>
-    © 2026 SpiesHub. All rights reserved.
-  </p>
+    <div class="container">
 
-  <p>
-    SpiesHub may earn a commission from some products purchased
-    through links on this website.
-  </p>
+        <div class="footer-grid">
+
+            <div class="footer-brand">
+
+                <a href="index.html" class="logo">
+                    Spies<span>Hub</span>
+                </a>
+
+                <p>
+                    Tactical gear, security technology and equipment
+                    worth knowing about.
+                </p>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h4>EXPLORE</h4>
+
+                <a href="categories.html">Products</a>
+                <a href="deals.html">Deals</a>
+                <a href="reviews.html">Reviews</a>
+                <a href="categories.html">Blog</a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h4>CATEGORIES</h4>
+
+                <a href="categories.html">Tactical Gear</a>
+                <a href="categories.html">Security</a>
+                <a href="categories.html">Optics</a>
+                <a href="categories.html">Everyday Carry</a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h4>SPIESHUB</h4>
+
+                <a href="about.html">About</a>
+                <a href="about.html">Affiliate Disclosure</a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <div>
+                © 2026 SpiesHub. All rights reserved.
+            </div>
+
+            <div>
+                Tactical • Security • Technology
+            </div>
+
+        </div>
+
+    </div>
 
 </footer>
-
 
 </body>
 </html>
