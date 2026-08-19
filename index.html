@@ -1,1 +1,602 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>SpiesHub | People Who Know the Gear</title>
+
+<meta
+name="description"
+content="SpiesHub — people who know the gear. Discover tactical equipment, security technology, everyday carry, outdoor gear, reviews, deals and more."
+>
+
+<style>
+
+/* =========================
+   SPIESHUB — CORE THEME
+========================= */
+
+:root {
+
+    --black: #080908;
+    --matte-black: #0d0f0d;
+    --panel: #121512;
+
+    --olive: #71845a;
+    --olive-light: #8da56f;
+
+    --white: #f1f2ed;
+    --muted: #9da39a;
+
+    --border: #272d27;
+
+}
+
+
+/* RESET */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+
+    background: var(--black);
+
+    color: var(--white);
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    min-height: 100vh;
+
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+header {
+
+    border-bottom:
+        1px solid var(--border);
+
+    background:
+        var(--black);
+
+}
+
+
+.header-inner {
+
+    width: 92%;
+
+    max-width: 1200px;
+
+    margin: auto;
+
+    min-height: 78px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+}
+
+
+.logo {
+
+    font-size: 27px;
+
+    font-weight: 900;
+
+    letter-spacing: 1px;
+
+}
+
+
+.logo span {
+
+    color:
+        var(--olive-light);
+
+}
+
+
+nav {
+
+    display: flex;
+
+    gap: 28px;
+
+}
+
+
+nav a {
+
+    color:
+        var(--white);
+
+    text-decoration: none;
+
+    font-size: 12px;
+
+    font-weight: 800;
+
+    letter-spacing: 1px;
+
+}
+
+
+nav a:hover {
+
+    color:
+        var(--olive-light);
+
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+
+    width: 92%;
+
+    max-width: 1200px;
+
+    margin: auto;
+
+    min-height: 610px;
+
+    display: flex;
+
+    align-items: center;
+
+}
+
+
+.hero-content {
+
+    max-width: 850px;
+
+}
+
+
+.kicker {
+
+    color:
+        var(--olive-light);
+
+    font-size: 13px;
+
+    font-weight: 800;
+
+    letter-spacing: 4px;
+
+    text-transform: uppercase;
+
+    margin-bottom: 24px;
+
+}
+
+
+h1 {
+
+    font-size:
+        clamp(52px, 9vw, 96px);
+
+    line-height: .92;
+
+    letter-spacing: -4px;
+
+    font-weight: 900;
+
+    margin-bottom: 28px;
+
+}
+
+
+h1 span {
+
+    color:
+        var(--olive-light);
+
+}
+
+
+.tagline {
+
+    color:
+        var(--muted);
+
+    max-width: 650px;
+
+    font-size: 19px;
+
+    line-height: 1.65;
+
+}
+
+
+/* =========================
+   MAIN NAVIGATION
+========================= */
+
+.main-links {
+
+    width: 92%;
+
+    max-width: 1200px;
+
+    margin: auto;
+
+    border-top:
+        1px solid var(--border);
+
+}
+
+
+.main-link {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 28px 0;
+
+    border-bottom:
+        1px solid var(--border);
+
+    color:
+        var(--white);
+
+    text-decoration: none;
+
+    transition:
+        padding-left .2s ease;
+
+}
+
+
+.main-link:hover {
+
+    padding-left: 12px;
+
+}
+
+
+.main-link h2 {
+
+    font-size:
+        clamp(28px, 5vw, 48px);
+
+    line-height: 1;
+
+    font-weight: 800;
+
+    letter-spacing: -1px;
+
+}
+
+
+.main-link h2 span {
+
+    color:
+        var(--olive-light);
+
+}
+
+
+.arrow {
+
+    color:
+        var(--olive-light);
+
+    font-size: 22px;
+
+    font-weight: 400;
+
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+
+    width: 92%;
+
+    max-width: 1200px;
+
+    margin: auto;
+
+    padding: 38px 0;
+
+    color:
+        #686e67;
+
+    font-size: 11px;
+
+    letter-spacing: 1px;
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 750px) {
+
+    nav {
+        display: none;
+    }
+
+
+    .header-inner {
+
+        min-height: 70px;
+
+    }
+
+
+    .hero {
+
+        min-height: 500px;
+
+    }
+
+
+    h1 {
+
+        font-size: 54px;
+
+        letter-spacing: -3px;
+
+    }
+
+
+    .tagline {
+
+        font-size: 17px;
+
+    }
+
+
+    .main-link {
+
+        padding: 24px 0;
+
+    }
+
+
+    .main-link h2 {
+
+        font-size: 34px;
+
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================
+     HEADER
+========================= -->
+
+<header>
+
+    <div class="header-inner">
+
+        <a
+            href="index.html"
+            class="logo"
+        >
+            Spies<span>Hub</span>
+        </a>
+
+
+        <nav>
+
+            <a href="products.html">
+                PRODUCTS
+            </a>
+
+            <a href="deals.html">
+                DEALS
+            </a>
+
+            <a href="reviews.html">
+                REVIEWS
+            </a>
+
+            <a href="blog.html">
+                BLOG
+            </a>
+
+            <a href="about.html">
+                ABOUT
+            </a>
+
+        </nav>
+
+    </div>
+
+</header>
+
+
+<!-- =========================
+     HERO
+========================= -->
+
+<main>
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <div class="kicker">
+            PEOPLE WHO KNOW THE GEAR
+        </div>
+
+
+        <h1>
+
+            GEAR WORTH
+
+            <br>
+
+            <span>KNOWING ABOUT.</span>
+
+        </h1>
+
+
+        <p class="tagline">
+
+            Tactical equipment, security technology,
+            everyday carry, outdoor gear and the products
+            worth putting on your radar.
+
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     MAIN SITE LINKS
+========================= -->
+
+<section class="main-links">
+
+
+    <a
+        href="products.html"
+        class="main-link"
+    >
+
+        <h2>
+            PRODUCTS<span>.</span>
+        </h2>
+
+        <div class="arrow">
+            →
+        </div>
+
+    </a>
+
+
+    <a
+        href="deals.html"
+        class="main-link"
+    >
+
+        <h2>
+            DEALS<span>.</span>
+        </h2>
+
+        <div class="arrow">
+            →
+        </div>
+
+    </a>
+
+
+    <a
+        href="reviews.html"
+        class="main-link"
+    >
+
+        <h2>
+            REVIEWS<span>.</span>
+        </h2>
+
+        <div class="arrow">
+            →
+        </div>
+
+    </a>
+
+
+    <a
+        href="blog.html"
+        class="main-link"
+    >
+
+        <h2>
+            BLOG<span>.</span>
+        </h2>
+
+        <div class="arrow">
+            →
+        </div>
+
+    </a>
+
+
+    <a
+        href="about.html"
+        class="main-link"
+    >
+
+        <h2>
+            ABOUT<span>.</span>
+        </h2>
+
+        <div class="arrow">
+            →
+        </div>
+
+    </a>
+
+
+</section>
+
+</main>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+    SPIESHUB
+    &nbsp;•&nbsp;
+    TACTICAL • SECURITY • TECHNOLOGY
+
+</footer>
+
+
+</body>
+
+</html>
