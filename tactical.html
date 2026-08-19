@@ -97,6 +97,28 @@ nav a.active {
 }
 
 
+/* BREADCRUMB */
+
+.breadcrumb {
+    width: 92%;
+    max-width: 1200px;
+    margin: 28px auto 0;
+
+    color: #737b72;
+
+    font-size: 12px;
+    letter-spacing: 1px;
+}
+
+.breadcrumb a {
+    color: var(--olive-light);
+}
+
+.breadcrumb span {
+    margin: 0 8px;
+}
+
+
 /* HERO */
 
 .hero {
@@ -104,7 +126,8 @@ nav a.active {
     max-width: 1200px;
 
     margin: auto;
-    padding: 70px 0 45px;
+
+    padding: 55px 0 45px;
 }
 
 .eyebrow {
@@ -149,31 +172,7 @@ nav a.active {
 }
 
 
-/* BREADCRUMB */
-
-.breadcrumb {
-    width: 92%;
-    max-width: 1200px;
-
-    margin: 0 auto 30px;
-
-    color: #737b72;
-
-    font-size: 12px;
-
-    letter-spacing: 1px;
-}
-
-.breadcrumb a {
-    color: var(--olive-light);
-}
-
-.breadcrumb span {
-    margin: 0 8px;
-}
-
-
-/* SUBCATEGORY GRID */
+/* CATEGORY GRID */
 
 .categories {
     width: 92%;
@@ -193,12 +192,12 @@ nav a.active {
 }
 
 
-/* CATEGORY CARD */
+/* CARDS */
 
 .category-card {
     position: relative;
 
-    min-height: 300px;
+    min-height: 310px;
 
     overflow: hidden;
 
@@ -241,7 +240,7 @@ nav a.active {
 }
 
 
-/* DARK OVERLAY */
+/* OVERLAY */
 
 .category-overlay {
     position: absolute;
@@ -251,16 +250,13 @@ nav a.active {
     background:
         linear-gradient(
             to top,
-            rgba(5, 8, 6, .97) 0%,
-            rgba(5, 8, 6, .72) 48%,
+            rgba(5, 8, 6, .98) 0%,
+            rgba(5, 8, 6, .74) 48%,
             rgba(5, 8, 6, .20) 100%
         );
 
     z-index: -2;
 }
-
-
-/* OLIVE TONE */
 
 .category-glow {
     position: absolute;
@@ -270,7 +266,7 @@ nav a.active {
     background:
         linear-gradient(
             135deg,
-            rgba(83, 103, 64, .16),
+            rgba(83, 103, 64, .18),
             transparent 60%
         );
 
@@ -278,10 +274,10 @@ nav a.active {
 }
 
 
-/* CARD CONTENT */
+/* CONTENT */
 
 .category-content {
-    min-height: 300px;
+    min-height: 310px;
 
     display: flex;
 
@@ -399,7 +395,7 @@ footer strong {
     }
 
     .hero {
-        padding: 55px 0 35px;
+        padding: 45px 0 35px;
     }
 
     .hero h1 {
@@ -416,11 +412,11 @@ footer strong {
     }
 
     .category-card {
-        min-height: 280px;
+        min-height: 285px;
     }
 
     .category-content {
-        min-height: 280px;
+        min-height: 285px;
         padding: 24px;
     }
 
@@ -445,13 +441,9 @@ footer strong {
         <nav>
 
             <a href="products.html" class="active">PRODUCTS</a>
-
             <a href="deals.html">DEALS</a>
-
             <a href="reviews.html">REVIEWS</a>
-
             <a href="blog.html">BLOG</a>
-
             <a href="about.html">ABOUT</a>
 
         </nav>
@@ -464,8 +456,6 @@ footer strong {
 <main>
 
 
-<!-- BREADCRUMB -->
-
 <div class="breadcrumb">
 
     <a href="products.html">PRODUCTS</a>
@@ -476,8 +466,6 @@ footer strong {
 
 </div>
 
-
-<!-- HERO -->
 
 <section class="hero">
 
@@ -497,278 +485,247 @@ footer strong {
 </section>
 
 
-<!-- SUBCATEGORIES -->
-
 <section class="categories">
 
-    <div class="category-grid">
+<div class="category-grid">
 
 
-        <!-- 01 -->
+<!-- 01 VESTS -->
 
-        <a href="tactical-vests.html" class="category-card">
+<a href="tactical-vests.html" class="category-card">
 
-            <img
-                class="category-image"
-                src="https://images.pexels.com/photos/7393146/pexels-photo-7393146.jpeg?auto=compress&cs=tinysrgb&w=1600"
-                alt="Tactical vest and equipment"
-            >
+<img
+    class="category-image"
+    src="https://images.pexels.com/photos/30871177/pexels-photo-30871177.jpeg?auto=compress&cs=tinysrgb&w=1600"
+    alt="Tactical vest with pouches and equipment"
+>
 
-            <div class="category-overlay"></div>
-            <div class="category-glow"></div>
+<div class="category-overlay"></div>
+<div class="category-glow"></div>
 
-            <div class="category-content">
+<div class="category-content">
 
-                <div class="category-number">
-                    01 / CARRY
-                </div>
+<div class="category-number">01 / CARRY</div>
 
-                <h2>
-                    Vests &amp; Carriers
-                </h2>
+<h2>Vests &amp; Carriers</h2>
 
-                <p>
-                    Tactical vests, plate carriers and load-bearing systems.
-                </p>
+<p>
+Tactical vests, plate carriers and load-bearing systems.
+</p>
 
-                <div class="explore">
-                    Explore <span class="arrow">→</span>
-                </div>
+<div class="explore">
+Explore <span class="arrow">→</span>
+</div>
 
-            </div>
+</div>
 
-        </a>
+</a>
 
 
-        <!-- 02 -->
+<!-- 02 BELTS -->
 
-        <a href="belts-pouches.html" class="category-card">
+<a href="belts-pouches.html" class="category-card">
 
-            <img
-                class="category-image"
-                src="https://images.pexels.com/photos/7393146/pexels-photo-7393146.jpeg?auto=compress&cs=tinysrgb&w=1600"
-                alt="Tactical belt and pouches"
-            >
+<img
+    class="category-image"
+    src="https://images.pexels.com/photos/11680871/pexels-photo-11680871.jpeg?auto=compress&cs=tinysrgb&w=1600"
+    alt="Military tactical belt with pouches"
+>
 
-            <div class="category-overlay"></div>
-            <div class="category-glow"></div>
+<div class="category-overlay"></div>
+<div class="category-glow"></div>
 
-            <div class="category-content">
+<div class="category-content">
 
-                <div class="category-number">
-                    02 / CARRY
-                </div>
+<div class="category-number">02 / CARRY</div>
 
-                <h2>
-                    Belts &amp; Pouches
-                </h2>
+<h2>Belts &amp; Pouches</h2>
 
-                <p>
-                    Tactical belts, utility pouches and equipment storage.
-                </p>
+<p>
+Tactical belts, utility pouches and equipment storage.
+</p>
 
-                <div class="explore">
-                    Explore <span class="arrow">→</span>
-                </div>
+<div class="explore">
+Explore <span class="arrow">→</span>
+</div>
 
-            </div>
+</div>
 
-        </a>
+</a>
 
 
-        <!-- 03 -->
+<!-- 03 GLOVES -->
 
-        <a href="gloves.html" class="category-card">
+<a href="gloves.html" class="category-card">
 
-            <img
-                class="category-image"
-                src="https://images.pexels.com/photos/5691626/pexels-photo-5691626.jpeg?auto=compress&cs=tinysrgb&w=1600"
-                alt="Protective tactical gloves"
-            >
+<img
+    class="category-image"
+    src="https://images.pexels.com/photos/11735385/pexels-photo-11735385.jpeg?auto=compress&cs=tinysrgb&w=1600"
+    alt="Tactical gloves and military equipment"
+>
 
-            <div class="category-overlay"></div>
-            <div class="category-glow"></div>
+<div class="category-overlay"></div>
+<div class="category-glow"></div>
 
-            <div class="category-content">
+<div class="category-content">
 
-                <div class="category-number">
-                    03 / PROTECTION
-                </div>
+<div class="category-number">03 / PROTECTION</div>
 
-                <h2>
-                    Gloves
-                </h2>
+<h2>Gloves</h2>
 
-                <p>
-                    Tactical and protective gloves for demanding work.
-                </p>
+<p>
+Tactical and protective gloves for demanding work.
+</p>
 
-                <div class="explore">
-                    Explore <span class="arrow">→</span>
-                </div>
+<div class="explore">
+Explore <span class="arrow">→</span>
+</div>
 
-            </div>
+</div>
 
-        </a>
+</a>
 
 
-        <!-- 04 -->
+<!-- 04 PROTECTIVE -->
 
-        <a href="protective-gear.html" class="category-card">
+<a href="protective-gear.html" class="category-card">
 
-            <img
-                class="category-image"
-                src="https://images.pexels.com/photos/6074778/pexels-photo-6074778.jpeg?auto=compress&cs=tinysrgb&w=1600"
-                alt="Protective equipment"
-            >
+<img
+    class="category-image"
+    src="https://images.pexels.com/photos/5795735/pexels-photo-5795735.jpeg?auto=compress&cs=tinysrgb&w=1600"
+    alt="Protective tactical vest and gloves"
+>
 
-            <div class="category-overlay"></div>
-            <div class="category-glow"></div>
+<div class="category-overlay"></div>
+<div class="category-glow"></div>
 
-            <div class="category-content">
+<div class="category-content">
 
-                <div class="category-number">
-                    04 / PROTECTION
-                </div>
+<div class="category-number">04 / PROTECTION</div>
 
-                <h2>
-                    Protective Gear
-                </h2>
+<h2>Protective Gear</h2>
 
-                <p>
-                    Protective equipment designed for demanding environments.
-                </p>
+<p>
+Protective equipment designed for demanding environments.
+</p>
 
-                <div class="explore">
-                    Explore <span class="arrow">→</span>
-                </div>
+<div class="explore">
+Explore <span class="arrow">→</span>
+</div>
 
-            </div>
+</div>
 
-        </a>
+</a>
 
 
-        <!-- 05 -->
+<!-- 05 CLOTHING -->
 
-        <a href="tactical-clothing.html" class="category-card">
+<a href="tactical-clothing.html" class="category-card">
 
-            <img
-                class="category-image"
-                src="https://images.pexels.com/photos/7679458/pexels-photo-7679458.jpeg?auto=compress&cs=tinysrgb&w=1600"
-                alt="Tactical clothing"
-            >
+<img
+    class="category-image"
+    src="https://images.pexels.com/photos/30213988/pexels-photo-30213988.jpeg?auto=compress&cs=tinysrgb&w=1600"
+    alt="Tactical clothing and military gear"
+>
 
-            <div class="category-overlay"></div>
-            <div class="category-glow"></div>
+<div class="category-overlay"></div>
+<div class="category-glow"></div>
 
-            <div class="category-content">
+<div class="category-content">
 
-                <div class="category-number">
-                    05 / CLOTHING
-                </div>
+<div class="category-number">05 / CLOTHING</div>
 
-                <h2>
-                    Tactical Clothing
-                </h2>
+<h2>Tactical Clothing</h2>
 
-                <p>
-                    Durable clothing designed for movement and hard use.
-                </p>
+<p>
+Durable clothing designed for movement and hard use.
+</p>
 
-                <div class="explore">
-                    Explore <span class="arrow">→</span>
-                </div>
+<div class="explore">
+Explore <span class="arrow">→</span>
+</div>
 
-            </div>
+</div>
 
-        </a>
+</a>
 
 
-        <!-- 06 -->
+<!-- 06 DUTY -->
 
-        <a href="duty-gear.html" class="category-card">
+<a href="duty-gear.html" class="category-card">
 
-            <img
-                class="category-image"
-                src="https://images.pexels.com/photos/5691533/pexels-photo-5691533.jpeg?auto=compress&cs=tinysrgb&w=1600"
-                alt="Duty equipment"
-            >
+<img
+    class="category-image"
+    src="https://images.pexels.com/photos/8820203/pexels-photo-8820203.jpeg?auto=compress&cs=tinysrgb&w=1600"
+    alt="Tactical duty belt and equipment"
+>
 
-            <div class="category-overlay"></div>
-            <div class="category-glow"></div>
+<div class="category-overlay"></div>
+<div class="category-glow"></div>
 
-            <div class="category-content">
+<div class="category-content">
 
-                <div class="category-number">
-                    06 / DUTY
-                </div>
+<div class="category-number">06 / DUTY</div>
 
-                <h2>
-                    Duty Gear
-                </h2>
+<h2>Duty Gear</h2>
 
-                <p>
-                    Practical equipment designed for professional use.
-                </p>
+<p>
+Practical equipment designed for professional use.
+</p>
 
-                <div class="explore">
-                    Explore <span class="arrow">→</span>
-                </div>
+<div class="explore">
+Explore <span class="arrow">→</span>
+</div>
 
-            </div>
+</div>
 
-        </a>
+</a>
 
 
-        <!-- 07 -->
+<!-- 07 HYDRATION -->
 
-        <a href="hydration.html" class="category-card">
+<a href="hydration.html" class="category-card">
 
-            <img
-                class="category-image"
-                src="https://images.pexels.com/photos/3768916/pexels-photo-3768916.jpeg?auto=compress&cs=tinysrgb&w=1600"
-                alt="Hydration equipment"
-            >
+<img
+    class="category-image"
+    src="https://images.pexels.com/photos/3768916/pexels-photo-3768916.jpeg?auto=compress&cs=tinysrgb&w=1600"
+    alt="Hydration equipment for outdoor use"
+>
 
-            <div class="category-overlay"></div>
-            <div class="category-glow"></div>
+<div class="category-overlay"></div>
+<div class="category-glow"></div>
 
-            <div class="category-content">
+<div class="category-content">
 
-                <div class="category-number">
-                    07 / HYDRATION
-                </div>
+<div class="category-number">07 / HYDRATION</div>
 
-                <h2>
-                    Hydration
-                </h2>
+<h2>Hydration</h2>
 
-                <p>
-                    Hydration systems and equipment for staying supplied on the move.
-                </p>
+<p>
+Hydration systems and equipment for staying supplied on the move.
+</p>
 
-                <div class="explore">
-                    Explore <span class="arrow">→</span>
-                </div>
+<div class="explore">
+Explore <span class="arrow">→</span>
+</div>
 
-            </div>
+</div>
 
-        </a>
+</a>
 
 
-    </div>
+</div>
 
 </section>
-
 
 </main>
 
 
 <footer>
 
-    <p>
-        <strong>SpiesHub</strong> — Gear worth knowing about.
-    </p>
+<p>
+<strong>SpiesHub</strong> — Gear worth knowing about.
+</p>
 
 </footer>
 
