@@ -1,12 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>SpiesHub | Tactical • Security • Technology</title>
 
-<meta name="description" content="SpiesHub — tactical gear, security technology and equipment worth knowing about.">
+<meta
+name="description"
+content="SpiesHub — tactical gear, security technology and equipment worth knowing about."
+>
 
 <style>
 
@@ -49,7 +54,9 @@ a {
 }
 
 
-/* HEADER */
+/* =========================
+   HEADER
+========================= */
 
 header {
     position: sticky;
@@ -94,7 +101,9 @@ header {
 }
 
 
-/* MOBILE MENU BUTTON */
+/* =========================
+   MOBILE MENU BUTTON
+========================= */
 
 .menu-button {
     display: none;
@@ -117,7 +126,9 @@ header {
 }
 
 
-/* MOBILE MENU */
+/* =========================
+   MOBILE MENU
+========================= */
 
 .mobile-menu {
     display: none;
@@ -142,7 +153,9 @@ header {
 }
 
 
-/* HERO */
+/* =========================
+   HERO
+========================= */
 
 .hero {
     min-height: 650px;
@@ -194,7 +207,9 @@ header {
 }
 
 
-/* TOP LINE */
+/* =========================
+   HERO KICKER
+========================= */
 
 .hero-kicker {
     color: var(--white);
@@ -210,7 +225,9 @@ header {
 }
 
 
-/* TACTICAL / SECURITY / TECHNOLOGY */
+/* =========================
+   HERO TYPES
+========================= */
 
 .hero-types {
     display: flex;
@@ -233,7 +250,9 @@ header {
 }
 
 
-/* MAIN HEADING */
+/* =========================
+   HERO HEADING
+========================= */
 
 .hero h1 {
     font-size: clamp(46px, 7vw, 78px);
@@ -258,6 +277,11 @@ header {
     flex-wrap: wrap;
     gap: 12px;
 }
+
+
+/* =========================
+   BUTTONS
+========================= */
 
 .btn {
     display: inline-block;
@@ -286,7 +310,9 @@ header {
 }
 
 
-/* MAIN PAGE SECTIONS */
+/* =========================
+   MAIN PAGE SECTIONS
+========================= */
 
 .page-section {
     min-height: 310px;
@@ -332,7 +358,9 @@ header {
 }
 
 
-/* FOOTER */
+/* =========================
+   FOOTER
+========================= */
 
 footer {
     padding: 30px 0;
@@ -362,7 +390,9 @@ footer {
 }
 
 
-/* MOBILE */
+/* =========================
+   MOBILE
+========================= */
 
 @media (max-width: 850px) {
 
@@ -395,6 +425,7 @@ footer {
         align-items: flex-start;
         flex-direction: column;
     }
+
 }
 
 @media (max-width: 520px) {
@@ -424,57 +455,90 @@ footer {
     .page-section h2 {
         font-size: 38px;
     }
+
 }
 
 </style>
+
 </head>
 
 <body>
 
 
+<!-- HEADER -->
+
 <header>
 
-    <div class="container nav">
+<div class="container nav">
 
-        <a href="index.html" class="logo">
-            Spies<span>Hub</span>
-        </a>
-
-        <nav class="desktop-nav">
-
-            <a href="index.html">HOME</a>
-            <a href="categories.html">PRODUCTS</a>
-            <a href="deals.html">DEALS</a>
-            <a href="reviews.html">REVIEWS</a>
-            <a href="blog.html">BLOG</a>
-            <a href="about.html">ABOUT</a>
-
-        </nav>
-
-        <button
-            class="menu-button"
-            id="menuButton"
-            aria-label="Open menu"
-            aria-expanded="false"
-        >
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
-
-    </div>
+<a href="index.html" class="logo">
+Spies<span>Hub</span>
+</a>
 
 
-    <div class="mobile-menu" id="mobileMenu">
+<nav class="desktop-nav">
 
-        <a href="index.html">HOME</a>
-        <a href="categories.html">PRODUCTS</a>
-        <a href="deals.html">DEALS</a>
-        <a href="reviews.html">REVIEWS</a>
-        <a href="blog.html">BLOG</a>
-        <a href="about.html">ABOUT</a>
+<a href="index.html">
+HOME
+</a>
 
-    </div>
+<a href="products.html">
+PRODUCTS
+</a>
+
+<a href="deals.html">
+DEALS
+</a>
+
+<a href="reviews.html">
+REVIEWS
+</a>
+
+<a href="blog.html">
+BLOG
+</a>
+
+<a href="about.html">
+ABOUT
+</a>
+
+</nav>
+
+
+<button
+class="menu-button"
+id="menuButton"
+aria-label="Open menu"
+aria-expanded="false"
+>
+
+<span></span>
+<span></span>
+<span></span>
+
+</button>
+
+</div>
+
+
+<div
+class="mobile-menu"
+id="mobileMenu"
+>
+
+<a href="index.html">HOME</a>
+
+<a href="products.html">PRODUCTS</a>
+
+<a href="deals.html">DEALS</a>
+
+<a href="reviews.html">REVIEWS</a>
+
+<a href="blog.html">BLOG</a>
+
+<a href="about.html">ABOUT</a>
+
+</div>
 
 </header>
 
@@ -482,57 +546,63 @@ footer {
 <main>
 
 
-<!-- HOME -->
+<!-- HOME / HERO -->
 
 <section class="hero" id="home">
 
-    <div class="container">
+<div class="container">
 
-        <div class="hero-content">
+<div class="hero-content">
 
-            <div class="hero-kicker">
-                FOR PEOPLE WHO KNOW <span>THE GEAR.</span>
-            </div>
 
-            <div class="hero-types">
+<div class="hero-kicker">
+FOR PEOPLE WHO KNOW <span>THE GEAR.</span>
+</div>
 
-                <span>TACTICAL</span>
-                <span>SECURITY</span>
-                <span>TECHNOLOGY</span>
 
-            </div>
+<div class="hero-types">
 
-            <h1>
-                GEAR WORTH<br>
-                <span>KNOWING ABOUT.</span>
-            </h1>
+<span>TACTICAL</span>
+<span>SECURITY</span>
+<span>TECHNOLOGY</span>
 
-            <p class="hero-description">
-                Tactical equipment, security technology, everyday carry,
-                outdoor gear and field-ready products worth putting on your radar.
-            </p>
+</div>
 
-            <div class="hero-buttons">
 
-                <a
-                    href="categories.html"
-                    class="btn btn-primary"
-                >
-                    EXPLORE PRODUCTS
-                </a>
+<h1>
+GEAR WORTH<br>
+<span>KNOWING ABOUT.</span>
+</h1>
 
-                <a
-                    href="deals.html"
-                    class="btn btn-secondary"
-                >
-                    VIEW DEALS
-                </a>
 
-            </div>
+<p class="hero-description">
+Tactical equipment, security technology, everyday carry,
+outdoor gear and field-ready products worth putting on your radar.
+</p>
 
-        </div>
 
-    </div>
+<div class="hero-buttons">
+
+<a
+href="products.html"
+class="btn btn-primary"
+>
+EXPLORE PRODUCTS
+</a>
+
+
+<a
+href="deals.html"
+class="btn btn-secondary"
+>
+VIEW DEALS
+</a>
+
+</div>
+
+</div>
+
+</div>
 
 </section>
 
@@ -541,27 +611,29 @@ footer {
 
 <section class="page-section" id="products">
 
-    <div class="container">
+<div class="container">
 
-        <div class="section-number">
-            01 / PRODUCTS
-        </div>
+<div class="section-number">
+01 / PRODUCTS
+</div>
 
-        <h2>PRODUCTS</h2>
+<h2>
+PRODUCTS
+</h2>
 
-        <p>
-            Explore tactical gear, security equipment, technology,
-            everyday carry, outdoor equipment and more.
-        </p>
+<p>
+Explore tactical gear, security equipment, technology,
+everyday carry, outdoor equipment and more.
+</p>
 
-        <a
-            href="categories.html"
-            class="section-link"
-        >
-            EXPLORE THE PRODUCT DIRECTORY →
-        </a>
+<a
+href="products.html"
+class="section-link"
+>
+EXPLORE THE PRODUCT DIRECTORY →
+</a>
 
-    </div>
+</div>
 
 </section>
 
@@ -570,27 +642,29 @@ footer {
 
 <section class="page-section" id="deals">
 
-    <div class="container">
+<div class="container">
 
-        <div class="section-number">
-            02 / DEALS
-        </div>
+<div class="section-number">
+02 / DEALS
+</div>
 
-        <h2>DEALS</h2>
+<h2>
+DEALS
+</h2>
 
-        <p>
-            Worthwhile offers, promotions and opportunities
-            from brands and retailers featured by SpiesHub.
-        </p>
+<p>
+Worthwhile offers, promotions and opportunities
+from brands and retailers featured by SpiesHub.
+</p>
 
-        <a
-            href="deals.html"
-            class="section-link"
-        >
-            VIEW CURRENT DEALS →
-        </a>
+<a
+href="deals.html"
+class="section-link"
+>
+VIEW CURRENT DEALS →
+</a>
 
-    </div>
+</div>
 
 </section>
 
@@ -599,27 +673,29 @@ footer {
 
 <section class="page-section" id="reviews">
 
-    <div class="container">
+<div class="container">
 
-        <div class="section-number">
-            03 / REVIEWS
-        </div>
+<div class="section-number">
+03 / REVIEWS
+</div>
 
-        <h2>REVIEWS</h2>
+<h2>
+REVIEWS
+</h2>
 
-        <p>
-            Product reviews, comparisons and practical breakdowns
-            designed to help you decide what gear makes sense.
-        </p>
+<p>
+Product reviews, comparisons and practical breakdowns
+designed to help you decide what gear makes sense.
+</p>
 
-        <a
-            href="reviews.html"
-            class="section-link"
-        >
-            EXPLORE REVIEWS →
-        </a>
+<a
+href="reviews.html"
+class="section-link"
+>
+EXPLORE REVIEWS →
+</a>
 
-    </div>
+</div>
 
 </section>
 
@@ -628,27 +704,29 @@ footer {
 
 <section class="page-section" id="blog">
 
-    <div class="container">
+<div class="container">
 
-        <div class="section-number">
-            04 / BLOG
-        </div>
+<div class="section-number">
+04 / BLOG
+</div>
 
-        <h2>BLOG</h2>
+<h2>
+BLOG
+</h2>
 
-        <p>
-            Gear guides, useful information, technology,
-            equipment stories and things worth knowing.
-        </p>
+<p>
+Gear guides, useful information, technology,
+equipment stories and things worth knowing.
+</p>
 
-        <a
-            href="blog.html"
-            class="section-link"
-        >
-            READ THE LATEST →
-        </a>
+<a
+href="blog.html"
+class="section-link"
+>
+READ THE LATEST →
+</a>
 
-    </div>
+</div>
 
 </section>
 
@@ -657,28 +735,30 @@ footer {
 
 <section class="page-section" id="about">
 
-    <div class="container">
+<div class="container">
 
-        <div class="section-number">
-            05 / ABOUT
-        </div>
+<div class="section-number">
+05 / ABOUT
+</div>
 
-        <h2>ABOUT</h2>
+<h2>
+ABOUT
+</h2>
 
-        <p>
-            SpiesHub is built around discovering useful,
-            interesting and capable equipment — from professional
-            environments to outdoor and everyday use.
-        </p>
+<p>
+SpiesHub is built around discovering useful,
+interesting and capable equipment — from professional
+environments to outdoor and everyday use.
+</p>
 
-        <a
-            href="about.html"
-            class="section-link"
-        >
-            ABOUT SPIESHUB →
-        </a>
+<a
+href="about.html"
+class="section-link"
+>
+ABOUT SPIESHUB →
+</a>
 
-    </div>
+</div>
 
 </section>
 
@@ -686,57 +766,72 @@ footer {
 </main>
 
 
+<!-- FOOTER -->
+
 <footer>
 
-    <div class="container footer-content">
+<div class="container footer-content">
 
-        <div class="footer-brand">
-            Spies<span>Hub</span>
-        </div>
+<div class="footer-brand">
+Spies<span>Hub</span>
+</div>
 
-        <div class="footer-text">
-            TACTICAL • SECURITY • TECHNOLOGY
-            &nbsp; | &nbsp;
-            © 2026 SPIESHUB
-        </div>
+<div class="footer-text">
+TACTICAL • SECURITY • TECHNOLOGY
+&nbsp; | &nbsp;
+© 2026 SPIESHUB
+</div>
 
-    </div>
+</div>
 
 </footer>
 
 
 <script>
 
-const menuButton = document.getElementById("menuButton");
-const mobileMenu = document.getElementById("mobileMenu");
+const menuButton =
+document.getElementById("menuButton");
 
-menuButton.addEventListener("click", function () {
+const mobileMenu =
+document.getElementById("mobileMenu");
 
-    const isOpen = mobileMenu.classList.toggle("open");
 
-    menuButton.setAttribute(
-        "aria-expanded",
-        isOpen ? "true" : "false"
-    );
+menuButton.addEventListener(
+"click",
+function() {
+
+const isOpen =
+mobileMenu.classList.toggle("open");
+
+menuButton.setAttribute(
+"aria-expanded",
+isOpen ? "true" : "false"
+);
 
 });
 
-document.querySelectorAll(".mobile-menu a").forEach(function(link) {
 
-    link.addEventListener("click", function() {
+document
+.querySelectorAll(".mobile-menu a")
+.forEach(function(link) {
 
-        mobileMenu.classList.remove("open");
+link.addEventListener(
+"click",
+function() {
 
-        menuButton.setAttribute(
-            "aria-expanded",
-            "false"
-        );
+mobileMenu.classList.remove("open");
 
-    });
+menuButton.setAttribute(
+"aria-expanded",
+"false"
+);
+
+});
 
 });
 
 </script>
+
 
 </body>
 </html>
