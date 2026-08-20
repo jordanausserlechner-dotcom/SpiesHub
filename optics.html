@@ -5,273 +5,239 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Optics & Night Vision | SpiesHub</title>
-
-<meta name="description" content="Explore binoculars, monoculars, night vision, thermal imaging and spotting scopes at SpiesHub.">
+<meta name="description" content="Explore binoculars, night vision, thermal imaging, spotting scopes and monoculars at SpiesHub.">
 
 <style>
+*{box-sizing:border-box;margin:0;padding:0}
 
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+body{
+font-family:Arial,Helvetica,sans-serif;
+background:#090c0a;
+color:#f1f1ed;
 }
 
-body {
-    font-family: Arial, Helvetica, sans-serif;
-    background: #090c0a;
-    color: #f1f1ed;
+a{color:inherit;text-decoration:none}
+
+header{
+background:#0b0f0d;
+border-bottom:1px solid #252a25;
 }
 
-a {
-    text-decoration: none;
-    color: inherit;
+.nav{
+max-width:1200px;
+margin:auto;
+padding:20px 24px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+gap:25px;
 }
 
-/* HEADER */
-
-header {
-    background: #0b0f0d;
-    border-bottom: 1px solid #252a25;
+.logo{
+font-size:26px;
+font-weight:800;
 }
 
-.nav {
-    max-width: 1200px;
-    margin: auto;
-    padding: 20px 24px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 25px;
+.logo span{color:#71835a}
+
+.nav-links{
+display:flex;
+gap:22px;
+flex-wrap:wrap;
 }
 
-.logo {
-    font-size: 26px;
-    font-weight: 800;
+.nav-links a{
+color:#c7ccc5;
+font-size:14px;
+font-weight:700;
 }
 
-.logo span {
-    color: #71835a;
+.nav-links a:hover{color:#91a875}
+
+.hero{
+max-width:900px;
+margin:auto;
+padding:65px 24px 45px;
+text-align:center;
 }
 
-.nav-links {
-    display: flex;
-    gap: 22px;
-    flex-wrap: wrap;
+.eyebrow{
+color:#91a875;
+font-size:12px;
+font-weight:800;
+letter-spacing:3px;
+margin-bottom:16px;
 }
 
-.nav-links a {
-    color: #c7ccc5;
-    font-size: 14px;
-    font-weight: 700;
+.hero h1{
+font-size:clamp(40px,8vw,68px);
+line-height:.95;
+letter-spacing:-2px;
+text-transform:uppercase;
+margin-bottom:22px;
 }
 
-.nav-links a:hover,
-.nav-links .active {
-    color: #91a875;
+.hero p{
+max-width:680px;
+margin:auto;
+color:#adb4ac;
+font-size:17px;
+line-height:1.6;
 }
 
-/* HERO */
-
-.hero {
-    max-width: 900px;
-    margin: auto;
-    padding: 65px 24px 45px;
-    text-align: center;
+.products{
+max-width:1100px;
+margin:auto;
+padding:20px 24px 80px;
 }
 
-.eyebrow {
-    color: #91a875;
-    font-size: 12px;
-    font-weight: 800;
-    letter-spacing: 3px;
-    margin-bottom: 16px;
+.grid{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:20px;
 }
 
-.hero h1 {
-    font-size: clamp(40px, 8vw, 68px);
-    line-height: .95;
-    text-transform: uppercase;
-    letter-spacing: -2px;
-    margin-bottom: 22px;
+.card{
+position:relative;
+min-height:330px;
+overflow:hidden;
+border:1px solid #303630;
+border-radius:14px;
+background:#111511;
+transition:.25s ease;
 }
 
-.hero p {
-    max-width: 680px;
-    margin: auto;
-    color: #adb4ac;
-    font-size: 17px;
-    line-height: 1.6;
+.card:hover{
+transform:translateY(-4px);
+border-color:#71835a;
 }
 
-/* PRODUCTS */
-
-.products {
-    max-width: 1100px;
-    margin: auto;
-    padding: 20px 24px 80px;
+.card img{
+position:absolute;
+inset:0;
+width:100%;
+height:100%;
+object-fit:cover;
 }
 
-.grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
+.card::after{
+content:"";
+position:absolute;
+inset:0;
+background:linear-gradient(
+to bottom,
+rgba(0,0,0,.05) 10%,
+rgba(0,0,0,.35) 45%,
+rgba(5,8,6,.98) 100%
+);
 }
 
-/* CARDS */
-
-.card {
-    position: relative;
-    min-height: 330px;
-    overflow: hidden;
-    border: 1px solid #303630;
-    border-radius: 14px;
-    background: #111511;
-    transition: .25s ease;
+.card-content{
+position:relative;
+z-index:2;
+min-height:330px;
+padding:27px;
+display:flex;
+flex-direction:column;
+justify-content:flex-end;
 }
 
-.card:hover {
-    transform: translateY(-4px);
-    border-color: #71835a;
+.number{
+color:#91a875;
+font-size:12px;
+font-weight:800;
+letter-spacing:2px;
+margin-bottom:8px;
 }
 
-.card img {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+.card h2{
+font-size:28px;
+line-height:1;
+text-transform:uppercase;
+margin-bottom:12px;
 }
 
-.card::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(
-        to bottom,
-        rgba(0,0,0,.05) 10%,
-        rgba(0,0,0,.35) 45%,
-        rgba(5,8,6,.98) 100%
-    );
+.card p{
+color:#d0d4ce;
+font-size:14px;
+line-height:1.5;
 }
 
-.card-content {
-    position: relative;
-    z-index: 2;
-    min-height: 330px;
-    padding: 26px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
+.explore{
+margin-top:17px;
+color:#a5ba89;
+font-size:12px;
+font-weight:800;
+letter-spacing:1.5px;
+text-transform:uppercase;
 }
 
-.number {
-    color: #91a875;
-    font-size: 12px;
-    font-weight: 800;
-    letter-spacing: 2px;
-    margin-bottom: 8px;
+.back{
+text-align:center;
+margin-top:30px;
 }
 
-.card h2 {
-    font-size: 29px;
-    text-transform: uppercase;
-    margin-bottom: 10px;
+.back a{
+color:#91a875;
+font-size:12px;
+font-weight:800;
+letter-spacing:1px;
+text-transform:uppercase;
 }
 
-.card p {
-    color: #d0d4ce;
-    font-size: 14px;
-    line-height: 1.5;
+footer{
+border-top:1px solid #252a25;
+background:#070907;
+padding:35px 20px;
+text-align:center;
 }
 
-.explore {
-    margin-top: 16px;
-    color: #a5ba89;
-    font-size: 12px;
-    font-weight: 800;
-    letter-spacing: 1.5px;
-    text-transform: uppercase;
+footer p{
+color:#70776f;
+font-size:12px;
 }
 
-/* LAST CARD */
+footer strong{color:#9aaa89}
 
-.card:last-child {
-    grid-column: span 2;
+@media(max-width:700px){
+
+.nav{
+padding:17px 18px;
+align-items:flex-start;
 }
 
-/* FOOTER */
+.logo{font-size:22px}
 
-footer {
-    border-top: 1px solid #252a25;
-    background: #070907;
-    padding: 35px 20px;
-    text-align: center;
+.nav-links{gap:12px}
+
+.nav-links a{font-size:11px}
+
+.hero{
+padding:50px 20px 35px;
 }
 
-footer p {
-    color: #70776f;
-    font-size: 12px;
+.hero h1{font-size:44px}
+
+.hero p{font-size:15px}
+
+.products{
+padding:15px 18px 60px;
 }
 
-footer strong {
-    color: #9aaa89;
+.grid{
+grid-template-columns:1fr;
 }
 
-/* MOBILE */
-
-@media (max-width: 700px) {
-
-    .nav {
-        padding: 17px 18px;
-        align-items: flex-start;
-    }
-
-    .logo {
-        font-size: 22px;
-    }
-
-    .nav-links {
-        gap: 12px;
-    }
-
-    .nav-links a {
-        font-size: 11px;
-    }
-
-    .hero {
-        padding: 50px 20px 35px;
-    }
-
-    .hero h1 {
-        font-size: 44px;
-    }
-
-    .hero p {
-        font-size: 15px;
-    }
-
-    .products {
-        padding: 15px 18px 60px;
-    }
-
-    .grid {
-        grid-template-columns: 1fr;
-    }
-
-    .card {
-        min-height: 300px;
-    }
-
-    .card-content {
-        min-height: 300px;
-        padding: 24px;
-    }
-
-    .card:last-child {
-        grid-column: span 1;
-    }
+.card{
+min-height:310px;
 }
 
+.card-content{
+min-height:310px;
+padding:24px;
+}
+
+}
 </style>
 </head>
 
@@ -282,31 +248,15 @@ footer strong {
 <nav class="nav">
 
 <a href="index.html" class="logo">
-    Spies<span>Hub</span>
+Spies<span>Hub</span>
 </a>
 
 <div class="nav-links">
-
-<a href="products.html" class="active">
-    Products
-</a>
-
-<a href="deals.html">
-    Deals
-</a>
-
-<a href="reviews.html">
-    Reviews
-</a>
-
-<a href="blog.html">
-    Blog
-</a>
-
-<a href="about.html">
-    About
-</a>
-
+<a href="products.html">Products</a>
+<a href="deals.html">Deals</a>
+<a href="reviews.html">Reviews</a>
+<a href="blog.html">Blog</a>
+<a href="about.html">About</a>
 </div>
 
 </nav>
@@ -317,17 +267,16 @@ footer strong {
 <section class="hero">
 
 <div class="eyebrow">
-    SPIESHUB / PRODUCTS / 07
+SPIESHUB / PRODUCTS / 07
 </div>
 
 <h1>
-    Optics &amp; Night Vision
+Optics &amp; Night Vision
 </h1>
 
 <p>
-Explore essential observation equipment including
-binoculars, monoculars, night vision, thermal imaging
-and spotting scopes.
+Binoculars, night vision, thermal imaging and
+field observation equipment for seeing further.
 </p>
 
 </section>
@@ -340,173 +289,152 @@ and spotting scopes.
 
 <!-- 01 BINOCULARS -->
 
-<a href="#" class="card">
+<a href="binoculars.html" class="card">
 
 <img
-src="https://commons.wikimedia.org/wiki/Special:Redirect/file/1st_Law_Enforcement_Battalion_conducts_IED_training_140311-M-VZ995-516.jpg"
-alt="Military binoculars"
+src="https://images.unsplash.com/photo-1595435934249-5df7ed86e1c0?auto=format&fit=crop&w=1400&q=85"
+alt="Binoculars"
 loading="lazy"
 >
 
 <div class="card-content">
 
-<div class="number">
-01 / OPTICS
-</div>
+<div class="number">01 / OPTICS</div>
 
-<h2>
-Binoculars
-</h2>
+<h2>Binoculars</h2>
 
 <p>
-Military and tactical binoculars for observation,
-field use and long-distance viewing.
+Rugged binoculars for outdoor observation,
+sport, wildlife and field use.
 </p>
 
-<div class="explore">
-Explore Category →
-</div>
+<div class="explore">Explore Category →</div>
 
 </div>
 
 </a>
 
 
-<!-- 02 MONOCULARS -->
+<!-- 02 NIGHT VISION -->
 
-<a href="#" class="card">
+<a href="night-vision.html" class="card">
 
 <img
-src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Caribbean_Urban_Warrior_2024_-_Safran_Vectronix_MOSKITO_TI%E2%84%A2_Dutch_Marines.webp"
-alt="Military optical device"
+src="https://images.unsplash.com/photo-1531327431456-837da4b1d562?auto=format&fit=crop&w=1400&q=85"
+alt="Night vision observation equipment"
 loading="lazy"
 >
 
 <div class="card-content">
 
-<div class="number">
-02 / OPTICS
-</div>
+<div class="number">02 / NIGHT</div>
 
-<h2>
-Monoculars
-</h2>
+<h2>Night Vision</h2>
 
 <p>
-Compact observation optics for portable field
-and outdoor use.
+Night vision equipment designed for low-light
+observation and field applications.
 </p>
 
-<div class="explore">
-Explore Category →
-</div>
+<div class="explore">Explore Category →</div>
 
 </div>
 
 </a>
 
 
-<!-- 03 NIGHT VISION -->
+<!-- 03 THERMAL IMAGING -->
 
-<a href="#" class="card">
+<a href="thermal-imaging.html" class="card">
 
 <img
-src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Mallet_Strike_2024_exercises_integrated_air_and_missile_defense_with_High_North_Allies_in_Finland_(8756117).jpg"
-alt="Military night vision equipment"
+src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1400&q=85"
+alt="Thermal imaging and outdoor observation"
 loading="lazy"
 >
 
 <div class="card-content">
 
-<div class="number">
-03 / LOW LIGHT
-</div>
+<div class="number">03 / THERMAL</div>
 
-<h2>
-Night Vision
-</h2>
+<h2>Thermal Imaging</h2>
 
 <p>
-Night-vision equipment for observation in
-low-light environments.
+Thermal cameras and imaging equipment for
+detecting heat signatures in challenging conditions.
 </p>
 
-<div class="explore">
-Explore Category →
-</div>
+<div class="explore">Explore Category →</div>
 
 </div>
 
 </a>
 
 
-<!-- 04 THERMAL -->
+<!-- 04 SPOTTING SCOPES -->
 
-<a href="#" class="card">
+<a href="spotting-scopes.html" class="card">
 
 <img
-src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Senop_LISA_-_MPL15_-_Target_acquisition_device_of_the_Finnish_Army.webp"
-alt="Thermal and military observation equipment"
+src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&w=1400&q=85"
+alt="Long range spotting scope"
 loading="lazy"
 >
 
 <div class="card-content">
 
-<div class="number">
-04 / THERMAL
-</div>
+<div class="number">04 / LONG RANGE</div>
 
-<h2>
-Thermal Imaging
-</h2>
+<h2>Spotting Scopes</h2>
 
 <p>
-Thermal and infrared observation equipment for
-detecting heat signatures.
+Long-range observation optics for field,
+wildlife and precision viewing.
 </p>
 
-<div class="explore">
-Explore Category →
-</div>
+<div class="explore">Explore Category →</div>
 
 </div>
 
 </a>
 
 
-<!-- 05 SPOTTING SCOPES -->
+<!-- 05 MONOCULARS -->
 
-<a href="#" class="card">
+<a href="monoculars.html" class="card">
 
 <img
-src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Defense.gov_News_Photo_120321-A-ML570-006_-_U.S._Army_Spc._Zachary_Dixson_with_the_173rd_Airborne_Brigade_Combat_Team_uses_a_spotting_scope_to_watch_for_simulated_enemy_combatants_during_an.jpg"
-alt="Military spotting scope"
+src="https://images.unsplash.com/photo-1511497584788-876760111969?auto=format&fit=crop&w=1400&q=85"
+alt="Compact monocular observation equipment"
 loading="lazy"
 >
 
 <div class="card-content">
 
-<div class="number">
-05 / OBSERVATION
-</div>
+<div class="number">05 / COMPACT</div>
 
-<h2>
-Spotting Scopes
-</h2>
+<h2>Monoculars</h2>
 
 <p>
-Long-range observation equipment used for
-detailed field viewing.
+Compact observation optics that are easy to
+carry for hiking, travel and field use.
 </p>
 
-<div class="explore">
-Explore Category →
-</div>
+<div class="explore">Explore Category →</div>
 
 </div>
 
 </a>
 
+
+</div>
+
+
+<div class="back">
+
+<a href="products.html">
+← Back to Products
+</a>
 
 </div>
 
