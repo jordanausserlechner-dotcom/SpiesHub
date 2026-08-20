@@ -1,1 +1,755 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="theme-color" content="#080908">
+
+<title>Tracking Devices | SpiesHub</title>
+
+<meta name="description" content="Explore GPS trackers, vehicle trackers, personal trackers, asset trackers, pet trackers, Bluetooth trackers and satellite tracking devices at SpiesHub.">
+
+<style>
+
+:root {
+    --black: #080908;
+    --olive: #71845a;
+    --olive-light: #8da56f;
+    --white: #f1f2ed;
+    --muted: #aeb5aa;
+    --border: #272d27;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    background: #080908;
+    color: #f1f2ed;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+/* HEADER */
+
+header {
+    background: #080908;
+    border-bottom: 1px solid #272d27;
+}
+
+.header-inner {
+    width: 92%;
+    max-width: 1200px;
+    min-height: 78px;
+    margin: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    color: #f1f2ed;
+    text-decoration: none;
+
+    font-size: 27px;
+    font-weight: 900;
+    letter-spacing: 1px;
+}
+
+.logo span {
+    color: #8da56f;
+}
+
+nav {
+    display: flex;
+    gap: 28px;
+}
+
+nav a {
+    color: #f1f2ed;
+    text-decoration: none;
+
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+nav a:hover,
+nav a.active {
+    color: #8da56f;
+}
+
+
+/* BREADCRUMB */
+
+.breadcrumb {
+    width: 92%;
+    max-width: 1200px;
+
+    margin: 28px auto 0;
+
+    color: #737b72;
+
+    font-size: 12px;
+
+    letter-spacing: 1px;
+}
+
+.breadcrumb a {
+    color: #8da56f;
+}
+
+.breadcrumb span {
+    margin: 0 8px;
+}
+
+
+/* HERO */
+
+.hero {
+    width: 92%;
+    max-width: 1200px;
+
+    margin: auto;
+
+    padding: 55px 0 45px;
+}
+
+.eyebrow {
+    color: #8da56f;
+
+    font-size: 12px;
+    font-weight: 800;
+
+    letter-spacing: 3px;
+
+    text-transform: uppercase;
+
+    margin-bottom: 14px;
+}
+
+.hero h1 {
+    margin: 0 0 18px;
+
+    color: #f1f2ed;
+
+    font-size: clamp(44px, 7vw, 76px);
+
+    line-height: .95;
+
+    letter-spacing: -3px;
+
+    font-weight: 900;
+
+    text-transform: uppercase;
+}
+
+.hero p {
+    max-width: 650px;
+
+    margin: 0;
+
+    color: #aeb5aa;
+
+    font-size: 16px;
+
+    line-height: 1.6;
+}
+
+
+/* CATEGORY GRID */
+
+.categories {
+    width: 92%;
+    max-width: 1200px;
+
+    margin: auto;
+
+    padding-bottom: 80px;
+}
+
+.category-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 18px;
+}
+
+
+/* CATEGORY CARD */
+
+.category-card {
+    position: relative;
+
+    min-height: 310px;
+
+    overflow: hidden;
+
+    border: 1px solid #272d27;
+
+    border-radius: 12px;
+
+    background: #10130f;
+
+    isolation: isolate;
+
+    transition:
+        transform .3s ease,
+        border-color .3s ease;
+}
+
+.category-card:hover {
+    transform: translateY(-5px);
+
+    border-color: #71845a;
+}
+
+.category-image {
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    z-index: -3;
+
+    transition: transform .5s ease;
+}
+
+.category-card:hover .category-image {
+    transform: scale(1.05);
+}
+
+
+/* OVERLAY */
+
+.category-overlay {
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            to top,
+            rgba(5, 8, 6, .98) 0%,
+            rgba(5, 8, 6, .74) 48%,
+            rgba(5, 8, 6, .18) 100%
+        );
+
+    z-index: -2;
+}
+
+.category-glow {
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(83, 103, 64, .18),
+            transparent 60%
+        );
+
+    z-index: -1;
+}
+
+
+/* CONTENT */
+
+.category-content {
+    min-height: 310px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: flex-end;
+
+    padding: 28px;
+}
+
+.category-number {
+    color: #8da56f;
+
+    font-size: 11px;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 8px;
+}
+
+.category-content h2 {
+    margin: 0 0 9px;
+
+    color: #f1f2ed;
+
+    font-size: clamp(26px, 4vw, 38px);
+
+    line-height: 1;
+
+    letter-spacing: -1px;
+
+    text-transform: uppercase;
+}
+
+.category-content p {
+    margin: 0;
+
+    max-width: 480px;
+
+    color: #c0c6bd;
+
+    font-size: 14px;
+
+    line-height: 1.5;
+}
+
+.explore {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    width: fit-content;
+
+    margin-top: 17px;
+
+    color: #8da56f;
+
+    font-size: 11px;
+
+    font-weight: 800;
+
+    letter-spacing: 1.5px;
+
+    text-transform: uppercase;
+}
+
+.arrow {
+    transition: transform .25s ease;
+}
+
+.category-card:hover .arrow {
+    transform: translateX(5px);
+}
+
+
+/* FOOTER */
+
+footer {
+    border-top: 1px solid #272d27;
+
+    background: #060706;
+
+    padding: 35px 24px;
+
+    text-align: center;
+}
+
+footer p {
+    margin: 0;
+
+    color: #727a71;
+
+    font-size: 12px;
+}
+
+footer strong {
+    color: #9aaa89;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 750px) {
+
+    nav {
+        display: none;
+    }
+
+    .header-inner {
+        min-height: 70px;
+    }
+
+    .hero {
+        padding: 45px 0 35px;
+    }
+
+    .hero h1 {
+        font-size: 48px;
+        letter-spacing: -3px;
+    }
+
+    .hero p {
+        font-size: 15px;
+    }
+
+    .category-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .category-card {
+        min-height: 285px;
+    }
+
+    .category-content {
+        min-height: 285px;
+        padding: 24px;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<header>
+
+    <div class="header-inner">
+
+        <a href="index.html" class="logo">
+            Spies<span>Hub</span>
+        </a>
+
+        <nav>
+
+            <a href="products.html" class="active">PRODUCTS</a>
+
+            <a href="deals.html">DEALS</a>
+
+            <a href="reviews.html">REVIEWS</a>
+
+            <a href="blog.html">BLOG</a>
+
+            <a href="about.html">ABOUT</a>
+
+        </nav>
+
+    </div>
+
+</header>
+
+
+<main>
+
+
+<div class="breadcrumb">
+
+    <a href="products.html">PRODUCTS</a>
+
+    <span>→</span>
+
+    TRACKING DEVICES
+
+</div>
+
+
+<section class="hero">
+
+    <div class="eyebrow">
+        SpiesHub / Tracking
+    </div>
+
+    <h1>
+        Tracking Devices
+    </h1>
+
+    <p>
+        Location and tracking technology for vehicles,
+        people, pets and valuable equipment.
+    </p>
+
+</section>
+
+
+<section class="categories">
+
+<div class="category-grid">
+
+
+<!-- 01 GPS TRACKERS -->
+
+<a href="gps-trackers.html" class="category-card">
+
+<img
+    class="category-image"
+    src="https://images.pexels.com/photos/13062233/pexels-photo-13062233.jpeg?auto=compress&cs=tinysrgb&w=1600"
+    alt="GPS tracking device"
+>
+
+<div class="category-overlay"></div>
+<div class="category-glow"></div>
+
+<div class="category-content">
+
+<div class="category-number">01 / GPS</div>
+
+<h2>
+GPS Trackers
+</h2>
+
+<p>
+Compact GPS devices for location tracking and monitoring.
+</p>
+
+<div class="explore">
+Explore <span class="arrow">→</span>
+</div>
+
+</div>
+
+</a>
+
+
+<!-- 02 VEHICLE TRACKERS -->
+
+<a href="vehicle-trackers.html" class="category-card">
+
+<img
+    class="category-image"
+    src="https://images.pexels.com/photos/9966007/pexels-photo-9966007.jpeg?auto=compress&cs=tinysrgb&w=1600"
+    alt="Vehicle GPS tracking system"
+>
+
+<div class="category-overlay"></div>
+<div class="category-glow"></div>
+
+<div class="category-content">
+
+<div class="category-number">02 / VEHICLE</div>
+
+<h2>
+Vehicle Trackers
+</h2>
+
+<p>
+Tracking systems designed for cars, motorcycles and other vehicles.
+</p>
+
+<div class="explore">
+Explore <span class="arrow">→</span>
+</div>
+
+</div>
+
+</a>
+
+
+<!-- 03 PERSONAL TRACKERS -->
+
+<a href="personal-trackers.html" class="category-card">
+
+<img
+    class="category-image"
+    src="https://images.pexels.com/photos/6846257/pexels-photo-6846257.jpeg?auto=compress&cs=tinysrgb&w=1600"
+    alt="Personal tracking device"
+>
+
+<div class="category-overlay"></div>
+<div class="category-glow"></div>
+
+<div class="category-content">
+
+<div class="category-number">03 / PERSONAL</div>
+
+<h2>
+Personal Trackers
+</h2>
+
+<p>
+Compact location devices designed for personal safety and travel.
+</p>
+
+<div class="explore">
+Explore <span class="arrow">→</span>
+</div>
+
+</div>
+
+</a>
+
+
+<!-- 04 ASSET TRACKERS -->
+
+<a href="asset-trackers.html" class="category-card">
+
+<img
+    class="category-image"
+    src="https://images.pexels.com/photos/5083216/pexels-photo-5083216.jpeg?auto=compress&cs=tinysrgb&w=1600"
+    alt="Electronic tracking technology"
+>
+
+<div class="category-overlay"></div>
+<div class="category-glow"></div>
+
+<div class="category-content">
+
+<div class="category-number">04 / ASSET</div>
+
+<h2>
+Asset Trackers
+</h2>
+
+<p>
+Tracking devices for equipment, cases, vehicles and valuable gear.
+</p>
+
+<div class="explore">
+Explore <span class="arrow">→</span>
+</div>
+
+</div>
+
+</a>
+
+
+<!-- 05 PET TRACKERS -->
+
+<a href="pet-trackers.html" class="category-card">
+
+<img
+    class="category-image"
+    src="https://images.pexels.com/photos/34150274/pexels-photo-34150274.jpeg?auto=compress&cs=tinysrgb&w=1600"
+    alt="GPS pet tracking collar"
+>
+
+<div class="category-overlay"></div>
+<div class="category-glow"></div>
+
+<div class="category-content">
+
+<div class="category-number">05 / PET</div>
+
+<h2>
+Pet Trackers
+</h2>
+
+<p>
+Location tracking devices designed to help keep track of pets.
+</p>
+
+<div class="explore">
+Explore <span class="arrow">→</span>
+</div>
+
+</div>
+
+</a>
+
+
+<!-- 06 BLUETOOTH -->
+
+<a href="bluetooth-trackers.html" class="category-card">
+
+<img
+    class="category-image"
+    src="https://images.pexels.com/photos/35147278/pexels-photo-35147278.jpeg?auto=compress&cs=tinysrgb&w=1600"
+    alt="Bluetooth tracking technology"
+>
+
+<div class="category-overlay"></div>
+<div class="category-glow"></div>
+
+<div class="category-content">
+
+<div class="category-number">06 / BLUETOOTH</div>
+
+<h2>
+Bluetooth Trackers
+</h2>
+
+<p>
+Small Bluetooth-enabled trackers for locating everyday items.
+</p>
+
+<div class="explore">
+Explore <span class="arrow">→</span>
+</div>
+
+</div>
+
+</a>
+
+
+<!-- 07 SATELLITE -->
+
+<a href="satellite-trackers.html" class="category-card">
+
+<img
+    class="category-image"
+    src="https://images.pexels.com/photos/11315278/pexels-photo-11315278.jpeg?auto=compress&cs=tinysrgb&w=1600"
+    alt="Satellite GPS tracking technology"
+>
+
+<div class="category-overlay"></div>
+<div class="category-glow"></div>
+
+<div class="category-content">
+
+<div class="category-number">07 / SATELLITE</div>
+
+<h2>
+Satellite Trackers
+</h2>
+
+<p>
+Long-range tracking technology for remote and off-grid use.
+</p>
+
+<div class="explore">
+Explore <span class="arrow">→</span>
+</div>
+
+</div>
+
+</a>
+
+
+</div>
+
+</section>
+
+</main>
+
+
+<footer>
+
+<p>
+<strong>SpiesHub</strong> — Gear worth knowing about.
+</p>
+
+</footer>
+
+
+</body>
+
+</html>
