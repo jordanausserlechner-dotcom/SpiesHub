@@ -1,1 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<title>Torches | SpiesHub</title>
+
+<meta name="description" content="Tactical torches, LED flashlights and practical lighting equipment at SpiesHub.">
+
+<style>
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #090c0a;
+    color: #f1f1ed;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+header {
+    background: #0b0f0d;
+    border-bottom: 1px solid #252a25;
+}
+
+.nav {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+}
+
+.logo {
+    font-size: 26px;
+    font-weight: 800;
+}
+
+.logo span {
+    color: #71835a;
+}
+
+.nav-links {
+    display: flex;
+    gap: 22px;
+    flex-wrap: wrap;
+}
+
+.nav-links a {
+    color: #c7ccc5;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.nav-links a:hover {
+    color: #91a875;
+}
+
+.hero {
+    max-width: 900px;
+    margin: auto;
+    padding: 60px 24px 40px;
+    text-align: center;
+}
+
+.eyebrow {
+    color: #91a875;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+}
+
+.hero h1 {
+    font-size: clamp(42px, 8vw, 68px);
+    line-height: .95;
+    letter-spacing: -2px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    max-width: 680px;
+    margin: auto;
+    color: #adb4ac;
+    font-size: 17px;
+    line-height: 1.6;
+}
+
+.products {
+    max-width: 1100px;
+    margin: auto;
+    padding: 20px 24px 70px;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.product-card {
+    background: #111511;
+    border: 1px solid #303630;
+    border-radius: 14px;
+    overflow: hidden;
+    transition: .25s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-4px);
+    border-color: #71835a;
+}
+
+.product-image {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    display: block;
+}
+
+.product-info {
+    padding: 22px;
+}
+
+.product-label {
+    color: #91a875;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin-bottom: 9px;
+}
+
+.product-card h2 {
+    font-size: 21px;
+    line-height: 1.15;
+    margin-bottom: 12px;
+}
+
+.product-card p {
+    color: #aeb5ad;
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 18px;
+}
+
+.shop-button {
+    display: block;
+    width: 100%;
+    padding: 14px;
+    background: #91a875;
+    color: #080b09;
+    text-align: center;
+    border-radius: 7px;
+    font-size: 12px;
+    font-weight: 900;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.shop-button:hover {
+    background: #a7bd8d;
+}
+
+.back {
+    text-align: center;
+    margin-top: 35px;
+}
+
+.back a {
+    color: #91a875;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+footer {
+    border-top: 1px solid #252a25;
+    background: #070907;
+    padding: 35px 20px;
+    text-align: center;
+}
+
+footer p {
+    color: #70776f;
+    font-size: 12px;
+}
+
+footer strong {
+    color: #9aaa89;
+}
+
+@media (max-width: 800px) {
+
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .nav {
+        padding: 17px 18px;
+        align-items: flex-start;
+    }
+
+    .logo {
+        font-size: 22px;
+    }
+
+    .nav-links {
+        gap: 12px;
+    }
+
+    .nav-links a {
+        font-size: 11px;
+    }
+
+    .hero {
+        padding: 50px 20px 35px;
+    }
+
+    .hero h1 {
+        font-size: 44px;
+    }
+
+    .hero p {
+        font-size: 15px;
+    }
+
+    .products {
+        padding: 15px 18px 60px;
+    }
+
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .product-image {
+        height: 280px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+
+<nav class="nav">
+
+<a href="index.html" class="logo">
+Spies<span>Hub</span>
+</a>
+
+<div class="nav-links">
+<a href="products.html">Products</a>
+<a href="deals.html">Deals</a>
+<a href="reviews.html">Reviews</a>
+<a href="blog.html">Blog</a>
+<a href="about.html">About</a>
+</div>
+
+</nav>
+
+</header>
+
+
+<section class="hero">
+
+<div class="eyebrow">
+SPIESHUB / TACTICAL GEAR
+</div>
+
+<h1>Torches</h1>
+
+<p>
+Tactical torches, LED flashlights and practical
+lighting equipment for outdoor, field and everyday use.
+</p>
+
+</section>
+
+
+<main class="products">
+
+<div class="product-grid">
+
+
+<div class="product-card">
+
+<img
+class="product-image"
+src="https://www.ecogearfx.com/wp-content/uploads/2015/06/TK120.jpg"
+alt="EcoGear FX TK120 Tactical Flashlight"
+>
+
+<div class="product-info">
+
+<div class="product-label">
+TACTICAL TORCH
+</div>
+
+<h2>
+EcoGear FX TK120 Tactical Flashlight
+</h2>
+
+<p>
+A compact high-powered LED flashlight with multiple
+light modes and rechargeable battery capability.
+</p>
+
+<a
+class="shop-button"
+href="https://tidd.ly/4gH4pp1"
+target="_blank"
+rel="nofollow sponsored noopener"
+>
+View Product →
+</a>
+
+</div>
+
+</div>
+
+
+</div>
+
+
+<div class="back">
+
+<a href="tactical-gear.html">
+← Back to Tactical Gear
+</a>
+
+</div>
+
+</main>
+
+
+<footer>
+
+<p>
+<strong>SpiesHub</strong> — Gear worth knowing about.
+</p>
+
+</footer>
+
+</body>
+</html>
