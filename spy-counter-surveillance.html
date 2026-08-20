@@ -1,1 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
 
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Spy & Counter-Surveillance | SpiesHub</title>
+
+<meta name="description" content="Explore spy and counter-surveillance equipment including hidden camera detectors, RF detectors, lens finders, privacy equipment and professional detection gear.">
+
+<style>
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #090c0a;
+    color: #f1f1ed;
+    line-height: 1.5;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+header {
+    background: #0b0f0d;
+    border-bottom: 1px solid #222822;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+}
+
+.logo {
+    font-size: 26px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.logo span {
+    color: #71835a;
+}
+
+.nav-links {
+    display: flex;
+    gap: 26px;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+.nav-links a {
+    font-size: 14px;
+    font-weight: 700;
+    color: #c9cec7;
+}
+
+.nav-links a:hover,
+.nav-links .active {
+    color: #91a875;
+}
+
+.hero {
+    max-width: 1200px;
+    margin: auto;
+    padding: 75px 24px 45px;
+    text-align: center;
+}
+
+.eyebrow {
+    color: #819467;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 14px;
+}
+
+.hero h1 {
+    font-size: clamp(40px, 7vw, 72px);
+    line-height: 0.95;
+    letter-spacing: -2px;
+    text-transform: uppercase;
+    margin-bottom: 22px;
+}
+
+.hero p {
+    max-width: 700px;
+    margin: auto;
+    color: #aeb5ac;
+    font-size: 17px;
+}
+
+.products {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px 24px 80px;
+}
+
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+}
+
+.category-card {
+    position: relative;
+    min-height: 330px;
+    border: 1px solid #2b332b;
+    border-radius: 12px;
+    overflow: hidden;
+    background: #111511;
+    isolation: isolate;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.category-card.large {
+    min-height: 390px;
+}
+
+.category-card:hover {
+    transform: translateY(-5px);
+    border-color: #71835a;
+}
+
+.category-image {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -3;
+    transition: transform 0.5s ease;
+}
+
+.category-card:hover .category-image {
+    transform: scale(1.05);
+}
+
+.category-overlay {
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(
+            to top,
+            rgba(5, 8, 6, 0.97) 0%,
+            rgba(5, 8, 6, 0.72) 45%,
+            rgba(5, 8, 6, 0.18) 100%
+        );
+    z-index: -2;
+}
+
+.olive-glow {
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(
+            135deg,
+            rgba(83, 103, 64, 0.16),
+            transparent 55%
+        );
+    z-index: -1;
+}
+
+.category-content {
+    min-height: 330px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 28px;
+}
+
+.category-card.large .category-content {
+    min-height: 390px;
+}
+
+.category-number {
+    color: #91a875;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+}
+
+.category-content h2 {
+    font-size: clamp(24px, 4vw, 36px);
+    line-height: 1;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.category-content p {
+    color: #c0c6be;
+    max-width: 460px;
+    font-size: 14px;
+}
+
+.explore {
+    margin-top: 18px;
+    display: inline-flex;
+    gap: 8px;
+    width: fit-content;
+    color: #a6ba8a;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+.arrow {
+    transition: transform 0.25s ease;
+}
+
+.category-card:hover .arrow {
+    transform: translateX(5px);
+}
+
+footer {
+    border-top: 1px solid #222822;
+    background: #070907;
+    padding: 35px 24px;
+    text-align: center;
+}
+
+footer p {
+    color: #727a71;
+    font-size: 12px;
+}
+
+footer strong {
+    color: #9aaa89;
+}
+
+@media (max-width: 700px) {
+
+    .nav {
+        padding: 17px 18px;
+        align-items: flex-start;
+    }
+
+    .logo {
+        font-size: 22px;
+    }
+
+    .nav-links {
+        gap: 12px;
+    }
+
+    .nav-links a {
+        font-size: 11px;
+    }
+
+    .hero {
+        padding: 55px 20px 35px;
+    }
+
+    .hero h1 {
+        font-size: 46px;
+    }
+
+    .hero p {
+        font-size: 15px;
+    }
+
+    .products {
+        padding: 15px 18px 60px;
+    }
+
+    .category-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .category-card,
+    .category-card.large {
+        min-height: 300px;
+    }
+
+    .category-content,
+    .category-card.large .category-content {
+        min-height: 300px;
+        padding: 24px;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+<nav class="nav">
+
+<a href="index.html" class="logo">
+    Spies<span>Hub</span>
+</a>
+
+<div class="nav-links">
+
+<a href="products.html" class="active">Products</a>
+<a href="deals.html">Deals</a>
+<a href="reviews.html">Reviews</a>
+<a href="blog.html">Blog</a>
+<a href="about.html">About</a>
+
+</div>
+
+</nav>
+
+</header>
+
+
+<section class="hero">
+
+<div class="eyebrow">
+    SpiesHub / Products / 06
+</div>
+
+<h1>Spy &amp; Counter-Surveillance</h1>
+
+<p>
+    Explore privacy and counter-surveillance technology designed
+    to help identify hidden cameras, wireless signals and other
+    potential surveillance equipment.
+</p>
+
+</section>
+
+
+<main class="products">
+
+<div class="category-grid">
+
+
+<!-- 01 -->
+
+<a href="#" class="category-card large">
+
+<img
+class="category-image"
+src="https://images.pexels.com/photos/3205735/pexels-photo-3205735.jpeg?auto=compress&cs=tinysrgb&w=1600"
+alt="Security camera and surveillance equipment"
+>
+
+<div class="category-overlay"></div>
+<div class="olive-glow"></div>
+
+<div class="category-content">
+
+<div class="category-number">01 / DETECTION</div>
+
+<h2>Hidden Camera Detectors</h2>
+
+<p>
+Portable devices designed to help locate concealed
+cameras using optical or electronic detection methods.
+</p>
+
+<div class="explore">
+Explore Category <span class="arrow">→</span>
+</div>
+
+</div>
+
+</a>
+
+
+<!-- 02 -->
+
+<a href="#" class="category-card">
+
+<img
+class="category-image"
+src="https://images.pexels.com/photos/442150/pexels-photo-442150.jpeg?auto=compress&cs=tinysrgb&w=1600"
+alt="Radio frequency electronic equipment"
+>
+
+<div class="category-overlay"></div>
+<div class="olive-glow"></div>
+
+<div class="category-content">
+
+<div class="category-number">02 / RF</div>
+
+<h2>RF &amp; Bug Detectors</h2>
+
+<p>
+RF detection equipment for identifying active wireless
+signals and potential transmitting devices.
+</p>
+
+<div class="explore">
+Explore Category <span class="arrow">→</span>
+</div>
+
+</div>
+
+</a>
+
+
+<!-- 03 -->
+
+<a href="#" class="category-card">
+
+<img
+class="category-image"
+src="https://images.pexels.com/photos/6802042/pexels-photo-6802042.jpeg?auto=compress&cs=tinysrgb&w=1600"
+alt="Camera lens and optical equipment"
+>
+
+<div class="category-overlay"></div>
+<div class="olive-glow"></div>
+
+<div class="category-content">
+
+<div class="category-number">03 / OPTICAL</div>
+
+<h2>Lens &amp; Camera Finders</h2>
+
+<p>
+Optical detection tools designed to help identify
+camera lenses concealed in rooms and objects.
+</p>
+
+<div class="explore">
+Explore Category <span class="arrow">→</span>
+</div>
+
+</div>
+
+</a>
+
+
+<!-- 04 -->
+
+<a href="#" class="category-card large">
+
+<img
+class="category-image"
+src="https://images.pexels.com/photos/4792285/pexels-photo-4792285.jpeg?auto=compress&cs=tinysrgb&w=1600"
+alt="Professional electronic inspection equipment"
+>
+
+<div class="category-overlay"></div>
+<div class="olive-glow"></div>
+
+<div class="category-content">
+
+<div class="category-number">04 / PROFESSIONAL</div>
+
+<h2>Counter-Surveillance Equipment</h2>
+
+<p>
+Advanced detection equipment for professional
+privacy inspections and technical sweeps.
+</p>
+
+<div class="explore">
+Explore Category <span class="arrow">→</span>
+</div>
+
+</div>
+
+</a>
+
+
+<!-- 05 -->
+
+<a href="#" class="category-card">
+
+<img
+class="category-image"
+src="https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg?auto=compress&cs=tinysrgb&w=1600"
+alt="Laptop privacy and digital security"
+>
+
+<div class="category-overlay"></div>
+<div class="olive-glow"></div>
+
+<div class="category-content">
+
+<div class="category-number">05 / PRIVACY</div>
+
+<h2>Privacy &amp; Anti-Surveillance</h2>
+
+<p>
+Privacy-focused equipment designed to reduce unwanted
+observation and protect sensitive environments.
+</p>
+
+<div class="explore">
+Explore Category <span class="arrow">→</span>
+</div>
+
+</div>
+
+</a>
+
+
+<!-- 06 -->
+
+<a href="#" class="category-card">
+
+<img
+class="category-image"
+src="https://images.pexels.com/photos/159888/pexels-photo-159888.jpeg?auto=compress&cs=tinysrgb&w=1600"
+alt="Electronic detection equipment and tools"
+>
+
+<div class="category-overlay"></div>
+<div class="olive-glow"></div>
+
+<div class="category-content">
+
+<div class="category-number">06 / KITS</div>
+
+<h2>Detection Kits &amp; Accessories</h2>
+
+<p>
+Practical kits, accessories and supporting equipment
+for privacy and counter-surveillance checks.
+</p>
+
+<div class="explore">
+Explore Category <span class="arrow">→</span>
+</div>
+
+</div>
+
+</a>
+
+
+</div>
+
+</main>
+
+
+<footer>
+
+<p>
+<strong>SpiesHub</strong> — Gear worth knowing about.
+</p>
+
+</footer>
+
+</body>
+</html>
