@@ -1,536 +1,724 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Surveillance & Security | SpiesHub</title>
+<title>Surveillance & Security | SpiesHub</title>
 
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+<meta name="description" content="Explore SpiesHub surveillance and security products including CCTV, security cameras, alarms, access control, dash cams, intercoms and security accessories.">
 
-    body {
-      font-family: Arial, Helvetica, sans-serif;
-      background: #0b0b0b;
-      color: #ffffff;
-    }
+<style>
 
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 
-    /* HEADER */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #090c0a;
+    color: #f1f1ed;
+    line-height: 1.5;
+}
 
-    header {
-      background: #050505;
-      border-bottom: 1px solid #252525;
-      padding: 22px 6%;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      position: sticky;
-      top: 0;
-      z-index: 100;
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* HEADER */
+
+header {
+    background: #0b0f0d;
+    border-bottom: 1px solid #222822;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+}
+
+.logo {
+    font-size: 26px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.logo span {
+    color: #71835a;
+}
+
+.nav-links {
+    display: flex;
+    gap: 26px;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+.nav-links a {
+    font-size: 14px;
+    font-weight: 700;
+    color: #c9cec7;
+    transition: 0.25s ease;
+}
+
+.nav-links a:hover,
+.nav-links .active {
+    color: #91a875;
+}
+
+/* HERO */
+
+.hero {
+    max-width: 1200px;
+    margin: auto;
+    padding: 75px 24px 45px;
+    text-align: center;
+}
+
+.eyebrow {
+    color: #819467;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 14px;
+}
+
+.hero h1 {
+    font-size: clamp(42px, 7vw, 76px);
+    line-height: 0.95;
+    letter-spacing: -2px;
+    text-transform: uppercase;
+    margin-bottom: 22px;
+}
+
+.hero p {
+    max-width: 700px;
+    margin: auto;
+    color: #aeb5ac;
+    font-size: 17px;
+}
+
+/* CATEGORY GRID */
+
+.products {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px 24px 80px;
+}
+
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+}
+
+.category-card {
+    position: relative;
+    min-height: 310px;
+    border: 1px solid #2b332b;
+    border-radius: 12px;
+    overflow: hidden;
+    background: #111511;
+    isolation: isolate;
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.category-card.large {
+    min-height: 390px;
+}
+
+.category-card:hover {
+    transform: translateY(-5px);
+    border-color: #71835a;
+}
+
+.category-image {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -3;
+    transition: transform 0.5s ease;
+}
+
+.category-card:hover .category-image {
+    transform: scale(1.05);
+}
+
+.category-overlay {
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(
+            to top,
+            rgba(5, 8, 6, 0.97) 0%,
+            rgba(5, 8, 6, 0.72) 45%,
+            rgba(5, 8, 6, 0.18) 100%
+        );
+    z-index: -2;
+}
+
+.olive-glow {
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(
+            135deg,
+            rgba(83, 103, 64, 0.16),
+            transparent 55%
+        );
+    z-index: -1;
+}
+
+.category-content {
+    height: 100%;
+    min-height: 310px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 28px;
+}
+
+.category-card.large .category-content {
+    min-height: 390px;
+}
+
+.category-number {
+    color: #91a875;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+}
+
+.category-content h2 {
+    font-size: clamp(24px, 4vw, 36px);
+    line-height: 1;
+    text-transform: uppercase;
+    letter-spacing: -0.5px;
+    margin-bottom: 10px;
+}
+
+.category-content p {
+    color: #c0c6be;
+    max-width: 430px;
+    font-size: 14px;
+}
+
+.explore {
+    margin-top: 18px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    width: fit-content;
+    color: #a6ba8a;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+.arrow {
+    transition: transform 0.25s ease;
+}
+
+.category-card:hover .arrow {
+    transform: translateX(5px);
+}
+
+/* FOOTER */
+
+footer {
+    border-top: 1px solid #222822;
+    background: #070907;
+    padding: 35px 24px;
+    text-align: center;
+}
+
+footer p {
+    color: #727a71;
+    font-size: 12px;
+}
+
+footer strong {
+    color: #9aaa89;
+}
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+    .nav {
+        padding: 17px 18px;
+        align-items: flex-start;
     }
 
     .logo {
-      font-size: 28px;
-      font-weight: 800;
-      letter-spacing: 2px;
+        font-size: 22px;
     }
 
-    .logo span {
-      color: #d6ff00;
+    .nav-links {
+        gap: 12px;
     }
 
-    nav {
-      display: flex;
-      gap: 28px;
-      align-items: center;
+    .nav-links a {
+        font-size: 11px;
     }
-
-    nav a {
-      font-size: 14px;
-      font-weight: 600;
-      color: #ddd;
-      transition: 0.2s;
-    }
-
-    nav a:hover {
-      color: #d6ff00;
-    }
-
-    /* HERO */
 
     .hero {
-      padding: 85px 6% 70px;
-      background:
-        linear-gradient(rgba(0,0,0,.72), rgba(0,0,0,.9)),
-        radial-gradient(circle at center, #242424, #080808 70%);
-      text-align: center;
-      border-bottom: 1px solid #222;
-    }
-
-    .hero-label {
-      color: #d6ff00;
-      font-size: 12px;
-      font-weight: 700;
-      letter-spacing: 3px;
-      margin-bottom: 18px;
+        padding: 55px 20px 35px;
     }
 
     .hero h1 {
-      font-size: clamp(38px, 6vw, 70px);
-      line-height: 1;
-      letter-spacing: -2px;
-      margin-bottom: 22px;
+        font-size: 46px;
     }
 
     .hero p {
-      max-width: 680px;
-      margin: auto;
-      color: #aaa;
-      font-size: 17px;
-      line-height: 1.7;
+        font-size: 15px;
     }
 
-    /* CATEGORY GRID */
-
-    .categories {
-      padding: 65px 6% 90px;
-      max-width: 1400px;
-      margin: auto;
-    }
-
-    .section-heading {
-      margin-bottom: 35px;
-    }
-
-    .section-heading h2 {
-      font-size: 30px;
-      margin-bottom: 10px;
-    }
-
-    .section-heading p {
-      color: #888;
-      line-height: 1.6;
+    .products {
+        padding: 15px 18px 60px;
     }
 
     .category-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
-    }
-
-    .category-card {
-      min-height: 220px;
-      background: linear-gradient(145deg, #191919, #0f0f0f);
-      border: 1px solid #292929;
-      padding: 28px;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-end;
-      position: relative;
-      overflow: hidden;
-      transition: transform .25s, border-color .25s;
-    }
-
-    .category-card::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background:
-        linear-gradient(135deg, transparent 45%, rgba(214,255,0,.08));
-      pointer-events: none;
-    }
-
-    .category-card:hover {
-      transform: translateY(-5px);
-      border-color: #d6ff00;
-    }
-
-    .number {
-      position: absolute;
-      top: 22px;
-      right: 24px;
-      color: #555;
-      font-size: 13px;
-      font-weight: 700;
-      letter-spacing: 2px;
-    }
-
-    .icon {
-      font-size: 30px;
-      margin-bottom: auto;
-      color: #d6ff00;
-    }
-
-    .category-card h3 {
-      font-size: 21px;
-      margin-bottom: 9px;
-    }
-
-    .category-card p {
-      color: #888;
-      font-size: 14px;
-      line-height: 1.5;
-    }
-
-    .arrow {
-      margin-top: 18px;
-      color: #d6ff00;
-      font-size: 13px;
-      font-weight: 700;
-      letter-spacing: 1px;
-    }
-
-    /* INFO */
-
-    .info {
-      background: #111;
-      border-top: 1px solid #222;
-      border-bottom: 1px solid #222;
-      padding: 65px 6%;
-      text-align: center;
-    }
-
-    .info-inner {
-      max-width: 850px;
-      margin: auto;
-    }
-
-    .info h2 {
-      font-size: 30px;
-      margin-bottom: 18px;
-    }
-
-    .info p {
-      color: #999;
-      line-height: 1.8;
-    }
-
-    /* FOOTER */
-
-    footer {
-      padding: 40px 6%;
-      background: #050505;
-      color: #777;
-      text-align: center;
-      font-size: 13px;
-    }
-
-    footer strong {
-      color: #fff;
-    }
-
-    /* MOBILE */
-
-    @media (max-width: 900px) {
-      .category-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      nav {
-        gap: 15px;
-      }
-    }
-
-    @media (max-width: 650px) {
-      header {
-        padding: 18px 5%;
-      }
-
-      .logo {
-        font-size: 23px;
-      }
-
-      nav {
-        gap: 12px;
-      }
-
-      nav a {
-        font-size: 12px;
-      }
-
-      .hero {
-        padding: 65px 5% 55px;
-      }
-
-      .categories {
-        padding: 50px 5% 70px;
-      }
-
-      .category-grid {
         grid-template-columns: 1fr;
-      }
-
-      .category-card {
-        min-height: 190px;
-      }
     }
-  </style>
+
+    .category-card,
+    .category-card.large {
+        min-height: 300px;
+    }
+
+    .category-card.large .category-content {
+        min-height: 300px;
+    }
+
+    .category-content {
+        min-height: 300px;
+        padding: 24px;
+    }
+}
+
+</style>
 </head>
 
 <body>
 
-  <!-- HEADER -->
+<header>
 
-  <header>
-    <a href="index.html" class="logo">
-      SPIES<span>HUB</span>
-    </a>
+    <nav class="nav">
 
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="products.html">Products</a>
-      <a href="about.html">About</a>
-      <a href="deals.html">Deals</a>
-      <a href="blog.html">Blog</a>
-      <a href="reviews.html">Reviews</a>
+        <a href="index.html" class="logo">
+            Spies<span>Hub</span>
+        </a>
+
+        <div class="nav-links">
+            <a href="products.html">Products</a>
+            <a href="deals.html">Deals</a>
+            <a href="reviews.html">Reviews</a>
+            <a href="blog.html">Blog</a>
+            <a href="about.html">About</a>
+        </div>
+
     </nav>
-  </header>
+
+</header>
 
 
-  <!-- HERO -->
+<section class="hero">
 
-  <section class="hero">
-
-    <div class="hero-label">
-      SPIESHUB / PRODUCTS / 05
+    <div class="eyebrow">
+        SpiesHub / Products / 05
     </div>
 
-    <h1>SURVEILLANCE &amp; SECURITY</h1>
+    <h1>Surveillance &amp; Security</h1>
 
     <p>
-      Discover modern security, monitoring and surveillance technology
-      designed to help protect your home, vehicle, property and people.
+        Explore modern surveillance, monitoring and security technology
+        designed to help protect homes, vehicles, property and people.
     </p>
 
-  </section>
+</section>
 
 
-  <!-- CATEGORIES -->
-
-  <main class="categories">
-
-    <div class="section-heading">
-      <h2>Explore Surveillance &amp; Security</h2>
-
-      <p>
-        From cameras and alarms to access control and vehicle security,
-        find the equipment built to keep an eye on what matters.
-      </p>
-    </div>
-
+<main class="products">
 
     <div class="category-grid">
 
 
-      <!-- 01 -->
+        <!-- 01 CCTV & SECURITY CAMERAS -->
 
-      <a href="#" class="category-card">
+        <a href="#" class="category-card large">
 
-        <span class="number">01</span>
+            <img
+                class="category-image"
+                src="https://images.pexels.com/photos/16560413/pexels-photo-16560413.jpeg?auto=compress&cs=tinysrgb&w=1600"
+                alt="CCTV security cameras"
+            >
 
-        <div class="icon">◉</div>
+            <div class="category-overlay"></div>
+            <div class="olive-glow"></div>
 
-        <h3>CCTV &amp; Security Cameras</h3>
+            <div class="category-content">
 
-        <p>
-          Security cameras, CCTV systems and smart monitoring solutions.
-        </p>
+                <div class="category-number">
+                    01 / SURVEILLANCE
+                </div>
 
-        <div class="arrow">EXPLORE →</div>
+                <h2>
+                    CCTV &amp; Security Cameras
+                </h2>
 
-      </a>
+                <p>
+                    CCTV systems, security cameras and smart monitoring
+                    equipment for homes and businesses.
+                </p>
 
+                <div class="explore">
+                    Explore Category
+                    <span class="arrow">→</span>
+                </div>
 
-      <!-- 02 -->
+            </div>
 
-      <a href="#" class="category-card">
+        </a>
 
-        <span class="number">02</span>
 
-        <div class="icon">◉</div>
+        <!-- 02 VIDEO DOORBELLS -->
 
-        <h3>Video Doorbells</h3>
+        <a href="#" class="category-card">
 
-        <p>
-          See who's at the door and monitor entrances from almost anywhere.
-        </p>
+            <img
+                class="category-image"
+                src="https://images.pexels.com/photos/24347621/pexels-photo-24347621.jpeg?auto=compress&cs=tinysrgb&w=1600"
+                alt="Smart home security camera"
+            >
 
-        <div class="arrow">EXPLORE →</div>
+            <div class="category-overlay"></div>
+            <div class="olive-glow"></div>
 
-      </a>
+            <div class="category-content">
 
+                <div class="category-number">
+                    02 / ENTRY
+                </div>
 
-      <!-- 03 -->
+                <h2>
+                    Video Doorbells
+                </h2>
 
-      <a href="#" class="category-card">
+                <p>
+                    See who is at the door and monitor entrances
+                    with connected video doorbells.
+                </p>
 
-        <span class="number">03</span>
+                <div class="explore">
+                    Explore Category
+                    <span class="arrow">→</span>
+                </div>
 
-        <div class="icon">◉</div>
+            </div>
 
-        <h3>Home Security Systems</h3>
+        </a>
 
-        <p>
-          Integrated security systems for homes, apartments and properties.
-        </p>
 
-        <div class="arrow">EXPLORE →</div>
+        <!-- 03 HOME SECURITY -->
 
-      </a>
+        <a href="#" class="category-card">
 
+            <img
+                class="category-image"
+                src="https://images.pexels.com/photos/24346971/pexels-photo-24346971.jpeg?auto=compress&cs=tinysrgb&w=1600"
+                alt="Home security monitoring system"
+            >
 
-      <!-- 04 -->
+            <div class="category-overlay"></div>
+            <div class="olive-glow"></div>
 
-      <a href="#" class="category-card">
+            <div class="category-content">
 
-        <span class="number">04</span>
+                <div class="category-number">
+                    03 / HOME
+                </div>
 
-        <div class="icon">◉</div>
+                <h2>
+                    Home Security Systems
+                </h2>
 
-        <h3>Alarms &amp; Sensors</h3>
+                <p>
+                    Connected security systems for monitoring
+                    homes, apartments and properties.
+                </p>
 
-        <p>
-          Motion, door, window and environmental sensors with alarm systems.
-        </p>
+                <div class="explore">
+                    Explore Category
+                    <span class="arrow">→</span>
+                </div>
 
-        <div class="arrow">EXPLORE →</div>
+            </div>
 
-      </a>
+        </a>
 
 
-      <!-- 05 -->
+        <!-- 04 ALARMS -->
 
-      <a href="#" class="category-card">
+        <a href="#" class="category-card large">
 
-        <span class="number">05</span>
+            <img
+                class="category-image"
+                src="https://images.pexels.com/photos/22491144/pexels-photo-22491144.jpeg?auto=compress&cs=tinysrgb&w=1600"
+                alt="Smart home security sensors and devices"
+            >
 
-        <div class="icon">◉</div>
+            <div class="category-overlay"></div>
+            <div class="olive-glow"></div>
 
-        <h3>Security Lighting</h3>
+            <div class="category-content">
 
-        <p>
-          Motion-activated and smart lighting for entrances and outdoor areas.
-        </p>
+                <div class="category-number">
+                    04 / ALERTS
+                </div>
 
-        <div class="arrow">EXPLORE →</div>
+                <h2>
+                    Alarms &amp; Sensors
+                </h2>
 
-      </a>
+                <p>
+                    Motion sensors, door and window sensors,
+                    alarms and smart detection equipment.
+                </p>
 
+                <div class="explore">
+                    Explore Category
+                    <span class="arrow">→</span>
+                </div>
 
-      <!-- 06 -->
+            </div>
 
-      <a href="#" class="category-card">
+        </a>
 
-        <span class="number">06</span>
 
-        <div class="icon">◉</div>
+        <!-- 05 SECURITY LIGHTING -->
 
-        <h3>Access Control</h3>
+        <a href="#" class="category-card">
 
-        <p>
-          Smart locks, keypads and systems designed to control access.
-        </p>
+            <img
+                class="category-image"
+                src="https://images.pexels.com/photos/4059469/pexels-photo-4059469.jpeg?auto=compress&cs=tinysrgb&w=1600"
+                alt="Security camera and outdoor lighting"
+            >
 
-        <div class="arrow">EXPLORE →</div>
+            <div class="category-overlay"></div>
+            <div class="olive-glow"></div>
 
-      </a>
+            <div class="category-content">
 
+                <div class="category-number">
+                    05 / LIGHTING
+                </div>
 
-      <!-- 07 -->
+                <h2>
+                    Security Lighting
+                </h2>
 
-      <a href="#" class="category-card">
+                <p>
+                    Outdoor security lights, motion lighting
+                    and smart illumination.
+                </p>
 
-        <span class="number">07</span>
+                <div class="explore">
+                    Explore Category
+                    <span class="arrow">→</span>
+                </div>
 
-        <div class="icon">◉</div>
+            </div>
 
-        <h3>Dash Cams</h3>
+        </a>
 
-        <p>
-          Vehicle cameras for recording journeys, incidents and surroundings.
-        </p>
 
-        <div class="arrow">EXPLORE →</div>
+        <!-- 06 ACCESS CONTROL -->
 
-      </a>
+        <a href="#" class="category-card">
 
+            <img
+                class="category-image"
+                src="https://images.pexels.com/photos/13007861/pexels-photo-13007861.jpeg?auto=compress&cs=tinysrgb&w=1600"
+                alt="Security intercom and keypad"
+            >
 
-      <!-- 08 -->
+            <div class="category-overlay"></div>
+            <div class="olive-glow"></div>
 
-      <a href="#" class="category-card">
+            <div class="category-content">
 
-        <span class="number">08</span>
+                <div class="category-number">
+                    06 / ACCESS
+                </div>
 
-        <div class="icon">◉</div>
+                <h2>
+                    Access Control
+                </h2>
 
-        <h3>Intercoms &amp; Entry Systems</h3>
+                <p>
+                    Smart locks, keypads, entry systems and
+                    equipment designed to control access.
+                </p>
 
-        <p>
-          Entry communication and access solutions for homes and businesses.
-        </p>
+                <div class="explore">
+                    Explore Category
+                    <span class="arrow">→</span>
+                </div>
 
-        <div class="arrow">EXPLORE →</div>
+            </div>
 
-      </a>
+        </a>
 
 
-      <!-- 09 -->
+        <!-- 07 DASH CAMS -->
 
-      <a href="#" class="category-card">
+        <a href="#" class="category-card large">
 
-        <span class="number">09</span>
+            <img
+                class="category-image"
+                src="https://images.pexels.com/photos/6043543/pexels-photo-6043543.jpeg?auto=compress&cs=tinysrgb&w=1600"
+                alt="Camera mounted on a car dashboard"
+            >
 
-        <div class="icon">◉</div>
+            <div class="category-overlay"></div>
+            <div class="olive-glow"></div>
 
-        <h3>Security Accessories</h3>
+            <div class="category-content">
 
-        <p>
-          Mounts, cables, storage and other essential security equipment.
-        </p>
+                <div class="category-number">
+                    07 / VEHICLE
+                </div>
 
-        <div class="arrow">EXPLORE →</div>
+                <h2>
+                    Dash Cams
+                </h2>
 
-      </a>
+                <p>
+                    Vehicle cameras for recording journeys,
+                    incidents and surroundings.
+                </p>
+
+                <div class="explore">
+                    Explore Category
+                    <span class="arrow">→</span>
+                </div>
+
+            </div>
+
+        </a>
+
+
+        <!-- 08 INTERCOMS -->
+
+        <a href="#" class="category-card">
+
+            <img
+                class="category-image"
+                src="https://images.pexels.com/photos/13007854/pexels-photo-13007854.jpeg?auto=compress&cs=tinysrgb&w=1600"
+                alt="Security intercom at building entrance"
+            >
+
+            <div class="category-overlay"></div>
+            <div class="olive-glow"></div>
+
+            <div class="category-content">
+
+                <div class="category-number">
+                    08 / ENTRY
+                </div>
+
+                <h2>
+                    Intercoms &amp; Entry Systems
+                </h2>
+
+                <p>
+                    Entry communication, intercoms and visitor
+                    access systems for homes and businesses.
+                </p>
+
+                <div class="explore">
+                    Explore Category
+                    <span class="arrow">→</span>
+                </div>
+
+            </div>
+
+        </a>
+
+
+        <!-- 09 SECURITY ACCESSORIES -->
+
+        <a href="#" class="category-card">
+
+            <img
+                class="category-image"
+                src="https://images.pexels.com/photos/36065331/pexels-photo-36065331.jpeg?auto=compress&cs=tinysrgb&w=1600"
+                alt="Security camera and lighting equipment"
+            >
+
+            <div class="category-overlay"></div>
+            <div class="olive-glow"></div>
+
+            <div class="category-content">
+
+                <div class="category-number">
+                    09 / ACCESSORIES
+                </div>
+
+                <h2>
+                    Security Accessories
+                </h2>
+
+                <p>
+                    Mounts, cables, storage and other useful
+                    equipment for security systems.
+                </p>
+
+                <div class="explore">
+                    Explore Category
+                    <span class="arrow">→</span>
+                </div>
+
+            </div>
+
+        </a>
 
 
     </div>
 
-  </main>
+</main>
 
 
-  <!-- INFO -->
+<footer>
 
-  <section class="info">
+    <p>
+        <strong>SpiesHub</strong>
+        — Gear worth knowing about.
+    </p>
 
-    <div class="info-inner">
+</footer>
 
-      <h2>Security Starts With Awareness</h2>
-
-      <p>
-        SpiesHub brings together security technology, surveillance equipment
-        and practical gear in one place, making it easier to discover the
-        right equipment for your setup.
-      </p>
-
-    </div>
-
-  </section>
-
-
-  <!-- FOOTER -->
-
-  <footer>
-    <strong>SPIESHUB</strong> — Surveillance, Security &amp; Tactical Technology
-  </footer>
 
 </body>
 </html>
