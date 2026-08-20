@@ -6,9 +6,10 @@
 
 <title>Optics & Night Vision | SpiesHub</title>
 
-<meta name="description" content="Explore binoculars, monoculars, night vision, thermal imaging, scopes, rangefinders and spotting scopes at SpiesHub.">
+<meta name="description" content="Explore binoculars, monoculars, night vision, thermal imaging and spotting scopes at SpiesHub.">
 
 <style>
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -22,11 +23,11 @@ body {
 }
 
 a {
-    color: inherit;
     text-decoration: none;
+    color: inherit;
 }
 
-/* NAVIGATION */
+/* HEADER */
 
 header {
     background: #0b0f0d;
@@ -72,9 +73,9 @@ header {
 /* HERO */
 
 .hero {
-    max-width: 950px;
+    max-width: 900px;
     margin: auto;
-    padding: 70px 24px 45px;
+    padding: 65px 24px 45px;
     text-align: center;
 }
 
@@ -87,15 +88,15 @@ header {
 }
 
 .hero h1 {
-    font-size: clamp(42px, 8vw, 72px);
+    font-size: clamp(40px, 8vw, 68px);
     line-height: .95;
-    letter-spacing: -2px;
     text-transform: uppercase;
+    letter-spacing: -2px;
     margin-bottom: 22px;
 }
 
 .hero p {
-    max-width: 720px;
+    max-width: 680px;
     margin: auto;
     color: #adb4ac;
     font-size: 17px;
@@ -105,7 +106,7 @@ header {
 /* PRODUCTS */
 
 .products {
-    max-width: 1200px;
+    max-width: 1100px;
     margin: auto;
     padding: 20px 24px 80px;
 }
@@ -116,14 +117,16 @@ header {
     gap: 20px;
 }
 
+/* CARDS */
+
 .card {
     position: relative;
-    min-height: 360px;
+    min-height: 330px;
     overflow: hidden;
     border: 1px solid #303630;
     border-radius: 14px;
     background: #111511;
-    transition: 0.25s ease;
+    transition: .25s ease;
 }
 
 .card:hover {
@@ -131,37 +134,31 @@ header {
     border-color: #71835a;
 }
 
-/* IMAGE */
-
 .card img {
     position: absolute;
     inset: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: center;
 }
 
 .card::after {
     content: "";
     position: absolute;
     inset: 0;
-    background:
-        linear-gradient(
-            to bottom,
-            rgba(0,0,0,0.05) 10%,
-            rgba(0,0,0,0.30) 45%,
-            rgba(5,8,6,0.98) 100%
-        );
+    background: linear-gradient(
+        to bottom,
+        rgba(0,0,0,.05) 10%,
+        rgba(0,0,0,.35) 45%,
+        rgba(5,8,6,.98) 100%
+    );
 }
-
-/* CARD TEXT */
 
 .card-content {
     position: relative;
     z-index: 2;
-    min-height: 360px;
-    padding: 28px;
+    min-height: 330px;
+    padding: 26px;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -176,26 +173,30 @@ header {
 }
 
 .card h2 {
-    font-size: 30px;
-    line-height: 1;
+    font-size: 29px;
     text-transform: uppercase;
-    margin-bottom: 12px;
+    margin-bottom: 10px;
 }
 
 .card p {
     color: #d0d4ce;
     font-size: 14px;
     line-height: 1.5;
-    max-width: 520px;
 }
 
 .explore {
-    margin-top: 18px;
+    margin-top: 16px;
     color: #a5ba89;
     font-size: 12px;
     font-weight: 800;
     letter-spacing: 1.5px;
     text-transform: uppercase;
+}
+
+/* LAST CARD */
+
+.card:last-child {
+    grid-column: span 2;
 }
 
 /* FOOTER */
@@ -238,11 +239,11 @@ footer strong {
     }
 
     .hero {
-        padding: 55px 20px 35px;
+        padding: 50px 20px 35px;
     }
 
     .hero h1 {
-        font-size: 46px;
+        font-size: 44px;
     }
 
     .hero p {
@@ -257,21 +258,24 @@ footer strong {
         grid-template-columns: 1fr;
     }
 
-    .card,
-    .card-content {
-        min-height: 320px;
+    .card {
+        min-height: 300px;
     }
 
     .card-content {
+        min-height: 300px;
         padding: 24px;
     }
+
+    .card:last-child {
+        grid-column: span 1;
+    }
 }
+
 </style>
 </head>
 
 <body>
-
-<!-- NAVIGATION -->
 
 <header>
 
@@ -310,8 +314,6 @@ footer strong {
 </header>
 
 
-<!-- HERO -->
-
 <section class="hero">
 
 <div class="eyebrow">
@@ -323,15 +325,13 @@ footer strong {
 </h1>
 
 <p>
-Explore binoculars, monoculars, night vision,
-thermal imaging, scopes, rangefinders and
-observation equipment.
+Explore essential observation equipment including
+binoculars, monoculars, night vision, thermal imaging
+and spotting scopes.
 </p>
 
 </section>
 
-
-<!-- PRODUCT CATEGORIES -->
 
 <main class="products">
 
@@ -343,10 +343,9 @@ observation equipment.
 <a href="#" class="card">
 
 <img
-src="https://commons.wikimedia.org/wiki/Special:Redirect/file/M25_Stabilized_Binoculars.jpg"
+src="https://commons.wikimedia.org/wiki/Special:Redirect/file/1st_Law_Enforcement_Battalion_conducts_IED_training_140311-M-VZ995-516.jpg"
 alt="Military binoculars"
 loading="lazy"
-onerror="this.style.display='none'"
 >
 
 <div class="card-content">
@@ -360,8 +359,8 @@ Binoculars
 </h2>
 
 <p>
-Military and tactical binoculars for long-distance
-observation, outdoor use and field viewing.
+Military and tactical binoculars for observation,
+field use and long-distance viewing.
 </p>
 
 <div class="explore">
@@ -378,10 +377,9 @@ Explore Category →
 <a href="#" class="card">
 
 <img
-src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Monocular.jpg"
-alt="Tactical monocular"
+src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Caribbean_Urban_Warrior_2024_-_Safran_Vectronix_MOSKITO_TI%E2%84%A2_Dutch_Marines.webp"
+alt="Military optical device"
 loading="lazy"
-onerror="this.style.display='none'"
 >
 
 <div class="card-content">
@@ -395,8 +393,8 @@ Monoculars
 </h2>
 
 <p>
-Compact observation optics designed for portable
-field use and long-distance viewing.
+Compact observation optics for portable field
+and outdoor use.
 </p>
 
 <div class="explore">
@@ -413,10 +411,9 @@ Explore Category →
 <a href="#" class="card">
 
 <img
-src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Night_vision_goggles.jpg"
-alt="Military night vision goggles"
+src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Mallet_Strike_2024_exercises_integrated_air_and_missile_defense_with_High_North_Allies_in_Finland_(8756117).jpg"
+alt="Military night vision equipment"
 loading="lazy"
-onerror="this.style.display='none'"
 >
 
 <div class="card-content">
@@ -430,8 +427,8 @@ Night Vision
 </h2>
 
 <p>
-Night-vision equipment designed for observation
-in low-light environments.
+Night-vision equipment for observation in
+low-light environments.
 </p>
 
 <div class="explore">
@@ -443,15 +440,14 @@ Explore Category →
 </a>
 
 
-<!-- 04 THERMAL IMAGING -->
+<!-- 04 THERMAL -->
 
 <a href="#" class="card">
 
 <img
-src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Thermal_camera.jpg"
-alt="Thermal imaging camera"
+src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Senop_LISA_-_MPL15_-_Target_acquisition_device_of_the_Finnish_Army.webp"
+alt="Thermal and military observation equipment"
 loading="lazy"
-onerror="this.style.display='none'"
 >
 
 <div class="card-content">
@@ -465,8 +461,8 @@ Thermal Imaging
 </h2>
 
 <p>
-Thermal optics and imaging equipment designed
-to detect heat signatures.
+Thermal and infrared observation equipment for
+detecting heat signatures.
 </p>
 
 <div class="explore">
@@ -478,91 +474,20 @@ Explore Category →
 </a>
 
 
-<!-- 05 SCOPES & SIGHTS -->
+<!-- 05 SPOTTING SCOPES -->
 
 <a href="#" class="card">
 
 <img
-src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Spotting_Scope.jpg"
-alt="Optical spotting scope"
+src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Defense.gov_News_Photo_120321-A-ML570-006_-_U.S._Army_Spc._Zachary_Dixson_with_the_173rd_Airborne_Brigade_Combat_Team_uses_a_spotting_scope_to_watch_for_simulated_enemy_combatants_during_an.jpg"
+alt="Military spotting scope"
 loading="lazy"
-onerror="this.style.display='none'"
 >
 
 <div class="card-content">
 
 <div class="number">
-05 / OPTICS
-</div>
-
-<h2>
-Scopes &amp; Sights
-</h2>
-
-<p>
-Optical equipment for observation, sporting
-applications and field use.
-</p>
-
-<div class="explore">
-Explore Category →
-</div>
-
-</div>
-
-</a>
-
-
-<!-- 06 RANGEFINDERS -->
-
-<a href="#" class="card">
-
-<img
-src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Laser_rangefinder.jpg"
-alt="Laser rangefinder"
-loading="lazy"
-onerror="this.style.display='none'"
->
-
-<div class="card-content">
-
-<div class="number">
-06 / RANGE
-</div>
-
-<h2>
-Rangefinders
-</h2>
-
-<p>
-Distance-measuring equipment for field observation,
-outdoor activities and sporting use.
-</p>
-
-<div class="explore">
-Explore Category →
-</div>
-
-</div>
-
-</a>
-
-
-<!-- 07 SPOTTING SCOPES -->
-
-<a href="#" class="card">
-
-<img
-src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Spotting_Scope.jpg"
-alt="Spotting scope"
-loading="lazy"
-onerror="this.style.display='none'"
->
-
-<div class="card-content">
-
-<div class="number">
-07 / OBSERVATION
+05 / OBSERVATION
 </div>
 
 <h2>
@@ -570,43 +495,8 @@ Spotting Scopes
 </h2>
 
 <p>
-Long-range observation equipment for detailed
-field viewing.
-</p>
-
-<div class="explore">
-Explore Category →
-</div>
-
-</div>
-
-</a>
-
-
-<!-- 08 OPTICS ACCESSORIES -->
-
-<a href="#" class="card">
-
-<img
-src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Military_optical_equipment.jpg"
-alt="Military optical equipment"
-loading="lazy"
-onerror="this.style.display='none'"
->
-
-<div class="card-content">
-
-<div class="number">
-08 / EQUIPMENT
-</div>
-
-<h2>
-Optics Accessories
-</h2>
-
-<p>
-Cases, mounts, cleaning equipment and other
-accessories for optics.
+Long-range observation equipment used for
+detailed field viewing.
 </p>
 
 <div class="explore">
@@ -622,8 +512,6 @@ Explore Category →
 
 </main>
 
-
-<!-- FOOTER -->
 
 <footer>
 
