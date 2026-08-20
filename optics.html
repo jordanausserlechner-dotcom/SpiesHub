@@ -6,6 +6,8 @@
 
 <title>Optics & Night Vision | SpiesHub</title>
 
+<meta name="description" content="Explore binoculars, monoculars, night vision, thermal imaging, scopes, rangefinders and spotting scopes at SpiesHub.">
+
 <style>
 * {
     box-sizing: border-box;
@@ -23,6 +25,8 @@ a {
     color: inherit;
     text-decoration: none;
 }
+
+/* NAVIGATION */
 
 header {
     background: #0b0f0d;
@@ -50,7 +54,7 @@ header {
 
 .nav-links {
     display: flex;
-    gap: 24px;
+    gap: 22px;
     flex-wrap: wrap;
 }
 
@@ -64,6 +68,8 @@ header {
 .nav-links .active {
     color: #91a875;
 }
+
+/* HERO */
 
 .hero {
     max-width: 950px;
@@ -96,6 +102,8 @@ header {
     line-height: 1.6;
 }
 
+/* PRODUCTS */
+
 .products {
     max-width: 1200px;
     margin: auto;
@@ -105,17 +113,17 @@ header {
 .grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 18px;
+    gap: 20px;
 }
 
 .card {
     position: relative;
-    min-height: 340px;
+    min-height: 360px;
     overflow: hidden;
     border: 1px solid #303630;
     border-radius: 14px;
     background: #111511;
-    transition: .25s ease;
+    transition: 0.25s ease;
 }
 
 .card:hover {
@@ -123,210 +131,36 @@ header {
     border-color: #71835a;
 }
 
-/* Built-in category artwork - no external image links */
-.visual {
+/* IMAGE */
+
+.card img {
     position: absolute;
     inset: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background:
-        radial-gradient(
-            circle at center,
-            #354238 0%,
-            #202921 42%,
-            #0c100d 100%
-        );
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
 }
 
-.visual::after {
+.card::after {
     content: "";
     position: absolute;
     inset: 0;
     background:
         linear-gradient(
-            to top,
-            rgba(5,8,6,.98),
-            rgba(5,8,6,.40),
-            rgba(5,8,6,.12)
+            to bottom,
+            rgba(0,0,0,0.05) 10%,
+            rgba(0,0,0,0.30) 45%,
+            rgba(5,8,6,0.98) 100%
         );
 }
 
-.device {
-    position: relative;
-    z-index: 1;
-    width: 55%;
-    height: 125px;
-    background: #303b32;
-    border: 7px solid #71835a;
-    border-radius: 35px;
-    box-shadow: 0 15px 40px rgba(0,0,0,.55);
-}
-
-/* BINOCULARS */
-
-.binoculars .device::before,
-.binoculars .device::after {
-    content: "";
-    position: absolute;
-    width: 105px;
-    height: 105px;
-    border-radius: 50%;
-    background: #050807;
-    border: 12px solid #4e604c;
-    top: 3px;
-}
-
-.binoculars .device::before {
-    left: -38px;
-}
-
-.binoculars .device::after {
-    right: -38px;
-}
-
-/* MONOCULAR */
-
-.monoculars .device {
-    transform: rotate(-12deg);
-    width: 62%;
-}
-
-.monoculars .device::before {
-    content: "";
-    position: absolute;
-    left: -38px;
-    top: 9px;
-    width: 95px;
-    height: 95px;
-    border-radius: 50%;
-    background: #050807;
-    border: 12px solid #4e604c;
-}
-
-/* NIGHT VISION */
-
-.nightvision .device {
-    width: 48%;
-    height: 150px;
-    border-radius: 45px;
-}
-
-.nightvision .device::before,
-.nightvision .device::after {
-    content: "";
-    position: absolute;
-    top: 28px;
-    width: 70px;
-    height: 90px;
-    border-radius: 50%;
-    background: #071009;
-    border: 10px solid #718b60;
-}
-
-.nightvision .device::before {
-    left: 18px;
-}
-
-.nightvision .device::after {
-    right: 18px;
-}
-
-/* THERMAL */
-
-.thermal .device {
-    width: 180px;
-    height: 180px;
-    border-radius: 35px;
-}
-
-.thermal .device::before {
-    content: "";
-    position: absolute;
-    width: 95px;
-    height: 95px;
-    border-radius: 50%;
-    left: 35px;
-    top: 35px;
-    background:
-        radial-gradient(
-            circle,
-            #f1d264,
-            #a87842 45%,
-            #292d25 100%
-        );
-}
-
-/* SCOPES */
-
-.scope .device,
-.spotting .device {
-    width: 68%;
-    height: 75px;
-    transform: rotate(-8deg);
-}
-
-.scope .device::before,
-.spotting .device::before {
-    content: "";
-    position: absolute;
-    left: -38px;
-    top: -17px;
-    width: 105px;
-    height: 105px;
-    border-radius: 50%;
-    background: #050807;
-    border: 12px solid #4e604c;
-}
-
-/* RANGEFINDER */
-
-.rangefinder .device {
-    width: 190px;
-    height: 150px;
-    border-radius: 25px;
-}
-
-.rangefinder .device::before {
-    content: "100m";
-    position: absolute;
-    left: 25px;
-    top: 35px;
-    width: 130px;
-    height: 65px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: #050807;
-    color: #91a875;
-    font-size: 30px;
-    font-weight: 800;
-}
-
-/* ACCESSORIES */
-
-.accessories .device {
-    width: 250px;
-    height: 145px;
-    border-radius: 25px;
-}
-
-.accessories .device::before {
-    content: "";
-    position: absolute;
-    width: 75px;
-    height: 75px;
-    border-radius: 50%;
-    background: #050807;
-    border: 10px solid #4e604c;
-    left: 25px;
-    top: 25px;
-}
+/* CARD TEXT */
 
 .card-content {
     position: relative;
-    z-index: 3;
-    min-height: 340px;
+    z-index: 2;
+    min-height: 360px;
     padding: 28px;
     display: flex;
     flex-direction: column;
@@ -349,10 +183,10 @@ header {
 }
 
 .card p {
-    color: #c0c6bf;
+    color: #d0d4ce;
     font-size: 14px;
     line-height: 1.5;
-    max-width: 500px;
+    max-width: 520px;
 }
 
 .explore {
@@ -363,6 +197,8 @@ header {
     letter-spacing: 1.5px;
     text-transform: uppercase;
 }
+
+/* FOOTER */
 
 footer {
     border-top: 1px solid #252a25;
@@ -379,6 +215,8 @@ footer p {
 footer strong {
     color: #9aaa89;
 }
+
+/* MOBILE */
 
 @media (max-width: 700px) {
 
@@ -419,20 +257,21 @@ footer strong {
         grid-template-columns: 1fr;
     }
 
-    .card {
-        min-height: 300px;
+    .card,
+    .card-content {
+        min-height: 320px;
     }
 
     .card-content {
-        min-height: 300px;
         padding: 24px;
     }
 }
-
 </style>
 </head>
 
 <body>
+
+<!-- NAVIGATION -->
 
 <header>
 
@@ -443,11 +282,27 @@ footer strong {
 </a>
 
 <div class="nav-links">
-    <a href="products.html" class="active">Products</a>
-    <a href="deals.html">Deals</a>
-    <a href="reviews.html">Reviews</a>
-    <a href="blog.html">Blog</a>
-    <a href="about.html">About</a>
+
+<a href="products.html" class="active">
+    Products
+</a>
+
+<a href="deals.html">
+    Deals
+</a>
+
+<a href="reviews.html">
+    Reviews
+</a>
+
+<a href="blog.html">
+    Blog
+</a>
+
+<a href="about.html">
+    About
+</a>
+
 </div>
 
 </nav>
@@ -455,22 +310,28 @@ footer strong {
 </header>
 
 
+<!-- HERO -->
+
 <section class="hero">
 
 <div class="eyebrow">
     SPIESHUB / PRODUCTS / 07
 </div>
 
-<h1>Optics &amp; Night Vision</h1>
+<h1>
+    Optics &amp; Night Vision
+</h1>
 
 <p>
-Explore observation equipment including binoculars,
-monoculars, night vision, thermal imaging, scopes,
-rangefinders and spotting equipment.
+Explore binoculars, monoculars, night vision,
+thermal imaging, scopes, rangefinders and
+observation equipment.
 </p>
 
 </section>
 
+
+<!-- PRODUCT CATEGORIES -->
 
 <main class="products">
 
@@ -481,19 +342,26 @@ rangefinders and spotting equipment.
 
 <a href="#" class="card">
 
-<div class="visual binoculars">
-    <div class="device"></div>
-</div>
+<img
+src="https://commons.wikimedia.org/wiki/Special:Redirect/file/M25_Stabilized_Binoculars.jpg"
+alt="Military binoculars"
+loading="lazy"
+onerror="this.style.display='none'"
+>
 
 <div class="card-content">
 
-<div class="number">01 / OPTICS</div>
+<div class="number">
+01 / OPTICS
+</div>
 
-<h2>Binoculars</h2>
+<h2>
+Binoculars
+</h2>
 
 <p>
-Full-size and compact binoculars for observation,
-travel, outdoor activities and long-distance viewing.
+Military and tactical binoculars for long-distance
+observation, outdoor use and field viewing.
 </p>
 
 <div class="explore">
@@ -509,19 +377,26 @@ Explore Category →
 
 <a href="#" class="card">
 
-<div class="visual monoculars">
-    <div class="device"></div>
-</div>
+<img
+src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Monocular.jpg"
+alt="Tactical monocular"
+loading="lazy"
+onerror="this.style.display='none'"
+>
 
 <div class="card-content">
 
-<div class="number">02 / OPTICS</div>
+<div class="number">
+02 / OPTICS
+</div>
 
-<h2>Monoculars</h2>
+<h2>
+Monoculars
+</h2>
 
 <p>
-Compact single-eye optics for portable observation
-and field use.
+Compact observation optics designed for portable
+field use and long-distance viewing.
 </p>
 
 <div class="explore">
@@ -537,19 +412,26 @@ Explore Category →
 
 <a href="#" class="card">
 
-<div class="visual nightvision">
-    <div class="device"></div>
-</div>
+<img
+src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Night_vision_goggles.jpg"
+alt="Military night vision goggles"
+loading="lazy"
+onerror="this.style.display='none'"
+>
 
 <div class="card-content">
 
-<div class="number">03 / LOW LIGHT</div>
+<div class="number">
+03 / LOW LIGHT
+</div>
 
-<h2>Night Vision</h2>
+<h2>
+Night Vision
+</h2>
 
 <p>
-Night-vision equipment designed to improve visibility
-and observation in low-light conditions.
+Night-vision equipment designed for observation
+in low-light environments.
 </p>
 
 <div class="explore">
@@ -565,19 +447,26 @@ Explore Category →
 
 <a href="#" class="card">
 
-<div class="visual thermal">
-    <div class="device"></div>
-</div>
+<img
+src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Thermal_camera.jpg"
+alt="Thermal imaging camera"
+loading="lazy"
+onerror="this.style.display='none'"
+>
 
 <div class="card-content">
 
-<div class="number">04 / THERMAL</div>
+<div class="number">
+04 / THERMAL
+</div>
 
-<h2>Thermal Imaging</h2>
+<h2>
+Thermal Imaging
+</h2>
 
 <p>
-Thermal imaging equipment designed to display heat
-differences and thermal signatures.
+Thermal optics and imaging equipment designed
+to detect heat signatures.
 </p>
 
 <div class="explore">
@@ -593,19 +482,26 @@ Explore Category →
 
 <a href="#" class="card">
 
-<div class="visual scope">
-    <div class="device"></div>
-</div>
+<img
+src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Spotting_Scope.jpg"
+alt="Optical spotting scope"
+loading="lazy"
+onerror="this.style.display='none'"
+>
 
 <div class="card-content">
 
-<div class="number">05 / OPTICS</div>
+<div class="number">
+05 / OPTICS
+</div>
 
-<h2>Scopes &amp; Sights</h2>
+<h2>
+Scopes &amp; Sights
+</h2>
 
 <p>
-Optical scopes and sighting equipment for observation
-and sporting applications.
+Optical equipment for observation, sporting
+applications and field use.
 </p>
 
 <div class="explore">
@@ -621,19 +517,26 @@ Explore Category →
 
 <a href="#" class="card">
 
-<div class="visual rangefinder">
-    <div class="device"></div>
-</div>
+<img
+src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Laser_rangefinder.jpg"
+alt="Laser rangefinder"
+loading="lazy"
+onerror="this.style.display='none'"
+>
 
 <div class="card-content">
 
-<div class="number">06 / MEASUREMENT</div>
+<div class="number">
+06 / RANGE
+</div>
 
-<h2>Rangefinders</h2>
+<h2>
+Rangefinders
+</h2>
 
 <p>
-Rangefinding equipment designed to measure distance
-for observation and outdoor applications.
+Distance-measuring equipment for field observation,
+outdoor activities and sporting use.
 </p>
 
 <div class="explore">
@@ -649,19 +552,26 @@ Explore Category →
 
 <a href="#" class="card">
 
-<div class="visual spotting">
-    <div class="device"></div>
-</div>
+<img
+src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Spotting_Scope.jpg"
+alt="Spotting scope"
+loading="lazy"
+onerror="this.style.display='none'"
+>
 
 <div class="card-content">
 
-<div class="number">07 / LONG RANGE</div>
+<div class="number">
+07 / OBSERVATION
+</div>
 
-<h2>Spotting Scopes</h2>
+<h2>
+Spotting Scopes
+</h2>
 
 <p>
-High-magnification optics for detailed long-distance
-observation.
+Long-range observation equipment for detailed
+field viewing.
 </p>
 
 <div class="explore">
@@ -677,19 +587,26 @@ Explore Category →
 
 <a href="#" class="card">
 
-<div class="visual accessories">
-    <div class="device"></div>
-</div>
+<img
+src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Military_optical_equipment.jpg"
+alt="Military optical equipment"
+loading="lazy"
+onerror="this.style.display='none'"
+>
 
 <div class="card-content">
 
-<div class="number">08 / ACCESSORIES</div>
+<div class="number">
+08 / EQUIPMENT
+</div>
 
-<h2>Optics Accessories</h2>
+<h2>
+Optics Accessories
+</h2>
 
 <p>
-Cases, cleaning equipment, mounts and other accessories
-for your optics setup.
+Cases, mounts, cleaning equipment and other
+accessories for optics.
 </p>
 
 <div class="explore">
@@ -705,6 +622,8 @@ Explore Category →
 
 </main>
 
+
+<!-- FOOTER -->
 
 <footer>
 
