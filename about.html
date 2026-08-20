@@ -1,1 +1,693 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<title>About | SpiesHub</title>
+
+<meta name="description" content="SpiesHub brings together product knowledge, real-world experience, independent ratings and carefully selected affiliate recommendations across tactical gear, surveillance, optics, technology and more.">
+
+<style>
+
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+body{
+    font-family:Arial,Helvetica,sans-serif;
+    background:#080b09;
+    color:#f1f1ed;
+}
+
+a{
+    color:inherit;
+    text-decoration:none;
+}
+
+/* HEADER */
+
+header{
+    background:#090d0b;
+    border-bottom:1px solid #252b26;
+}
+
+.nav{
+    max-width:1200px;
+    margin:auto;
+    padding:20px 24px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:25px;
+}
+
+.logo{
+    font-size:26px;
+    font-weight:800;
+    letter-spacing:-1px;
+}
+
+.logo span{
+    color:#71835a;
+}
+
+.nav-links{
+    display:flex;
+    gap:22px;
+    flex-wrap:wrap;
+}
+
+.nav-links a{
+    color:#c6cbc5;
+    font-size:14px;
+    font-weight:700;
+}
+
+.nav-links a:hover,
+.nav-links .active{
+    color:#91a875;
+}
+
+/* HERO */
+
+.hero{
+    position:relative;
+    min-height:560px;
+    display:flex;
+    align-items:center;
+    overflow:hidden;
+
+    background-image:
+        linear-gradient(
+            rgba(5,8,6,.76),
+            rgba(5,8,6,.88)
+        ),
+        url("https://stockcake.com/i/tactical-gear-pose_240399_46213/");
+    background-size:cover;
+    background-position:center;
+}
+
+.hero-inner{
+    position:relative;
+    z-index:2;
+    width:100%;
+    max-width:900px;
+    margin:auto;
+    padding:90px 24px;
+    text-align:center;
+}
+
+.eyebrow{
+    color:#91a875;
+    font-size:12px;
+    font-weight:800;
+    letter-spacing:4px;
+    margin-bottom:20px;
+}
+
+.hero h1{
+    font-size:clamp(42px,8vw,76px);
+    line-height:.95;
+    letter-spacing:-2px;
+    text-transform:uppercase;
+    margin-bottom:28px;
+}
+
+.hero h1 span{
+    color:#91a875;
+}
+
+.hero p{
+    max-width:720px;
+    margin:auto;
+    color:#d0d4ce;
+    font-size:18px;
+    line-height:1.7;
+}
+
+/* MAIN */
+
+.content{
+    max-width:1000px;
+    margin:auto;
+    padding:70px 24px 90px;
+}
+
+.article{
+    max-width:850px;
+    margin:auto;
+}
+
+.article h2{
+    font-size:31px;
+    text-transform:uppercase;
+    margin-bottom:18px;
+    letter-spacing:-.5px;
+}
+
+.article h2 span{
+    color:#91a875;
+}
+
+.article p{
+    color:#b7bdb6;
+    font-size:17px;
+    line-height:1.85;
+    margin-bottom:20px;
+}
+
+.article p:last-child{
+    margin-bottom:0;
+}
+
+/* EXPERIENCE */
+
+.experience{
+    margin-top:55px;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:20px;
+}
+
+.box{
+    background:#101410;
+    border:1px solid #303730;
+    border-radius:14px;
+    padding:32px;
+}
+
+.box-number{
+    color:#91a875;
+    font-size:11px;
+    font-weight:800;
+    letter-spacing:3px;
+    margin-bottom:14px;
+}
+
+.box h3{
+    font-size:22px;
+    text-transform:uppercase;
+    margin-bottom:12px;
+}
+
+.box p{
+    font-size:14px;
+    line-height:1.7;
+    margin-bottom:0;
+}
+
+/* REVIEWS */
+
+.review-section{
+    margin-top:55px;
+    padding:40px;
+    border:1px solid #394331;
+    border-radius:14px;
+    background:#101510;
+}
+
+.review-section h2{
+    margin-bottom:18px;
+}
+
+.rating{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    margin:25px 0;
+}
+
+.stars{
+    color:#9caf7b;
+    font-size:21px;
+    letter-spacing:3px;
+}
+
+.rating-text{
+    color:#9da69c;
+    font-size:13px;
+}
+
+/* AFFILIATE */
+
+.affiliate{
+    margin-top:55px;
+    padding:38px;
+    border:1px solid #4b5a39;
+    border-radius:14px;
+    background:linear-gradient(
+        135deg,
+        #121811,
+        #0c100d
+    );
+}
+
+.affiliate h2{
+    color:#91a875;
+    margin-bottom:17px;
+}
+
+.affiliate p{
+    font-size:15px;
+}
+
+/* THREE POINTS */
+
+.points{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+    margin-top:55px;
+}
+
+.point{
+    text-align:center;
+    padding:25px 15px;
+}
+
+.point-number{
+    color:#91a875;
+    font-size:11px;
+    font-weight:800;
+    letter-spacing:3px;
+    margin-bottom:12px;
+}
+
+.point h3{
+    font-size:18px;
+    text-transform:uppercase;
+    margin-bottom:10px;
+}
+
+.point p{
+    color:#959d95;
+    font-size:14px;
+    line-height:1.6;
+}
+
+/* FINAL */
+
+.final{
+    margin-top:60px;
+    padding:55px 30px;
+    text-align:center;
+    border-top:1px solid #303730;
+    border-bottom:1px solid #303730;
+}
+
+.final h2{
+    color:#91a875;
+    font-size:30px;
+    text-transform:uppercase;
+    margin-bottom:14px;
+}
+
+.final p{
+    max-width:650px;
+    margin:auto;
+}
+
+/* FOOTER */
+
+footer{
+    border-top:1px solid #252b26;
+    background:#060806;
+    padding:35px 20px;
+    text-align:center;
+}
+
+footer p{
+    color:#70776f;
+    font-size:12px;
+}
+
+footer strong{
+    color:#9aaa89;
+}
+
+/* MOBILE */
+
+@media(max-width:700px){
+
+    .nav{
+        padding:17px 18px;
+        align-items:flex-start;
+    }
+
+    .logo{
+        font-size:22px;
+    }
+
+    .nav-links{
+        gap:12px;
+    }
+
+    .nav-links a{
+        font-size:11px;
+    }
+
+    .hero{
+        min-height:520px;
+    }
+
+    .hero-inner{
+        padding:70px 20px;
+    }
+
+    .hero h1{
+        font-size:45px;
+    }
+
+    .hero p{
+        font-size:16px;
+    }
+
+    .content{
+        padding:55px 18px 70px;
+    }
+
+    .article h2{
+        font-size:27px;
+    }
+
+    .article p{
+        font-size:16px;
+    }
+
+    .experience{
+        grid-template-columns:1fr;
+    }
+
+    .review-section,
+    .affiliate{
+        padding:28px;
+    }
+
+    .points{
+        grid-template-columns:1fr;
+    }
+
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<header>
+
+<nav class="nav">
+
+<a href="index.html" class="logo">
+    Spies<span>Hub</span>
+</a>
+
+<div class="nav-links">
+
+<a href="products.html">Products</a>
+<a href="deals.html">Deals</a>
+<a href="reviews.html">Reviews</a>
+<a href="blog.html">Blog</a>
+<a href="about.html" class="active">About</a>
+
+</div>
+
+</nav>
+
+</header>
+
+
+<section class="hero">
+
+<div class="hero-inner">
+
+<div class="eyebrow">
+    ABOUT SPIESHUB
+</div>
+
+<h1>
+    Knowledge Behind<br>
+    <span>The Gear</span>
+</h1>
+
+<p>
+SpiesHub is built around a simple idea: the best product
+recommendations come from people who understand the
+equipment, know what matters and, where possible, have
+real-world experience using it.
+</p>
+
+</div>
+
+</section>
+
+
+<main class="content">
+
+
+<article class="article">
+
+
+<h2>
+People Who Know <span>The Products</span>
+</h2>
+
+<p>
+There is no shortage of gear available online. The difficult
+part is knowing what is actually worth your money.
+</p>
+
+<p>
+SpiesHub is designed to cut through that noise by bringing
+together product information, experience and independent
+opinions from people who understand the equipment they are
+talking about.
+</p>
+
+<p>
+Our focus is on the details that matter in the real world —
+how equipment performs, how practical it is, where it works
+well, where it doesn't, and whether it genuinely deserves
+a place in your kit.
+</p>
+
+<p>
+Where products have been used and assessed by people with
+relevant experience, that experience helps inform the
+ratings, reviews and recommendations you see across
+SpiesHub.
+</p>
+
+
+<div class="experience">
+
+
+<div class="box">
+
+<div class="box-number">
+01 / EXPERIENCE
+</div>
+
+<h3>
+Real-World Knowledge
+</h3>
+
+<p>
+We value practical experience over marketing claims.
+The people contributing knowledge to SpiesHub are selected
+because they understand the environments, equipment and
+problems these products are designed for.
+</p>
+
+</div>
+
+
+<div class="box">
+
+<div class="box-number">
+02 / PRODUCT KNOWLEDGE
+</div>
+
+<h3>
+Know What Matters
+</h3>
+
+<p>
+Specifications are useful, but they don't tell the whole
+story. We focus on the features, reliability, usability and
+performance that actually matter when choosing equipment.
+</p>
+
+</div>
+
+
+</div>
+
+
+<section class="review-section">
+
+<h2>
+Ratings &amp; Reviews
+</h2>
+
+<p>
+Our ratings and reviews are designed to help you make a
+more informed decision. They are based on product
+information, available testing and reviews from people
+with knowledge of the equipment and the environments in
+which it is used.
+</p>
+
+<div class="rating">
+
+<div class="stars">
+★★★★★
+</div>
+
+<div class="rating-text">
+Independent product assessment
+</div>
+
+</div>
+
+<p>
+We don't believe every product needs to be perfect to be
+useful. A good review should tell you what a product does
+well, where it falls short and who it is actually suited to.
+</p>
+
+</section>
+
+
+<section class="affiliate">
+
+<h2>
+How Our Affiliate Links Work
+</h2>
+
+<p>
+Some of the products featured on SpiesHub are connected
+to affiliate programs. These programs are selected based
+on the retailers, brands and products available to us and
+the relevance they have to our audience.
+</p>
+
+<p>
+If you choose to purchase through an affiliate link,
+SpiesHub may receive a commission at no additional cost
+to you.
+</p>
+
+<p>
+That relationship helps support the website and allows us
+to continue researching products, publishing reviews and
+building useful guides.
+</p>
+
+<p>
+<strong>
+Our recommendations are based on the product — not simply
+on whether an affiliate link exists.
+</strong>
+</p>
+
+</section>
+
+
+<div class="points">
+
+
+<div class="point">
+
+<div class="point-number">
+01
+</div>
+
+<h3>
+Experience
+</h3>
+
+<p>
+Real-world knowledge and practical product experience
+where available.
+</p>
+
+</div>
+
+
+<div class="point">
+
+<div class="point-number">
+02
+</div>
+
+<h3>
+Research
+</h3>
+
+<p>
+Product information, specifications, comparisons and
+independent opinions.
+</p>
+
+</div>
+
+
+<div class="point">
+
+<div class="point-number">
+03
+</div>
+
+<h3>
+Transparency
+</h3>
+
+<p>
+Clear affiliate relationships and honest assessments of
+the products we feature.
+</p>
+
+</div>
+
+
+</div>
+
+
+<section class="final">
+
+<h2>
+Gear Worth Knowing About.
+</h2>
+
+<p>
+Whether you're looking for tactical equipment, everyday
+carry, surveillance technology, optics, drones, outdoor
+gear or useful technology, SpiesHub is built to help you
+find it, understand it and make a more informed choice.
+</p>
+
+</section>
+
+
+</article>
+
+</main>
+
+
+<footer>
+
+<p>
+<strong>SpiesHub</strong> — Gear worth knowing about.
+</p>
+
+</footer>
+
+
+</body>
+</html>
