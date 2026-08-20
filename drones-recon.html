@@ -1,1 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<title>Drones & Recon | SpiesHub</title>
+
+<meta name="description" content="Explore drones, reconnaissance equipment, aerial cameras and tactical recon gear at SpiesHub.">
+
+<style>
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+body{
+    font-family:Arial,Helvetica,sans-serif;
+    background:#090c0a;
+    color:#f1f1ed;
+}
+
+a{
+    color:inherit;
+    text-decoration:none;
+}
+
+header{
+    background:#0b0f0d;
+    border-bottom:1px solid #252a25;
+}
+
+.nav{
+    max-width:1200px;
+    margin:auto;
+    padding:20px 24px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:25px;
+}
+
+.logo{
+    font-size:26px;
+    font-weight:800;
+}
+
+.logo span{
+    color:#71835a;
+}
+
+.nav-links{
+    display:flex;
+    gap:22px;
+    flex-wrap:wrap;
+}
+
+.nav-links a{
+    color:#c7ccc5;
+    font-size:14px;
+    font-weight:700;
+}
+
+.nav-links a:hover,
+.nav-links .active{
+    color:#91a875;
+}
+
+.hero{
+    max-width:900px;
+    margin:auto;
+    padding:65px 24px 45px;
+    text-align:center;
+}
+
+.eyebrow{
+    color:#91a875;
+    font-size:12px;
+    font-weight:800;
+    letter-spacing:3px;
+    margin-bottom:16px;
+}
+
+.hero h1{
+    font-size:clamp(40px,8vw,68px);
+    line-height:.95;
+    letter-spacing:-2px;
+    text-transform:uppercase;
+    margin-bottom:22px;
+}
+
+.hero p{
+    max-width:680px;
+    margin:auto;
+    color:#adb4ac;
+    font-size:17px;
+    line-height:1.6;
+}
+
+.products{
+    max-width:1100px;
+    margin:auto;
+    padding:20px 24px 80px;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:20px;
+}
+
+.card{
+    position:relative;
+    min-height:330px;
+    overflow:hidden;
+    border:1px solid #303630;
+    border-radius:14px;
+    background:#111511;
+    transition:.25s ease;
+}
+
+.card:hover{
+    transform:translateY(-4px);
+    border-color:#71835a;
+}
+
+.card img{
+    position:absolute;
+    inset:0;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.card::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:linear-gradient(
+        to bottom,
+        rgba(0,0,0,.05) 10%,
+        rgba(0,0,0,.35) 45%,
+        rgba(5,8,6,.98) 100%
+    );
+}
+
+.card-content{
+    position:relative;
+    z-index:2;
+    min-height:330px;
+    padding:26px;
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-end;
+}
+
+.number{
+    color:#91a875;
+    font-size:12px;
+    font-weight:800;
+    letter-spacing:2px;
+    margin-bottom:8px;
+}
+
+.card h2{
+    font-size:29px;
+    line-height:1;
+    text-transform:uppercase;
+    margin-bottom:10px;
+}
+
+.card p{
+    color:#d0d4ce;
+    font-size:14px;
+    line-height:1.5;
+}
+
+.explore{
+    margin-top:16px;
+    color:#a5ba89;
+    font-size:12px;
+    font-weight:800;
+    letter-spacing:1.5px;
+    text-transform:uppercase;
+}
+
+.card:last-child{
+    grid-column:span 2;
+}
+
+footer{
+    border-top:1px solid #252a25;
+    background:#070907;
+    padding:35px 20px;
+    text-align:center;
+}
+
+footer p{
+    color:#70776f;
+    font-size:12px;
+}
+
+footer strong{
+    color:#9aaa89;
+}
+
+@media(max-width:700px){
+
+    .nav{
+        padding:17px 18px;
+        align-items:flex-start;
+    }
+
+    .logo{
+        font-size:22px;
+    }
+
+    .nav-links{
+        gap:12px;
+    }
+
+    .nav-links a{
+        font-size:11px;
+    }
+
+    .hero{
+        padding:50px 20px 35px;
+    }
+
+    .hero h1{
+        font-size:44px;
+    }
+
+    .hero p{
+        font-size:15px;
+    }
+
+    .products{
+        padding:15px 18px 60px;
+    }
+
+    .grid{
+        grid-template-columns:1fr;
+    }
+
+    .card{
+        min-height:300px;
+    }
+
+    .card-content{
+        min-height:300px;
+        padding:24px;
+    }
+
+    .card:last-child{
+        grid-column:span 1;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+
+<nav class="nav">
+
+<a href="index.html" class="logo">
+    Spies<span>Hub</span>
+</a>
+
+<div class="nav-links">
+
+<a href="products.html" class="active">Products</a>
+<a href="deals.html">Deals</a>
+<a href="reviews.html">Reviews</a>
+<a href="blog.html">Blog</a>
+<a href="about.html">About</a>
+
+</div>
+
+</nav>
+
+</header>
+
+
+<section class="hero">
+
+<div class="eyebrow">
+    SPIESHUB / PRODUCTS / 08
+</div>
+
+<h1>
+    Drones &amp; Recon
+</h1>
+
+<p>
+Explore drones, aerial cameras, reconnaissance equipment
+and technology designed for aerial observation and
+field reconnaissance.
+</p>
+
+</section>
+
+
+<main class="products">
+
+<div class="grid">
+
+
+<!-- 01 CAMERA DRONES -->
+
+<a href="#" class="card">
+
+<img
+src="https://commons.wikimedia.org/wiki/Special:Redirect/file/DJI_Mavic_2_Pro.jpg"
+alt="Camera drone"
+loading="lazy"
+>
+
+<div class="card-content">
+
+<div class="number">
+01 / DRONES
+</div>
+
+<h2>
+Camera Drones
+</h2>
+
+<p>
+Camera-equipped drones for aerial photography,
+mapping, inspection and reconnaissance.
+</p>
+
+<div class="explore">
+Explore Category →
+</div>
+
+</div>
+
+</a>
+
+
+<!-- 02 TACTICAL DRONES -->
+
+<a href="#" class="card">
+
+<img
+src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Black_Hornet_Nano_UAV.jpg"
+alt="Tactical reconnaissance drone"
+loading="lazy"
+>
+
+<div class="card-content">
+
+<div class="number">
+02 / RECON
+</div>
+
+<h2>
+Tactical Drones
+</h2>
+
+<p>
+Compact aerial platforms designed for portable
+reconnaissance and observation.
+</p>
+
+<div class="explore">
+Explore Category →
+</div>
+
+</div>
+
+</a>
+
+
+<!-- 03 FPV DRONES -->
+
+<a href="#" class="card">
+
+<img
+src="https://commons.wikimedia.org/wiki/Special:Redirect/file/FPV_drone.jpg"
+alt="FPV drone"
+loading="lazy"
+>
+
+<div class="card-content">
+
+<div class="number">
+03 / FPV
+</div>
+
+<h2>
+FPV Drones
+</h2>
+
+<p>
+Fast, compact drones offering immersive first-person
+flight and aerial video.
+</p>
+
+<div class="explore">
+Explore Category →
+</div>
+
+</div>
+
+</a>
+
+
+<!-- 04 AERIAL CAMERAS -->
+
+<a href="#" class="card">
+
+<img
+src="https://commons.wikimedia.org/wiki/Special:Redirect/file/DJI_Mavic_3.jpg"
+alt="Aerial drone camera"
+loading="lazy"
+>
+
+<div class="card-content">
+
+<div class="number">
+04 / CAMERAS
+</div>
+
+<h2>
+Aerial Cameras
+</h2>
+
+<p>
+High-resolution cameras and imaging systems for
+aerial observation and photography.
+</p>
+
+<div class="explore">
+Explore Category →
+</div>
+
+</a>
+
+
+<!-- 05 RECON ACCESSORIES -->
+
+<a href="#" class="card">
+
+<img
+src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Drone_controller.jpg"
+alt="Drone controller and reconnaissance equipment"
+loading="lazy"
+>
+
+<div class="card-content">
+
+<div class="number">
+05 / EQUIPMENT
+</div>
+
+<h2>
+Recon Accessories
+</h2>
+
+<p>
+Controllers, batteries, cases, mounts and other
+equipment for drone and reconnaissance setups.
+</p>
+
+<div class="explore">
+Explore Category →
+</div>
+
+</a>
+
+
+</div>
+
+</main>
+
+
+<footer>
+
+<p>
+<strong>SpiesHub</strong> — Gear worth knowing about.
+</p>
+
+</footer>
+
+</body>
+</html>
