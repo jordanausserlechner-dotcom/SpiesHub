@@ -6,681 +6,599 @@
 
 <title>Products | SpiesHub</title>
 
-<meta name="description" content="Explore SpiesHub tactical gear, everyday carry, surveillance, optics, drones, outdoor equipment and technology.">
+<meta name="description" content="Explore SpiesHub products including tactical gear, footwear, bags, everyday carry, surveillance, optics, drones, outdoor equipment and technology.">
 
 <style>
-    * {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-    }
 
-    body {
-        font-family: Arial, Helvetica, sans-serif;
-        background: #090c0a;
-        color: #f1f1ed;
-        line-height: 1.5;
-    }
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 
-    a {
-        color: inherit;
-        text-decoration: none;
-    }
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #090c0a;
+    color: #f1f1ed;
+}
 
-    /* HEADER */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+header {
+    background: #050605;
+    border-bottom: 1px solid #252925;
+    padding: 20px 6%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: 900;
+    letter-spacing: 2px;
+}
+
+.logo span {
+    color: #d6ff00;
+}
+
+nav {
+    display: flex;
+    gap: 28px;
+}
+
+nav a {
+    color: #d5d5d0;
+    font-size: 14px;
+    font-weight: 600;
+    transition: .2s;
+}
+
+nav a:hover {
+    color: #d6ff00;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    padding: 85px 6% 75px;
+    text-align: center;
+    background:
+        linear-gradient(
+            rgba(5,7,5,.82),
+            rgba(5,7,5,.96)
+        ),
+        radial-gradient(
+            circle at center,
+            #30352f,
+            #090c0a 70%
+        );
+    border-bottom: 1px solid #252925;
+}
+
+.eyebrow {
+    color: #d6ff00;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 4px;
+    margin-bottom: 18px;
+}
+
+.hero h1 {
+    font-size: clamp(45px, 7vw, 78px);
+    line-height: .95;
+    letter-spacing: -3px;
+    margin-bottom: 24px;
+}
+
+.hero p {
+    max-width: 720px;
+    margin: auto;
+    color: #999d98;
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+/* =========================
+   PRODUCTS
+========================= */
+
+.products {
+    max-width: 1450px;
+    margin: auto;
+    padding: 70px 6% 100px;
+}
+
+.section-title {
+    margin-bottom: 35px;
+}
+
+.section-title h2 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.section-title p {
+    color: #858a84;
+    line-height: 1.6;
+}
+
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+/* =========================
+   CATEGORY CARD
+========================= */
+
+.category {
+    min-height: 235px;
+    position: relative;
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            145deg,
+            #191d19,
+            #0e110f
+        );
+
+    border: 1px solid #292e29;
+
+    padding: 30px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    transition:
+        transform .25s ease,
+        border-color .25s ease,
+        background .25s ease;
+}
+
+.category:hover {
+    transform: translateY(-5px);
+    border-color: #d6ff00;
+    background:
+        linear-gradient(
+            145deg,
+            #202520,
+            #111511
+        );
+}
+
+.category::after {
+    content: "";
+    position: absolute;
+    width: 180px;
+    height: 180px;
+    right: -70px;
+    top: -70px;
+    border: 1px solid rgba(214,255,0,.08);
+    border-radius: 50%;
+}
+
+.number {
+    position: absolute;
+    top: 22px;
+    right: 25px;
+
+    color: #555a55;
+
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.category-icon {
+    position: absolute;
+    top: 27px;
+    left: 30px;
+
+    color: #d6ff00;
+
+    font-size: 27px;
+    font-weight: 700;
+}
+
+.category h3 {
+    font-size: 23px;
+    margin-bottom: 10px;
+}
+
+.category p {
+    max-width: 480px;
+
+    color: #888d88;
+
+    font-size: 14px;
+    line-height: 1.55;
+}
+
+.explore {
+    margin-top: 18px;
+
+    color: #d6ff00;
+
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+/* =========================
+   FEATURE STRIP
+========================= */
+
+.feature {
+    background: #111511;
+    border-top: 1px solid #252925;
+    border-bottom: 1px solid #252925;
+
+    padding: 65px 6%;
+    text-align: center;
+}
+
+.feature-inner {
+    max-width: 850px;
+    margin: auto;
+}
+
+.feature h2 {
+    font-size: 30px;
+    margin-bottom: 18px;
+}
+
+.feature p {
+    color: #898e89;
+    line-height: 1.8;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    background: #050605;
+    padding: 40px 6%;
+    text-align: center;
+    color: #707570;
+    font-size: 13px;
+}
+
+footer strong {
+    color: #ffffff;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 750px) {
 
     header {
-        background: #0b0f0d;
-        border-bottom: 1px solid #222822;
-        position: sticky;
-        top: 0;
-        z-index: 1000;
-    }
-
-    .nav {
-        max-width: 1200px;
-        margin: auto;
-        padding: 20px 24px;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 25px;
+        padding: 18px 5%;
     }
 
     .logo {
-        font-size: 26px;
-        font-weight: 800;
-        letter-spacing: 1px;
+        font-size: 23px;
     }
 
-    .logo span {
-        color: #71835a;
+    nav {
+        gap: 12px;
     }
 
-    .nav-links {
-        display: flex;
-        gap: 26px;
-        align-items: center;
-        flex-wrap: wrap;
-        justify-content: flex-end;
+    nav a {
+        font-size: 11px;
     }
-
-    .nav-links a {
-        font-size: 14px;
-        font-weight: 700;
-        color: #c9cec7;
-        transition: 0.25s ease;
-    }
-
-    .nav-links a:hover,
-    .nav-links .active {
-        color: #91a875;
-    }
-
-    /* HERO */
 
     .hero {
-        max-width: 1200px;
-        margin: auto;
-        padding: 75px 24px 45px;
-        text-align: center;
+        padding: 65px 5% 55px;
     }
-
-    .eyebrow {
-        color: #819467;
-        font-size: 12px;
-        font-weight: 800;
-        letter-spacing: 3px;
-        text-transform: uppercase;
-        margin-bottom: 14px;
-    }
-
-    .hero h1 {
-        font-size: clamp(42px, 7vw, 76px);
-        line-height: 0.95;
-        letter-spacing: -2px;
-        text-transform: uppercase;
-        margin-bottom: 22px;
-    }
-
-    .hero p {
-        max-width: 650px;
-        margin: auto;
-        color: #aeb5ac;
-        font-size: 17px;
-    }
-
-    /* CATEGORY GRID */
 
     .products {
-        max-width: 1200px;
-        margin: auto;
-        padding: 20px 24px 80px;
+        padding: 50px 5% 70px;
     }
 
     .category-grid {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 18px;
+        grid-template-columns: 1fr;
     }
 
-    .category-card {
-        position: relative;
-        min-height: 310px;
-        border: 1px solid #2b332b;
-        border-radius: 12px;
-        overflow: hidden;
-        background: #111511;
-        isolation: isolate;
-        transition:
-            transform 0.3s ease,
-            border-color 0.3s ease;
+    .category {
+        min-height: 205px;
     }
 
-    .category-card:hover {
-        transform: translateY(-5px);
-        border-color: #71835a;
-    }
+}
 
-    .category-card.large {
-        min-height: 390px;
-    }
-
-    .category-image {
-        position: absolute;
-        inset: 0;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        z-index: -3;
-        transition: transform 0.5s ease;
-    }
-
-    .category-card:hover .category-image {
-        transform: scale(1.05);
-    }
-
-    .category-overlay {
-        position: absolute;
-        inset: 0;
-        background:
-            linear-gradient(
-                to top,
-                rgba(5, 8, 6, 0.97) 0%,
-                rgba(5, 8, 6, 0.72) 45%,
-                rgba(5, 8, 6, 0.18) 100%
-            );
-        z-index: -2;
-    }
-
-    .olive-glow {
-        position: absolute;
-        inset: 0;
-        background:
-            linear-gradient(
-                135deg,
-                rgba(83, 103, 64, 0.16),
-                transparent 55%
-            );
-        z-index: -1;
-    }
-
-    .category-content {
-        height: 100%;
-        min-height: 310px;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-end;
-        padding: 28px;
-    }
-
-    .category-card.large .category-content {
-        min-height: 390px;
-    }
-
-    .category-number {
-        color: #91a875;
-        font-size: 12px;
-        font-weight: 800;
-        letter-spacing: 2px;
-        margin-bottom: 8px;
-    }
-
-    .category-content h2 {
-        font-size: clamp(25px, 4vw, 38px);
-        line-height: 1;
-        text-transform: uppercase;
-        letter-spacing: -0.5px;
-        margin-bottom: 10px;
-    }
-
-    .category-content p {
-        color: #c0c6be;
-        max-width: 430px;
-        font-size: 14px;
-    }
-
-    .explore {
-        margin-top: 18px;
-        display: inline-flex;
-        align-items: center;
-        gap: 8px;
-        width: fit-content;
-        color: #a6ba8a;
-        font-size: 12px;
-        font-weight: 800;
-        letter-spacing: 1.5px;
-        text-transform: uppercase;
-    }
-
-    .arrow {
-        transition: transform 0.25s ease;
-    }
-
-    .category-card:hover .arrow {
-        transform: translateX(5px);
-    }
-
-    /* FOOTER */
-
-    footer {
-        border-top: 1px solid #222822;
-        background: #070907;
-        padding: 35px 24px;
-        text-align: center;
-    }
-
-    footer p {
-        color: #727a71;
-        font-size: 12px;
-    }
-
-    footer strong {
-        color: #9aaa89;
-    }
-
-    /* MOBILE */
-
-    @media (max-width: 700px) {
-
-        .nav {
-            padding: 17px 18px;
-            align-items: flex-start;
-        }
-
-        .logo {
-            font-size: 22px;
-        }
-
-        .nav-links {
-            gap: 12px;
-        }
-
-        .nav-links a {
-            font-size: 11px;
-        }
-
-        .hero {
-            padding: 55px 20px 35px;
-        }
-
-        .hero h1 {
-            font-size: 48px;
-        }
-
-        .hero p {
-            font-size: 15px;
-        }
-
-        .products {
-            padding: 15px 18px 60px;
-        }
-
-        .category-grid {
-            grid-template-columns: 1fr;
-        }
-
-        .category-card,
-        .category-card.large {
-            min-height: 300px;
-        }
-
-        .category-card.large .category-content {
-            min-height: 300px;
-        }
-
-        .category-content {
-            min-height: 300px;
-            padding: 24px;
-        }
-    }
 </style>
 </head>
 
 <body>
 
+<!-- =========================
+     HEADER
+========================= -->
+
 <header>
-    <nav class="nav">
 
-        <a href="index.html" class="logo">
-            Spies<span>Hub</span>
-        </a>
+    <a href="index.html" class="logo">
+        SPIES<span>HUB</span>
+    </a>
 
-        <div class="nav-links">
-            <a href="products.html" class="active">Products</a>
-            <a href="deals.html">Deals</a>
-            <a href="reviews.html">Reviews</a>
-            <a href="blog.html">Blog</a>
-            <a href="about.html">About</a>
-        </div>
-
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="products.html">Products</a>
+        <a href="about.html">About</a>
+        <a href="deals.html">Deals</a>
+        <a href="blog.html">Blog</a>
+        <a href="reviews.html">Reviews</a>
     </nav>
+
 </header>
 
 
+<!-- =========================
+     HERO
+========================= -->
+
 <section class="hero">
 
-    <div class="eyebrow">SPiesHub / Gear Directory</div>
+    <div class="eyebrow">
+        SPIESHUB / PRODUCTS
+    </div>
 
-    <h1>Products</h1>
+    <h1>PRODUCTS</h1>
 
     <p>
-        Explore the gear worth knowing about — from tactical equipment
-        and everyday carry to surveillance, optics, drones and technology.
+        Explore tactical equipment, everyday carry, surveillance,
+        optics, drones, outdoor gear and technology selected for
+        people who take their equipment seriously.
     </p>
 
 </section>
 
 
+<!-- =========================
+     CATEGORY SECTION
+========================= -->
+
 <main class="products">
+
+    <div class="section-title">
+
+        <h2>Explore Categories</h2>
+
+        <p>
+            Browse the SpiesHub collection by category.
+        </p>
+
+    </div>
+
 
     <div class="category-grid">
 
 
-        <!-- 01 TACTICAL -->
+        <!-- 01 TACTICAL GEAR -->
 
-        <a href="tactical.html" class="category-card large">
+        <a href="tactical.html" class="category">
 
-            <img
-                class="category-image"
-                src="https://images.pexels.com/photos/7393146/pexels-photo-7393146.jpeg?auto=compress&cs=tinysrgb&w=1600"
-                alt="Tactical equipment and gear"
-            >
+            <span class="number">01</span>
 
-            <div class="category-overlay"></div>
-            <div class="olive-glow"></div>
+            <span class="category-icon">+</span>
 
-            <div class="category-content">
+            <h3>Tactical Gear</h3>
 
-                <div class="category-number">01 / GEAR</div>
+            <p>
+                Tactical equipment, apparel and mission-ready gear.
+            </p>
 
-                <h2>Tactical Gear</h2>
-
-                <p>
-                    Equipment built for demanding environments,
-                    duty and the mission ahead.
-                </p>
-
-                <div class="explore">
-                    Explore Category <span class="arrow">→</span>
-                </div>
-
+            <div class="explore">
+                EXPLORE →
             </div>
 
         </a>
 
 
-        <!-- 02 FOOTWEAR -->
+        <!-- 02 TACTICAL FOOTWEAR -->
 
-        <a href="footwear.html" class="category-card">
+        <a href="footwear.html" class="category">
 
-            <img
-                class="category-image"
-                src="https://images.pexels.com/photos/33974776/pexels-photo-33974776.jpeg?auto=compress&cs=tinysrgb&w=1600"
-                alt="Tactical boots"
-            >
+            <span class="number">02</span>
 
-            <div class="category-overlay"></div>
-            <div class="olive-glow"></div>
+            <span class="category-icon">+</span>
 
-            <div class="category-content">
+            <h3>Tactical Footwear</h3>
 
-                <div class="category-number">02 / FOOTWEAR</div>
+            <p>
+                Tactical boots, outdoor footwear and performance shoes.
+            </p>
 
-                <h2>Tactical Footwear</h2>
-
-                <p>
-                    Rugged footwear built to go the distance.
-                </p>
-
-                <div class="explore">
-                    Explore Category <span class="arrow">→</span>
-                </div>
-
+            <div class="explore">
+                EXPLORE →
             </div>
 
         </a>
 
 
-        <!-- 03 BAGS -->
+        <!-- 03 BAGS & PACKS -->
 
-        <a href="bags.html" class="category-card">
+        <a href="bags.html" class="category">
 
-            <img
-                class="category-image"
-                src="https://images.pexels.com/photos/16359294/pexels-photo-16359294.jpeg?auto=compress&cs=tinysrgb&w=1600"
-                alt="Tactical backpack"
-            >
+            <span class="number">03</span>
 
-            <div class="category-overlay"></div>
-            <div class="olive-glow"></div>
+            <span class="category-icon">+</span>
 
-            <div class="category-content">
+            <h3>Bags &amp; Packs</h3>
 
-                <div class="category-number">03 / CARRY</div>
+            <p>
+                Backpacks, tactical bags, travel packs and carry systems.
+            </p>
 
-                <h2>Bags &amp; Packs</h2>
-
-                <p>
-                    Tactical packs, sling bags and carry systems
-                    for work, travel and everyday use.
-                </p>
-
-                <div class="explore">
-                    Explore Category <span class="arrow">→</span>
-                </div>
-
+            <div class="explore">
+                EXPLORE →
             </div>
 
         </a>
 
 
-        <!-- 04 EDC -->
+        <!-- 04 EVERYDAY CARRY -->
 
-        <a href="everyday-carry.html" class="category-card large">
+        <a href="everyday-carry.html" class="category">
 
-            <img
-                class="category-image"
-                src="https://images.pexels.com/photos/15110141/pexels-photo-15110141.jpeg?auto=compress&cs=tinysrgb&w=1600"
-                alt="Everyday carry gadgets"
-            >
+            <span class="number">04</span>
 
-            <div class="category-overlay"></div>
-            <div class="olive-glow"></div>
+            <span class="category-icon">+</span>
 
-            <div class="category-content">
+            <h3>Everyday Carry</h3>
 
-                <div class="category-number">04 / EVERYDAY</div>
+            <p>
+                Practical everyday equipment designed to go wherever you do.
+            </p>
 
-                <h2>Everyday Carry</h2>
-
-                <p>
-                    Smart gear, tools and useful equipment
-                    worth carrying every day.
-                </p>
-
-                <div class="explore">
-                    Explore Category <span class="arrow">→</span>
-                </div>
-
+            <div class="explore">
+                EXPLORE →
             </div>
 
         </a>
 
 
-        <!-- 05 SURVEILLANCE -->
+        <!-- 05 SURVEILLANCE & SECURITY -->
 
-        <a href="surveillance.html" class="category-card">
+        <a href="surveillance-security.html" class="category">
 
-            <img
-                class="category-image"
-                src="https://images.pexels.com/photos/19782580/pexels-photo-19782580.jpeg?auto=compress&cs=tinysrgb&w=1600"
-                alt="Security surveillance cameras"
-            >
+            <span class="number">05</span>
 
-            <div class="category-overlay"></div>
-            <div class="olive-glow"></div>
+            <span class="category-icon">◉</span>
 
-            <div class="category-content">
+            <h3>Surveillance &amp; Security</h3>
 
-                <div class="category-number">05 / SECURITY</div>
+            <p>
+                CCTV, security cameras, alarms, access control and
+                modern security technology.
+            </p>
 
-                <h2>Surveillance &amp; Security</h2>
-
-                <p>
-                    Cameras, monitoring systems and security technology
-                    for home and business.
-                </p>
-
-                <div class="explore">
-                    Explore Category <span class="arrow">→</span>
-                </div>
-
+            <div class="explore">
+                EXPLORE →
             </div>
 
         </a>
 
 
-        <!-- 06 SPY -->
+        <!-- 06 SPY & COUNTER-SURVEILLANCE -->
 
-        <a href="spy-counter-surveillance.html" class="category-card">
+        <a href="#" class="category">
 
-            <img
-                class="category-image"
-                src="https://images.pexels.com/photos/9909229/pexels-photo-9909229.jpeg?auto=compress&cs=tinysrgb&w=1600"
-                alt="Observation binoculars"
-            >
+            <span class="number">06</span>
 
-            <div class="category-overlay"></div>
-            <div class="olive-glow"></div>
+            <span class="category-icon">◉</span>
 
-            <div class="category-content">
+            <h3>Spy &amp; Counter-Surveillance</h3>
 
-                <div class="category-number">06 / INTELLIGENCE</div>
+            <p>
+                Privacy, detection and counter-surveillance equipment.
+            </p>
 
-                <h2>Spy &amp; Counter-Surveillance</h2>
-
-                <p>
-                    Observation, detection, privacy and
-                    counter-surveillance technology.
-                </p>
-
-                <div class="explore">
-                    Explore Category <span class="arrow">→</span>
-                </div>
-
+            <div class="explore">
+                COMING SOON →
             </div>
 
         </a>
 
 
-        <!-- 07 OPTICS -->
+        <!-- 07 OPTICS & NIGHT VISION -->
 
-        <a href="optics.html" class="category-card large">
+        <a href="#" class="category">
 
-            <img
-                class="category-image"
-                src="https://images.pexels.com/photos/27865656/pexels-photo-27865656.jpeg?auto=compress&cs=tinysrgb&w=1600"
-                alt="Binoculars and observation equipment"
-            >
+            <span class="number">07</span>
 
-            <div class="category-overlay"></div>
-            <div class="olive-glow"></div>
+            <span class="category-icon">◉</span>
 
-            <div class="category-content">
+            <h3>Optics &amp; Night Vision</h3>
 
-                <div class="category-number">07 / VISION</div>
+            <p>
+                Binoculars, scopes, thermal equipment and night vision.
+            </p>
 
-                <h2>Optics &amp; Night Vision</h2>
-
-                <p>
-                    Binoculars, monoculars and observation
-                    technology for seeing further.
-                </p>
-
-                <div class="explore">
-                    Explore Category <span class="arrow">→</span>
-                </div>
-
+            <div class="explore">
+                COMING SOON →
             </div>
 
         </a>
 
 
-        <!-- 08 DRONES -->
+        <!-- 08 DRONES & RECON -->
 
-        <a href="drones.html" class="category-card">
+        <a href="#" class="category">
 
-            <img
-                class="category-image"
-                src="https://images.pexels.com/photos/1619858/pexels-photo-1619858.jpeg?auto=compress&cs=tinysrgb&w=1600"
-                alt="Camera drone flying outdoors"
-            >
+            <span class="number">08</span>
 
-            <div class="category-overlay"></div>
-            <div class="olive-glow"></div>
+            <span class="category-icon">◇</span>
 
-            <div class="category-content">
+            <h3>Drones &amp; Recon</h3>
 
-                <div class="category-number">08 / RECON</div>
+            <p>
+                Drones, aerial imaging and reconnaissance technology.
+            </p>
 
-                <h2>Drones &amp; Recon</h2>
-
-                <p>
-                    Drones, aerial technology and equipment
-                    for a different perspective.
-                </p>
-
-                <div class="explore">
-                    Explore Category <span class="arrow">→</span>
-                </div>
-
+            <div class="explore">
+                COMING SOON →
             </div>
 
         </a>
 
 
-        <!-- 09 OUTDOOR -->
+        <!-- 09 OUTDOOR & SURVIVAL -->
 
-        <a href="outdoor-survival.html" class="category-card">
+        <a href="#" class="category">
 
-            <img
-                class="category-image"
-                src="https://images.pexels.com/photos/32769110/pexels-photo-32769110.jpeg?auto=compress&cs=tinysrgb&w=1600"
-                alt="Outdoor camping and survival equipment"
-            >
+            <span class="number">09</span>
 
-            <div class="category-overlay"></div>
-            <div class="olive-glow"></div>
+            <span class="category-icon">+</span>
 
-            <div class="category-content">
+            <h3>Outdoor &amp; Survival</h3>
 
-                <div class="category-number">09 / OUTDOOR</div>
+            <p>
+                Outdoor equipment, survival gear and expedition essentials.
+            </p>
 
-                <h2>Outdoor &amp; Survival</h2>
-
-                <p>
-                    Camping, survival, navigation and rugged
-                    outdoor equipment.
-                </p>
-
-                <div class="explore">
-                    Explore Category <span class="arrow">→</span>
-                </div>
-
+            <div class="explore">
+                COMING SOON →
             </div>
 
         </a>
 
 
-        <!-- 10 TECH -->
+        <!-- 10 TECH & GADGETS -->
 
-        <a href="tech-gadgets.html" class="category-card large">
+        <a href="#" class="category">
 
-            <img
-                class="category-image"
-                src="https://images.pexels.com/photos/12527574/pexels-photo-12527574.jpeg?auto=compress&cs=tinysrgb&w=1600"
-                alt="Technology and field equipment"
-            >
+            <span class="number">10</span>
 
-            <div class="category-overlay"></div>
-            <div class="olive-glow"></div>
+            <span class="category-icon">◇</span>
 
-            <div class="category-content">
+            <h3>Tech &amp; Gadgets</h3>
 
-                <div class="category-number">10 / TECHNOLOGY</div>
+            <p>
+                Useful technology, gadgets and innovative equipment.
+            </p>
 
-                <h2>Tech &amp; Gadgets</h2>
-
-                <p>
-                    Clever technology, electronics and gadgets
-                    worth knowing about.
-                </p>
-
-                <div class="explore">
-                    Explore Category <span class="arrow">→</span>
-                </div>
-
+            <div class="explore">
+                COMING SOON →
             </div>
 
         </a>
@@ -691,12 +609,37 @@
 </main>
 
 
-<footer>
-    <p>
-        <strong>SpiesHub</strong> — Gear worth knowing about.
-    </p>
-</footer>
+<!-- =========================
+     FEATURE
+========================= -->
 
+<section class="feature">
+
+    <div class="feature-inner">
+
+        <h2>Gear For The Curious</h2>
+
+        <p>
+            SpiesHub brings together tactical equipment, security
+            technology, everyday carry and specialist gear in one place,
+            making it easier to discover equipment worth knowing about.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+    <strong>SPIESHUB</strong>
+    — Tactical. Surveillance. Technology.
+
+</footer>
 
 </body>
 </html>
