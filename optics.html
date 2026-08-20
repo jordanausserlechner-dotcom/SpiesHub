@@ -1,1 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<title>Optics & Night Vision | SpiesHub</title>
+
+<meta name="description" content="Explore binoculars, monoculars, night vision, thermal imaging, scopes, rangefinders, spotting scopes and optics accessories at SpiesHub.">
+
+<style>
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #090c0a;
+    color: #f1f1ed;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+header {
+    background: #0b0f0d;
+    border-bottom: 1px solid #252a25;
+}
+
+.nav {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+}
+
+.logo {
+    font-size: 26px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.logo span {
+    color: #829665;
+}
+
+.nav-links {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+.nav-links a {
+    color: #c7ccc5;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.nav-links a:hover,
+.nav-links .active {
+    color: #91a875;
+}
+
+.hero {
+    max-width: 1000px;
+    margin: auto;
+    padding: 70px 24px 45px;
+    text-align: center;
+}
+
+.eyebrow {
+    color: #8fa572;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 3px;
+    margin-bottom: 16px;
+    text-transform: uppercase;
+}
+
+.hero h1 {
+    font-size: clamp(42px, 8vw, 72px);
+    line-height: .95;
+    text-transform: uppercase;
+    letter-spacing: -2px;
+    margin-bottom: 22px;
+}
+
+.hero p {
+    max-width: 720px;
+    margin: auto;
+    color: #adb4ac;
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+.products {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px 24px 80px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+}
+
+.card {
+    position: relative;
+    min-height: 340px;
+    overflow: hidden;
+    border: 1px solid #303630;
+    border-radius: 14px;
+    background: #111511;
+}
+
+.card-image {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-overlay {
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(
+            to top,
+            rgba(4,7,5,.97) 0%,
+            rgba(4,7,5,.72) 48%,
+            rgba(4,7,5,.18) 100%
+        );
+}
+
+.card-content {
+    position: relative;
+    z-index: 2;
+    min-height: 340px;
+    padding: 28px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.number {
+    color: #91a875;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+}
+
+.card h2 {
+    font-size: 31px;
+    line-height: 1;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+}
+
+.card p {
+    color: #c0c6bf;
+    font-size: 14px;
+    line-height: 1.6;
+    max-width: 470px;
+}
+
+.explore {
+    margin-top: 18px;
+    color: #a5ba89;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+footer {
+    border-top: 1px solid #252a25;
+    padding: 35px 20px;
+    text-align: center;
+    color: #70776f;
+    font-size: 12px;
+}
+
+footer strong {
+    color: #9aaa89;
+}
+
+@media (max-width: 700px) {
+
+    .nav {
+        padding: 17px 18px;
+        align-items: flex-start;
+    }
+
+    .logo {
+        font-size: 22px;
+    }
+
+    .nav-links {
+        gap: 12px;
+    }
+
+    .nav-links a {
+        font-size: 11px;
+    }
+
+    .hero {
+        padding: 55px 20px 35px;
+    }
+
+    .hero h1 {
+        font-size: 45px;
+    }
+
+    .hero p {
+        font-size: 15px;
+    }
+
+    .products {
+        padding: 15px 18px 60px;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .card {
+        min-height: 300px;
+    }
+
+    .card-content {
+        min-height: 300px;
+        padding: 24px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+
+<nav class="nav">
+
+<a href="index.html" class="logo">
+    Spies<span>Hub</span>
+</a>
+
+<div class="nav-links">
+    <a href="products.html" class="active">Products</a>
+    <a href="deals.html">Deals</a>
+    <a href="reviews.html">Reviews</a>
+    <a href="blog.html">Blog</a>
+    <a href="about.html">About</a>
+</div>
+
+</nav>
+
+</header>
+
+
+<section class="hero">
+
+<div class="eyebrow">SpiesHub / Products / 07</div>
+
+<h1>Optics &amp; Night Vision</h1>
+
+<p>
+Explore optics and observation technology including binoculars,
+monoculars, night vision, thermal imaging, scopes, rangefinders
+and spotting equipment.
+</p>
+
+</section>
+
+
+<main class="products">
+
+<div class="grid">
+
+
+<!-- 01 -->
+
+<a href="#" class="card">
+
+<img
+class="card-image"
+src="https://images.unsplash.com/photo-1551817958-d9d86fb29431?auto=format&fit=crop&w=1400&q=85"
+alt="Binoculars"
+loading="lazy"
+>
+
+<div class="card-overlay"></div>
+
+<div class="card-content">
+
+<div class="number">01 / OPTICS</div>
+
+<h2>Binoculars</h2>
+
+<p>
+Full-size and compact binoculars for observation,
+travel, outdoor activities and long-distance viewing.
+</p>
+
+<div class="explore">Explore Category →</div>
+
+</div>
+
+</a>
+
+
+<!-- 02 -->
+
+<a href="#" class="card">
+
+<img
+class="card-image"
+src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&w=1400&q=85"
+alt="Optical equipment"
+loading="lazy"
+>
+
+<div class="card-overlay"></div>
+
+<div class="card-content">
+
+<div class="number">02 / OPTICS</div>
+
+<h2>Monoculars</h2>
+
+<p>
+Lightweight single-eye optics for portable observation
+and field use.
+</p>
+
+<div class="explore">Explore Category →</div>
+
+</div>
+
+</a>
+
+
+<!-- 03 -->
+
+<a href="#" class="card">
+
+<img
+class="card-image"
+src="https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=1400&q=85"
+alt="Night observation"
+loading="lazy"
+>
+
+<div class="card-overlay"></div>
+
+<div class="card-content">
+
+<div class="number">03 / LOW LIGHT</div>
+
+<h2>Night Vision</h2>
+
+<p>
+Equipment designed to improve visibility and observation
+in low-light environments.
+</p>
+
+<div class="explore">Explore Category →</div>
+
+</div>
+
+</a>
+
+
+<!-- 04 -->
+
+<a href="#" class="card">
+
+<img
+class="card-image"
+src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1400&q=85"
+alt="Thermal imaging technology"
+loading="lazy"
+>
+
+<div class="card-overlay"></div>
+
+<div class="card-content">
+
+<div class="number">04 / THERMAL</div>
+
+<h2>Thermal Imaging</h2>
+
+<p>
+Thermal cameras and imaging equipment for detecting
+heat signatures and temperature differences.
+</p>
+
+<div class="explore">Explore Category →</div>
+
+</div>
+
+</a>
+
+
+<!-- 05 -->
+
+<a href="#" class="card">
+
+<img
+class="card-image"
+src="https://images.unsplash.com/photo-1509099836639-18ba1795216d?auto=format&fit=crop&w=1400&q=85"
+alt="Optical equipment"
+loading="lazy"
+>
+
+<div class="card-overlay"></div>
+
+<div class="card-content">
+
+<div class="number">05 / OPTICS</div>
+
+<h2>Scopes &amp; Sights</h2>
+
+<p>
+Optical scopes and sighting equipment for observation
+and sporting applications.
+</p>
+
+<div class="explore">Explore Category →</div>
+
+</div>
+
+</a>
+
+
+<!-- 06 -->
+
+<a href="#" class="card">
+
+<img
+class="card-image"
+src="https://images.unsplash.com/photo-1524666041070-9b8767495eab?auto=format&fit=crop&w=1400&q=85"
+alt="Outdoor measurement equipment"
+loading="lazy"
+>
+
+<div class="card-overlay"></div>
+
+<div class="card-content">
+
+<div class="number">06 / MEASUREMENT</div>
+
+<h2>Rangefinders</h2>
+
+<p>
+Digital rangefinding equipment for measuring distance
+and improving observation accuracy.
+</p>
+
+<div class="explore">Explore Category →</div>
+
+</div>
+
+</a>
+
+
+<!-- 07 -->
+
+<a href="#" class="card">
+
+<img
+class="card-image"
+src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1400&q=85"
+alt="Long distance outdoor observation"
+loading="lazy"
+>
+
+<div class="card-overlay"></div>
+
+<div class="card-content">
+
+<div class="number">07 / LONG RANGE</div>
+
+<h2>Spotting Scopes</h2>
+
+<p>
+High-magnification optics for detailed long-distance
+observation and outdoor viewing.
+</p>
+
+<div class="explore">Explore Category →</div>
+
+</div>
+
+</a>
+
+
+<!-- 08 -->
+
+<a href="#" class="card">
+
+<img
+class="card-image"
+src="https://images.unsplash.com/photo-1511497584788-876760111969?auto=format&fit=crop&w=1400&q=85"
+alt="Optics accessories"
+loading="lazy"
+>
+
+<div class="card-overlay"></div>
+
+<div class="card-content">
+
+<div class="number">08 / ACCESSORIES</div>
+
+<h2>Optics Accessories</h2>
+
+<p>
+Cases, cleaning equipment, mounts and other accessories
+for your optics setup.
+</p>
+
+<div class="explore">Explore Category →</div>
+
+</div>
+
+</a>
+
+
+</div>
+
+</main>
+
+
+<footer>
+
+<p>
+<strong>SpiesHub</strong> — Gear worth knowing about.
+</p>
+
+</footer>
+
+</body>
+</html>
