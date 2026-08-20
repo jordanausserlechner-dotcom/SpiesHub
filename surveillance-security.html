@@ -1,1 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <title>Surveillance & Security | SpiesHub</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #0b0b0b;
+      color: #ffffff;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    /* HEADER */
+
+    header {
+      background: #050505;
+      border-bottom: 1px solid #252525;
+      padding: 22px 6%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .logo {
+      font-size: 28px;
+      font-weight: 800;
+      letter-spacing: 2px;
+    }
+
+    .logo span {
+      color: #d6ff00;
+    }
+
+    nav {
+      display: flex;
+      gap: 28px;
+      align-items: center;
+    }
+
+    nav a {
+      font-size: 14px;
+      font-weight: 600;
+      color: #ddd;
+      transition: 0.2s;
+    }
+
+    nav a:hover {
+      color: #d6ff00;
+    }
+
+    /* HERO */
+
+    .hero {
+      padding: 85px 6% 70px;
+      background:
+        linear-gradient(rgba(0,0,0,.72), rgba(0,0,0,.9)),
+        radial-gradient(circle at center, #242424, #080808 70%);
+      text-align: center;
+      border-bottom: 1px solid #222;
+    }
+
+    .hero-label {
+      color: #d6ff00;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 3px;
+      margin-bottom: 18px;
+    }
+
+    .hero h1 {
+      font-size: clamp(38px, 6vw, 70px);
+      line-height: 1;
+      letter-spacing: -2px;
+      margin-bottom: 22px;
+    }
+
+    .hero p {
+      max-width: 680px;
+      margin: auto;
+      color: #aaa;
+      font-size: 17px;
+      line-height: 1.7;
+    }
+
+    /* CATEGORY GRID */
+
+    .categories {
+      padding: 65px 6% 90px;
+      max-width: 1400px;
+      margin: auto;
+    }
+
+    .section-heading {
+      margin-bottom: 35px;
+    }
+
+    .section-heading h2 {
+      font-size: 30px;
+      margin-bottom: 10px;
+    }
+
+    .section-heading p {
+      color: #888;
+      line-height: 1.6;
+    }
+
+    .category-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .category-card {
+      min-height: 220px;
+      background: linear-gradient(145deg, #191919, #0f0f0f);
+      border: 1px solid #292929;
+      padding: 28px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      position: relative;
+      overflow: hidden;
+      transition: transform .25s, border-color .25s;
+    }
+
+    .category-card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(135deg, transparent 45%, rgba(214,255,0,.08));
+      pointer-events: none;
+    }
+
+    .category-card:hover {
+      transform: translateY(-5px);
+      border-color: #d6ff00;
+    }
+
+    .number {
+      position: absolute;
+      top: 22px;
+      right: 24px;
+      color: #555;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 2px;
+    }
+
+    .icon {
+      font-size: 30px;
+      margin-bottom: auto;
+      color: #d6ff00;
+    }
+
+    .category-card h3 {
+      font-size: 21px;
+      margin-bottom: 9px;
+    }
+
+    .category-card p {
+      color: #888;
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+    .arrow {
+      margin-top: 18px;
+      color: #d6ff00;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
+
+    /* INFO */
+
+    .info {
+      background: #111;
+      border-top: 1px solid #222;
+      border-bottom: 1px solid #222;
+      padding: 65px 6%;
+      text-align: center;
+    }
+
+    .info-inner {
+      max-width: 850px;
+      margin: auto;
+    }
+
+    .info h2 {
+      font-size: 30px;
+      margin-bottom: 18px;
+    }
+
+    .info p {
+      color: #999;
+      line-height: 1.8;
+    }
+
+    /* FOOTER */
+
+    footer {
+      padding: 40px 6%;
+      background: #050505;
+      color: #777;
+      text-align: center;
+      font-size: 13px;
+    }
+
+    footer strong {
+      color: #fff;
+    }
+
+    /* MOBILE */
+
+    @media (max-width: 900px) {
+      .category-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      nav {
+        gap: 15px;
+      }
+    }
+
+    @media (max-width: 650px) {
+      header {
+        padding: 18px 5%;
+      }
+
+      .logo {
+        font-size: 23px;
+      }
+
+      nav {
+        gap: 12px;
+      }
+
+      nav a {
+        font-size: 12px;
+      }
+
+      .hero {
+        padding: 65px 5% 55px;
+      }
+
+      .categories {
+        padding: 50px 5% 70px;
+      }
+
+      .category-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .category-card {
+        min-height: 190px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+
+  <header>
+    <a href="index.html" class="logo">
+      SPIES<span>HUB</span>
+    </a>
+
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="products.html">Products</a>
+      <a href="about.html">About</a>
+      <a href="deals.html">Deals</a>
+      <a href="blog.html">Blog</a>
+      <a href="reviews.html">Reviews</a>
+    </nav>
+  </header>
+
+
+  <!-- HERO -->
+
+  <section class="hero">
+
+    <div class="hero-label">
+      SPIESHUB / PRODUCTS / 05
+    </div>
+
+    <h1>SURVEILLANCE &amp; SECURITY</h1>
+
+    <p>
+      Discover modern security, monitoring and surveillance technology
+      designed to help protect your home, vehicle, property and people.
+    </p>
+
+  </section>
+
+
+  <!-- CATEGORIES -->
+
+  <main class="categories">
+
+    <div class="section-heading">
+      <h2>Explore Surveillance &amp; Security</h2>
+
+      <p>
+        From cameras and alarms to access control and vehicle security,
+        find the equipment built to keep an eye on what matters.
+      </p>
+    </div>
+
+
+    <div class="category-grid">
+
+
+      <!-- 01 -->
+
+      <a href="#" class="category-card">
+
+        <span class="number">01</span>
+
+        <div class="icon">◉</div>
+
+        <h3>CCTV &amp; Security Cameras</h3>
+
+        <p>
+          Security cameras, CCTV systems and smart monitoring solutions.
+        </p>
+
+        <div class="arrow">EXPLORE →</div>
+
+      </a>
+
+
+      <!-- 02 -->
+
+      <a href="#" class="category-card">
+
+        <span class="number">02</span>
+
+        <div class="icon">◉</div>
+
+        <h3>Video Doorbells</h3>
+
+        <p>
+          See who's at the door and monitor entrances from almost anywhere.
+        </p>
+
+        <div class="arrow">EXPLORE →</div>
+
+      </a>
+
+
+      <!-- 03 -->
+
+      <a href="#" class="category-card">
+
+        <span class="number">03</span>
+
+        <div class="icon">◉</div>
+
+        <h3>Home Security Systems</h3>
+
+        <p>
+          Integrated security systems for homes, apartments and properties.
+        </p>
+
+        <div class="arrow">EXPLORE →</div>
+
+      </a>
+
+
+      <!-- 04 -->
+
+      <a href="#" class="category-card">
+
+        <span class="number">04</span>
+
+        <div class="icon">◉</div>
+
+        <h3>Alarms &amp; Sensors</h3>
+
+        <p>
+          Motion, door, window and environmental sensors with alarm systems.
+        </p>
+
+        <div class="arrow">EXPLORE →</div>
+
+      </a>
+
+
+      <!-- 05 -->
+
+      <a href="#" class="category-card">
+
+        <span class="number">05</span>
+
+        <div class="icon">◉</div>
+
+        <h3>Security Lighting</h3>
+
+        <p>
+          Motion-activated and smart lighting for entrances and outdoor areas.
+        </p>
+
+        <div class="arrow">EXPLORE →</div>
+
+      </a>
+
+
+      <!-- 06 -->
+
+      <a href="#" class="category-card">
+
+        <span class="number">06</span>
+
+        <div class="icon">◉</div>
+
+        <h3>Access Control</h3>
+
+        <p>
+          Smart locks, keypads and systems designed to control access.
+        </p>
+
+        <div class="arrow">EXPLORE →</div>
+
+      </a>
+
+
+      <!-- 07 -->
+
+      <a href="#" class="category-card">
+
+        <span class="number">07</span>
+
+        <div class="icon">◉</div>
+
+        <h3>Dash Cams</h3>
+
+        <p>
+          Vehicle cameras for recording journeys, incidents and surroundings.
+        </p>
+
+        <div class="arrow">EXPLORE →</div>
+
+      </a>
+
+
+      <!-- 08 -->
+
+      <a href="#" class="category-card">
+
+        <span class="number">08</span>
+
+        <div class="icon">◉</div>
+
+        <h3>Intercoms &amp; Entry Systems</h3>
+
+        <p>
+          Entry communication and access solutions for homes and businesses.
+        </p>
+
+        <div class="arrow">EXPLORE →</div>
+
+      </a>
+
+
+      <!-- 09 -->
+
+      <a href="#" class="category-card">
+
+        <span class="number">09</span>
+
+        <div class="icon">◉</div>
+
+        <h3>Security Accessories</h3>
+
+        <p>
+          Mounts, cables, storage and other essential security equipment.
+        </p>
+
+        <div class="arrow">EXPLORE →</div>
+
+      </a>
+
+
+    </div>
+
+  </main>
+
+
+  <!-- INFO -->
+
+  <section class="info">
+
+    <div class="info-inner">
+
+      <h2>Security Starts With Awareness</h2>
+
+      <p>
+        SpiesHub brings together security technology, surveillance equipment
+        and practical gear in one place, making it easier to discover the
+        right equipment for your setup.
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <!-- FOOTER -->
+
+  <footer>
+    <strong>SPIESHUB</strong> — Surveillance, Security &amp; Tactical Technology
+  </footer>
+
+</body>
+</html>
