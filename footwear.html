@@ -1,1 +1,717 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="theme-color" content="#080908">
+
+<title>Tactical Footwear | SpiesHub</title>
+
+<meta name="description" content="Explore tactical boots, duty boots, hiking boots, trail shoes, work boots and waterproof footwear at SpiesHub.">
+
+<style>
+
+:root {
+    --black: #080908;
+    --olive: #71845a;
+    --olive-light: #8da56f;
+    --white: #f1f2ed;
+    --muted: #aeb5aa;
+    --border: #272d27;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    background: var(--black);
+    color: var(--white);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+/* HEADER */
+
+header {
+    background: var(--black);
+    border-bottom: 1px solid var(--border);
+}
+
+.header-inner {
+    width: 92%;
+    max-width: 1200px;
+    min-height: 78px;
+    margin: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    color: var(--white);
+    text-decoration: none;
+
+    font-size: 27px;
+    font-weight: 900;
+    letter-spacing: 1px;
+}
+
+.logo span {
+    color: var(--olive-light);
+}
+
+nav {
+    display: flex;
+    gap: 28px;
+}
+
+nav a {
+    color: var(--white);
+    text-decoration: none;
+
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+nav a:hover,
+nav a.active {
+    color: var(--olive-light);
+}
+
+
+/* BREADCRUMB */
+
+.breadcrumb {
+    width: 92%;
+    max-width: 1200px;
+
+    margin: 28px auto 0;
+
+    color: #737b72;
+
+    font-size: 12px;
+
+    letter-spacing: 1px;
+}
+
+.breadcrumb a {
+    color: var(--olive-light);
+}
+
+.breadcrumb span {
+    margin: 0 8px;
+}
+
+
+/* HERO */
+
+.hero {
+    width: 92%;
+    max-width: 1200px;
+
+    margin: auto;
+
+    padding: 55px 0 45px;
+}
+
+.eyebrow {
+    color: var(--olive-light);
+
+    font-size: 12px;
+    font-weight: 800;
+
+    letter-spacing: 3px;
+
+    text-transform: uppercase;
+
+    margin-bottom: 14px;
+}
+
+.hero h1 {
+    margin: 0 0 18px;
+
+    color: var(--white);
+
+    font-size: clamp(44px, 7vw, 76px);
+
+    line-height: .95;
+
+    letter-spacing: -3px;
+
+    font-weight: 900;
+
+    text-transform: uppercase;
+}
+
+.hero p {
+    max-width: 650px;
+
+    margin: 0;
+
+    color: var(--muted);
+
+    font-size: 16px;
+
+    line-height: 1.6;
+}
+
+
+/* CATEGORY GRID */
+
+.categories {
+    width: 92%;
+    max-width: 1200px;
+
+    margin: auto;
+
+    padding-bottom: 80px;
+}
+
+.category-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 18px;
+}
+
+
+/* CATEGORY CARD */
+
+.category-card {
+    position: relative;
+
+    min-height: 310px;
+
+    overflow: hidden;
+
+    border: 1px solid var(--border);
+
+    border-radius: 12px;
+
+    background: #10130f;
+
+    isolation: isolate;
+
+    transition:
+        transform .3s ease,
+        border-color .3s ease;
+}
+
+.category-card:hover {
+    transform: translateY(-5px);
+
+    border-color: var(--olive);
+}
+
+.category-image {
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    z-index: -3;
+
+    transition: transform .5s ease;
+}
+
+.category-card:hover .category-image {
+    transform: scale(1.05);
+}
+
+
+/* OVERLAY */
+
+.category-overlay {
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            to top,
+            rgba(5, 8, 6, .98) 0%,
+            rgba(5, 8, 6, .74) 48%,
+            rgba(5, 8, 6, .18) 100%
+        );
+
+    z-index: -2;
+}
+
+.category-glow {
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(83, 103, 64, .18),
+            transparent 60%
+        );
+
+    z-index: -1;
+}
+
+
+/* CONTENT */
+
+.category-content {
+    min-height: 310px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: flex-end;
+
+    padding: 28px;
+}
+
+.category-number {
+    color: var(--olive-light);
+
+    font-size: 11px;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 8px;
+}
+
+.category-content h2 {
+    margin: 0 0 9px;
+
+    color: var(--white);
+
+    font-size: clamp(26px, 4vw, 38px);
+
+    line-height: 1;
+
+    letter-spacing: -1px;
+
+    text-transform: uppercase;
+}
+
+.category-content p {
+    margin: 0;
+
+    max-width: 480px;
+
+    color: #c0c6bd;
+
+    font-size: 14px;
+
+    line-height: 1.5;
+}
+
+.explore {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    width: fit-content;
+
+    margin-top: 17px;
+
+    color: var(--olive-light);
+
+    font-size: 11px;
+
+    font-weight: 800;
+
+    letter-spacing: 1.5px;
+
+    text-transform: uppercase;
+}
+
+.arrow {
+    transition: transform .25s ease;
+}
+
+.category-card:hover .arrow {
+    transform: translateX(5px);
+}
+
+
+/* FOOTER */
+
+footer {
+    border-top: 1px solid var(--border);
+
+    background: #060706;
+
+    padding: 35px 24px;
+
+    text-align: center;
+}
+
+footer p {
+    margin: 0;
+
+    color: #727a71;
+
+    font-size: 12px;
+}
+
+footer strong {
+    color: #9aaa89;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 750px) {
+
+    nav {
+        display: none;
+    }
+
+    .header-inner {
+        min-height: 70px;
+    }
+
+    .hero {
+        padding: 45px 0 35px;
+    }
+
+    .hero h1 {
+        font-size: 48px;
+        letter-spacing: -3px;
+    }
+
+    .hero p {
+        font-size: 15px;
+    }
+
+    .category-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .category-card {
+        min-height: 285px;
+    }
+
+    .category-content {
+        min-height: 285px;
+        padding: 24px;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<header>
+
+    <div class="header-inner">
+
+        <a href="index.html" class="logo">
+            Spies<span>Hub</span>
+        </a>
+
+        <nav>
+
+            <a href="products.html" class="active">PRODUCTS</a>
+            <a href="deals.html">DEALS</a>
+            <a href="reviews.html">REVIEWS</a>
+            <a href="blog.html">BLOG</a>
+            <a href="about.html">ABOUT</a>
+
+        </nav>
+
+    </div>
+
+</header>
+
+
+<main>
+
+
+<div class="breadcrumb">
+
+    <a href="products.html">PRODUCTS</a>
+
+    <span>→</span>
+
+    TACTICAL FOOTWEAR
+
+</div>
+
+
+<section class="hero">
+
+    <div class="eyebrow">
+        SpiesHub / Footwear
+    </div>
+
+    <h1>
+        Tactical Footwear
+    </h1>
+
+    <p>
+        Rugged footwear built for duty,
+        movement and demanding terrain.
+    </p>
+
+</section>
+
+
+<section class="categories">
+
+<div class="category-grid">
+
+
+<!-- 01 TACTICAL BOOTS -->
+
+<a href="tactical-boots.html" class="category-card">
+
+<img
+    class="category-image"
+    src="https://images.pexels.com/photos/33974776/pexels-photo-33974776.jpeg?auto=compress&cs=tinysrgb&w=1600"
+    alt="Tan tactical boots"
+>
+
+<div class="category-overlay"></div>
+<div class="category-glow"></div>
+
+<div class="category-content">
+
+<div class="category-number">01 / TACTICAL</div>
+
+<h2>
+Tactical Boots
+</h2>
+
+<p>
+Rugged boots designed for tactical and demanding outdoor use.
+</p>
+
+<div class="explore">
+Explore <span class="arrow">→</span>
+</div>
+
+</div>
+
+</a>
+
+
+<!-- 02 DUTY BOOTS -->
+
+<a href="duty-boots.html" class="category-card">
+
+<img
+    class="category-image"
+    src="https://images.pexels.com/photos/11914138/pexels-photo-11914138.jpeg?auto=compress&cs=tinysrgb&w=1600"
+    alt="Black duty boots"
+>
+
+<div class="category-overlay"></div>
+<div class="category-glow"></div>
+
+<div class="category-content">
+
+<div class="category-number">02 / DUTY</div>
+
+<h2>
+Duty Boots
+</h2>
+
+<p>
+Professional boots built for long shifts and demanding work.
+</p>
+
+<div class="explore">
+Explore <span class="arrow">→</span>
+</div>
+
+</div>
+
+</a>
+
+
+<!-- 03 HIKING BOOTS -->
+
+<a href="hiking-boots.html" class="category-card">
+
+<img
+    class="category-image"
+    src="https://images.pexels.com/photos/7225259/pexels-photo-7225259.jpeg?auto=compress&cs=tinysrgb&w=1600"
+    alt="Tactical hiking boots with outdoor gear"
+>
+
+<div class="category-overlay"></div>
+<div class="category-glow"></div>
+
+<div class="category-content">
+
+<div class="category-number">03 / OUTDOOR</div>
+
+<h2>
+Hiking Boots
+</h2>
+
+<p>
+Supportive footwear for trails, terrain and outdoor travel.
+</p>
+
+<div class="explore">
+Explore <span class="arrow">→</span>
+</div>
+
+</div>
+
+</a>
+
+
+<!-- 04 TRAIL SHOES -->
+
+<a href="trail-shoes.html" class="category-card">
+
+<img
+    class="category-image"
+    src="https://images.pexels.com/photos/32898989/pexels-photo-32898989.jpeg?auto=compress&cs=tinysrgb&w=1600"
+    alt="Trail running shoes on rocky terrain"
+>
+
+<div class="category-overlay"></div>
+<div class="category-glow"></div>
+
+<div class="category-content">
+
+<div class="category-number">04 / TRAIL</div>
+
+<h2>
+Trail Shoes
+</h2>
+
+<p>
+Lightweight footwear for fast movement across uneven terrain.
+</p>
+
+<div class="explore">
+Explore <span class="arrow">→</span>
+</div>
+
+</div>
+
+</a>
+
+
+<!-- 05 WORK BOOTS -->
+
+<a href="work-boots.html" class="category-card">
+
+<img
+    class="category-image"
+    src="https://images.pexels.com/photos/30229920/pexels-photo-30229920.jpeg?auto=compress&cs=tinysrgb&w=1600"
+    alt="Rugged work boots"
+>
+
+<div class="category-overlay"></div>
+<div class="category-glow"></div>
+
+<div class="category-content">
+
+<div class="category-number">05 / WORK</div>
+
+<h2>
+Work Boots
+</h2>
+
+<p>
+Hard-wearing boots built for demanding work environments.
+</p>
+
+<div class="explore">
+Explore <span class="arrow">→</span>
+</div>
+
+</div>
+
+</a>
+
+
+<!-- 06 WATERPROOF -->
+
+<a href="waterproof-footwear.html" class="category-card">
+
+<img
+    class="category-image"
+    src="https://images.pexels.com/photos/37550602/pexels-photo-37550602.jpeg?auto=compress&cs=tinysrgb&w=1600"
+    alt="Waterproof hiking boot on wet terrain"
+>
+
+<div class="category-overlay"></div>
+<div class="category-glow"></div>
+
+<div class="category-content">
+
+<div class="category-number">06 / WEATHER</div>
+
+<h2>
+Waterproof Footwear
+</h2>
+
+<p>
+Water-resistant and waterproof footwear for wet conditions.
+</p>
+
+<div class="explore">
+Explore <span class="arrow">→</span>
+</div>
+
+</div>
+
+</a>
+
+
+</div>
+
+</section>
+
+</main>
+
+
+<footer>
+
+<p>
+<strong>SpiesHub</strong> — Gear worth knowing about.
+</p>
+
+</footer>
+
+
+</body>
+
+</html>
