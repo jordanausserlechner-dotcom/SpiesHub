@@ -1,1 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<title>Tech & Gadgets | SpiesHub</title>
+
+<meta name="description" content="Explore useful technology, smart gadgets, cameras, communication equipment and portable tech at SpiesHub.">
+
+<style>
+
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+body{
+    font-family:Arial,Helvetica,sans-serif;
+    background:#090c0a;
+    color:#f1f1ed;
+}
+
+a{
+    color:inherit;
+    text-decoration:none;
+}
+
+header{
+    background:#0b0f0d;
+    border-bottom:1px solid #252a25;
+}
+
+.nav{
+    max-width:1200px;
+    margin:auto;
+    padding:20px 24px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:25px;
+}
+
+.logo{
+    font-size:26px;
+    font-weight:800;
+}
+
+.logo span{
+    color:#71835a;
+}
+
+.nav-links{
+    display:flex;
+    gap:22px;
+    flex-wrap:wrap;
+}
+
+.nav-links a{
+    color:#c7ccc5;
+    font-size:14px;
+    font-weight:700;
+}
+
+.nav-links a:hover,
+.nav-links .active{
+    color:#91a875;
+}
+
+.hero{
+    max-width:900px;
+    margin:auto;
+    padding:65px 24px 45px;
+    text-align:center;
+}
+
+.eyebrow{
+    color:#91a875;
+    font-size:12px;
+    font-weight:800;
+    letter-spacing:3px;
+    margin-bottom:16px;
+}
+
+.hero h1{
+    font-size:clamp(40px,8vw,68px);
+    line-height:.95;
+    letter-spacing:-2px;
+    text-transform:uppercase;
+    margin-bottom:22px;
+}
+
+.hero p{
+    max-width:680px;
+    margin:auto;
+    color:#adb4ac;
+    font-size:17px;
+    line-height:1.6;
+}
+
+.products{
+    max-width:1100px;
+    margin:auto;
+    padding:20px 24px 80px;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:20px;
+}
+
+.card{
+    position:relative;
+    min-height:330px;
+    overflow:hidden;
+    border:1px solid #303630;
+    border-radius:14px;
+    background:#111511;
+    transition:.25s ease;
+}
+
+.card:hover{
+    transform:translateY(-4px);
+    border-color:#71835a;
+}
+
+.card img{
+    position:absolute;
+    inset:0;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.card::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:linear-gradient(
+        to bottom,
+        rgba(0,0,0,.05) 10%,
+        rgba(0,0,0,.35) 45%,
+        rgba(5,8,6,.98) 100%
+    );
+}
+
+.card-content{
+    position:relative;
+    z-index:2;
+    min-height:330px;
+    padding:26px;
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-end;
+}
+
+.number{
+    color:#91a875;
+    font-size:12px;
+    font-weight:800;
+    letter-spacing:2px;
+    margin-bottom:8px;
+}
+
+.card h2{
+    font-size:29px;
+    line-height:1;
+    text-transform:uppercase;
+    margin-bottom:10px;
+}
+
+.card p{
+    color:#d0d4ce;
+    font-size:14px;
+    line-height:1.5;
+}
+
+.explore{
+    margin-top:16px;
+    color:#a5ba89;
+    font-size:12px;
+    font-weight:800;
+    letter-spacing:1.5px;
+    text-transform:uppercase;
+}
+
+.card:last-child{
+    grid-column:span 2;
+}
+
+footer{
+    border-top:1px solid #252a25;
+    background:#070907;
+    padding:35px 20px;
+    text-align:center;
+}
+
+footer p{
+    color:#70776f;
+    font-size:12px;
+}
+
+footer strong{
+    color:#9aaa89;
+}
+
+@media(max-width:700px){
+
+    .nav{
+        padding:17px 18px;
+        align-items:flex-start;
+    }
+
+    .logo{
+        font-size:22px;
+    }
+
+    .nav-links{
+        gap:12px;
+    }
+
+    .nav-links a{
+        font-size:11px;
+    }
+
+    .hero{
+        padding:50px 20px 35px;
+    }
+
+    .hero h1{
+        font-size:44px;
+    }
+
+    .hero p{
+        font-size:15px;
+    }
+
+    .products{
+        padding:15px 18px 60px;
+    }
+
+    .grid{
+        grid-template-columns:1fr;
+    }
+
+    .card{
+        min-height:300px;
+    }
+
+    .card-content{
+        min-height:300px;
+        padding:24px;
+    }
+
+    .card:last-child{
+        grid-column:span 1;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+<nav class="nav">
+
+<a href="index.html" class="logo">
+    Spies<span>Hub</span>
+</a>
+
+<div class="nav-links">
+
+<a href="products.html" class="active">Products</a>
+<a href="deals.html">Deals</a>
+<a href="reviews.html">Reviews</a>
+<a href="blog.html">Blog</a>
+<a href="about.html">About</a>
+
+</div>
+
+</nav>
+
+</header>
+
+
+<section class="hero">
+
+<div class="eyebrow">
+    SPIESHUB / PRODUCTS / 10
+</div>
+
+<h1>
+    Tech &amp; Gadgets
+</h1>
+
+<p>
+Explore useful technology, smart gadgets and portable
+equipment for everyday use, travel, security and field work.
+</p>
+
+</section>
+
+
+<main class="products">
+
+<div class="grid">
+
+
+<!-- 01 SMART DEVICES -->
+
+<a href="#" class="card">
+
+<img
+src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=1200&q=85"
+alt="Smart technology"
+loading="lazy"
+>
+
+<div class="card-content">
+
+<div class="number">
+01 / SMART TECH
+</div>
+
+<h2>
+Smart Devices
+</h2>
+
+<p>
+Useful smart technology, connected devices and
+portable electronics for everyday life.
+</p>
+
+<div class="explore">
+Explore Category →
+</div>
+
+</div>
+
+</a>
+
+
+<!-- 02 CAMERAS -->
+
+<a href="#" class="card">
+
+<img
+src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&w=1200&q=85"
+alt="Digital camera"
+loading="lazy"
+>
+
+<div class="card-content">
+
+<div class="number">
+02 / IMAGING
+</div>
+
+<h2>
+Cameras &amp; Imaging
+</h2>
+
+<p>
+Compact cameras, action cameras and imaging
+technology for recording and observation.
+</p>
+
+<div class="explore">
+Explore Category →
+</div>
+
+</div>
+
+</a>
+
+
+<!-- 03 COMMUNICATION -->
+
+<a href="#" class="card">
+
+<img
+src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=1200&q=85"
+alt="Communication technology"
+loading="lazy"
+>
+
+<div class="card-content">
+
+<div class="number">
+03 / COMMUNICATION
+</div>
+
+<h2>
+Communication Tech
+</h2>
+
+<p>
+Portable communication equipment, radios and
+technology for staying connected.
+</p>
+
+<div class="explore">
+Explore Category →
+</div>
+
+</div>
+
+</a>
+
+
+<!-- 04 PORTABLE POWER -->
+
+<a href="#" class="card">
+
+<img
+src="https://images.unsplash.com/photo-1593642532744-d377ab507dc8?auto=format&fit=crop&w=1200&q=85"
+alt="Portable technology"
+loading="lazy"
+>
+
+<div class="card-content">
+
+<div class="number">
+04 / POWER
+</div>
+
+<h2>
+Portable Power
+</h2>
+
+<p>
+Power banks, portable charging equipment and
+technology for life away from the wall socket.
+</p>
+
+<div class="explore">
+Explore Category →
+</div>
+
+</div>
+
+</a>
+
+
+<!-- 05 GADGETS -->
+
+<a href="#" class="card">
+
+<img
+src="https://images.unsplash.com/photo-1550009158-9ebf69173e03?auto=format&fit=crop&w=1200&q=85"
+alt="Electronic gadgets"
+loading="lazy"
+>
+
+<div class="card-content">
+
+<div class="number">
+05 / GADGETS
+</div>
+
+<h2>
+Smart Gadgets
+</h2>
+
+<p>
+Interesting and practical gadgets designed to make
+everyday tasks easier and more useful.
+</p>
+
+<div class="explore">
+Explore Category →
+</div>
+
+</div>
+
+</a>
+
+
+</div>
+
+</main>
+
+
+<footer>
+
+<p>
+<strong>SpiesHub</strong> — Gear worth knowing about.
+</p>
+
+</footer>
+
+</body>
+</html>
