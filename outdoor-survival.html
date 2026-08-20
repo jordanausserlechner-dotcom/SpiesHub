@@ -5,252 +5,230 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Outdoor & Survival | SpiesHub</title>
-
 <meta name="description" content="Explore survival kits, navigation equipment, emergency gear and outdoor tools at SpiesHub.">
 
 <style>
-
-*{
-    box-sizing:border-box;
-    margin:0;
-    padding:0;
-}
+*{box-sizing:border-box;margin:0;padding:0}
 
 body{
-    font-family:Arial,Helvetica,sans-serif;
-    background:#090c0a;
-    color:#f1f1ed;
+font-family:Arial,Helvetica,sans-serif;
+background:#090c0a;
+color:#f1f1ed;
 }
 
-a{
-    color:inherit;
-    text-decoration:none;
-}
+a{color:inherit;text-decoration:none}
 
 header{
-    background:#0b0f0d;
-    border-bottom:1px solid #252a25;
+background:#0b0f0d;
+border-bottom:1px solid #252a25;
 }
 
 .nav{
-    max-width:1200px;
-    margin:auto;
-    padding:20px 24px;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    gap:25px;
+max-width:1200px;
+margin:auto;
+padding:20px 24px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+gap:25px;
 }
 
-.logo{
-    font-size:26px;
-    font-weight:800;
-}
-
-.logo span{
-    color:#71835a;
-}
+.logo{font-size:26px;font-weight:800}
+.logo span{color:#71835a}
 
 .nav-links{
-    display:flex;
-    gap:22px;
-    flex-wrap:wrap;
+display:flex;
+gap:22px;
+flex-wrap:wrap;
 }
 
 .nav-links a{
-    color:#c7ccc5;
-    font-size:14px;
-    font-weight:700;
+color:#c7ccc5;
+font-size:14px;
+font-weight:700;
 }
 
-.nav-links a:hover{
-    color:#91a875;
-}
+.nav-links a:hover{color:#91a875}
 
 .hero{
-    max-width:900px;
-    margin:auto;
-    padding:65px 24px 45px;
-    text-align:center;
+max-width:900px;
+margin:auto;
+padding:65px 24px 45px;
+text-align:center;
 }
 
 .eyebrow{
-    color:#91a875;
-    font-size:12px;
-    font-weight:800;
-    letter-spacing:3px;
-    margin-bottom:16px;
+color:#91a875;
+font-size:12px;
+font-weight:800;
+letter-spacing:3px;
+margin-bottom:16px;
 }
 
 .hero h1{
-    font-size:clamp(40px,8vw,68px);
-    line-height:.95;
-    letter-spacing:-2px;
-    text-transform:uppercase;
-    margin-bottom:22px;
+font-size:clamp(40px,8vw,68px);
+line-height:.95;
+letter-spacing:-2px;
+text-transform:uppercase;
+margin-bottom:22px;
 }
 
 .hero p{
-    max-width:680px;
-    margin:auto;
-    color:#adb4ac;
-    font-size:17px;
-    line-height:1.6;
+max-width:680px;
+margin:auto;
+color:#adb4ac;
+font-size:17px;
+line-height:1.6;
 }
 
 .products{
-    max-width:1100px;
-    margin:auto;
-    padding:20px 24px 80px;
+max-width:1100px;
+margin:auto;
+padding:20px 24px 80px;
 }
 
 .grid{
-    display:grid;
-    grid-template-columns:repeat(2,1fr);
-    gap:20px;
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:20px;
 }
 
 .card{
-    position:relative;
-    min-height:330px;
-    overflow:hidden;
-    border:1px solid #303630;
-    border-radius:14px;
-    background:#111511;
-    transition:.25s ease;
+position:relative;
+min-height:330px;
+overflow:hidden;
+border:1px solid #303630;
+border-radius:14px;
+background:#111511;
+transition:.25s ease;
 }
 
 .card:hover{
-    transform:translateY(-4px);
-    border-color:#71835a;
+transform:translateY(-4px);
+border-color:#71835a;
 }
 
 .card img{
-    position:absolute;
-    inset:0;
-    width:100%;
-    height:100%;
-    object-fit:cover;
+position:absolute;
+inset:0;
+width:100%;
+height:100%;
+object-fit:cover;
 }
 
 .card::after{
-    content:"";
-    position:absolute;
-    inset:0;
-    background:linear-gradient(
-        to bottom,
-        rgba(0,0,0,.05) 10%,
-        rgba(0,0,0,.35) 45%,
-        rgba(5,8,6,.98) 100%
-    );
+content:"";
+position:absolute;
+inset:0;
+background:linear-gradient(
+to bottom,
+rgba(0,0,0,.05) 10%,
+rgba(0,0,0,.35) 45%,
+rgba(5,8,6,.98) 100%
+);
 }
 
 .card-content{
-    position:relative;
-    z-index:2;
-    min-height:330px;
-    padding:27px;
-    display:flex;
-    flex-direction:column;
-    justify-content:flex-end;
+position:relative;
+z-index:2;
+min-height:330px;
+padding:27px;
+display:flex;
+flex-direction:column;
+justify-content:flex-end;
 }
 
 .number{
-    color:#91a875;
-    font-size:12px;
-    font-weight:800;
-    letter-spacing:2px;
-    margin-bottom:8px;
+color:#91a875;
+font-size:12px;
+font-weight:800;
+letter-spacing:2px;
+margin-bottom:8px;
 }
 
 .card h2{
-    font-size:28px;
-    line-height:1;
-    text-transform:uppercase;
-    margin-bottom:12px;
+font-size:28px;
+line-height:1;
+text-transform:uppercase;
+margin-bottom:12px;
 }
 
 .card p{
-    color:#d0d4ce;
-    font-size:14px;
-    line-height:1.5;
+color:#d0d4ce;
+font-size:14px;
+line-height:1.5;
 }
 
 .explore{
-    margin-top:17px;
-    color:#a5ba89;
-    font-size:12px;
-    font-weight:800;
-    letter-spacing:1.5px;
-    text-transform:uppercase;
+margin-top:17px;
+color:#a5ba89;
+font-size:12px;
+font-weight:800;
+letter-spacing:1.5px;
+text-transform:uppercase;
+}
+
+.back{
+text-align:center;
+margin-top:30px;
+}
+
+.back a{
+color:#91a875;
+font-size:12px;
+font-weight:800;
+letter-spacing:1px;
+text-transform:uppercase;
 }
 
 footer{
-    border-top:1px solid #252a25;
-    background:#070907;
-    padding:35px 20px;
-    text-align:center;
+border-top:1px solid #252a25;
+background:#070907;
+padding:35px 20px;
+text-align:center;
 }
 
 footer p{
-    color:#70776f;
-    font-size:12px;
+color:#70776f;
+font-size:12px;
 }
 
-footer strong{
-    color:#9aaa89;
-}
+footer strong{color:#9aaa89}
 
 @media(max-width:700px){
 
-    .nav{
-        padding:17px 18px;
-        align-items:flex-start;
-    }
-
-    .logo{
-        font-size:22px;
-    }
-
-    .nav-links{
-        gap:12px;
-    }
-
-    .nav-links a{
-        font-size:11px;
-    }
-
-    .hero{
-        padding:50px 20px 35px;
-    }
-
-    .hero h1{
-        font-size:44px;
-    }
-
-    .hero p{
-        font-size:15px;
-    }
-
-    .products{
-        padding:15px 18px 60px;
-    }
-
-    .grid{
-        grid-template-columns:1fr;
-    }
-
-    .card{
-        min-height:310px;
-    }
-
-    .card-content{
-        min-height:310px;
-        padding:24px;
-    }
-
+.nav{
+padding:17px 18px;
+align-items:flex-start;
 }
 
+.logo{font-size:22px}
+.nav-links{gap:12px}
+.nav-links a{font-size:11px}
+
+.hero{
+padding:50px 20px 35px;
+}
+
+.hero h1{font-size:44px}
+.hero p{font-size:15px}
+
+.products{
+padding:15px 18px 60px;
+}
+
+.grid{
+grid-template-columns:1fr;
+}
+
+.card{min-height:310px}
+
+.card-content{
+min-height:310px;
+padding:24px;
+}
+
+}
 </style>
 </head>
 
@@ -261,17 +239,15 @@ footer strong{
 <nav class="nav">
 
 <a href="index.html" class="logo">
-    Spies<span>Hub</span>
+Spies<span>Hub</span>
 </a>
 
 <div class="nav-links">
-
 <a href="products.html">Products</a>
 <a href="deals.html">Deals</a>
 <a href="reviews.html">Reviews</a>
 <a href="blog.html">Blog</a>
 <a href="about.html">About</a>
-
 </div>
 
 </nav>
@@ -282,11 +258,11 @@ footer strong{
 <section class="hero">
 
 <div class="eyebrow">
-    SPIESHUB / PRODUCTS / 09
+SPIESHUB / PRODUCTS / 09
 </div>
 
 <h1>
-    Outdoor &amp; Survival
+Outdoor &amp; Survival
 </h1>
 
 <p>
@@ -302,141 +278,126 @@ emergency situations and life in the field.
 <div class="grid">
 
 
-<!-- SURVIVAL KITS -->
+<!-- 01 SURVIVAL KITS -->
 
-<a href="#" class="card">
+<a href="survival-kits.html" class="card">
 
 <img
-src="https://www.kartes.lv/wp-content/uploads/2025/05/72-stundu-M-TAC-ar-nepilno.webp"
-alt="Tactical survival backpack and emergency equipment"
+src="https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?auto=format&fit=crop&w=1400&q=85"
+alt="Outdoor survival backpack and equipment"
 loading="lazy"
 >
 
 <div class="card-content">
 
-<div class="number">
-01 / SURVIVAL
-</div>
+<div class="number">01 / SURVIVAL</div>
 
-<h2>
-Survival Kits
-</h2>
+<h2>Survival Kits</h2>
 
 <p>
-Tactical survival packs, emergency backpacks,
-ration supplies and essential field equipment.
+Tactical survival packs, emergency supplies,
+ration equipment and essential field gear.
 </p>
 
-<div class="explore">
-Explore Category →
-</div>
+<div class="explore">Explore Category →</div>
 
 </div>
 
 </a>
 
 
-<!-- NAVIGATION -->
+<!-- 02 NAVIGATION -->
 
-<a href="#" class="card">
+<a href="navigation.html" class="card">
 
 <img
-src="https://cdn1.comptoirnautique.com/178479-large_default/gps-portable-etrex-touch.jpg"
-alt="Handheld GPS navigation device in the bush"
+src="https://images.unsplash.com/photo-1524666041070-9e7b61aaf165?auto=format&fit=crop&w=1400&q=85"
+alt="GPS and navigation equipment outdoors"
 loading="lazy"
 >
 
 <div class="card-content">
 
-<div class="number">
-02 / NAVIGATION
-</div>
+<div class="number">02 / NAVIGATION</div>
 
-<h2>
-Navigation
-</h2>
+<h2>Navigation</h2>
 
 <p>
-GPS units, navigation equipment and reliable
-technology for finding your way in the bush.
+GPS devices, compasses and reliable navigation
+equipment for bush and field use.
 </p>
 
-<div class="explore">
-Explore Category →
-</div>
+<div class="explore">Explore Category →</div>
 
 </div>
 
 </a>
 
 
-<!-- EMERGENCY GEAR -->
+<!-- 03 EMERGENCY GEAR -->
 
-<a href="#" class="card">
+<a href="emergency-gear.html" class="card">
 
 <img
-src="https://cdn11.bigcommerce.com/s-r80ysxw79r/images/stencil/1280x1280/products/982/6537/82-0031_gg__66657.1741718959.jpg?c=2&imbypass=on"
-alt="Rugged first aid emergency kit"
+src="https://images.unsplash.com/photo-1603398938378-e54eab446dde?auto=format&fit=crop&w=1400&q=85"
+alt="Emergency first aid kit"
 loading="lazy"
 >
 
 <div class="card-content">
 
-<div class="number">
-03 / EMERGENCY
-</div>
+<div class="number">03 / EMERGENCY</div>
 
-<h2>
-Emergency Gear
-</h2>
+<h2>Emergency Gear</h2>
 
 <p>
 Rugged first aid kits, medical equipment and
-essential emergency gear for field use.
+essential emergency equipment for field use.
 </p>
 
-<div class="explore">
-Explore Category →
-</div>
+<div class="explore">Explore Category →</div>
 
 </div>
 
 </a>
 
 
-<!-- OUTDOOR TOOLS -->
+<!-- 04 OUTDOOR TOOLS -->
 
-<a href="#" class="card">
+<a href="outdoor-tools.html" class="card">
 
 <img
-src="https://leo-shop.com.ua/content/images/27/536x536l50nn0/92326222912738.png"
-alt="Outdoor axe and bushcraft knife tools"
+src="https://images.unsplash.com/photo-1540573133985-87b6da6d54a9?auto=format&fit=crop&w=1400&q=85"
+alt="Outdoor tools and bushcraft equipment"
 loading="lazy"
 >
 
 <div class="card-content">
 
-<div class="number">
-04 / TOOLS
-</div>
+<div class="number">04 / TOOLS</div>
 
-<h2>
-Outdoor Tools
-</h2>
+<h2>Outdoor Tools</h2>
 
 <p>
 Axes, bushcraft knives and practical outdoor
-tools for camping, hunting and field use.
+tools for camping and field use.
 </p>
 
-<div class="explore">
-Explore Category →
-</div>
+<div class="explore">Explore Category →</div>
 
 </div>
 
 </a>
 
+
+</div>
+
+
+<div class="back">
+
+<a href="products.html">
+← Back to Products
+</a>
 
 </div>
 
